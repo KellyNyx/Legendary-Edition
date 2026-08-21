@@ -1,0 +1,992 @@
+{
+ Projectiles = [
+     "_append"
+    {
+      Name = "MegRushWeaponControl"
+      InheritFrom = "1_BasePlayerSmallProjectile"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      ImpactFx = "null"
+      ImpactSound = "null"
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      Range = 450
+      Speed = 99999
+      MaxSpeed = 99999
+      Acceleration = 15000
+      DamageLow = 0
+      DamageHigh = 0
+      CanCrit = false
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      ObstacleCollisionCheck = "PolygonContainsPoint"
+      SpawnOnDeath = "LEInvisibleTarget"
+      SpawnType = "OBSTACLE"
+      SpawnGroup = "Standing"
+      DangerDistance = 200
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 60
+        AttachedAnim = "null"
+        Grip = 999999
+        Points = [
+          {
+            X = 0
+            Y = 64
+          }
+          {
+            X = 128
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -64
+          }
+          {
+            X = -128
+            Y = 0
+          }]
+      }
+      Effects = [
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          Cancelable = true
+        }
+        {
+          Name = "EnemyFriendStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }]
+    }
+    {
+      Name = "EPCMegaeraRushWeapon"
+      Type = "STRAIGHT"
+      Fuse = 0.0
+      Range = 500
+      DamageLow = 0
+      DamageHigh = 0
+      DamageRadius = 220.0
+      DamageRadiusScaleY = 0.6
+      DamageRadiusScaleX = 1.1
+      UseRadialImpact = true
+      AutoAdjustForTarget = false
+      UseVulnerability = false
+      NumPenetrations = 999
+      SilentImpactOnInvulnerable = true
+	  ClearOnAttackEffects = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }
+        ]
+      }
+      Effects = [
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        /* For Poseidon Rush */
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpyLunge"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "null"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = false
+      UnlimitedUnitPenetration = true
+      AttachToOwner = true
+      CanBeProjectileDefenseDestroyed = false
+      ImpactVelocity = 800
+      ImpactFilterDuration = 0
+      ImpactFilterOpacity = 0
+      Fuse = 0.2
+      DamageLow = 30
+      DamageHigh = 30
+      Range = 700
+      UseArmor = false
+      UseVulnerability = true
+      ImpactFx = "null"
+      ImmunityDuration = 0.1
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.7
+          HaltOnEnd = true
+          Active = true
+        }
+        {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+      ]
+      Thing = {
+        Graphic = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 125
+            Y = 150
+          }
+          {
+            X = 125
+            Y = -50
+          }
+          {
+            X = -30
+            Y = -50
+          }
+          {
+            X = -30
+            Y = 150
+          }
+        ]
+      }
+    }
+    {
+      Name = "EPCHarpyBeam"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedObstaclePenetration = false
+      UnlimitedUnitPenetration = false
+      Range = 2000
+      Speed = 800
+      DamageLow = 5
+      DamageHigh = 5
+      NumPenetrations = 0
+      GroupName = "FX_Standing_Add"
+      DangerDistance = 150
+      UseVulnerability = true
+      Effects = [
+        {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+
+      ]
+      Thing = {
+        Graphic = "FuryBeamEmitter"
+        OffsetZ = 70
+        AttachedAnim = "EnemyProjectileLight"
+        Grip = 999999
+        RotateGeometry = true
+        Points =
+		[
+          {
+            X = -14
+            Y = 0
+          }
+          {
+            X = 10
+            Y = 14
+          }
+          {
+            X = 10
+            Y = -14
+          }
+        ]
+      }
+    }
+    {
+      Name = "EPCMegWhipLash1"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "null"
+      Type = "ARC"
+      ArcStart = -75
+      ArcEnd = 90
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      //AttachToOwner = false
+      DamageLow = 20
+      DamageHigh = 20
+      Speed = 2700
+      Range = 360
+      NumPenetrations = 99999
+      CanCrit = true
+      CriticalHitMultiplier = 3
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = true
+      UseVulnerability = true
+      InvulnerableImpactOwnerVelocity = 300
+      StartFx = "null"
+      UseRadialImpact = false
+      ImpactLineOfSightFromOwner = true
+      //UseDetonationForProjectileDefense = true
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 335
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = -360
+            Y = 0
+          }
+          {
+            X = 0
+            Y = 100
+          }
+          {
+            X = 0
+            Y = -100
+          }
+        ]
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "EPCMegWhipLash2"
+      InheritFrom = "EPCMegWhipLash1"
+      ArcStart = 90
+      ArcEnd = -75
+
+    }
+        {
+      Name = "EPCHarpyWhipWhirl"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryWhipWhirl"
+      Type = "STRAIGHT"
+      DetonateSound = "null"
+      Fuse = 0.0
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1.0
+	  ActiveBlinkSpeedMultiplier = 1.4
+	  ActiveBlinkRangeMultiplier = 1.8
+      DamageRadius = 550
+      DamageRadiusScaleY = 0.58
+	  RequireHitCenter = false
+      BlastDuration = 0.16
+      AttachToOwner = true
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      DamageLow = 25
+      DamageHigh = 25
+      ImpactVelocity = 1500
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      DangerDistance = 150
+	  //UseDetonationForProjectileDefense = true
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 525
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        Grip = 999999
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpyWhipWhirl2"
+      InheritFrom = "EPCHarpyWhipWhirl"
+      DamageLow = 50
+      DamageHigh = 50
+      DamageRadius = 550
+      DeflectProjectiles = false
+    }
+    {
+      Name = "EPCHarpyWhipWhirl3"
+      InheritFrom = "EPCHarpyWhipWhirl"
+      DamageLow = 100
+      DamageHigh = 100
+      DamageRadius = 550
+      DeflectProjectiles = false
+    }
+    {
+      Name = "EPCHarpyWhipWhirlDash"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryWhipWhirl"
+      Type = "STRAIGHT"
+      DetonateSound = "null"
+      Fuse = 0.0
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1.0
+      ActiveBlinkSpeedMultiplier = 1.4
+      ActiveBlinkRangeMultiplier = 1.8
+      DamageRadius = 450
+      DamageRadiusScaleY = 0.58
+      RequireHitCenter = false
+      BlastDuration = 0.16
+      AttachToOwner = true
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      DamageLow = 20
+      DamageHigh = 20
+      ImpactVelocity = 1500
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      //UseDetonationForProjectileDefense = true
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 425
+      DeflectProjectiles = false
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 70
+        Grip = 999999
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }]
+    }
+    {
+      Name = "EPCMegRapidLashes"
+      InheritFrom = "EPCHarpyWhipWhirl"
+      DetonateGraphic = "FuryWhipWhirl-RapidLashes"
+      DamageLow = 15
+      DamageHigh = 15
+      Range = 100
+      ImpactVelocity = 0.0
+      DamageRadius = 250
+      DeflectProjectiles = false
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 325
+    }
+    {
+      Name = "EPCHarpyLightning"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryHellfire"
+      Type = "INSTANT"
+      DetonateSound = "null"
+      Fuse = 0.6
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1200.0
+      DamageRadius = 300
+      DamageRadiusScaleY = 0.58
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      DamageLow = 30
+      DamageHigh = 30
+      ImpactVelocity = 0
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      CanCrit = true
+      GroupName = "FX_Terrain"
+      ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "FuryHellfirePreviewDecalDark"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "EPCHarpyLightning2"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryHellfire"
+      Type = "INSTANT"
+      DetonateSound = "null"
+      Fuse = 0.6
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1200.0
+      DamageRadius = 300
+      DamageRadiusScaleY = 0.58
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      DamageLow = 40
+      DamageHigh = 40
+      ImpactVelocity = 0
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      CanCrit = true
+      GroupName = "FX_Terrain"
+      ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "FuryHellfirePreviewDecalDark"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "EPCHarpyLightning3"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryHellfire"
+      Type = "INSTANT"
+      DetonateSound = "null"
+      Fuse = 0.6
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1200.0
+      DamageRadius = 300
+      DamageRadiusScaleY = 0.58
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      DamageLow = 60
+      DamageHigh = 60
+      ImpactVelocity = 0
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      CanCrit = true
+      GroupName = "FX_Terrain"
+      ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "FuryHellfirePreviewDecalDark"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "LEBlankObstacleSpawner"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "INSTANT"
+      Fuse = 0.0
+      Range = 1200.0
+      GroupName = "FX_Terrain"
+      SpawnOnDeath = "BlankObstacle1"
+      SpawnType = "OBSTACLE"
+      SpawnCount = 1
+      //ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "null"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "LEBlankObstacleSpawner2"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "INSTANT"
+      Fuse = 0.0
+      Range = 1200.0
+      GroupName = "FX_Terrain"
+      SpawnOnDeath = "BlankObstacle2"
+      SpawnType = "OBSTACLE"
+      SpawnCount = 1
+      //ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "null"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "LEBlankObstacleSpawner3"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "INSTANT"
+      Fuse = 0.0
+      Range = 1200.0
+      GroupName = "FX_Terrain"
+      SpawnOnDeath = "BlankObstacle3"
+      SpawnType = "OBSTACLE"
+      SpawnCount = 1
+      //ImmunityDuration = 1.0
+      Thing = 
+      {
+        Graphic = "null"
+        RotateGeometry = false
+        Scale = 1.0
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }]
+      }
+      Effect = 
+      {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+    {
+      Name = "EPCHarpyLightningMeg"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryHellfire"
+      Type = "INSTANT"
+      DetonateSound = "null"
+      Fuse = 0.6
+	 // UseStartLocation = true
+	 // StartFx = "MegaeraAssist"
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1.0
+      DamageRadius = 300
+      DamageRadiusScaleY = 0.58
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      DamageLow = 30
+      DamageHigh = 30
+      //SpawnRadius = 300
+      ImpactVelocity = 0
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      CanCrit = true
+      ImpactLineOfSight = true
+      GroupName = "FX_Terrain"
+      //ImmunityDuration = 1.0
+	  Thing = {
+        Graphic = "FuryHellfirePreviewDecalDark"
+       // OffsetZ = 300
+        RotateGeometry = false
+        Scale = 1.0
+        Color = {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+        Points = [
+          {
+            X = 0
+            Y = 8
+          }
+          {
+            X = 32
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -8
+          }
+          {
+            X = -32
+            Y = 0
+          }
+        ]
+      }
+      Effect = {
+        Name = "EnemyFriendStun"
+        Duration = 1.0
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+    }
+ ]
+}

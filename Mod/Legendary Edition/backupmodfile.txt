@@ -1,0 +1,7 @@
+Top Import "config.lua"
+Import "main.lua"
+
+To "Game/Animations/CharacterAnimationsHero.sjson
+SJSON "PlayerAnimations/CharacterAnimationsHero.sjson"
+To "Game/Units/PlayerUnits.sjson"
+SJSON "PUnits/PlayerUnits.sjson"

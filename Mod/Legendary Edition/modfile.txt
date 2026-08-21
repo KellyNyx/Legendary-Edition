@@ -1,0 +1,53 @@
+Top Import "config.lua"
+
+::Assets
+
+Include "modfile_Assets.txt"
+
+::GUI\Animations
+
+Include "modfile_GUI.txt"
+
+::Patches
+
+::Sjson
+
+::To "Game/Projectiles/EnemyProjectiles.sjson"
+::SJSON "Patches/Game/Projectiles/ZagStunFix.sjson"
+
+
+::Common/shared Scripts
+
+Import "LE Scripts/LE Main.lua"
+
+Import "LE Scripts/LE Overrides.lua"
+
+Import "LE Scripts/LEDeathLoopData.lua"
+
+To "Scripts/TraitData.lua"
+Import "LE Scripts/DefaultCharacterTrait.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "LE Scripts/LEWeaponSets.lua"
+
+Import "LE Scripts/ContractExchange.lua"
+
+To "Scripts/TraitData.lua"
+Import "LE Scripts/LETraitData.lua"
+
+
+:: Character/Enemy modfiles
+
+::Include "CharacterData/CharacterDataEnemies/modfile-Enemies.txt
+
+Include "CharacterData/CharacterDataFuries/modfile_FuryFx.txt"
+
+Include "CharacterData/CharacterDataFuries/Megaera/modfile.txt"
+
+Include "CharacterData/CharacterDataFuries/Tisiphone/modfile.txt"
+
+Include "CharacterData/CharacterDataFuries/Alecto/modfile.txt"
+
+Include "CharacterData/CharacterDataHades/Hades/modfile.txt"
+
+Include "CharacterData/CharacterDataHades/modfile_HadesFx.txt"

@@ -1,0 +1,26 @@
+Import "EPCHadesMain.lua"
+
+To "Scripts/EnemyData.lua"
+Import "HadesEnemies.lua"
+
+To "Game/Units/Enemies.sjson"
+SJSON "HadesEnemies.sjson"
+
+To "Scripts/WeaponData.lua"
+Import "HadesWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "HadesWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "HadesWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "HadesWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "HadesProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "HadesWeapons.sjson"
+

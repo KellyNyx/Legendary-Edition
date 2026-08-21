@@ -1,0 +1,1430 @@
+{
+ Animations = [
+     "_append"
+     {
+      Name = "FuryLungeStreak-Zeus-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "FuryLungeStreak-Zeus"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "FuryLungeStreak-Zeus"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCSpearRushTrail-Zeus"
+        }
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "QuickFlashYellowSmall"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "EPCSpearRushTrailFx-Zeus"
+      FilePath = "Dev\blank_invisible"
+      InheritFrom = "SpearRushTrailFx"
+      VisualFx = "SpearRushTrail-Zeus"
+      ClearCreateAnimations = true
+      CreateAnimations =
+      [
+        { Name = "SpearRushDashPuff" }
+        { Name = "QuickFlashYellowSmall" }
+      ]
+    }
+    {
+      Name = "EPCSpearRushTrail-Zeus"
+      InheritFrom = "SpearRushTrail"
+      Duration = 0.25
+      StartRed = 1
+      StartGreen = 1
+      StartBlue = 0.7
+      EndRed = 0.99
+      EndGreen = 0.99
+      EndBlue = 0.3
+      AngleFromMarker = "Take"
+      AngleFromOwner = "Take"
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "SpearRushTrail_Dark"
+        }
+        {
+          Name = "SpearThrowParticles_Rush-Zeus"
+        }
+        {
+          Name = "LightningPiece"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirl-Zeus"
+      CreateAnimation = "QuickFlashYellow"
+      //ChildAnimation = "FuryWhipWhirlDark"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      VisualFx = "FuryWhipWhirlRandom-Zeus_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      //OverlayVfx = true
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      // EndBlue = 0.6
+      // EndGreen = 1
+      // EndRed = 1
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Hue = 0.20
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 60.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      VisualFxCap = 2
+      VisualFxIntervalMax = 0.12
+      VisualFxIntervalMin = 0.1
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDark"
+        }
+        {
+          Name = "DionysusSpawner"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomA-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkA"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomB-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkB"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomC-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkC"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomD-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkD"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomE-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkE"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomF-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkF"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomG-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkG"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomH-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkH"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomI-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkI"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJ-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJ"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomK-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkK"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomL-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkL"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomM-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkM"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomN-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkN"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomO-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkO"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomAFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkAFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomBFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkBFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomCFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkCFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomDFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkDFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomEFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkEFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomFFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkFFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomGFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkGFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomHFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkHFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomIFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkIFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomKFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkKFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomLFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkLFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomMFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkMFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomNFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkNFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomOFast-Zeus"
+      InheritFrom = "FuryWhipWhirl-Zeus"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkOFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandom-Zeus_"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryWhipWhirlRandomA-Zeus" }
+        { Name = "FuryWhipWhirlRandomB-Zeus" }
+        { Name = "FuryWhipWhirlRandomC-Zeus" }
+        { Name = "FuryWhipWhirlRandomD-Zeus" }
+        { Name = "FuryWhipWhirlRandomE-Zeus" }
+        { Name = "FuryWhipWhirlRandomF-Zeus" }
+        { Name = "FuryWhipWhirlRandomG-Zeus" }
+        { Name = "FuryWhipWhirlRandomH-Zeus" }
+        { Name = "FuryWhipWhirlRandomI-Zeus" }
+        { Name = "FuryWhipWhirlRandomJ-Zeus" }
+        { Name = "FuryWhipWhirlRandomK-Zeus" }
+        { Name = "FuryWhipWhirlRandomL-Zeus" }
+        { Name = "FuryWhipWhirlRandomM-Zeus" }
+        { Name = "FuryWhipWhirlRandomN-Zeus" }
+        { Name = "FuryWhipWhirlRandomO-Zeus" }
+        { Name = "FuryWhipWhirlRandomAFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomBFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomCFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomDFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomEFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomFFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomGFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomHFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomIFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomJFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomKFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomLFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomMFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomNFast-Zeus" }
+        { Name = "FuryWhipWhirlRandomOFast-Zeus" }
+      ]
+    }
+    {
+      Name = "AlectoWhipArc-Zeus"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      // EndBlue = 0.3
+      // EndGreen = 0.7
+      // EndRed = 0.999
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      EndFrame = 17
+      Hue = 0.15
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashYellowLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement-Zeus"
+        }
+        {
+          Name = "AlectoWhipArcDark"
+        }
+        {
+          Name = "AlectoWhipArc-Zeus_Lightning"
+        }]
+    }
+    {
+      Name = "AlectoWhipArcDisplacement-Zeus"
+      InheritFrom = "AlectoWhipArc-Zeus"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "AlectoWhipArc-Zeus_Lightning"
+      InheritFrom = "SwordSwipeAFlipped-Zeus"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      FilePath = "Fx\SwordSwipeA-Zeus\SwordSwipeA-Zeus"
+      Type = "Book"
+      AddColor = false
+      EndFrame = 21
+      NumFrames = 21
+      ClearSlides = true
+      StartFrame = 1
+      Scale = 2.0
+    }
+    {
+      Name = "FuryAlectoThrow-Zeus"
+      ChainTo = "null"
+      CreateAnimation = null
+      ChildAnimation = "ProjectileLightningBallGlowSpawner"
+      FilePath = "Fx\LightningBall\LightningBall"
+      Type = "Book"
+      VisualFx = "SpearSwipe360Alecto-Zeus"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/ZeusLightningRangedAttack"
+      StopSoundOnFinishFade = 0.3
+      EndFrame = 30
+      Loop = true
+      NumFrames = 30
+      StartFrame = 1
+      Scale = 0.5
+      ScaleRadius = 110.0
+      Ambient = 0.0
+      VisualFxIntervalMax = 0.2
+      VisualFxIntervalMin = 0.1
+    }
+    {
+      Name = "SpearSwipe360Alecto-Zeus"
+      InheritFrom = "SpearSwipe360"
+      CreateAnimation = "SpearSwipe360Alecto-Displace"
+      ChildAnimation = "SpearSwipe360AlectoB-Zeus"
+      EndGreen = 1.0
+      EndBlue = 0.4
+      EndRed = 1.0
+      StartGreen = 1.0
+      StartBlue = 0.8
+      StartRed = 1.0
+      Scale = 1.8
+      EaseIn = 0.999
+      EaseOut = 1.0
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+          Frame = 4
+          VisualFx = "QuickFlashYellow"
+        }]
+    }
+    {
+      Name = "SpearSwipe360Alecto-Displace"
+      InheritFrom = "SpearSwipe360"
+      ChildAnimation = "null"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      StartAlpha = 0.1
+      ClearSlides = true
+      CancelOverCap = true
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360AlectoB-Zeus"
+      InheritFrom = "SpearSwipe360B"
+      ChildAnimation = "SpearSwipeGlowAlecto-Zeus"
+      Scale = 1.8
+      EndGreen = 1.0
+      EndBlue = 0.4
+      EndRed = 1.0
+      StartGreen = 1.0
+      StartBlue = 0.8
+      StartRed = 1.0
+    }
+    {
+      Name = "SpearSwipeGlowAlecto-Zeus"
+      InheritFrom = "SpearSwipeGlow"
+      ChildAnimation = "SpearSwipe360-Zeus-Emitter"
+      EndGreen = 1.0
+      EndBlue = 0.4
+      EndRed = 1.0
+      StartGreen = 1.0
+      StartBlue = 0.8
+      StartRed = 1.0
+    }
+    {
+      Name = "LightningPieceSpawner"
+      InheritFrom = "RadialNova"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      GroupName = "FX_Terrain_Add"
+      VisualFx = "LightningPieceSwordParry"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.03
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "FuryBeamEmitter-Zeus"
+      InheritFrom = "ProjectileFire"
+      ChildAnimation = "ProjectileLightningBallGlowSpawner"
+      FilePath = "Fx\ProjectileFire\ProjectileFire"
+      VisualFx = "LightningPiece"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastFire"
+      StopSoundOnFinishFade = 0.2
+      AddColor = true
+      EndScale = 0.25
+      PingPongScale = true
+      ScaleMax = 1.0
+      ScaleMin = 0.5     
+      EndFrame = 60
+      NumFrames = 60
+      StartFrame = 1
+      VisualFxUse3DAngle = false
+      Scale = 0.45
+      VisualFxIntervalMax = 0.071
+      VisualFxIntervalMin = 0.07
+      CreateAnimations = [
+        {
+          Name = "FuryBeamEmitterDark"
+        }]
+        Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    }
+    {
+      Name = "EnemyHeavySlashLasso-Zeus"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashLassoDark_1"
+      GroupName = "FX_Standing_Add"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AddColor = true
+      EaseIn = 0.9
+      EaseOut = 1.0
+      OriginX = 240.0
+      OriginY = 120.0
+      EndScaleY = 0.0
+      ScaleX = 4.0
+      StartScaleY = 0.8
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      CreateAnimations = [
+        {
+          Name = "EnemyHeavySlashLassoLighting-Zeus"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashLassoLighting-Zeus"
+      InheritFrom = "EnemyHeavySlashLassoLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "EnemyHeavySlashWhip1-Zeus"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashWhip1Dark_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      //ChildAnimation = "ProjectileLightningBallGlowLargeSpawner"
+      AddColor = true
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Hue = 0.20
+      EaseIn = 0.9
+      EaseOut = 1.0
+      ScaleX = 2.0
+      ScaleY = 1.5
+      CreateAnimations = [
+        {
+          Name = "ProjectileLightningBallGlowLarge"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }  
+    {
+      Name = "EnemyHeavySlashWhipLighting-Zeus"
+      InheritFrom = "EnemyHeavySlashWhipLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "ProjectileLightningBallGlowLarge"
+      FilePath = "Particles\particle_quickflash"
+      GroupName = "FX_Standing_Add"
+      Type = "Constant"
+      UseOwnAngle = false
+      EndAlpha = 0.7
+      StartAlpha = 1.0
+      EndFrame = 1
+      Loop = false
+      NumFrames = 1
+      RandomDurationMax = 0.2
+      RandomDurationMin = 0.2
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "FromParent"
+      EndScale = 0.5
+      Scale = 1.0
+      ScaleFromOwner = "Ignore"
+      StartScale = 1.5
+      Ambient = 0.0
+      Color = 
+      {
+        Red = 1.0
+        Green = 0.8
+        Blue = 0.3
+      }
+    }
+    {
+      Name = "ProjectileLightningBallGlowLargeSpawner"
+      InheritFrom = "GroupChange"
+      VisualFx = "ProjectileLightningBallGlowLarge"
+      DieWithOwner = true
+      LocationZFromOwner = "Ignore"
+      ScaleFromOwner = "Ignore"
+    }
+    {
+      Name = "LightningPieceNoOffset"
+      FilePath = "Animations\LightningPiece\LightningPiece"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        {
+          Name = "LightningPieceANoOffset"
+        }
+        {
+          Name = "LightningPieceBNoOffset"
+        }
+        {
+          Name = "LightningPieceCNoOffset"
+        }
+        {
+          Name = "LightningPieceDNoOffset"
+        }
+        {
+          Name = "LightningPieceENoOffset"
+        }
+        {
+          Name = "LightningPieceFNoOffset"
+        }]
+    }
+    {
+      Name = "LightningPieceANoOffset"
+      InheritFrom = "LightningPieceA"
+      GroupName = "FX_Standing_Add"
+      CreateAnimation = "null"
+      EndFrame = 44
+      NumFrames = 14
+      StartFrame = 31
+      OffsetZ = 0.0
+    }
+    {
+      Name = "LightningPieceBNoOffset"
+      InheritFrom = "LightningPieceANoOffset"
+      EndFrame = 44
+      NumFrames = 14
+      StartFrame = 31
+    }
+    {
+      Name = "LightningPieceCNoOffset"
+      InheritFrom = "LightningPieceANoOffset"
+      EndFrame = 58
+      NumFrames = 14
+      StartFrame = 46
+    }
+    {
+      Name = "LightningPieceDNoOffset"
+      InheritFrom = "LightningPieceANoOffset"
+      EndFrame = 74
+      NumFrames = 14
+      StartFrame = 61
+    }
+    {
+      Name = "LightningPieceENoOffset"
+      InheritFrom = "LightningPieceANoOffset"
+      EndFrame = 89
+      NumFrames = 14
+      StartFrame = 76
+    }
+    {
+      Name = "LightningPieceFNoOffset"
+      InheritFrom = "LightningPieceANoOffset"
+      EndFrame = 29
+      NumFrames = 14
+      StartFrame = 16
+    }
+
+{
+      Name = "LightningPieceLong"
+      FilePath = "Animations\LightningPiece\LightningPiece"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        {
+          Name = "LightningPieceLongA"
+        }
+        {
+          Name = "LightningPieceLongB"
+        }
+        {
+          Name = "LightningPieceLongC"
+        }
+        {
+          Name = "LightningPieceLongD"
+        }
+        {
+          Name = "LightningPieceLongE"
+        }
+        {
+          Name = "LightningPieceLongF"
+        }]
+    }
+    {
+      Name = "LightningPieceLongA"
+      InheritFrom = "LightningPieceA"
+      GroupName = "FX_Standing_Add"
+      CreateAnimation = "null"
+      EndFrame = 44
+      NumFrames = 14
+      StartFrame = 31
+      ScaleX = 3.0
+      OffsetZ = 50.0
+    }
+    {
+      Name = "LightningPieceLongB"
+      InheritFrom = "LightningPieceLongA"
+      EndFrame = 44
+      NumFrames = 14
+      StartFrame = 31
+    }
+
+    {
+      Name = "LightningPieceLongC"
+      InheritFrom = "LightningPieceLongA"
+      EndFrame = 58
+      NumFrames = 14
+      StartFrame = 46
+    }
+
+    {
+      Name = "LightningPieceLongD"
+      InheritFrom = "LightningPieceLongA"
+      EndFrame = 74
+      NumFrames = 14
+      StartFrame = 61
+    }
+
+    {
+      Name = "LightningPieceLongE"
+      InheritFrom = "LightningPieceLongA"
+      EndFrame = 89
+      NumFrames = 14
+      StartFrame = 76
+    }
+
+    {
+      Name = "LightningPieceLongF"
+      InheritFrom = "LightningPieceLongA"
+      EndFrame = 29
+      NumFrames = 14
+      StartFrame = 16
+    }
+    {
+      Name = "FuryHellfire-Zeus"
+      InheritFrom = "FuryHellfire"
+      FilePath = "Dev\blank_invisible" 
+      ChildAnimation = "LightningPieceSpawner"
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      AddColor = true
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      EaseIn = 0.5
+      EaseOut = 0.6
+      EndScaleX = 0.2
+      EndScaleY = 1.5
+      StartScaleX = 0.6
+      RandomFlipHorizontal = false
+      Hue = 0.20
+      CreateAnimations = [
+        { Name = "FuryHellfireRandom-Zeus" }
+        { Name = "QuickFlashYellowLarge" }
+        { Name = "RadialNovaZeus" }
+        { Name = "FuryDustRingFront" }
+        { Name = "FuryDustRingBack" }
+        //{ Name = "FuryHellfireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireRandom-Zeus"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryHellfireSlow-Zeus" }
+        { Name = "FuryHellfireFast-Zeus" }
+      ]
+    }
+    {
+      Name = "FuryHellfireSlow-Zeus"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = true
+      Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+      Hue = 0.20
+      PlaySpeed = 45.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireFast-Zeus"
+      InheritFrom = "FuryHellfireSlow-Zeus"
+      PlaySpeed = 75.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDarkFast" }
+      ]
+    }
+    {
+      Name = "FuryHellfirePreviewDecalDark-Zeus"
+      InheritFrom = "FuryHellfirePreviewDecalDark"
+      CreateAnimation = "FuryHellfirePreviewDecal-Zeus"
+    }
+    {
+      Name = "FuryHellfirePreviewDecal-Zeus"
+      InheritFrom = "FuryHellfirePreviewDecal"
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+    }
+    {
+      Name = "RadialNovaZeus"
+      InheritFrom = "RadialNova"
+      GroupName = "FX_Terrain_Add"
+      //VisualFx = "LightningPieceSwordParry"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.03
+      VisualFxIntervalMin = 0.01
+      TimeModifierFraction = 0.0
+      CreateAnimations = [
+        { Name = "RadialNovaSwordParryDark" }
+        { Name = "DisplaceShockwaveSwordParry" }
+        { Name = "LightningBoltZeus" }
+        { Name = "QuickFlashYellow" }
+      ]
+    }
+{
+      Name = "HarpyWhipSlashSwipe-Zeus"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Zeus"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Zeus"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Zeus"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Zeus"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      VisualFx = null
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Zeus"
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.011
+      VisualFxCap = 8
+      CreateAnimations = [
+        {
+          Name = "SwordSwipeAFlipped-Zeus_Lightning"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace-Zeus"
+        }
+        {
+          Name = "QuickFlashYellow"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Zeus"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Zeus"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Zeus"
+      CreateAnimations = [
+        {
+          Name = "SwordSwipeA-Zeus_Lightning"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Zeus"
+        }
+        {
+          Name = "QuickFlashYellow"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Zeus"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Zeus"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Zeus"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Zeus"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace-Zeus"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Zeus"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Zeus"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Zeus"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+ ]
+}

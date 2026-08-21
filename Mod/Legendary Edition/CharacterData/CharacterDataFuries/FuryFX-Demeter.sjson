@@ -1,0 +1,1249 @@
+{
+ Animations = [
+     "_append"
+     {
+      Name = "FuryLungeStreak-Demeter-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "FuryLungeStreak-Demeter"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "FuryLungeStreak-Demeter"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCSpearRushTrail-Demeter"
+        }
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "QuickFlashYellowSmall"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "EPCSpearRushTrailFx-Demeter"
+      FilePath = "Dev\blank_invisible"
+      InheritFrom = "SpearRushTrailFx"
+      VisualFx = "SpearRushTrail-Demeter"
+      ClearCreateAnimations = true
+      CreateAnimations =
+      [
+        { Name = "SpearRushDashPuff" }
+        { Name = "QuickFlashYellowSmall" }
+      ]
+    }
+    {
+      Name = "EPCSpearRushTrail-Demeter"
+      InheritFrom = "SpearRushTrail"
+      Duration = 0.25
+      StartRed = 1
+      StartGreen = 1
+      StartBlue = 0.7
+      EndRed = 0.99
+      EndGreen = 0.99
+      EndBlue = 0.3
+      AngleFromMarker = "Take"
+      AngleFromOwner = "Take"
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "SpearRushTrail_Dark"
+        }
+        {
+          Name = "SpearThrowParticles_Rush-Demeter"
+        }
+        {
+          Name = "LightningPiece"
+        }]
+    }
+{
+      Name = "FuryWhipWhirl-Demeter"
+      CreateAnimation = "QuickFlashYellow"
+      //ChildAnimation = "FuryWhipWhirlDark"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      VisualFx = "FuryWhipWhirlRandom-Demeter_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      //OverlayVfx = true
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      // EndBlue = 0.6
+      // EndGreen = 1
+      // EndRed = 1
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Hue = 0.20
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 60.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      VisualFxCap = 2
+      VisualFxIntervalMax = 0.12
+      VisualFxIntervalMin = 0.1
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDark"
+        }
+        {
+          Name = "DemeterSpawner"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomA-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkA"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomB-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkB"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomC-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkC"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomD-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkD"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomE-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkE"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomF-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkF"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomG-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkG"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomH-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkH"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomI-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkI"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJ-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJ"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomK-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkK"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomL-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkL"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomM-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkM"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomN-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkN"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomO-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkO"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomAFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkAFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomBFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkBFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomCFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkCFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomDFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkDFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomEFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkEFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomFFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkFFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomGFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkGFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomHFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkHFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomIFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkIFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomKFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkKFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomLFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkLFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomMFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkMFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomNFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkNFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomOFast-Demeter"
+      InheritFrom = "FuryWhipWhirl-Demeter"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkOFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandom-Demeter_"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryWhipWhirlRandomA-Demeter" }
+        { Name = "FuryWhipWhirlRandomB-Demeter" }
+        { Name = "FuryWhipWhirlRandomC-Demeter" }
+        { Name = "FuryWhipWhirlRandomD-Demeter" }
+        { Name = "FuryWhipWhirlRandomE-Demeter" }
+        { Name = "FuryWhipWhirlRandomF-Demeter" }
+        { Name = "FuryWhipWhirlRandomG-Demeter" }
+        { Name = "FuryWhipWhirlRandomH-Demeter" }
+        { Name = "FuryWhipWhirlRandomI-Demeter" }
+        { Name = "FuryWhipWhirlRandomJ-Demeter" }
+        { Name = "FuryWhipWhirlRandomK-Demeter" }
+        { Name = "FuryWhipWhirlRandomL-Demeter" }
+        { Name = "FuryWhipWhirlRandomM-Demeter" }
+        { Name = "FuryWhipWhirlRandomN-Demeter" }
+        { Name = "FuryWhipWhirlRandomO-Demeter" }
+        { Name = "FuryWhipWhirlRandomAFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomBFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomCFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomDFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomEFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomFFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomGFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomHFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomIFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomJFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomKFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomLFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomMFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomNFast-Demeter" }
+        { Name = "FuryWhipWhirlRandomOFast-Demeter" }
+      ]
+    }
+    {
+      Name = "AlectoWhipArc-Demeter"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      // EndBlue = 0.3
+      // EndGreen = 0.7
+      // EndRed = 0.999
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      EndFrame = 17
+      Hue = 0.15
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashYellowLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement-Demeter"
+        }
+        {
+          Name = "AlectoWhipArcDark"
+        }
+/*         {
+          Name = "AlectoWhipArc-Demeter_Lightning"
+        } */]
+    }
+    {
+      Name = "AlectoWhipArcDisplacement-Demeter"
+      InheritFrom = "AlectoWhipArc-Demeter"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    // {
+    //   Name = "AlectoWhipArc-Demeter_Lightning"
+    //   InheritFrom = "SwordSwipeAFlipped-Demeter"
+    //   CreateAnimation = "null"
+    //   ClearCreateAnimations = true
+    //   FilePath = "Fx\SwordSwipeA-Demeter\SwordSwipeA-Demeter"
+    //   Type = "Book"
+    //   AddColor = false
+    //   EndFrame = 21
+    //   NumFrames = 21
+    //   ClearSlides = true
+    //   StartFrame = 1
+    //   Scale = 2.0
+    // }
+    {
+      Name = "FuryAlectoThrow-Demeter"
+      ChainTo = "null"
+      CreateAnimation = null
+      FilePath = "Fx\DemeterProjectile\DemeterProjectile"
+      Type = "Book"
+      VisualFx = "SpearSwipe360Alecto-Demeter"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/DemeterShieldRangedAttack"
+      StopSoundOnFinishFade = 0.3
+      EndFrame = 30
+      Loop = true
+      NumFrames = 30
+      StartFrame = 1
+      Scale = 0.5
+      ScaleRadius = 110.0
+      Ambient = 0.0
+      VisualFxIntervalMax = 0.2
+      VisualFxIntervalMin = 0.1
+    }
+    {
+      Name = "SpearSwipe360Alecto-Demeter"
+      InheritFrom = "SpearSwipe360"
+      CreateAnimation = "SpearSwipe360Alecto-Displace"
+      ChildAnimation = "SpearSwipe360AlectoB-Demeter"
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      Scale = 1.8
+      StartGreen = 0.95
+      EaseIn = 0.999
+      EaseOut = 1.0
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+          Frame = 4
+          VisualFx = "QuickFlashBlueSpawner"
+        }]
+    }
+    {
+      Name = "SpearSwipe360Alecto-Displace"
+      InheritFrom = "SpearSwipe360"
+      ChildAnimation = "null"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      StartAlpha = 0.1
+      ClearSlides = true
+      CancelOverCap = true
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360AlectoB-Demeter"
+      InheritFrom = "SpearSwipe360B"
+      ChildAnimation = "SpearSwipeGlowAlecto-Demeter"
+      Scale = 1.8
+      EndBlue = 1.0
+      EndGreen = 0.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+    }
+    {
+      Name = "SpearSwipeGlowAlecto-Demeter"
+      InheritFrom = "SpearSwipeGlow"
+      ChildAnimation = null
+      EndGreen = 0.9
+      EndRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+    }
+    {
+      Name = "SpearSwipe360Alecto-Demeter-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "SpearSwipe360-Demeter-Particles"
+      //Sound = "null"
+      Duration = 0.2
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxIntervalMax = 0.011
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "DemeterSpawner"
+      InheritFrom = "RadialNova"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      GroupName = "FX_Terrain_Add"
+      VisualFx = "LightningPieceSwordParry"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.03
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "FuryBeamEmitter-Demeter"
+      InheritFrom = "ProjectileFire"
+      ChildAnimation = "ProjectileLightningBallGlowSpawner"
+      FilePath = "Fx\ProjectileFire\ProjectileFire"
+      VisualFx = "LightningPiece"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastFire"
+      StopSoundOnFinishFade = 0.2
+      AddColor = true
+      EndScale = 0.25
+      PingPongScale = true
+      ScaleMax = 1.0
+      ScaleMin = 0.5     
+      EndFrame = 60
+      NumFrames = 60
+      StartFrame = 1
+      VisualFxUse3DAngle = false
+      Scale = 0.45
+      VisualFxIntervalMax = 0.071
+      VisualFxIntervalMin = 0.07
+      CreateAnimations = [
+        {
+          Name = "FuryBeamEmitterDark"
+        }]
+        Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    }
+    {
+      Name = "EnemyProjectileLightYellow"
+      InheritFrom = "EnemyProjectileLight"
+      Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    }
+    {
+      Name = "EnemyHeavySlashLasso-Demeter"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashLassoDark_1"
+      GroupName = "FX_Standing_Add"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AddColor = true
+      EaseIn = 0.9
+      EaseOut = 1.0
+      OriginX = 240.0
+      OriginY = 120.0
+      EndScaleY = 0.0
+      ScaleX = 4.0
+      StartScaleY = 0.8
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      CreateAnimations = [
+        {
+          Name = "EnemyHeavySlashLassoLighting-Demeter"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashLassoLighting-Demeter"
+      InheritFrom = "EnemyHeavySlashLassoLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "EnemyHeavySlashWhip1-Demeter"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashWhip1Dark_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      //ChildAnimation = "ProjectileLightningBallGlowLargeSpawner"
+      AddColor = true
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Hue = 0.20
+      EaseIn = 0.9
+      EaseOut = 1.0
+      ScaleX = 2.0
+      ScaleY = 1.5
+      CreateAnimations = [
+        {
+          Name = "ProjectileLightningBallGlowLarge"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashWhipLighting-Demeter"
+      InheritFrom = "EnemyHeavySlashWhipLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "FuryHellfire-Demeter"
+      InheritFrom = "FuryHellfire"
+      FilePath = "Dev\blank_invisible" 
+      ChildAnimation = "LightningPieceSpawner"
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      AddColor = true
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      EaseIn = 0.5
+      EaseOut = 0.6
+      EndScaleX = 0.2
+      EndScaleY = 1.5
+      StartScaleX = 0.6
+      RandomFlipHorizontal = false
+      Hue = 0.20
+      CreateAnimations = [
+        { Name = "FuryHellfireRandom-Demeter" }
+        { Name = "QuickFlashYellowLarge" }
+        { Name = "RadialNovaZeus" }
+        { Name = "FuryDustRingFront" }
+        { Name = "FuryDustRingBack" }
+        //{ Name = "FuryHellfireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireRandom-Demeter"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryHellfireSlow-Demeter" }
+        { Name = "FuryHellfireFast-Demeter" }
+      ]
+    }
+    {
+      Name = "FuryHellfireSlow-Demeter"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = true
+      Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+      Hue = 0.20
+      PlaySpeed = 45.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireFast-Demeter"
+      InheritFrom = "FuryHellfireSlow-Demeter"
+      PlaySpeed = 75.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDarkFast" }
+      ]
+    }
+    {
+      Name = "FuryHellfirePreviewDecalDark-Demeter"
+      InheritFrom = "FuryHellfirePreviewDecalDark"
+      CreateAnimation = "FuryHellfirePreviewDecal-Demeter"
+    }
+    {
+      Name = "FuryHellfirePreviewDecal-Demeter"
+      InheritFrom = "FuryHellfirePreviewDecal"
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+    }
+    // {
+    //   Name = "RadialNovaDemeter"
+    //   InheritFrom = "RadialNova"
+    //   GroupName = "FX_Terrain_Add"
+    //   //VisualFx = "LightningPieceSwordParry"
+    //   EndBlue = 0.3
+    //   EndGreen = 0.7
+    //   EndRed = 0.999
+    //   StartBlue = 0.6
+    //   StartGreen = 1.0
+    //   StartRed = 1.0
+    //   PlaySpeed = 75.0
+    //   ScaleRadius = 350.0
+    //   VisualFxCap = 8
+    //   VisualFxIntervalMax = 0.03
+    //   VisualFxIntervalMin = 0.01
+    //   TimeModifierFraction = 0.0
+    //   CreateAnimations = [
+    //     { Name = "RadialNovaSwordParryDark" }
+    //     { Name = "DisplaceShockwaveSwordParry" }
+    //     { Name = "LightningBoltZeus" }
+    //     { Name = "QuickFlashYellow" }
+    //   ]
+    // }
+    {
+      Name = "HarpyWhipSlashSwipe-Demeter"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Demeter"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Demeter"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Demeter"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Demeter"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      Color = { Red = 0.0 Green = 1.0 Blue = 0.4 }
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Demeter"
+      VisualFx = null
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.011
+      VisualFxCap = 8
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace-Demeter"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Demeter"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Demeter"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Demeter"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Demeter"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Demeter"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Demeter"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Demeter"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Demeter"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace-Demeter"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Demeter"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Demeter"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Demeter"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+ ]
+}

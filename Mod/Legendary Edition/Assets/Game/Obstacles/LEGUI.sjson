@@ -1,0 +1,145 @@
+{
+    Obstacles = [
+        "_append"
+
+    {
+      Name = "BoonBoxAlecto"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectInAlecto"
+      }
+    }
+    {
+      Name = "BoonBoxMeg"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectInMeg"
+      }
+    }
+    {
+      Name = "BoonBoxTis"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectInTis"
+      }
+    }
+
+    {
+      Name = "BoonSelectLighting_Alecto"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectLighting_Alecto"
+      }
+    }
+    {
+      Name = "BoonSelectLighting_Meg"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectLighting_Meg"
+      }
+    }
+    {
+      Name = "BoonSelectLighting_Tis"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectLighting_Tis"
+      }
+    }
+
+    {
+      Name = "BoonSelectInFrontFx_Alt"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "BoonSelectInFrontFx_Alt"
+      }
+    }
+
+    {
+      Name = "ContractExchangeBackground"
+      InheritFrom = "1_BaseGUIObstacle"
+      DisplayInEditor = false
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "ContractExchangeIn"
+      }
+    }
+
+    {
+      Name = "HouseDesk_ContractExchange"
+      InheritFrom = "1_BaseInvulnerableObstacle"
+      DisplayInEditor = true
+      Thing = 
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "Tilesets\House\House_Desk_ContractExchange"
+        Offset = { X = 0 Y = -154 }
+        Points = [
+          { X = 116 Y = 339 }
+          { X = 458 Y = 156 }
+          { X = -64 Y = -118 }
+          { X = -432 Y = 68 }
+        ]
+      }
+    }
+    {
+      Name = "HouseDesk_ContractExchange02"
+      InheritFrom = "1_BaseInvulnerableObstacle"
+      DisplayInEditor = true
+      Thing = 
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "Tilesets\House\House_Desk_ContractExchange"
+        Offset = { X = 0 Y = -154 }
+        Points = [
+          { X = 0 Y = 0 }
+          { X = 0 Y = 0 }
+          { X = 0 Y = 0 }
+          { X = 0 Y = 0 }
+        ]
+      }
+    }
+    {
+      Name = "LEInvisibleTarget"
+      DisplayInEditor = true
+	  NeedsLife = false
+      Life =
+      {
+        Invulnerable = true
+      }
+      Thing =
+      {
+        EditorOutlineDrawBounds = false
+        Graphic = "Dev\InvisibleTarget"
+        Grip = 1E+08
+        Invisible = true
+        Material = "Unlit"
+        StopsProjectiles = false
+        StopsUnits = false
+        Tallness = 0.0
+        TriggerOnSpawn = false
+      }
+    }
+    ]
+}

@@ -1,0 +1,681 @@
+{
+ Animations = [
+     "_append"
+         {
+      Name = "DashCrackHades"
+      ChainTo = "DashCrackHadesDissipate"
+	  VisualFxManagerCap = 400
+      CreateAnimation = "DashPuff"
+      FilePath = "Fx\DashCrack\DashCrack"
+      GroupName = "FX_Terrain"
+      Type = "Book"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/DashCrack"
+      ColorFromOwner = "Ignore"
+      EndAlpha = 1.0
+      Duration = 0.2
+      EaseOut = 1.0
+      EndFrame = 1
+      HoldLastFrame = true
+      NumAngles = 64
+      NumFrames = 1
+      StartFrame = 1
+      LocationFromOwner = "Take"
+	  LocationZFromOwner = "Ignore"
+      Scale = 0.95
+      StartScale = 0.0
+      CancelOverCap = true
+      OnlyWhenVisible = true
+      UseAttachedFlasher = false
+    }
+    {
+      Name = "DashCrackHadesDissipate"
+      InheritFrom = "DashCrackHades"
+      ChainTo = "null"
+      CreateAnimation = "null"
+      Sound = "/EmptyCue"
+      EndAlpha = 0.0
+      StartAlpha = 1.0
+      RandomDurationMax = 1.1
+      RandomDurationMin = 0.9
+      TransferAngle = true
+      StartScale = 0.999
+	  HoldLastFrame = false
+    }
+    {
+      Name = "FireFootstepL-Hades"
+      ChildAnimation = "FireFootstepRays-Hades"
+      FilePath = "Fx\FireFootstep\FireFootstep"
+      GroupName = "FX_Terrain_Add"
+      Light = "FootstepLight"
+      Type = "Slide"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/BurningFootsteps"
+      SoundManagerCap = 16
+      ColorFromOwner = "Ignore"
+      EndFrame = 25
+      NumFrames = 25
+      PlaySpeed = 30.0
+      StartFrame = 1
+      LocationFromOwner = "Ignore"
+      SortMode = "FromParent"
+      PostRotateScaleY = 0.5
+      Scale = 0.8
+      Ambient = 0.0
+      Slides = [
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 30
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "FootstepLight-Hades"
+      FilePath = "Lights\DiffuseSpotlight"
+      Type = "Constant"
+      EndRed = 1.0
+      StartAlpha = 1.0
+      StartBlue = 0.01
+      StartGreen = 0.5
+      StartRed = 1.0
+      Duration = 0.25
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 2.2
+    }
+    {
+      Name = "FireFootstepL-Spawner-Hades"
+      InheritFrom = "GroupChange"
+      VisualFx = "FireFootstepL-Hades"
+      VisualFxManagerCap = 300
+      UseAttachedMarkerLocation = "l_foot_TRACKING"
+    }
+    {
+      Name = "FireFootstepR-Spawner-Hades"
+      InheritFrom = "GroupChange"
+      VisualFx = "FireFootstepR-Hades"
+      VisualFxManagerCap = 300
+      UseAttachedMarkerLocation = "r_foot_TRACKING"
+    }
+    {
+      Name = "FireFootstepParticles-Hades"
+      FilePath = "Particles\particle_spark"
+      GroupName = "FX_Terrain_Add"
+      Type = "Constant"
+      AngleChangeSpeedMax = 40.0
+      AngleChangeSpeedMin = -40.0
+      AngleMax = 95.0
+      AngleMin = 85.0
+      ColorFromOwner = "Ignore"
+      StartGreen = 1.0
+      EndFrame = 1
+      NumFrames = 1
+      RandomDurationMax = 1.0
+      RandomDurationMin = 0.25
+      StartFrame = 1
+      RandomOffsetX = 20.0
+      LocationFromOwner = "Ignore"
+      Acceleration = -100.0
+      VelocityMax = 160.0
+      VelocityMin = 40.0
+      EndScale = 0.0
+      ScaleMax = 1.0
+      ScaleMin = 0.2
+      Ambient = 0.0
+    }
+    {
+      Name = "FireFootstepR-Hades"
+      InheritFrom = "FireFootstepL"
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepParticles-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "FireFootstepRays-Hades"
+      FilePath = "Fx\FireFootstepVerticalRays\FireFootstepVerticalRays"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      EndFrame = 13
+      NumFrames = 13
+      PlaySpeed = 30.0
+      StartFrame = 1
+      RandomFlipHorizontal = true
+      OriginX = 24.0
+      OriginY = 113.0
+      LocationFromOwner = "Ignore"
+      ScaleMax = 0.8
+      ScaleMin = 0.6
+    }
+    {
+      Name = "EPCHadesAmmoBurst"
+      InheritFrom = "EPCHadesAmmo"
+      FilePath = "Fx\HadesAmmoBurst\HadesAmmoBurst"
+      NumFrames = 25
+      Loop = false
+      CreateAnimation = "EPCMinotaurLandDust"
+      Scale = 1.25
+      StartOffsetZ = 15
+      EndOffsetZ = 14.5
+      VisualFx = null
+    }
+
+
+    // {
+    //   Name = "EPCHadesSpinPreview"
+    //   FilePath = "Fx\SpearSpinPreview\SpearSpinPreview"
+    //   GroupName = "FX_Standing_Add"
+    //   Type = "Book"
+    //   AngleChangeSpeedMax = -499.00
+    //   AngleChangeSpeedMin = -500.00
+    //   Sound = "/Leftovers/SFX/AuraOnLoud"
+    //   Duration = 0.6
+    //   EndFrame = 30
+    //   NumFrames = 30
+    //   StartFrame = 1
+    //   OffsetZ = 80.0
+    //   RotationSpeed = 500.00
+    //   PostRotateScaleY = 0.5
+    //   Scale = 2.5
+    //   Ambient = 0.0
+    // }
+
+    {
+      Name = "EPCHadesBidentArc"
+      FilePath = "Fx\HadesBidentArc\HadesBidentArc"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      EndFrame = 15
+      NumFrames = 15
+      PlaySpeed = 50.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.65
+      Ambient = 0.0
+      VisualFx = "null"
+      ActiveVisualFxCap = 50
+      VisualFxIntervalMin = 0.02
+      VisualFxIntervalMax = 0.03
+      CreateAnimations = [
+        { Name = "QuickFlashEnemy" }
+      ]
+    }
+
+    {
+      Name = "EPCHadesBidentArcRight"
+      InheritFrom = "EPCHadesBidentArc"
+      CreateAnimation = "EPCHadesBidentArcRightDisplacement"
+      FlipVertical = false
+    }
+
+    {
+      Name = "EPCHadesBidentArcRightDisplacement"
+      InheritFrom = "EPCHadesBidentArcRight"
+      CreateAnimation = "null"
+      GroupName = "FX_Displacement"
+      EndAlpha = 0.1
+      PingPongColor = true
+      PlaySpeed = 40.0
+    }
+
+    {
+      Name = "EPCHadesBidentArcLeft"
+      InheritFrom = "EPCHadesBidentArc"
+      CreateAnimation = "EPCHadesBidentArcLeftDisplacement"
+    }
+
+    {
+      Name = "EPCHadesBidentArcLeftDisplacement"
+      InheritFrom = "EPCHadesBidentArcRightDisplacement"
+      FlipVertical = true
+    }
+
+
+    {
+      Name = "EPCHadesBidentStrike"
+      Type = "Constant"
+      FilePath = "Particles\particle_glow"
+      CreateAnimation = "QuickFlashEnemy"
+      GroupName = "FX_Standing_Add"
+      VisualFx = "WaveFistTrailShade"
+      Sound = "/SFX/Enemy Sounds/BloodlessWaveAmbienceLoop"
+      StopSoundOnFinishFade = 0.25
+      Alpha = 0.35
+      EndFrame = 1
+      Loop = true
+      NumFrames = 1
+      StartFrame = 1
+      Ambient = 0.0
+      VisualFxDistanceMax = 50.0
+      VisualFxDistanceMin = 40.0
+      OverlayVfx = true
+      PingPongShiftOverDuration = true
+      CreateAnimations = [
+        { Name = "ShadeSpikeVertical" }
+        { Name = "EPCHadesBidentStrikeSwipe" }
+        { Name = "EPCHadesBidentStrikeSwipeDisplacement" }
+      ]
+      Color = { Red = 1.0 Green = 0.5 Blue = 0 }
+    }
+
+    {
+        Name = "EPCHadesBidentStrikeSwipe"
+        Type = "Book"
+        FilePath = "Fx\HadesBidentStrike\HadesBidentStrike"
+        NumFrames = 12
+        PlaySpeed = 30
+        Material = "Unlit"
+        Scale = 1.5
+        VisualFx = "null"
+        VisualFxIntervalMin = 0.01
+        VisualFxIntervalMax = 0.02
+        VisualFxCap = 16
+        OffsetZ = 60
+        OriginX = 250
+        OriginY = 100
+    }
+
+    {
+        Name = "EPCHadesBidentStrikeSwipeDisplacement"
+        InheritFrom = "EPCHadesBidentStrikeSwipe"
+        PlaySpeed = 15
+        VisualFx = "null"
+    }
+
+    {
+      Name = "EPCHadesBidentSpinSwipe"
+      FilePath = "Fx\HadesBidentSwipe\HadesBidentSwipe"
+      Type = "Book"
+      EndFrame = 18
+      NumFrames = 18
+      PlaySpeed = 45.0
+      StartFrame = 1
+      FlipHorizontal = false
+      RotationSpeed = 90.0
+      PostRotateScaleY = 0.6
+      Scale = 2.1
+      ScaleFromOwner = "Ignore"
+      SortMode = "FromParent"
+      Ambient = 0.0
+      ScaleRadius = 400
+      ColorFromOwner = "Ignore"
+      ActiveVisualFxCap = 50
+      // VisualFx = "EPCHydraTouchdownFx"
+      // VisualFxIntervalMin = 0.001
+      // VisualFxIntervalMax = 0.0011
+      CreateAnimations = [
+        {
+          Name = "EPCHadesBidentSpinSwipe_Add"
+        }
+        {
+          Name = "EPCHadesBidentSpinSwipe_Displace"
+        }
+        {
+          Name = "DeathDefianceShockwave"
+        }
+        ]
+    }
+    {
+      Name = "EPCHadesBidentSpinSwipe_Add"
+      InheritFrom = "EPCHadesBidentSpinSwipe"
+      GroupName = "FX_Standing_Add"
+      ClearCreateAnimations = true
+      PlaySpeed = 60.0
+    }
+    {
+      Name = "EPCHadesBidentSpinSwipe_Displace"
+      InheritFrom = "EPCHadesBidentSpinSwipe"
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      PlaySpeed = 24.0
+      Alpha = 0.15
+      VisualFx = null
+    }
+
+    {
+      Name = "EPCHadesSpearPullNova"
+      Type = "Book"
+      FilePath = "Fx\RadialNova\RadialNova"
+      PlaySpeed = 30
+      NumFrames = 44
+      PostRotateScaleY = 0.5
+      Alpha = 0.1
+      StartAlpha = 1
+      EndAlpha = 0
+      Scale = 2
+      GroupName = "FX_Displacement"
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.02
+      CreateAnimations = [
+        // { Name = "HadesSpearPullSnow" }
+        // { Name = "HadesSpearPullSnowBack" }
+        { Name = "HadesSpearPullNovaDark" }
+      ]
+    }
+
+    {
+      Name = "EPCHadesSpearPullNovaDark"
+      InheritFrom = "HadesSpearPullNova"
+      GroupName = "FX_Terrain"
+      PlaySpeed = 45
+      Alpha = 0.3
+      ClearCreateAnimations = true
+      VisualFx = null
+      ChildAnimation = null
+      CreateAnimation = null
+      Red = 1
+      Green = 1
+      Blue = 1
+    }
+
+    {
+      Name = "EPCHadesSpearPullSnow"
+      InheritFrom = "DustRingFrontSnow"
+      Scale = 2
+      Material = "Unlit"
+      Red = 0.45
+      Green = 0.43
+      Blue = 0.40
+      StartAlpha = 0.5
+      EndAlpha = 0
+    }
+
+    {
+      Name = "EPCHadesSpearPullSnowBack"
+      InheritFrom = "DustRingBackSnow"
+      Scale = 2
+      Material = "Unlit"
+      Red = 0.2
+      Green = 0.23
+      Blue = 0.20
+      OffsetZ = -200
+      StartAlpha = 0.5
+      EndAlpha = 0
+    }
+    // {
+    //   Name = "RadialSwipeSnow"
+    //   Type = "Random"
+    //   Random = [
+    //     { Name = "RadialSwipeSnowA" }
+    //     { Name = "RadialSwipeSnowB" }
+    //     { Name = "RadialSwipeSnowC" }
+    //     { Name = "RadialSwipeSnowD" }
+    //   ]
+    // }
+
+    // {
+    //   Name = "RadialSwipeSnowBidentArc"
+    //   Type = "Random"
+    //   Random = [
+    //     { Name = "RadialSwipeSnowA_Arc" }
+    //     { Name = "RadialSwipeSnowB_Arc" }
+    //     { Name = "RadialSwipeSnowC_Arc" }
+    //     { Name = "RadialSwipeSnowD_Arc" }
+    //   ]
+    // }
+
+    // {
+    //   Name = "RadialSwipeSnowA"
+    //   InheritFrom = "DashCrackSnowTrailA"
+    //   RandomDurationMin = 0.7
+    //   RandomDurationMax = 1.4
+    //   Material = "Unlit"
+    //   VelocityMin = 250
+    //   VelocityMax = 400
+    //   StartScale = 0.4
+    //   EndScale = 0.75
+    //   ScaleMin = 1
+    //   ScaleMax = 1.5
+    //   Gravity = 250
+    //   Acceleration = -250
+    //   UpwardVelocityMin = 0
+    //   UpwardVelocityMax = 1
+    //   UseOwnAngle = true
+    //   SortMode = "FromParent"
+    //   LocationFromOwner = "Ignore"
+    //   RadialOffsetScaleY = 0.5
+    //   RadialOffsetScaleRadius = 400
+    //   RadialOffsetMin = 300
+    //   RadialOffsetMax = 400
+    //   AngleMin = 180
+    //   AngleMax = 540
+    // }
+
+    // {
+    //   Name = "RadialSwipeSnowB"
+    //   InheritFrom = "RadialSwipeSnowA"
+    //   FilePath = "Particles\particle_snowDust_02"
+    // }
+
+    // {
+    //   Name = "RadialSwipeSnowC"
+    //   InheritFrom = "RadialSwipeSnowA"
+    //   FilePath = "Particles\particle_snowDust_03"
+    // }
+
+    // {
+    //   Name = "RadialSwipeSnowD"
+    //   InheritFrom = "RadialSwipeSnowA"
+    //   FilePath = "Particles\particle_snowDust_04"
+    // }
+
+    {
+      Name = "RadialSwipeSnowA_Arc"
+      Type = "Constant"
+      FilePath = "Particles\particle_snowDust_01"
+      RandomDurationMin = 0.7
+      RandomDurationMax = 1.4
+      Material = "Unlit"
+      VelocityMin = 250
+      VelocityMax = 400
+      StartScale = 0.4
+      EndScale = 0.75
+      ScaleMin = 1.5
+      ScaleMax = 2.5
+      Gravity = 250
+      Acceleration = -250
+      UpwardVelocityMin = 0
+      UpwardVelocityMax = 1
+      UseOwnAngle = true
+      ScaleFromOwner = "Ignore"
+      SortMode = "FromParent"
+      LocationFromOwner = "Ignore"
+      RadialOffsetScaleY = 0.5
+      RadialOffsetMin = 300
+      RadialOffsetMax = 400
+      AngleMin = -120
+      AngleMax = 120
+      StartAlpha = 1
+      EndAlpha = 0
+      GroupName = "Standing"
+      AngleFromOwner = "Take"
+    }
+    {
+      Name = "EPCMinotaurLandDust"
+      InheritFrom = "DoorCloseDust"
+      CreateAnimations = [
+        { Name = "EPCDustRingFrontMinotaurLand" }
+        { Name = "EPCDustRingBackMinotaurLand" }
+        { Name = "EPCRubbleFallImpactDebris" }
+        { Name = "EPCRubbleFallImpactDebris" }
+        { Name = "EPCRubbleFallImpactDecal" }
+      ]
+    }
+
+    {
+      Name = "EPCDustRingFrontMinotaurLand"
+      InheritFrom = "DustRingFront"
+      AngleFromOwner = "Ignore"
+      PlaySpeed = 45.0
+      LocationFromOwner = "Ignore"
+      LocationZFromOwner = "Ignore"
+      SortMode = "FromParent"
+      GroupName = "Standing"
+    }
+
+    {
+      Name = "EPCDustRingBackMinotaurLand"
+      InheritFrom = "DustRingBack"
+      AngleFromOwner = "Ignore"
+      StartAlpha = 0.5
+      PlaySpeed = 45.0
+      OffsetY = 0.0
+      OffsetZ = 30.0
+      LocationFromOwner = "Ignore"
+      LocationZFromOwner = "Ignore"
+      GroupName = "Standing"
+    }
+  ]
+}

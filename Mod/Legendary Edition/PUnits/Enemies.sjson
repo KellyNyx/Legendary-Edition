@@ -1,0 +1,14 @@
+{
+  Units = [
+  "_append"
+  {
+    Name = "ControllableMeg"
+    InheritFrom = "Harpy"
+  }
+  {
+    Name = "ControllableMegSupportUnit"
+    InheritFrom = "HarpySupportUnit"
+    ImmuneToCharm = false
+  }
+  ]
+}

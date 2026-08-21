@@ -1,0 +1,102 @@
+::Packages
+
+::1080p
+
+To "Win/Packages/Launch.pkg"
+Replace "Assets/Packages/1080p/Launch.pkg"
+To "Win/Packages/Launch.pkg_manifest"
+Replace "Assets/Packages/1080p/Launch.pkg_manifest"
+
+To "Win/Packages/LEGUI.pkg"
+Replace "Assets/Packages/1080p/LEGUI.pkg"
+To "Win/Packages/LEGUI.pkg_manifest"
+Replace "Assets/Packages/1080p/LEGUI.pkg_manifest"
+
+::720p
+
+To "Win/Packages/Launch.pkg"
+Replace "Assets/Packages/720p/Launch.pkg"
+To "Win/Packages/720p/Launch.pkg_manifest"
+Replace "Assets/Packages/720p/Launch.pkg_manifest"
+
+To "Win/Packages/LEGUI.pkg"
+Replace "Assets/Packages/720p/LEGUI.pkg"
+To "Win/Packages/720p/LEGUI.pkg_manifest"
+Replace "Assets/Packages/720p/LEGUI.pkg_manifest"
+
+::Movies
+
+::1080p
+
+To "Movies/BoonAlectoIn.bik"
+Replace "Assets/Movies/1080p/BoonAlectoIn.bik"
+To "Movies/BoonAlectoIn.bik_atlas"
+Replace "Assets/Movies/1080p/BoonAlectoIn.bik_atlas"
+
+To "Movies/BoonAlectoOut.bik"
+Replace "Assets/Movies/1080p/BoonAlectoOut.bik"
+To "Movies/BoonAlectoOut.bik_atlas"
+Replace "Assets/Movies/1080p/BoonAlectoOut.bik_atlas"
+
+To "Movies/BoonMegaerIn.bik"
+Replace "Assets/Movies/1080p/BoonMegaerIn.bik"
+To "Movies/BoonMegaerIn.bik_atlas"
+Replace "Assets/Movies/1080p/BoonMegaerIn.bik_atlas"
+
+To "Movies/BoonMegaerOut.bik"
+Replace "Assets/Movies/1080p/BoonMegaerOut.bik"
+To "Movies/BoonMegaerOut.bik_atlas"
+Replace "Assets/Movies/1080p/BoonMegaerOut.bik_atlas"
+
+To "Movies/BoonTisiphIn.bik"
+Replace "Assets/Movies/1080p/BoonTisiphIn.bik"
+To "Movies/BoonTisiphIn.bik_atlas"
+Replace "Assets/Movies/1080p/BoonTisiphIn.bik_atlas"
+
+To "Movies/BoonTisiphOut.bik"
+Replace "Assets/Movies/1080p/BoonTisiphOut.bik"
+To "Movies/BoonTisiphOut.bik_atlas"
+Replace "Assets/Movies/1080p/BoonTisiphOut.bik_atlas
+
+To "Movies/MainMenuLE.bik"
+Replace "Assets/Movies/1080p/MainMenuLE.bik"
+To "Movies/MainMenuLE.bik_atlas"
+Replace "Assets/Movies/1080p/MainMenuLE.bik_atlas
+
+::720p
+
+To "Movies/720p/BoonAlectoIn.bik"
+Replace "Assets/Movies/720p/BoonAlectoIn.bik"
+To "Movies/720p/BoonAlectoIn.bik_atlas"
+Replace "Assets/Movies/720p/BoonAlectoIn.bik_atlas"
+
+To "Movies/720p/BoonAlectoOut.bik"
+Replace "Assets/Movies/720p/BoonAlectoOut.bik"
+To "Movies/720p/BoonAlectoOut.bik_atlas"
+Replace "Assets/Movies/720p/BoonAlectoOut.bik_atlas"
+
+To "Movies/720p/BoonMegaerIn.bik"
+Replace "Assets/Movies/720p/BoonMegaerIn.bik"
+To "Movies/720p/BoonMegaerIn.bik_atlas"
+Replace "Assets/Movies/720p/BoonMegaerIn.bik_atlas"
+
+To "Movies/720p/BoonMegaerOut.bik"
+Replace "Assets/Movies/720p/BoonMegaerOut.bik"
+To "Movies/720p/BoonMegaerOut.bik_atlas"
+Replace "Assets/Movies/720p/BoonMegaerOut.bik_atlas"
+
+To "Movies/720p/BoonTisiphIn.bik"
+Replace "Assets/Movies/720p/BoonTisiphIn.bik"
+To "Movies/720p/BoonTisiphIn.bik_atlas"
+Replace "Assets/Movies/720p/BoonTisiphIn.bik_atlas"
+
+To "Movies/720p/BoonTisiphOut.bik"
+Replace "Assets/Movies/720p/BoonTisiphOut.bik"
+To "Movies/720p/BoonTisiphOut.bik_atlas"
+Replace "Assets/Movies/720p/BoonTisiphOut.bik_atlas
+
+To "Movies/720p/MainMenuLE.bik"
+Replace "Assets/Movies/720p/MainMenuLE.bik"
+To "Movies/720p/MainMenuLE.bik_atlas"
+Replace "Assets/Movies/720p/MainMenuLE.bik_atlas
+

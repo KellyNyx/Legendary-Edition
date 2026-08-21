@@ -1,0 +1,9 @@
+{
+    Texts = [
+        "_append"
+    {
+      Id = "ContractExchange_Title"
+      DisplayName = "Contract Exchange"
+    }
+    ]
+}

@@ -1,0 +1,99 @@
+--v TraitData v--
+
+-- function stuupidtest()
+-- TraitData.AthenaRushTrait.RequiredFalseTraits = { "EPC_CharacterHandlerTrait" }
+
+-- TraitData.AthenaRushTrait1 = 
+-- {
+-- 	RequiredTrait = { "EPC_CharacterHandlerTrait" },
+-- 	Icon = "Boon_Athena_03",
+-- 		InheritFrom = { "ShopTier1Trait" },
+-- 		God = "Athena",
+-- 		Slot = "Rush",
+-- 		RarityLevels =
+-- 		{
+-- 			Common =
+-- 			{
+-- 				Multiplier = 1.0,
+-- 			},
+-- 			Rare =
+-- 			{
+-- 				Multiplier = 1.2,
+-- 			},
+-- 			Epic =
+-- 			{
+-- 				Multiplier = 1.4,
+-- 			},
+-- 			Heroic =
+-- 			{
+-- 				Multiplier = 1.6,
+-- 			}
+-- 		},
+-- 		PropertyChanges =
+-- 		{
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				WeaponProperty = "Projectile",
+-- 				ChangeValue = "AthenaRushProjectile",
+-- 				ChangeType = "Absolute",
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				WeaponProperty = "FireFx",
+-- 				ChangeValue = "BlinkTrail-AthenaDark",
+-- 				ChangeType = "Absolute",
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				WeaponProperty = "FireGraphic",
+-- 				ChangeValue = "ZagreusDashNoCollide_Athena",
+-- 				ChangeType = "Absolute",
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				WeaponProperty = "BlinkDetonateOnInterval",
+-- 				ChangeValue = 60,
+-- 				ChangeType = "Absolute",
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				EffectName = "AthenaDashShieldReflection",
+-- 				EffectProperty = "Active",
+-- 				ChangeValue = true,
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				EffectName = "AthenaDashShieldReflect",
+-- 				EffectProperty = "Active",
+-- 				ChangeValue = true,
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				ProjectileProperty = "DamageLow",
+-- 				BaseMin = 10,
+-- 				BaseMax = 10,
+-- 				AsInt = true,
+-- 				MinMultiplier = 0.2,
+-- 				IdenticalMultiplier =
+-- 				{
+-- 					Value = DuplicateStrongMultiplier,
+-- 				},
+-- 				ExtractValue =
+-- 				{
+-- 					ExtractAs = "TooltipDamage",
+-- 				}
+-- 			},
+-- 			{
+-- 				WeaponNames = WeaponSets.HeroRushWeapons,
+-- 				ProjectileProperty = "DamageHigh",
+-- 				DeriveValueFrom = "DamageLow"
+-- 			},
+-- 		},
+-- }
+-- table.insert( LootData.AthenaUpgrade.PriorityUpgrades, "AthenaRushTrait1" )
+-- table.insert( LootData.AthenaUpgrade.WeaponUpgrades, "AthenaRushTrait1" )
+-- table.insert( LootData.AthenaUpgrade.LinkedUpgrades.AthenaBackstabDebuffTrait.OneOf, "AthenaRushTrait1" )
+-- table.insert( LootData.AthenaUpgrade.LinkedUpgrades.AthenaShieldTrait.OneOf, "AthenaRushTrait1" )
+-- end
+
+--stuupidtest()

@@ -1,0 +1,20 @@
+Import "EPCAlectoMain.lua"
+
+To "Scripts/WeaponData.lua"
+Import "AlectoWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "AlectoWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "AlectoWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "AlectoWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "AlectoProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "AlectoWeapons.sjson"
+

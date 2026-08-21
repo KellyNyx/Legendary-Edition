@@ -1,0 +1,422 @@
+{
+    Projectiles = [
+        "_append"
+    {
+      Name = "AlectoRushWeaponControl"
+      InheritFrom = "1_BasePlayerSmallProjectile"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      ImpactFx = "null"
+      ImpactSound = "null"
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      Range = 450
+      Speed = 99999
+      MaxSpeed = 99999
+      Acceleration = 15000
+      DamageLow = 0
+      DamageHigh = 0
+      CanCrit = false
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      ObstacleCollisionCheck = "PolygonContainsPoint"
+      SpawnOnDeath = "BlankObstacle1"
+      SpawnType = "OBSTACLE"
+      SpawnGroup = "Standing"
+      DangerDistance = 200
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 60
+        AttachedAnim = "null"
+        Grip = 999999
+        Points = [
+          {
+            X = 0
+            Y = 64
+          }
+          {
+            X = 128
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -64
+          }
+          {
+            X = -128
+            Y = 0
+          }]
+      }
+      Effects = [
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          Cancelable = true
+        }
+        {
+          Name = "EnemyFriendStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }]
+    }
+    {
+      Name = "EPCAlectoRushWeapon"
+      DetonateSound = "null"
+      InheritFrom = "EPCMegaeraRushWeapon"
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }]
+      }
+      Effects = [
+        {
+          Name = "EnemyFriendStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          FrontFx = "null"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }]
+    }
+    {
+      Name = "EPCHarpyLungeAlecto"
+      CanCrit = true
+      InheritFrom = "EPCHarpyLunge"
+      ImpactFx = "null"
+      ImpactFxInterval = 0.0
+    }
+    {
+      Name = "EPCAlectoWhipLash1"
+      InheritFrom = "EPCMegWhipLash1"
+      DamageHigh = 20
+      DamageLow = 20
+    }
+    {
+      Name = "EPCAlectoWhipLash2"
+      InheritFrom = "EPCMegWhipLash1"
+      ArcStart = 90
+      ArcEnd = -75
+      DamageHigh = 20
+      DamageLow = 20
+    }
+    {
+      Name = "EPCHarpyWhipWhirlAlectoDash"
+      InheritFrom = "EPCHarpyWhipWhirlDash"
+      DetonateGraphic = "FuryWhipWhirlAlecto"
+    }
+    {
+      Name = "EPCHarpyWhipArc"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "null"
+      Type = "ARC"
+      ArcStart = -75
+      ArcEnd = 90
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      AttachToOwner = false
+      DamageLow = 35
+      DamageHigh = 35
+      Speed = 2700
+      Range = 360
+      NumPenetrations = 99999
+      CanCrit = true
+      CriticalHitMultiplier = 3
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = true
+      UseVulnerability = true
+      InvulnerableImpactOwnerVelocity = 300
+      StartFx = "null"
+      UseRadialImpact = false
+      ImpactLineOfSightFromOwner = true
+      UseDetonationForProjectileDefense = true
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = -360
+            Y = 0
+          }
+          {
+            X = 0
+            Y = 100
+          }
+          {
+            X = 0
+            Y = -100
+          }
+        ]
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "AlectoWhipSlash"
+      InheritFrom = "SpearWeapon"
+      DetonateGraphic = "HarpyWhipSlashSwipeFlipped-Alecto"
+      Speed = 6000
+      Range = 160
+      DamageRadius = 300
+      ProjectileDefenseAngle = 100
+      ProjectileDefenseRadius = 240
+      DamageLow = 20
+      DamageHigh = 20
+      Thing = 
+      {
+        Graphic = "HarpyWhipSlashSwipeFlipped-Alecto"
+        Points = [
+          {
+            X = 200
+            Y = 100
+          }
+          {
+            X = 200
+            Y = -100
+          }
+          {
+            X = -10
+            Y = -150
+          }
+          {
+            X = -10
+            Y = 150
+          }]
+      }
+    }
+    {
+      Name = "EPCHarpyBeamAlecto"
+      InheritFrom = "EPCHarpyBeam"
+      CanCrit = true
+      DamageHigh = 5
+      DamageLow = 5
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+      Thing =
+	    {
+        Graphic = "FuryBeamEmitterAlecto"
+        AttachedAnim = "EnemyProjectileLightRed"
+      }
+    }
+    {
+      Name = "EPCHarpyWhipShot"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "HOMING"
+      HomingAllegiance = "ENEMIES"
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      MaxAdjustRate = 35
+      UnlimitedUnitPenetration = true
+      CanCrit = true
+      CriticalHitMultiplier = 3
+      Range = 99999
+      Speed = 400
+      DamageRadius = 125
+      DamageRadiusScaleY = 0.7
+      DamageRadiusScaleX = 1.3
+      DamageLow = 10
+      DamageHigh = 10
+      ImpactVelocity = 600
+      MultiDetonate = true
+      TotalFuse = 12
+      Fuse = 0.2
+      ImpactFx = "HitSparkSwordOrb"
+      UseVulnerability = false
+      SilentImpactOnInvulnerable = true
+      NumBounces = 999
+      ReflectOnUnitImpact = false
+      CanBeReflected = false
+      DetonateGraphic = "null"
+      DangerDistance = 50
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 125
+      DeflectProjectiles = false
+      Effects = [
+        {
+          Name = "EnemyFriendStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          FrontFx = "null"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }]
+      Thing = 
+      {
+        Graphic = "FuryAlectoThrow"
+        OffsetZ = 0
+        Grip = 999999
+        AttachedAnim = "null"
+        Points = [
+          {
+            X = 90
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -45
+          }
+          {
+            X = -90
+            Y = 0
+          }
+          {
+            X = 0
+            Y = 45
+          }]
+      }
+    }
+    {
+      Name = "EPCHarpyLightningAlecto"
+      InheritFrom = "EPCHarpyLightningMeg"
+      DetonateGraphic = "FuryHellfireAlecto"
+      CanCrit = true
+      DamageLow = 30
+      DamageHigh = 30
+      Thing = {
+        Graphic = "FuryHellfirePreviewDecalDarkAlecto"
+        Color = {
+          Red = 1.0
+          Green = 1.0
+          Blue = 0
+          Opacity = 1.0
+        }
+      }
+    }
+  ]
+}

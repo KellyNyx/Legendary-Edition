@@ -1,0 +1,51 @@
+::Shared
+
+Import "BombersMain.lua"
+
+::Burn-Flinger
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "Burn-Flinger/Burn-FlingerProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "Burn-Flinger/Burn-FlingerWeapons.sjson"
+
+Import "Burn-Flinger/Burn-FlingerWeaponData.lua"
+
+Import "Burn-Flinger/Burn-FlingerWeaponSets.lua"
+
+Import "Burn-Flinger/Burn-FlingerWeaponTrait.lua"
+
+Import "Burn-Flinger/Burn-FlingerWeaponUpgradeData.lua"
+
+::Inferno-Bomber
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "Inferno-Bomber/Inferno-BomberProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "Inferno-Bomber/Inferno-BomberWeapons.sjson"
+
+Import "Inferno-Bomber/Inferno-BomberWeaponData.lua"
+
+Import "Inferno-Bomber/Inferno-BomberWeaponSets.lua"
+
+Import "Inferno-Bomber/Inferno-BomberWeaponTrait.lua"
+
+Import "Inferno-Bomber/Inferno-BomberWeaponUpgradeData.lua"
+
+::Slam-Dancer
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "Slam-Dancer/Slam-DancerProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "Slam-Dancer/Slam-DancerWeapons.sjson"
+
+Import "Slam-Dancer/Slam-DancerWeaponData.lua"
+
+Import "Slam-Dancer/Slam-DancerWeaponSets.lua"
+
+Import "Slam-Dancer/Slam-DancerWeaponTrait.lua"
+
+Import "Slam-Dancer/Slam-DancerWeaponUpgradeData.lua"

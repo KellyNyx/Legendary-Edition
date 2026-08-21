@@ -1,0 +1,241 @@
+{
+Animations = [
+    "_append"
+    {
+      Name = "MainMenuLoopLEBeta_Furies"
+      InheritFrom = "MainMenuIn"
+      ChildAnimation = "MainMenuUpdateImage_Furies"
+      FilePath = "Screens\MainMenuLoop\MainMenuLoop"
+      VideoTexture = "MainMenuLoop"
+      Loop = true
+      PlaySpeed = 30.0
+	  Slides = []
+    }
+
+    {
+      Name = "MainMenuUpdateTitle_Furies"
+      FilePath = "GUI\Screens\UpdateTitle"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.25
+      Ambient = 0.0
+    }
+
+    {
+      Name = "MainMenuUpdateImage_Furies"
+      ChildAnimation = "MainMenuZagStatic"
+      FilePath = "GUI\Screens\Furies"
+      Type = "Constant"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRushAttack"
+      EndAlpha = 1.0
+      EndBlue = 1.0
+      EndGreen = 1.0
+      EndRed = 1.0
+      Duration = 2.0
+      EaseOut = 1.0
+      EndFrame = 1
+      HoldLastFrame = true
+      NumFrames = 1
+      StartFrame = 1
+      StartOffsetX = -360.0
+      StartScale = 0.99
+      Ambient = 0.0
+      SoundAllowedAfterFrame = -1
+    }
+
+    {
+      Name = "MainMenuInLEBeta"
+      ChainTo = "MainMenuLoopLEBeta_Furies"
+      //FilePath = "Screens\MainMenuInLEBeta\MainMenuInLEBeta"
+      Type = "Book"
+      VideoTexture = "MainMenuLE"
+      EndFrame = 80
+      NumFrames = 80
+      PlaySpeed = 45.0
+      StartFrame = 1
+      Ambient = 0.0
+      OnlyWhenVisible = true
+      Slides = [
+        { DurationFrames = 1 Sound = "/SFX/StabSplatterEndSequence" Frame = 1 }
+        { DurationFrames = 1 Sound = "/SFX/Menu Sounds/HadesMainMenuWhoosh" Frame = 64 }
+      ]
+    }
+
+    {
+      Name = "MainMenuLogo_1"
+      FilePath = "GUI\MainMenuLogo"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.5
+      Ambient = 0.0
+    }
+
+    {
+      Name = "MainMenuInWait_Beta"
+      ChainTo = "LELogoInBeta"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      EndFrame = 80
+      NumFrames = 80
+      PlaySpeed = 32.0
+      StartFrame = 1
+      Ambient = 0.0
+      //CreateAnimation = "MainMenuLogo"
+     // OnlyWhenVisible = true
+    }
+
+    {
+      Name = "MainMenuInWait"
+      ChainTo = "LELogoIn"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      EndFrame = 80
+      NumFrames = 80
+      PlaySpeed = 32.0
+      StartFrame = 1
+      Ambient = 0.0
+      //CreateAnimation = "MainMenuLogo"
+     // OnlyWhenVisible = true
+    }
+
+    {
+      Name = "MainMenuLogoLEBeta"
+      FilePath = "GUI\Screens\LegendaryEdition_Beta"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.5
+      Ambient = 0.0
+    }
+
+    {
+      Name = "MainMenuLogoLE"
+      FilePath = "GUI\Screens\LegendaryEdition"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.5
+      Ambient = 0.0
+    }
+
+    {
+      Name = "LETitleIn"
+      ChainTo = "MainMenuLogoLE"
+      Type = "Book"
+      FilePath = "Screens\LEETitleIn\LEETitleIn"
+      VideoTexture = "LEETitleIn"
+      
+      EndFrame = 23
+      NumFrames = 23
+      Loop = true
+      StartFrame = 1
+      Ambient = 0.0
+      PlaySpeed = 30.0
+      Slides = [
+        { DurationFrames = 1 Sound = "/SFX/Menu Sounds/LegendaryBoonShimmer" Frame = 1 }
+      ]
+    }
+
+    {
+      Name = "LELogoInBeta"
+      ChainTo = "MainMenuLogoLEBeta"
+      Type = "Book"
+      FilePath = "GUI\Screens\LELogoInBeta\LELogoInBeta"
+      //VideoTexture = "LEETitleIn"
+      
+      EndFrame = 24
+      NumFrames = 24
+      //HoldLastFrame = true
+      StartFrame = 1
+      Scale = 0.5
+      Ambient = 0.0
+      PlaySpeed = 30.0
+      //ChildAnimation = "MainMenuLogo"
+      //CreateAnimationOnEnd = "LETitleIn"
+      // NumAngles = 1
+      // AngleFromOwner = "Ignore"
+      Slides = [
+        { DurationFrames = 1 Sound = "/SFX/Menu Sounds/LegendaryBoonShimmer" Frame = 1 }
+        
+        /*Frame 1*/
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        //{ DurationFrames = 1 VisualFx = "MainMenuLogoLE" Frame = 23 }
+      ]
+    }
+
+    {
+      Name = "LELogoIn"
+      ChainTo = "MainMenuLogoLE"
+      Type = "Book"
+      FilePath = "GUI\Screens\LELogoIn\LELogoIn"
+      //VideoTexture = "LEETitleIn"
+      
+      EndFrame = 24
+      NumFrames = 24
+      //HoldLastFrame = true
+      StartFrame = 1
+      Scale = 0.5
+      Ambient = 0.0
+      PlaySpeed = 30.0
+      //ChildAnimation = "MainMenuLogo"
+      //CreateAnimationOnEnd = "LETitleIn"
+      // NumAngles = 1
+      // AngleFromOwner = "Ignore"
+      Slides = [
+        { DurationFrames = 1 Sound = "/SFX/Menu Sounds/LegendaryBoonShimmer" Frame = 1 }
+        
+        /*Frame 1*/
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        // { DurationFrames = 1 }
+        //{ DurationFrames = 1 VisualFx = "MainMenuLogoLE" Frame = 23 }
+      ]
+    }
+    ]
+}

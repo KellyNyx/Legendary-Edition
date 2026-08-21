@@ -1,0 +1,1651 @@
+{
+ Animations = [
+     "_append"
+      { 
+      Name = "EPCMegaeraHeroLanding_Air_Streak"
+      FilePath = "Fx\RubbleFallStreak\RubbleFallStreak"
+      Type = "Slide"
+      EndFrame = 8
+      NumFrames = 8
+      StartFrame = 1
+      RandomFlipHorizontal = true
+      OriginX = 164.0
+      OriginY = 934.0
+      OffsetY = -180
+      ScaleX = 1.5
+      ScaleFromOwner = "Take"
+      AngleFromOwner = "Ignore"
+      GroupName = "Standing"
+      SortMode = "FromParent"
+      DrawBehindOwner = true
+      Ambient = 0.0
+      AddColor = true
+      StartRed = 1.0
+      StartGreen = 0.0
+      StartBlue = 1.0
+      EndRed = 0.05
+      EndGreen = 0.1
+      EndBlue = 1.0
+      Slides = [
+        { DurationFrames = 100 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+      ]
+    }
+    {
+      Name = "EPCAlectoHeroLanding_Air_Streak"
+      InheritFrom = "EPCMegaeraHeroLanding_Air_Streak"
+      StartRed = 0.999
+      StartGreen = 0.0
+      StartBlue = 0.0
+      EndRed = 0.1
+      EndGreen = 1.0
+      EndBlue = 0.3
+    }
+    {
+      Name = "EPCTisiphoneHeroLanding_Air_Streak"
+      InheritFrom = "EPCMegaeraHeroLanding_Air_Streak"
+      StartRed = 0.2
+      StartGreen = 1.0
+      StartBlue = 0.2
+      EndRed = 0.3
+      EndGreen = 0.1
+      EndBlue = 1.0
+    }
+    { 
+      Name = "EPCMegaeraHeroLanding_Air_Streak_Fast"
+      InheritFrom = "EPCMegaeraHeroLanding_Air_Streak"
+      Slides = [
+        { DurationFrames = 25 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+      ]
+    }
+    {
+      Name = "EPCAlectoHeroLanding_Air_Streak_Fast"
+      InheritFrom = "EPCMegaeraHeroLanding_Air_Streak_Fast"
+      StartRed = 0.999
+      StartGreen = 0.0
+      StartBlue = 0.0
+      EndRed = 0.1
+      EndGreen = 1.0
+      EndBlue = 0.3
+    }
+    {
+      Name = "EPCTisiphoneHeroLanding_Air_Streak_Fast"
+      InheritFrom = "EPCMegaeraHeroLanding_Air_Streak_Fast"
+      StartRed = 0.2
+      StartGreen = 1.0
+      StartBlue = 0.2
+      EndRed = 0.3
+      EndGreen = 0.1
+      EndBlue = 1.0
+    }
+    {
+      Name = "EPCFuryLungeStreak_Meg-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "EPCFuryLungeStreak_Meg"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFuryLungeStreak_Meg"
+      FilePath = "Fx\KnockbackLines\KnockbackLines"
+      GroupName = "FX_Standing_Add"
+      Type = "Book"
+      AngleFromOwner = "Take"
+      ColorFromOwner = "Ignore"
+      VisualFx = "null"
+      StartRed = 1.0
+      StartGreen = 0.0
+      StartBlue = 1.0
+      EndRed = 0.05
+      EndGreen = 0.1
+      EndBlue = 1.0
+      EndFrame = 19
+      NumFrames = 19
+      PlaySpeed = 90.0
+      StartFrame = 1
+      RandomFlipVertical = true
+      OriginX = 70.0
+      OriginY = 138.0
+      LocationZFromOwner = "Maintain"
+      LocationFromOwner = "Ignore"
+      SortMode = "FromParent"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.0
+      ScaleMin = 0.6
+      ScaleY = 0.5
+      StartScaleX = 6.0
+      Ambient = 0.0
+      OffsetZ = 50
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.01
+      UseVelocityAngleFromOwner = false
+      UseAttachedFlasher = false
+      TimeModifierFraction = 0.5
+      CreateAnimations = [
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "EPCFuryLungeStreak_Alecto-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "EPCFuryLungeStreak_Alecto"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFuryLungeStreak_Alecto"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      StartRed = 0.999
+      StartGreen = 0.0
+      StartBlue = 0.0
+      EndRed = 0.1
+      EndGreen = 1.0
+      EndBlue = 0.3
+    }
+    {
+      Name = "EPCFuryLungeStreak_Tisiphone-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "EPCFuryLungeStreak_Tisiphone"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFuryLungeStreak_Tisiphone"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      StartRed = 0.2
+      StartGreen = 1.0
+      StartBlue = 0.2
+      EndRed = 0.3
+      EndGreen = 0.1
+      EndBlue = 1.0
+    }
+    {
+      Name = "EPCFuryLungeStreakDark"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      GroupName = "FX_Dark"
+      Red = 0
+      Green = 0
+      Blue = 0
+      PlaySpeed = 50
+      ClearCreateAnimations = true
+      CreateAnimation = null
+    }
+    {
+      Name = "EPCTisiphoneLunge"
+      InheritFrom = "EnemyHeavySlashStretch"
+      AngleFromOwner = "Take"
+      CreateAnimation = "QuickFlashGreen"
+      PlaySpeed = 60.0
+      CreateAnimations = [
+        { Name = "EPCFuryTisiphoneGhosts" }
+      ]
+      Color = { Red = 0.0 Green = 1.0 Blue = 0.4 }
+      
+    }
+    {
+      Name = "EPCFuryTisiphoneGhosts"
+      FilePath = "Fx\FuryTisiphoneGhosts\FuryTisiphoneGhosts"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Take"
+      UseOwnAngle = false
+      ColorFromOwner = "Ignore"
+      EaseIn = 0.9
+      EaseOut = 1.0
+      EndFrame = 47
+      NumFrames = 47
+      RandomPlaySpeedMax = 120.0
+      RandomPlaySpeedMin = 90.0
+      StartFrame = 1
+      RandomFlipHorizontal = true
+      LocationFromOwner = "Take"
+      SortMode = "FromParent"
+      EndScaleX = 0.5
+      EndScaleY = 2.0
+      Scale = 1.5
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      UseAttachedFlasher = false
+    }
+    // {
+    //   Name = "FuryBeamEmitter-Zeus"
+    //   InheritFrom = "FuryBeamEmitter"
+    //   VisualFx = "FuryBeamFire-Zeus"
+    //   Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    //   CreateAnimations = [
+    //     { Name = "FuryBeamEmitterDark" }
+    //   ]
+      
+    // }
+    // {
+    //   Name = "FuryBeamFire-Zeus"
+    //   InheritFrom = "FuryBeamFire"
+    //   CreateAnimations = [
+    //     { Name = "FuryBeamFireDark" }
+    //     { Name = "BatMaybe" }
+    //   ]
+    // }
+    {
+      Name = "FuryWhipWhirlDark"
+      //LocationZFromOwner = "Take"
+      //CancelOverCap = true
+      //SortFromOwner = "Take"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      GroupName = "FX_Dark"
+      SortMode = "FromParent"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 50.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      AngleMin = 0
+      AngleMax = 0
+      AddColor = false
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryWhipWhirlDarkA"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 20
+      AngleMax = 20
+    }
+    {
+      Name = "FuryWhipWhirlDarkB"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 30
+      AngleMax = 30
+    }
+    {
+      Name = "FuryWhipWhirlDarkC"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 40
+      AngleMax = 40
+    }
+    {
+      Name = "FuryWhipWhirlDarkD"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 50
+      AngleMax = 50
+    }
+    {
+      Name = "FuryWhipWhirlDarkE"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 60
+      AngleMax = 60
+    }
+    {
+      Name = "FuryWhipWhirlDarkF"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 70
+      AngleMax = 70
+    }
+    {
+      Name = "FuryWhipWhirlDarkG"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 80
+      AngleMax = 80
+    }
+    {
+      Name = "FuryWhipWhirlDarkH"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 90
+      AngleMax = 90
+    }
+    {
+      Name = "FuryWhipWhirlDarkI"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 100
+      AngleMax = 100
+    }
+    {
+      Name = "FuryWhipWhirlDarkJ"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 110
+      AngleMax = 110
+    }
+    {
+      Name = "FuryWhipWhirlDarkK"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 120
+      AngleMax = 120
+    }
+    {
+      Name = "FuryWhipWhirlDarkL"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 130
+      AngleMax = 130
+    }
+    {
+      Name = "FuryWhipWhirlDarkM"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 140
+      AngleMax = 140
+    }
+    {
+      Name = "FuryWhipWhirlDarkN"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 150
+      AngleMax = 150
+    }
+    {
+      Name = "FuryWhipWhirlDarkO"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.5
+      AngleMin = 160
+      AngleMax = 160
+    }
+    //Fast versions//
+    {
+      Name = "FuryWhipWhirlDarkAFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 20
+      AngleMax = 20
+    }
+    {
+      Name = "FuryWhipWhirlDarkBFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 30
+      AngleMax = 30
+    }
+    {
+      Name = "FuryWhipWhirlDarkCFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 40
+      AngleMax = 40
+    }
+    {
+      Name = "FuryWhipWhirlDarkDFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 50
+      AngleMax = 50
+    }
+    {
+      Name = "FuryWhipWhirlDarkEFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 60
+      AngleMax = 60
+    }
+    {
+      Name = "FuryWhipWhirlDarkFFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 70
+      AngleMax = 70
+    }
+    {
+      Name = "FuryWhipWhirlDarkGFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 80
+      AngleMax = 80
+    }
+    {
+      Name = "FuryWhipWhirlDarkHFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 90
+      AngleMax = 90
+    }
+    {
+      Name = "FuryWhipWhirlDarkIFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 100
+      AngleMax = 100
+    }
+    {
+      Name = "FuryWhipWhirlDarkJFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 110
+      AngleMax = 110
+    }
+    {
+      Name = "FuryWhipWhirlDarkKFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 120
+      AngleMax = 120
+    }
+    {
+      Name = "FuryWhipWhirlDarkLFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 130
+      AngleMax = 130
+    }
+    {
+      Name = "FuryWhipWhirlDarkMFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 140
+      AngleMax = 140
+    }
+    {
+      Name = "FuryWhipWhirlDarkNFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 150
+      AngleMax = 150
+    }
+    {
+      Name = "FuryWhipWhirlDarkOFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.5
+      AngleMin = 160
+      AngleMax = 160
+    }
+    //RapidLashesDark//
+    {
+      Name = "FuryWhipWhirl-RapidLashesDark"
+      InheritFrom = "FuryWhipWhirlDark"
+      Scale = 1.5
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkA"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 20
+      AngleMax = 20
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkB"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 30
+      AngleMax = 30
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkC"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 40
+      AngleMax = 40
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkD"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 50
+      AngleMax = 50
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkE"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 60
+      AngleMax = 60
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkF"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 70
+      AngleMax = 70
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkG"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 80
+      AngleMax = 80
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkH"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 90
+      AngleMax = 90
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkI"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 100
+      AngleMax = 100
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkJ"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 110
+      AngleMax = 110
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkK"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 120
+      AngleMax = 120
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkL"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 130
+      AngleMax = 130
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkM"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 140
+      AngleMax = 140
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkN"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 150
+      AngleMax = 150
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkO"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 45.0
+      Scale = 1.0
+      AngleMin = 160
+      AngleMax = 160
+    }
+    //Fast versions//
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkAFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 20
+      AngleMax = 20
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkBFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 30
+      AngleMax = 30
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkCFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 40
+      AngleMax = 40
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkDFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 50
+      AngleMax = 50
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkEFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 60
+      AngleMax = 60
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkFFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 70
+      AngleMax = 70
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkGFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 80
+      AngleMax = 80
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkHFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 90
+      AngleMax = 90
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkIFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 100
+      AngleMax = 100
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkJFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 110
+      AngleMax = 110
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkKFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 120
+      AngleMax = 120
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkLFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 130
+      AngleMax = 130
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkMFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 140
+      AngleMax = 140
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkNFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 150
+      AngleMax = 150
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesDarkOFast"
+      InheritFrom = "FuryWhipWhirlDark"
+      PlaySpeed = 75.0
+      Scale = 1.0
+      AngleMin = 160
+      AngleMax = 160
+    }
+    {
+      Name = "EnemyHeavySlashWhip1Dark_1"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "null"
+      GroupName = "FX_Dark"
+      ClearCreateAnimations = true
+      AddColor = false
+      EndBlue = 0.00
+      EndGreen = 0.00
+      EndRed = 0.00
+      StartBlue = 0.0
+      StartGreen = 0.0
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+      PlaySpeed = 60.0
+    }
+    {
+      Name = "EnemyHeavySlashLassoDark_1"
+      InheritFrom = "EnemyHeavySlashLasso"
+      CreateAnimation = "null"
+      GroupName = "Standing"
+      ClearCreateAnimations = true
+      AddColor = false
+      PlaySpeed = 50.0
+      ScaleY = 1.5
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryHellfireDark"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "FX_Dark"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = false
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+      PlaySpeed = 35.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+    }
+    {
+      Name = "FuryHellfireDarkFast"
+      InheritFrom = "FuryHellfireDark"
+      GroupName = "FX_Dark"
+      PlaySpeed = 65.0
+    }
+    {
+      Name = "FuryWhipWhirlAlecto"
+      InheritFrom = "FuryWhipWhirl"
+      FilePath = "Fx\FuryWhipWhirlAlecto\FuryWhipWhirlAlecto"
+      CreateAnimation = "QuickFlashRed"
+      VisualFx = "FuryWhipWhirlRandomAlecto"
+    }
+    {
+      Name = "FuryWhipWhirlRandomAlecto"
+      InheritFrom = "FuryWhipWhirlAlecto"
+      VisualFx = "null"
+      AngleMax = 360.0
+      RandomPlaySpeedMax = 90.0
+      RandomPlaySpeedMin = 60.0
+      Scale = 1.5
+    }
+    {
+      Name = "FuryWhipWhirlAlectoEnraged"
+      InheritFrom = "FuryWhipWhirl"
+      Hue = 0.1
+      AddColor = true
+       Color = { Red = 0.5 Green = 0.0 Blue = 0.0 }
+      CreateAnimation = "QuickFlashRed"
+      VisualFx = "FuryWhipWhirlRandomAlectoEnraged"
+    }
+    {
+      Name = "FuryWhipWhirlRandomAlectoEnraged"
+      InheritFrom = "FuryWhipWhirlAlectoEnraged"
+      VisualFx = "null"
+      AngleMax = 360.0
+      RandomPlaySpeedMax = 90.0
+      RandomPlaySpeedMin = 60.0
+      Scale = 1.5
+    }
+    {
+      Name = "FuryWhipWhirlTisiphoneLE"
+      InheritFrom = "FuryWhipWhirl"
+      FilePath = "Fx\FuryWhipWhirlTisiphone\FuryWhipWhirlTisiphone"
+      CreateAnimation = "QuickFlashRed"
+      VisualFx = "FuryWhipWhirlRandomTisiphoneLE"
+    }
+    {
+      Name = "FuryWhipWhirlRandomTisiphoneLE"
+      InheritFrom = "FuryWhipWhirlTisiphoneLE"
+      VisualFx = "null"
+      AngleMax = 360.0
+      RandomPlaySpeedMax = 90.0
+      RandomPlaySpeedMin = 60.0
+      Scale = 1.5
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashes"
+      InheritFrom = "FuryWhipWhirl"
+      VisualFx = "FuryWhipWhirlRandom-RapidLashes"
+      Scale = 1.0
+    }
+    {
+      Name = "FuryWhipWhirlRandom-RapidLashes"
+      InheritFrom = "FuryWhipWhirlRandom"
+      Scale = 1.0
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesAlecto"
+      FilePath = "Fx\FuryWhipWhirlAlecto\FuryWhipWhirlAlecto"
+      InheritFrom = "FuryWhipWhirlAlecto"
+      VisualFx = "FuryWhipWhirlRandom-RapidLashesAlecto"
+      Scale = 1.0
+    }
+    {
+      Name = "FuryWhipWhirlRandom-RapidLashesAlecto"
+      FilePath = "Fx\FuryWhipWhirlAlecto\FuryWhipWhirlAlecto"
+      InheritFrom = "FuryWhipWhirlRandom"
+      Scale = 1.0
+    }
+    {
+      Name = "FuryWhipWhirl-RapidLashesTisiphoneLE"
+      FilePath = "Fx\FuryWhipWhirlTisiphone\FuryWhipWhirlTisiphone"
+      InheritFrom = "FuryWhipWhirl"
+      VisualFx = "FuryWhipWhirlRandom-RapidLashesTisiphoneLE"
+      Scale = 1.0
+    }
+    {
+      Name = "FuryWhipWhirlRandom-RapidLashesTisiphoneLE"
+      FilePath = "Fx\FuryWhipWhirlTisiphone\FuryWhipWhirlTisiphone"
+      InheritFrom = "FuryWhipWhirlRandom"
+      Scale = 1.0
+    }
+    {
+      Name = "AlectoWhipArcOffset"
+      OriginX = 200.0
+      OriginY = 256.0
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashRedLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement"
+        }]
+    }
+    {
+      Name = "AlectoWhipArcOffsetDisplacement"
+      InheritFrom = "AlectoWhipArcOffset"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "AlectoWhipArcOffsetFlipped"
+      OriginX = 200.0
+      OriginY = 256.0
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = false
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashRedLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement"
+        }]
+    }
+    {
+      Name = "AlectoWhipArcOffsetDisplacementFlipped"
+      InheritFrom = "AlectoWhipArc"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+      FlipVertical = false
+    }
+    {
+      Name = "AlectoWhipArcDark"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      GroupName = "FX_Dark"
+      SortMode = "FromParent"
+      AddColor = false
+      // EndBlue = 0.3
+      // EndGreen = 0.7
+      // EndRed = 0.999
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 35.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+    }
+    {
+      Name = "MegaeraWhipArc"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Hue = 0.80
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashEnemyLarge"
+        }
+        {
+          Name = "MegaeraWhipArcDisplacement"
+        }]
+      Color = 
+      {
+        Red = 0.25
+        Green = 0.0
+        Blue = 0.12
+      }
+    }
+    {
+      Name = "MegaeraWhipArcDisplacement"
+      InheritFrom = "MegaeraWhipArc"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "QuickFlashEnemyLarge"
+      InheritFrom = "QuickFlashEnemy"
+      EndScale = 4.0
+      StartScale = 5.0
+      VisualFxCap = 1
+      VisualFxIntervalMax = 0.002
+      VisualFxIntervalMin = 0.001
+    }
+    {
+      Name = "TisiphoneWhipArc"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        { Name = "QuickFlashGreenLarge" }
+        { Name = "TisiphoneWhipArcDisplacement" }
+      ]
+      Color = { Red = 0.0 Green = 1.0 Blue = 0.50 }
+    }
+
+    {
+      Name = "TisiphoneWhipArcDisplacement"
+      InheritFrom = "TisiphoneWhipArc"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "HarpyWhipSlashSwipe"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      Color = { Red = 0.0 Green = 1.0 Blue = 0.4 }
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB"
+      VisualFx = null
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.011
+      VisualFxCap = 8
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDark"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      ClearCreateAnimations = true
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+      AddColor = false
+      GroupName = "FX_Dark"
+      Scale = 0.97
+      VisualFx = null
+      DrawBehindOwner = true
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDark"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      ClearCreateAnimations = true
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+      AddColor = false
+      GroupName = "FX_Dark"
+      Scale = 0.97
+      VisualFx = null
+      DrawBehindOwner = true
+      FlipVertical = true
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipe-Alecto"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Alecto"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Alecto"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Alecto"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Alecto"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      ClearCreateAnimations = true
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Alecto"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFx-AlectoDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFx-AlectoDisplace"
+        }
+        {
+          Name = "QuickFlashRed"
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-AlectoDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFxDisplace"
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Alecto"
+      InheritFrom = "HarpyWhipSlashSwipeFxB"
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Alecto"
+      InheritFrom = "HarpyWhipSlashSwipeFxFlipped"
+      ClearCreateAnimations = true
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Alecto"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlipped-AlectoDisplace"
+        }
+        {
+          Name = "QuickFlashRed"
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Alecto"
+      InheritFrom = "HarpyWhipSlashSwipeFxBFlipped"
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-AlectoDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFxFlippedDisplace"
+      Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    
+    {
+      Name = "HarpyWhipSlashSwipe-Meg"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Meg"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Meg"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Meg"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Meg"
+      InheritFrom = "HarpyWhipSlashSwipeFx"
+      ClearCreateAnimations = true
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Meg"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFx-Meg"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFx-MegDisplace"
+        }
+        {
+          Name = "QuickFlashEnemy"
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-MegDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFxDisplace"
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Meg"
+      InheritFrom = "HarpyWhipSlashSwipeFxB"
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Meg"
+      InheritFrom = "HarpyWhipSlashSwipeFxFlipped"
+      ClearCreateAnimations = true
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Meg"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlipped-MegDisplace"
+        }
+        {
+          Name = "QuickFlashEnemy"
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Meg"
+      InheritFrom = "HarpyWhipSlashSwipeFxBFlipped"
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-MegDisplace"
+      InheritFrom = "HarpyWhipSlashSwipeFxFlippedDisplace"
+      Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
+    }
+
+    {
+      Name = "FuryWhipLash"
+      FilePath = "Fx\FuryWhipLash\FuryWhipLash"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      ScaleFromOwner = "Ignore"
+      //AddColor = false
+      EndFrame = 16
+      NumFrames = 16
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = false
+      PostRotateScaleY = 0.5
+      //Hue = 0.80
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimation = "QuickFlashEnemy"
+    }
+    {
+      Name = "FuryWhipLashFlipped"
+      InheritFrom = "FuryWhipLash"
+      CreateAnimation = "null"
+      FlipVertical = true
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryWhipLashDark"
+      InheritFrom = "FuryWhipLash"
+      PlaySpeed = 45.0
+      AddColor = false
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryWhipLashFlippedDark"
+      InheritFrom = "FuryWhipLashDark"
+      FlipVertical = true
+    }
+    {
+      Name = "AlectoWhipLash"
+      InheritFrom = "FuryWhipLash"
+      Hue = 0.1
+      CreateAnimation = "QuickFlashRed"
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "AlectoWhipLashFlipped"
+      InheritFrom = "AlectoWhipLash"
+      FlipVertical = true
+      //Hue = 0.1
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "TisiphoneWhipLash"
+      InheritFrom = "FuryWhipLash"
+      Hue = 0.55
+      CreateAnimation = "QuickFlashGreen"
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "TisiphoneWhipLashFlipped"
+      InheritFrom = "TisiphoneWhipLash"
+      FlipVertical = true
+      //Hue = 0.55
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+
+    {
+      Name = "QuickFlashYellowLarge"
+      InheritFrom = "QuickFlashRedLarge"
+      EndGreen = 0.2
+      EndRed = 0.99
+      StartGreen = 0.7
+    }
+    {
+      Name = "QuickFlashBlueLarge"
+      InheritFrom = "QuickFlashBlue"
+      EndScale = 2.0
+      StartScale = 3.0
+    }
+    {
+      Name = "QuickFlashPinkLarge"
+      InheritFrom = "QuickFlashPink"
+      EndScale = 4.0
+      StartScale = 5.0
+    }
+    {
+      Name = "FuryWhipLashMegaera"
+      FilePath = "Fx\FuryWhipLashMegaera\FuryWhipLashMegaera"
+      Type = "Book"
+      //SortMode = "FromParent"
+      ColorFromOwner = "Ignore"
+      ScaleFromOwner = "Ignore"
+      //LocationFromOwner = "Take"
+      EndFrame = 10
+      NumFrames = 10
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = false
+      PostRotateScaleY = 0.5
+      OriginX = 200.0
+      OriginY = 256.0
+      //OffsetX = -200
+      //OffsetZ = -200
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimation = "QuickFlashEnemy"
+    }
+    {
+      Name = "FuryWhipLashMegaeraFlipped"
+      InheritFrom = "FuryWhipLashMegaera"
+      CreateAnimation = "null"
+      FlipVertical = true
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryWhipLashMegaeraDark"
+      InheritFrom = "FuryWhipLashMegaera"
+      PlaySpeed = 45.0
+      AddColor = false
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryWhipLashMegaeraFlippedDark"
+      InheritFrom = "FuryWhipLashMegaeraDark"
+      FlipVertical = true
+    }
+    {
+      Name = "FuryWhipLashAlecto"
+      InheritFrom = "FuryWhipLashMegaera"
+      FilePath = "Fx\FuryWhipLashAlecto\FuryWhipLashAlecto"
+    }
+    {
+      Name = "FuryWhipLashAlectoFlipped"
+      InheritFrom = "FuryWhipLashAlecto"
+      FlipVertical = true
+    }
+    {
+      Name = "FuryWhipLashTisiphone"
+      InheritFrom = "FuryWhipLashMegaera"
+      FilePath = "Fx\FuryWhipLashTisiphone\FuryWhipLashTisiphone"
+    }
+    {
+      Name = "FuryWhipLashTisiphoneFlipped"
+      InheritFrom = "FuryWhipLashTisiphone"
+      FlipVertical = true
+    }
+ ]
+}

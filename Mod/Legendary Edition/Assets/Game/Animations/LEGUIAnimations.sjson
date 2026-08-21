@@ -1,0 +1,537 @@
+{
+    Animations = [
+        "_append"
+        
+/*Character Trait Icons*/
+
+    
+    {
+	  Name = "CharacterTrait_Alecto_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Alecto"
+	}
+	{
+	  Name = "CharacterTrait_Alecto_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Alecto"
+	}
+    {
+	  Name = "CharacterTrait_Megaera_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Megaera"
+	}
+	{
+	  Name = "CharacterTrait_Megaera_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Megaera"
+	}
+    {
+	  Name = "CharacterTrait_Tisiphone_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone"
+	}
+	{
+	  Name = "CharacterTrait_Tisiphone_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone"
+	}
+    {
+	  Name = "CharacterTrait_Zagreus_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Zagreus"
+	}
+	{
+	  Name = "CharacterTrait_Zagreus_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Zagreus"
+	}
+    {
+	  Name = "CharacterTrait_Theseus_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Theseus"
+	}
+	{
+	  Name = "CharacterTrait_Theseus_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Theseus"
+	}
+
+/*Chibi Character Trait Icons*/
+
+    {
+	  Name = "CharacterTrait_Alecto_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Alecto_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Alecto_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Alecto_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Charon_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Charon_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Charon_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Charon_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Hades_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Hades_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Hades_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Hades_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Thanatos_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Thanatos_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Thanatos_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Thanatos_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Megaera_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Megaera_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Megaera_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Megaera_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Tisiphone_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Tisiphone_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt"
+	}
+    {
+	  Name = "CharacterTrait_Tisiphone_Alt02_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt02"
+	}
+	{
+	  Name = "CharacterTrait_Tisiphone_Alt02_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt02"
+	}
+    {
+	  Name = "CharacterTrait_Tisiphone_Alt03_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt03"
+	}
+	{
+	  Name = "CharacterTrait_Tisiphone_Alt03_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt03"
+	}
+    {
+	  Name = "CharacterTrait_Tisiphone_Alt04_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt04"
+	}
+	{
+	  Name = "CharacterTrait_Tisiphone_Alt04_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Tisiphone_Alt04"
+	}
+    {
+	  Name = "CharacterTrait_Zagreus_Alt_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Zagreus_Alt"
+	}
+	{
+	  Name = "CharacterTrait_Zagreus_Alt_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\CharacterTrait_Zagreus_Alt"
+	}
+
+/*Character Boon Icons */
+
+    {
+	  Name = "Alecto_Rage_Large"
+	  InheritFrom = "BoonIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\Alecto_Rage"
+	}
+	{
+	  Name = "Alecto_Rage_Small"
+	  InheritFrom = "BoonTrayIcon"
+      FilePath = "GUI\Screens\CharacterTraitIcons\Alecto_Rage"
+	}
+
+
+
+/*HUD Icons*/
+    
+    {
+      Name = "ExtraLifeAlecto"
+      FilePath = "GUI\HUD\HealthBar_1upAlecto"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.6
+      Material = "Unlit"
+    }
+    {
+      Name = "ExtraLifeMeg"
+      FilePath = "GUI\HUD\HealthBar_1upMeg"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.6
+      Material = "Unlit"
+    }
+    {
+      Name = "ExtraLifeTis"
+      FilePath = "GUI\HUD\HealthBar_1upTis"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Scale = 0.6
+      Material = "Unlit"
+    }
+
+    {
+      Name = "HellfireIndicatorIcon_Alecto"
+      FilePath = "GUI\HUD\AlectoHellfireHud"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HellfireIndicatorIcon_Alecto01"
+      FilePath = "GUI\HUD\AlectoHellfireHud01"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HellfireIndicatorIcon_Meg"
+      FilePath = "GUI\HUD\MegHellfireHud"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HellfireIndicatorIcon_Meg01"
+      FilePath = "GUI\HUD\MegHellfireHud01"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HellfireIndicatorIcon_Tis"
+      FilePath = "GUI\HUD\TisHellfireHud"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HellfireIndicatorIcon_Tis01"
+      FilePath = "GUI\HUD\TisHellfireHud01"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+
+    {
+      Name = "AlectoSpecialIndicatorIcon"
+      FilePath = "GUI\HUD\AlectoSpecialHud"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HadesAmmoIndicatorIcon"
+      FilePath = "GUI\HUD\HadesAmmoIconHUD"
+      Type = "ConstantNoUpdate"
+      AngleFromOwner = "Ignore"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      DieWithOwner = true
+      SortMode = "Id"
+      Scale = 0.5
+      ScaleFromOwner = "Ignore"
+      Material = "Unlit"
+    }
+    {
+      Name = "HadesAmmoEmbeddedInEnemyIcon"
+      InheritFrom = "AmmoEmbeddedInEnemyIcon"
+      ColorFromOwner = "Maintain"
+      FilePath = "GUI\HUD\HadesAmmoIconPlayer"
+    }
+/*Screens*/
+
+ /*Contract Exchange*/
+
+    {
+      Name = "ContractExchangeIn"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchangeUI"
+      Type = "Constant"
+      StartScale = 0.99
+      Ambient = 0.0
+      Duration = 2.0
+      EaseOut = 1.0
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "ContractExchange"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchangeUI"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "ContractExchangeOut"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchangeUI"
+      Type = "Constant"
+      Scale = 4.0
+      //Ambient = 0.0
+      //Duration = 2.0
+      //EaseIn = 1.0
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      //Material = "Unlit"
+    }
+
+  /*version of the ui with all the other backing elements*/
+
+    {
+      Name = "ContractExchangeIn_02"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchange_Static"
+      Type = "Constant"
+      StartScale = 0.99
+      Ambient = 0.0
+      Duration = 2.0
+      EaseOut = 1.0
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "ContractExchange_02"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchange_Static"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "ContractExchangeOut_02"
+      FilePath = "GUI\Screens\ContractExchange\Screens\ContractExchange_Static"
+      Type = "Constant"
+      Scale = 4.0
+      //Ambient = 0.0
+      //Duration = 2.0
+      //EaseIn = 1.0
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      //Material = "Unlit"
+    }
+
+   /* House_Desk_01 with the contract exchange items*/
+
+    {
+      Name = "ContractExchangeDesk"
+      FilePath = "Tilesets\House\House_Desk_ContractExchange"
+      Type = "ConstantNoUpdate"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+
+   /*Boon Select Screen*/
+
+    {
+      Name = "BoonSelectInAlecto"
+      ChainTo = "BoonSelectScreenAlecto"
+      FilePath = "Screens\BoonSelectInAlecto\BoonSelectInAlecto"
+      Type = "Book"
+      VideoTexture = "BoonAlectoIn"
+      Sound = "/SFX/Menu Sounds/GodBoonMenuOpen"
+      EndFrame = 22
+      NumFrames = 22
+      PlaySpeed = 30.0
+      StartFrame = 1
+      Material = "Unlit"
+      Slides = [
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlamePreBurst" Frame = 1 }
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastStartup" Frame = 3 }
+        { DurationFrames = 1 Sound = "/SFX/ThanatosAOERift" Frame = 4 }
+      ]
+    }
+    {
+     Name = "BoonSelectInMeg"
+     InheritFrom = "BoonSelectInAlecto"
+     FilePath = "Screens\BoonSelectInMeg\BoonSelectInMeg"
+     VideoTexture = "BoonMegaerIn"
+     ChainTo = "BoonSelectScreenMeg"
+    }
+    {
+     Name = "BoonSelectInTis"
+     InheritFrom = "BoonSelectInAlecto"
+     FilePath = "Screens\BoonSelectInMeg\BoonSelectInTis"
+     VideoTexture = "BoonTisiphIn"
+     ChainTo = "BoonSelectScreenTis"
+    }
+
+    {
+      Name = "BoonSelectScreenAlecto"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectScreenAlecto"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "BoonSelectScreenMeg"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectScreenMeg"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "BoonSelectScreenTis"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectScreenTis"
+      Type = "Constant"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Material = "Unlit"
+    }
+
+    {
+      Name = "BoonSelectOutAlecto"
+      FilePath = "Screens\BoonSelectOutAlecto\BoonSelectOutAlecto"
+      Type = "Book"
+      VideoTexture = "BoonAlectoOut"
+      Sound = "/SFX/Menu Sounds/GodBoonMenuClose"
+      EndFrame = 16
+      NumFrames = 16
+      PlaySpeed = 30.0
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    {
+      Name = "BoonSelectOutMeg"
+      InheritFrom = "BoonSelectOutAlecto"
+      FilePath = "Screens\BoonSelectOutMeg\BoonSelectOutMeg"
+      VideoTexture = "BoonMegaerOut"
+    }
+    {
+      Name = "BoonSelectOutTis"
+      InheritFrom = "BoonSelectOutAlecto"
+      FilePath = "Screens\BoonSelectOutTis\BoonSelectOutTis"
+      VideoTexture = "BoonTisiphOut"
+      EndFrame = 17
+      NumFrames = 17
+    }
+    
+    {
+      Name = "BoonSelectLighting_Alecto"
+      InheritFrom = "BoonSelectLighting"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectLighting_Alecto"
+    }
+    {
+      Name = "BoonSelectLighting_Meg"
+      InheritFrom = "BoonSelectLighting"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectLighting_Meg"
+    }
+    {
+      Name = "BoonSelectLighting_Tis"
+      InheritFrom = "BoonSelectLighting"
+      FilePath = "GUI\Screens\BoonSelectScreen\BoonSelectLighting_Tis"
+    }
+
+    {
+      Name = "BoonSelectInFrontFx_Alt"
+      ChainTo = "BoonSelectInFrontFxBlank"
+      FilePath = "GUI\Screens\BoonSelectInFrontFx_Alt\BoonSelectInFrontFx_Alt"
+      Type = "Book"
+      EndFrame = 14
+      NumFrames = 14
+      PlaySpeed = 30.0
+      StartFrame = 1
+      Material = "Unlit"
+    }
+    ]
+}

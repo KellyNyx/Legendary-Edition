@@ -1,0 +1,677 @@
+{
+    Projectiles = [
+        "_append"
+    {
+      Name = "TisiphoneRushWeaponControl"
+      InheritFrom = "1_BasePlayerSmallProjectile"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      ImpactFx = "null"
+      ImpactSound = "null"
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      Range = 525
+      Speed = 99999
+      MaxSpeed = 99999
+      Acceleration = 15000
+      DamageLow = 0
+      DamageHigh = 0
+      CanCrit = false
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      ObstacleCollisionCheck = "PolygonContainsPoint"
+      SpawnOnDeath = "BlankObstacle"
+      SpawnType = "OBSTACLE"
+      SpawnGroup = "Standing"
+      DangerDistance = 200
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 60
+        AttachedAnim = "null"
+        Grip = 999999
+        Points = [
+          {
+            X = 0
+            Y = 64
+          }
+          {
+            X = 128
+            Y = 0
+          }
+          {
+            X = 0
+            Y = -64
+          }
+          {
+            X = -128
+            Y = 0
+          }]
+      }
+      Effects = [
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          Cancelable = true
+        }
+        {
+          Name = "EnemyFriendStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }]
+    }
+    {
+      Name = "EPCTisiphoneRushWeapon"
+      DetonateSound = "null"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "INSTANT"
+      Fuse = 0.2
+      Range = 1050
+      DamageLow = 30
+      DamageHigh = 30
+      DamageRadiusScaleY = 0.6
+      DamageRadiusScaleX = 1.1
+      AttachToOwner = true
+      ImpactVelocity = 800
+      UseRadialImpact = false
+      AutoAdjustForTarget = true
+      UseArmor = false
+      UseVulnerability = true
+      ImpactFx = "null"
+      ImmunityDuration = 0.1
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      SilentImpactOnInvulnerable = true
+      ClearOnAttackEffects = false
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }]
+      }
+      Effects = [
+        {
+          Name = "EnemyFriendStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          FrontFx = "null"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }]
+    }
+    {
+      Name = "EPCTisiphoneDash"
+      DetonateSound = "null"
+      InheritFrom = "EPCMegaeraRushWeapon"
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }]
+      }
+      Effects = [
+        {
+          Name = "EnemyFriendStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          FrontFx = "null"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }]
+    }
+    {
+      Name = "EPCHarpyWhipCombo1"
+      DetonateSound = "null"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "INSTANT"
+      Fuse = 0.2
+      Range = 1050
+      DamageLow = 30
+      DamageHigh = 30
+      DamageRadiusScaleY = 0.6
+      DamageRadiusScaleX = 1.1
+      AttachToOwner = true
+      ImpactVelocity = 800
+      UseRadialImpact = false
+      AutoAdjustForTarget = false
+      UseArmor = false
+      UseVulnerability = true
+      ImpactFx = "null"
+      ImmunityDuration = 0.1
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      SilentImpactOnInvulnerable = true
+      ClearOnAttackEffects = false
+      Thing = 
+      {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }]
+      }
+      Effects = [
+        {
+          Name = "EnemyFriendStun"
+          Duration = 0.6
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = true
+          FrontFx = "null"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+        }
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }]
+    }
+    {
+      Name = "HarpyWhipSlash1"
+      InheritFrom = "SpearWeapon"
+		DetonateGraphic = "HarpyWhipSlashSwipe"
+    Speed = 6000
+    Range = 160
+    DamageRadius = 300
+		ProjectileDefenseAngle = 100
+		ProjectileDefenseRadius = 240
+      DamageLow = 20
+      DamageHigh = 20
+      Thing =
+        {
+          Graphic = "HarpyWhipSlashSwipe"
+			Points =
+			[
+			  {
+				X = 200
+				Y = 100
+        }
+			  {
+				X = 200
+				Y = -100
+    }
+    {
+				X = -10
+				Y = -150
+			  }
+			  {
+				X = -10
+				Y = 150
+			  }
+			]
+		}
+    }
+    {
+      Name = "HarpyWhipSlash2"
+      InheritFrom = "HarpyWhipSlash1"
+		DetonateGraphic = "HarpyWhipSlashSwipeFlipped"
+    Speed = 6000
+    Range = 160
+    DamageRadius = 300
+		ProjectileDefenseAngle = 100
+		ProjectileDefenseRadius = 240
+      DamageLow = 20
+      DamageHigh = 20
+      Thing =
+        {
+          Graphic = "HarpyWhipSlashSwipeFlipped"
+			Points =
+			[
+			  {
+				X = 200
+				Y = 100
+        }
+			  {
+				X = 200
+				Y = -100
+    }
+    {
+				X = -10
+				Y = -150
+			  }
+			  {
+				X = -10
+				Y = 150
+			  }
+			]
+		}
+    }
+    {
+      Name = "EPCHarpyBeamTisiphone"
+      InheritFrom = "EPCHarpyBeam"
+      DamageLow = 5
+      DamageHigh = 5
+      //InvulnerableToProjectileDefenseDuringPause = true
+      Thing =
+	  {
+        Graphic = "FuryBeamEmitterTisiphone"
+        AttachedAnim = "EnemyProjectileLightGreen"
+      }
+    }
+    {
+      Name = "EPCHarpySlowBeam"
+      InheritFrom = "EPCHarpyBeamTisiphone"
+      Speed = 475
+      DamageLow = 5
+      DamageHigh = 5
+      //UnpauseAnimation = "FuryBeamEmitterTisiphone"
+      Thing =
+	  {
+        AttachedAnim = "EnemyProjectileLightGreen"
+      }
+    }
+    {
+      Name = "EPCHarpyLassoLunge"
+      InheritFrom = "EPCHarpyLunge"
+      Range = 1200
+      ImpactFx = "null"
+      Thing = {
+        Graphic = "TisiphoneLunge"
+      }
+    }
+    {
+      Name = "EPCHarpyLightningTisiphone"
+      InheritFrom = "EPCHarpyLightningMeg"
+      DetonateGraphic = "FuryHellfireTisiphone"
+      UseStartLocation = true
+      DamageLow = 25
+      DamageHigh = 25
+      Thing = 
+      {
+        Graphic = "FuryHellfirePreviewDecalDarkTisiphone"
+        Color = 
+        {
+          Red = 1.0
+          Green = 1.0
+          Blue = 1.0
+          Opacity = 1.0
+        }
+      }
+    }  
+    {
+      Name = "EPCHarpyWhipRage"
+      Type = "STRAIGHT"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateSound = "/Leftovers/SFX/BeaconTeleportSFX"
+      Fuse = 0.2
+      DamageLow = 30
+      DamageHigh = 30
+      DamageRadiusScaleY = 0.6
+      DamageRadiusScaleX = 1.1
+      AttachToOwner = true
+      AffectsEnemies = true
+      AffectsFriends = false
+      ImpactVelocity = 600
+      AffectsSelf = false
+      UseRadialImpact = false
+      AutoAdjustForTarget = false
+      UseArmor = false
+      UseVulnerability = true
+      ImmunityDuration = 0.1
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      CanBeProjectileDefenseDestroyed = false
+      SilentImpactOnInvulnerable = true
+      ImpactLineOfSight = true
+      ImpactFx = "null"
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 350
+            Y = 80
+          }
+          {
+            X = 350
+            Y = -80
+          }
+          {
+            X = -10
+            Y = -40
+          }
+          {
+            X = -10
+            Y = 40
+          }
+        ]
+      }
+      Effect = [
+        {
+        Name = "MeleeAttackVictimGrip"
+        Type = "GRIP"
+        Duration = 0.3
+        Modifier = 0.05
+        HaltOnEnd = true
+        Active = true
+      }
+      {
+        Name = "EnemyFriendStun"
+        Duration = 0.6
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+      ]
+    }
+    {
+      Name = "EPCHarpyWhipLasso"
+      InheritFrom = "EPCHarpyWhipRage"
+      DamageLow = 20
+      DamageHigh = 20
+      ImpactVelocity = 0
+      ImpactFx = "null"
+      DangerDistance = 300
+      ImpactLineOfSight = true
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 150
+      DeflectProjectiles = false
+      Effects = [
+        {
+          Name = "HarpyLasso"
+          Duration = 0.6
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          //FrontFx = "DionysusStunnedFx"
+          Cancelable = false
+          IgnoreName = "_PlayerUnit"
+          Stacks = true
+		     // StartAnimation = "ZagreusStun"
+			  //OnlyAffectName = "_PlayerUnit"
+        }
+        {
+          Name = "MeleeAttackVictimGrip"
+          Type = "GRIP"
+          Duration = 0.3
+          Modifier = 0.05
+          HaltOnEnd = true
+          Active = true
+        }
+      ]
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 1100
+            Y = 90
+          }
+          {
+            X = 1100
+            Y = -90
+          }
+          {
+            X = -10
+            Y = -40
+          }
+          {
+            X = -10
+            Y = 40
+          }
+        ]
+      }
+    }
+    {
+      Name = "EPCHarpyWhipCombo3"
+      InheritFrom = "EPCHarpyWhipWhirl"
+      DamageRadius = 450
+      DamageLow = 20
+      DamageHigh = 20
+      DetonateGraphic = "FuryWhipWhirlTisiphoneLE"
+      Effect = [
+        {
+        Name = "EnemyFriendStun"
+        Duration = 0.6
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = true
+        FrontFx = "null"
+        Cancelable = false
+        IgnoreName = "_PlayerUnit"
+        Stacks = true
+      }
+      ]
+    }
+    {
+      Name = "EPCTisiphoneRapidLashes"
+      InheritFrom = "EPCMegRapidLashes"
+      DetonateGraphic = "FuryWhipWhirl-RapidLashesTisiphoneLE"
+      DamageHigh = 25
+      DamageLow = 25
+    }
+    ]
+}

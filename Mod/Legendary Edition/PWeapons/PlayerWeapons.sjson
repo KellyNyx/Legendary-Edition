@@ -1,0 +1,549 @@
+﻿{
+  Weapons = [
+    "_append"
+    {
+      Name = "1_BaseDamagingWeapon"
+    }
+    {
+      Name = "EPCMegaeraRushWeapon"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "BLINK"
+      Control = "Rush"
+      ChargeStartAnimation = "FuryLungeCharge"
+      FireGraphic = "FuryLungeFire"
+      ChargeCancelGraphic = "null"
+      UnblockedBlinkFx = "null"
+      ChargeTime = 0.82
+      SelfVelocity = 3000.0
+      SelfVelocityCap = 3000.0
+      BlinkDuration = 0.2
+      BlinkEaseIn = 0
+      BlinkEaseOut = 0
+      Projectile = "RushWeapon"
+      WeaponRange = 600
+      BlinkMaxRange = 600
+      ClipSize = 1
+      ClipRegenInterval = 0.74
+      FullClipRegen = true
+      Cooldown = 0.05
+      ChargeFx = "null"
+      ArsenalCooldown = 0.0
+      CancelMovement = true
+      FullyAutomatic = true
+      AutoLock = false
+      UseTargetAngle = false
+      BlockMoveInput = true
+      ControlHelpTextId = "Rush"
+      IgnoreForceCooldown = true
+      ForceReleaseAllOnFire = true
+      CanCancelDisables = true
+      BlinkDetonateAtEndpoint = false
+      BlinkDetonateAtOrigin = true
+      BlinkNumGhosts = 3
+      BlinkGhostAnimation = "null"
+      CheckMovementReactionDistance = 150
+      ConsumeClipOnRelease = true
+	  CheckDanger = true
+      CanUseKeyboardAim = true
+      FireFx = "null"
+      SilentImpact = true
+      AcceptTriggerLockRequests = true
+	  AllowMultiFireRequest = true
+      CancelAttachedProjectiles = true
+	  SetTargetAngleOnRequest = false
+	  SetCompleteAngleOnFire = true
+	  SetCompleteAngleOnCharge = true
+      Effects = [
+        {
+          Name = "RushWeaponInvulnerable"
+          Type = "INVULNERABLE"
+          Duration = 1.2
+          Modifier = 1.0
+          NoUnitCollision = true
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = true
+        }
+			  {
+				  Name = "RushWeaponInvulnerableCharge"
+				  Trigger = "Charging"
+				  Type = "INVULNERABLE"
+				  Duration = 2.32
+				  Modifier = 1.0
+				  NoUnitCollision = true
+				  Active = true
+				  CanAffectInvulnerable = true
+				  Cancelable = true
+        }
+        {
+          Name = "RushWeaponImmuneToForce"
+          ImmuneToForce = true
+          Duration = 0.24
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponSelfSlow"
+          Type = "SPEED"
+          DurationFrames = 15
+          Modifier = 0.65
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponSpeedBoost"
+          Type = "SPEED"
+          DurationFrames = 15
+          Modifier = 0.65
+          Cancelable = true
+          Active = false
+          HaltOnEnd = true
+          BackFx = "HermesRushSpeedTrail"
+        }
+        {
+          Name = "RushWeaponDodgeBoost"
+          OnlyAffectName = "_PlayerUnit"
+          ExtendDurationOnReapply = true
+          Duration = 0.5
+          DodgeChance = 0.5
+          ClearOnAttack = true
+          Active = false
+        }
+        {
+          Name = "RushHyperArmor"
+          Type = "DAMAGE_TAKEN"
+          Duration = 5
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          ExtendDurationOnReapply = true
+          BackFx = "null"
+          Active = false
+          FlashFrontFxWhenExpiring = true
+          FlashBackFxWhenExpiring = true
+          ImmuneToForce = true
+          ClearOnAttack = false
+        }
+        {
+          Name = "RushWeaponSelfGrip"
+          Type = "GRIP"
+          DurationFrames = 1
+          Modifier = 1.0
+          HaltOnEnd = true
+          Cancelable = false
+        }
+        {
+          Name = "RushWeaponDisableRotation"
+          DurationFrames = 1
+          DisableMove = false
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponDisableMove"
+          DurationFrames = 12
+          DisableMove = true
+          DisableRotate = false
+          DisableAttack = false
+          Cancelable = true
+        }
+         {
+          Name = "RushWeaponDisableRapid"
+          DurationFrames = 4
+          DisableMove = true
+          DisableRotate = false
+          DisableAttack = false
+          Cancelable = true
+          Active = false
+        }
+        {
+          Name = "DashDamageIncrease"
+          Duration = 0
+          CritAddition = 0
+          Active = false
+          FrontFx = "ArtemisCritSparkles"
+          BackFx = "null"
+        }
+        {
+          Name = "DashDamageShield"
+          Type = "DAMAGE_TAKEN"
+          Duration = 1.5
+          Modifier = 0.75
+          Active = false
+          FrontFx = "Shielded"
+        }
+        {
+          Name = "MagicShieldBlast"
+          Duration = 0.35
+          Active = false
+          BackFx = "AthenaSingleShieldRushFront"
+        }
+        {
+          Name = "AthenaDashShieldReflection"
+          Duration = 0.175
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "AthenaProtectionFront"
+          BackFx = "AthenaProtectionBack"
+          FlashFrontFxWhenExpiring = false
+          FlashBackFxWhenExpiring = false
+        }
+        {
+          Name = "AthenaDashShieldReflect"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.175
+          Range = 210
+          Deflect = true
+          Active = false
+        }
+        {
+          Name = "SlowShieldDeflect"
+          Duration = 0.25
+          ReflectAddition = 1.0
+          Active = false
+          CanAffectInvulnerable = true
+          FrontFx = "Invincibubble"
+          BackFx = "null"
+          Sound = "/Leftovers/SFX/AuraOnLoud"
+        }
+        {
+          Name = "SlowShieldInvulnerable"
+          Type = "INVULNERABLE"
+          Duration = 0.25
+          Modifier = 1.0
+          Active = false
+          CanAffectInvulnerable = true
+        }
+        {
+          Name = "SlowShieldReflectRange"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.25
+          Range = 200
+          Deflect = true
+          Active = false
+        }
+         {
+          Trigger = "Charging"
+          Name = "AreaSlowWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.05
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }
+        {
+          Trigger = "Fire"
+          Name = "RushAreaSlowWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.05
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }
+        {
+          Trigger = "Fire"
+          Name = "RushRuptureWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.15
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpyBeam"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Control = "Attack2"
+      Type = "GUN"
+      ChargeStartAnimation = "FuryBeamCharge"
+      Projectile = "EPCHarpyBeam"
+      ChargeTime = 0.5
+      FireGraphic = "FuryBeam"
+      ChargeSound = "null"
+      RootOwnerWhileFiring = true
+      BlockMoveInput = true
+      CancelMovement = false
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      BarrelLength = 90
+      AutoLock = true
+      LockTriggerForCharge = false
+      DisableOwnerForDuration = 0
+      SwapOnFire = "EPCHarpBeam2"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+      NumProjectiles = 5
+      ProjectileAngleOffset = 35
+      Spread = 5
+    }
+    {
+      Name = "EPCHarpyBeam2"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam3"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+    {
+      Name = "EPCHarpyBeam3"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam4"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam4"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam5"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam5"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam6"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam6"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam7"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam7"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam8"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam8"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam9"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam9"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam10"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam10"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam11"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam11"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam12"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam12"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam13"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam13"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam14"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam14"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam15"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+        {
+      Name = "EPCHarpyBeam15"
+      InheritFrom = "EPCHarpyBeam"
+      ChargeStartAnimation = "null"
+      ChargeTime = 0.0
+      FireGraphic = "FuryBeam"
+      SwapOnFire = "EPCHarpBeam"
+      AddOnFire = "EPCHarpyWhipWhirl"
+      ChargeTimeFrames = 7
+    }
+    {
+      Name = "EPCHarpWhipWhirl"
+      InheritFrom = "1_BaseDamagingWeapon"
+      Type = "GUN"
+      Control = "Attack2"
+      DisallowedControl = "null"
+      Projectile = "EPCHarpWhipWhirl"
+      ClipSize = 1
+      RootOwnerWhileFiring = true
+      BlockMoveInput = true
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = true
+      ForceReleaseOnSwap = false
+      BarrelLength = 100
+      AutoLock = false
+      AutoLockRange = 100
+      AutoLockArcDistance = 90
+      ChargeStartAnimation = "FuryWhipWhirlCharge"
+      ChargeCancelGraphic = "FuryIdle"
+      FireGraphic = "FuryWhipWhirlFire"
+      LockTriggerForCharge = false
+      NumProjectiles = 1
+      MinChargeToFire = 1.0
+      ChargeTime = 0.26
+      ChargeRumbleRight = 0.06
+      ChargeFx = "null"
+      FireFx = "null"
+      SelfVelocity = 0
+      SelfVelocityCap = 0
+      FireOnRelease = true
+      ControlWindow = 0.34
+      LoseControlOnRelease = true
+	  LoseControlIfNotCharging = false
+      CanCancelDisables = false
+      AcceptTriggerLockRequests = false
+	  AllowExternalForceRelease = false
+	  AllowExternalForceReleaseIfAnyCharged = true
+	  RemoveControlOnCharge = "SpearWeaponThrow"
+	  AddControlOnFire = "SpearWeaponThrow"
+	  AddControlOnChargeCancel = "SpearWeaponThrow"
+      TriggersStoredAmmoVulnerability = true
+	  SetCompleteAngleOnFire = true
+	  SetCompleteAngleOnCharge = true
+      Effects = [
+        {
+          Name = "SwordReflection2"
+          Duration = 0.5
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "null"
+          BackFx = "null"
+        }
+        {
+          Name = "SpearSpinDisable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableCancelable"
+          DurationFrames = 80
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableFast"
+          DurationFrames = 10
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearSpinDisableCancelableFast"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = false
+        }
+
+         {
+          Name = "SpearWeaponSpinExplosiveChargeWeapon"
+          Type = "WEAPON_FIRE"
+          Trigger = "Charging"
+          Duration = 999.0
+          Active = false
+          ClearOnAttack = true
+        }
+        {
+          Name = "SpearWeaponSpinDefenseWeapon"
+          Type = "DAMAGE_TAKEN"
+          Trigger = "Charging"
+          Duration = 0.3
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          Active = false
+          ImmuneToForce = true
+          ClearOnAttack = false
+          ExtendDurationOnReapply = true
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpWhipWhirl2"
+      InheritFrom = "SpearWeaponSpin"
+      Projectile = "EPCHarpWhipWhirl2"
+      ChargeTime = 0.0
+      FireOnRelease = false
+    }
+    {
+      Name = "EPCHarpyWhipWhirl3"
+      InheritFrom = "EPCHarpWhipWhirl2"
+      Projectile = "EPCHarpWhipWhirl3"
+    }
+  ]
+}

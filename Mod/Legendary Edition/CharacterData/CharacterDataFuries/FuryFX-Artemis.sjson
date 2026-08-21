@@ -1,0 +1,1249 @@
+{
+ Animations = [
+     "_append"
+     {
+      Name = "FuryLungeStreak-Artemis-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "FuryLungeStreak-Artemis"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "FuryLungeStreak-Artemis"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCSpearRushTrail-Artemis"
+        }
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "QuickFlashYellowSmall"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "EPCSpearRushTrailFx-Artemis"
+      FilePath = "Dev\blank_invisible"
+      InheritFrom = "SpearRushTrailFx"
+      VisualFx = "SpearRushTrail-Artemis"
+      ClearCreateAnimations = true
+      CreateAnimations =
+      [
+        { Name = "SpearRushDashPuff" }
+        { Name = "QuickFlashYellowSmall" }
+      ]
+    }
+    {
+      Name = "EPCSpearRushTrail-Artemis"
+      InheritFrom = "SpearRushTrail"
+      Duration = 0.25
+      StartRed = 1
+      StartGreen = 1
+      StartBlue = 0.7
+      EndRed = 0.99
+      EndGreen = 0.99
+      EndBlue = 0.3
+      AngleFromMarker = "Take"
+      AngleFromOwner = "Take"
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "SpearRushTrail_Dark"
+        }
+        {
+          Name = "SpearThrowParticles_Rush-Artemis"
+        }
+        {
+          Name = "LightningPiece"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirl-Artemis"
+      CreateAnimation = "QuickFlashYellow"
+      //ChildAnimation = "FuryWhipWhirlDark"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      VisualFx = "FuryWhipWhirlRandom-Artemis_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      //OverlayVfx = true
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      // EndBlue = 0.6
+      // EndGreen = 1
+      // EndRed = 1
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Hue = 0.20
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 60.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      VisualFxCap = 2
+      VisualFxIntervalMax = 0.12
+      VisualFxIntervalMin = 0.1
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDark"
+        }
+        {
+          Name = "DionysusSpawner"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomA-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkA"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomB-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkB"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomC-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkC"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomD-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkD"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomE-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkE"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomF-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkF"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomG-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkG"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomH-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkH"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomI-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkI"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJ-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJ"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomK-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkK"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomL-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkL"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomM-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkM"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomN-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkN"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomO-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkO"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomAFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkAFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomBFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkBFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomCFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkCFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomDFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkDFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomEFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkEFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomFFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkFFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomGFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkGFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomHFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkHFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomIFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkIFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomKFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkKFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomLFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkLFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomMFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkMFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomNFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkNFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomOFast-Artemis"
+      InheritFrom = "FuryWhipWhirl-Artemis"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkOFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandom-Artemis_"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryWhipWhirlRandomA-Artemis" }
+        { Name = "FuryWhipWhirlRandomB-Artemis" }
+        { Name = "FuryWhipWhirlRandomC-Artemis" }
+        { Name = "FuryWhipWhirlRandomD-Artemis" }
+        { Name = "FuryWhipWhirlRandomE-Artemis" }
+        { Name = "FuryWhipWhirlRandomF-Artemis" }
+        { Name = "FuryWhipWhirlRandomG-Artemis" }
+        { Name = "FuryWhipWhirlRandomH-Artemis" }
+        { Name = "FuryWhipWhirlRandomI-Artemis" }
+        { Name = "FuryWhipWhirlRandomJ-Artemis" }
+        { Name = "FuryWhipWhirlRandomK-Artemis" }
+        { Name = "FuryWhipWhirlRandomL-Artemis" }
+        { Name = "FuryWhipWhirlRandomM-Artemis" }
+        { Name = "FuryWhipWhirlRandomN-Artemis" }
+        { Name = "FuryWhipWhirlRandomO-Artemis" }
+        { Name = "FuryWhipWhirlRandomAFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomBFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomCFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomDFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomEFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomFFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomGFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomHFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomIFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomJFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomKFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomLFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomMFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomNFast-Artemis" }
+        { Name = "FuryWhipWhirlRandomOFast-Artemis" }
+      ]
+    }
+    {
+      Name = "AlectoWhipArc-Artemis"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      // EndBlue = 0.3
+      // EndGreen = 0.7
+      // EndRed = 0.999
+      // StartBlue = 0.6
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      EndFrame = 17
+      Hue = 0.15
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashYellowLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement-Artemis"
+        }
+        {
+          Name = "AlectoWhipArcDark"
+        }
+        {
+          Name = "AlectoWhipArc-Artemis_Lightning"
+        }]
+    }
+    {
+      Name = "AlectoWhipArcDisplacement-Artemis"
+      InheritFrom = "AlectoWhipArc-Artemis"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    // {
+    //   Name = "AlectoWhipArc-Artemis_Lightning"
+    //   InheritFrom = "SwordSwipeAFlipped-Artemis"
+    //   CreateAnimation = "null"
+    //   ClearCreateAnimations = true
+    //   FilePath = "Fx\SwordSwipeA-Artemis\SwordSwipeA-Artemis"
+    //   Type = "Book"
+    //   AddColor = false
+    //   EndFrame = 21
+    //   NumFrames = 21
+    //   ClearSlides = true
+    //   StartFrame = 1
+    //   Scale = 2.0
+    // }
+    {
+      Name = "FuryAlectoThrow-Artemis"
+      ChainTo = "null"
+      CreateAnimation = null
+      FilePath = "Fx\ArtemisProjectile\ArtemisProjectile"
+      Type = "Book"
+      VisualFx = "SpearSwipe360Alecto-Artemis"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/ArtemisShieldRangedAttack"
+      StopSoundOnFinishFade = 0.3
+      EndFrame = 30
+      Loop = true
+      NumFrames = 30
+      StartFrame = 1
+      Scale = 0.5
+      ScaleRadius = 110.0
+      Ambient = 0.0
+      VisualFxIntervalMax = 0.2
+      VisualFxIntervalMin = 0.1
+    }
+    {
+      Name = "SpearSwipe360Alecto-Artemis"
+      InheritFrom = "SpearSwipe360"
+      CreateAnimation = "SpearSwipe360Alecto-Displace"
+      ChildAnimation = "SpearSwipe360AlectoB-Artemis"
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      Scale = 1.8
+      StartGreen = 0.95
+      EaseIn = 0.999
+      EaseOut = 1.0
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+          Frame = 4
+          VisualFx = "QuickFlashBlueSpawner"
+        }]
+    }
+    {
+      Name = "SpearSwipe360Alecto-Displace"
+      InheritFrom = "SpearSwipe360"
+      ChildAnimation = "null"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      StartAlpha = 0.1
+      ClearSlides = true
+      CancelOverCap = true
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360AlectoB-Artemis"
+      InheritFrom = "SpearSwipe360B"
+      ChildAnimation = "SpearSwipeGlowAlecto-Artemis"
+      Scale = 1.8
+      EndBlue = 1.0
+      EndGreen = 0.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+    }
+    {
+      Name = "SpearSwipeGlowAlecto-Artemis"
+      InheritFrom = "SpearSwipeGlow"
+      ChildAnimation = null
+      EndGreen = 0.9
+      EndRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+    }
+    {
+      Name = "SpearSwipe360Alecto-Artemis-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "SpearSwipe360-Artemis-Particles"
+      //Sound = "null"
+      Duration = 0.2
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxIntervalMax = 0.011
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "ArtemisLeavesSpawner"
+      InheritFrom = "RadialNova"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      GroupName = "FX_Terrain_Add"
+      VisualFx = "LightningPieceSwordParry"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.03
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "FuryBeamEmitter-Artemis"
+      InheritFrom = "ProjectileFire"
+      ChildAnimation = "ProjectileLightningBallGlowSpawner"
+      FilePath = "Fx\ProjectileFire\ProjectileFire"
+      VisualFx = "LightningPiece"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastFire"
+      StopSoundOnFinishFade = 0.2
+      AddColor = true
+      EndScale = 0.25
+      PingPongScale = true
+      ScaleMax = 1.0
+      ScaleMin = 0.5     
+      EndFrame = 60
+      NumFrames = 60
+      StartFrame = 1
+      VisualFxUse3DAngle = false
+      Scale = 0.45
+      VisualFxIntervalMax = 0.071
+      VisualFxIntervalMin = 0.07
+      CreateAnimations = [
+        {
+          Name = "FuryBeamEmitterDark"
+        }]
+        Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    }
+    // {
+    //   Name = "EnemyProjectileLightYellow"
+    //   InheritFrom = "EnemyProjectileLight"
+    //   Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+    // }
+    {
+      Name = "EnemyHeavySlashLasso-Artemis"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashLassoDark_1"
+      GroupName = "FX_Standing_Add"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      AddColor = true
+      EaseIn = 0.9
+      EaseOut = 1.0
+      OriginX = 240.0
+      OriginY = 120.0
+      EndScaleY = 0.0
+      ScaleX = 4.0
+      StartScaleY = 0.8
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      CreateAnimations = [
+        {
+          Name = "EnemyHeavySlashLassoLighting-Artemis"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashLassoLighting-Artemis"
+      InheritFrom = "EnemyHeavySlashLassoLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "EnemyHeavySlashWhip1-Artemis"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashWhip1Dark_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      //ChildAnimation = "ProjectileLightningBallGlowLargeSpawner"
+      AddColor = true
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Hue = 0.20
+      EaseIn = 0.9
+      EaseOut = 1.0
+      ScaleX = 2.0
+      ScaleY = 1.5
+      CreateAnimations = [
+        {
+          Name = "ProjectileLightningBallGlowLarge"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashWhipLighting-Artemis"
+      InheritFrom = "EnemyHeavySlashWhipLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "FuryHellfire-Artemis"
+      InheritFrom = "FuryHellfire"
+      FilePath = "Dev\blank_invisible" 
+      ChildAnimation = "LightningPieceSpawner"
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      AddColor = true
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      EaseIn = 0.5
+      EaseOut = 0.6
+      EndScaleX = 0.2
+      EndScaleY = 1.5
+      StartScaleX = 0.6
+      RandomFlipHorizontal = false
+      Hue = 0.20
+      CreateAnimations = [
+        { Name = "FuryHellfireRandom-Artemis" }
+        { Name = "QuickFlashYellowLarge" }
+        { Name = "RadialNovaZeus" }
+        { Name = "FuryDustRingFront" }
+        { Name = "FuryDustRingBack" }
+        //{ Name = "FuryHellfireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireRandom-Artemis"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryHellfireSlow-Artemis" }
+        { Name = "FuryHellfireFast-Artemis" }
+      ]
+    }
+    {
+      Name = "FuryHellfireSlow-Artemis"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = true
+      Color = { Red = 1.0 Green = 0.8 Blue = 0.30 }
+      Hue = 0.20
+      PlaySpeed = 45.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfireFast-Artemis"
+      InheritFrom = "FuryHellfireSlow-Artemis"
+      PlaySpeed = 75.0
+      CreateAnimations = [
+        { Name = "FuryHellFireDarkFast" }
+      ]
+    }
+    {
+      Name = "FuryHellfirePreviewDecalDark-Artemis"
+      InheritFrom = "FuryHellfirePreviewDecalDark"
+      CreateAnimation = "FuryHellfirePreviewDecal-Artemis"
+    }
+    {
+      Name = "FuryHellfirePreviewDecal-Artemis"
+      InheritFrom = "FuryHellfirePreviewDecal"
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+    }
+    // {
+    //   Name = "RadialNovaZeus"
+    //   InheritFrom = "RadialNova"
+    //   GroupName = "FX_Terrain_Add"
+    //   //VisualFx = "LightningPieceSwordParry"
+    //   EndBlue = 0.3
+    //   EndGreen = 0.7
+    //   EndRed = 0.999
+    //   StartBlue = 0.6
+    //   StartGreen = 1.0
+    //   StartRed = 1.0
+    //   PlaySpeed = 75.0
+    //   ScaleRadius = 350.0
+    //   VisualFxCap = 8
+    //   VisualFxIntervalMax = 0.03
+    //   VisualFxIntervalMin = 0.01
+    //   TimeModifierFraction = 0.0
+    //   CreateAnimations = [
+    //     { Name = "RadialNovaSwordParryDark" }
+    //     { Name = "DisplaceShockwaveSwordParry" }
+    //     { Name = "LightningBoltZeus" }
+    //     { Name = "QuickFlashYellow" }
+    //   ]
+    // }
+    {
+      Name = "HarpyWhipSlashSwipe-Artemis"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Artemis"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Artemis"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Artemis"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Artemis"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      Color = { Red = 0.0 Green = 1.0 Blue = 0.4 }
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Artemis"
+      VisualFx = null
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.011
+      VisualFxCap = 8
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace-Artemis"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Artemis"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Artemis"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Artemis"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Artemis"
+        }
+        {
+          Name = "QuickFlashGreen"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Artemis"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Artemis"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Artemis"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Artemis"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace-Artemis"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Artemis"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Artemis"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Artemis"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ Animations = [
+     "_append"
+    {
+      Name = "FuryLungeStreak-Hermes"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCSpearRushTrail-Zeus"
+        }
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "QuickFlashYellowSmall"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    // {
+    //   Name = "EPCSpearRushTrailFx-Zeus"
+    //   FilePath = "Dev\blank_invisible"
+    //   InheritFrom = "SpearRushTrailFx"
+    //   VisualFx = "SpearRushTrail-Zeus"
+    //   ClearCreateAnimations = true
+    //   CreateAnimations =
+    //   [
+    //     { Name = "SpearRushDashPuff" }
+    //     { Name = "QuickFlashYellowSmall" }
+    //   ]
+    // }
+    // {
+    //   Name = "EPCSpearRushTrail-Zeus"
+    //   InheritFrom = "SpearRushTrail"
+    //   Duration = 0.25
+    //   StartRed = 1
+    //   StartGreen = 1
+    //   StartBlue = 0.7
+    //   EndRed = 0.99
+    //   EndGreen = 0.99
+    //   EndBlue = 0.3
+    //   AngleFromMarker = "Take"
+    //   AngleFromOwner = "Take"
+    //   ClearCreateAnimations = true
+    //   CreateAnimations = [
+    //     {
+    //       Name = "SpearRushTrail_Dark"
+    //     }
+    //     {
+    //       Name = "SpearThrowParticles_Rush-Zeus"
+    //     }
+    //     {
+    //       Name = "LightningPiece"
+    //     }]
+    // }
+ ]
+}

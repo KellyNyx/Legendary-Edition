@@ -1,0 +1,23 @@
+::Animations
+
+To "Game/Animations/GUIAnimations.sjson"
+SJSON "Assets/Game/Animations/LEGUIAnimations.sjson"
+
+To "Game/Animations/ObstacleAnimations.sjson"
+SJSON "Assets/Game/Animations/LEObstacleAnimations.sjson"
+
+To "Game/Animations/PortraitAnimations.sjson"
+SJSON "Assets/Game/Animations/LEPortraitAnimations.sjson"
+
+::GUI
+
+To "Game/GUI/MainMenuScreen.sjson"
+Replace "Assets/Game/GUI/LEMainMenuScreen.sjson"
+
+::Obstacles
+
+To "Game/Obstacles/1_DevObstacles.sjson"
+SJSON "Assets/Game/Obstacles/LEDevObstacles.sjson"
+
+To "Game/Obstacles/GUI.sjson"
+SJSON "Assets/Game/Obstacles/LEGUI.sjson"

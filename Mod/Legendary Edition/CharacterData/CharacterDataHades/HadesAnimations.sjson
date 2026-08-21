@@ -1,0 +1,7316 @@
+{
+ Animations = [   
+   "_append"
+   {
+      Name = "EPCHadesBattleRun"
+      InheritFrom = "HadesBattleRun"
+      Slides = [
+        { DurationFrames = 1 Sound = "/Leftovers/SFX/FootstepsHuge" Frame = 13 VisualFx = "FireFootstepR-Spawner-Hades" }
+        { DurationFrames = 1 Sound = "/Leftovers/SFX/FootstepsHuge" Frame = 28 VisualFx = "FireFootstepL-Spawner-Hades" }
+        ]
+    }
+    {
+      Name = "EPCHadesBattleAttackRange_Start"
+      ChainTo = "EPCHadesBattleAttackRange_Fire"
+      FilePath = "Animations\Hades\HadesBattleAttackRange\HadesBattleAttackRange"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackRange_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackRange.sga"
+      EndFrame = 48
+      NumAngles = 32
+      NumFrames = 48
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackRange_StartHold"
+      InheritFrom = "HadesBattleAttackRange_Start"
+      ClearSlides = true
+      Slides = [
+
+        { DurationFrames = 2 }/*preAttack*/
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 999 Sound = "/Leftovers/SFX/FootstepsHuge" VisualFx = "FireFootstepL-Spawner-Hades"}
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+
+        { DurationFrames = 0 }/*Fire*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*returnToIdle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+
+        { DurationFrames = 0 } 
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*40*/
+
+        { DurationFrames = 0 } 
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*48*/
+        
+        ]
+    }
+
+     {
+      Name = "EPCHadesBattleAttackRange_Fire"
+      ChainTo = "EPCHadesBattleAttackRange_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleAttackRange\HadesBattleAttackRange"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackRange_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackRange.sga"
+      EndFrame = 48
+      NumAngles = 32
+      NumFrames = 48
+      StartFrame = 1
+      OffsetY = -105.0
+      //DisableOwnerRotation = false
+      Slides = [
+
+        { DurationFrames = 0 }/*preAttack*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+
+        { DurationFrames = 1 }/*Fire*/
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 4 }/*20*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 0 }/*returnToIdle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+
+        { DurationFrames = 0 } 
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*40*/
+
+        { DurationFrames = 0 } 
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }/*48*/
+        
+        
+        ]
+       Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackRange_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleAttackRange\HadesBattleAttackRange"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackRange_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackRange.sga"
+      EndFrame = 48
+      NumAngles = 32
+      NumFrames = 48
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleBidentFlurry_Fire"
+      ChainTo = "EPCHadesBattleBidentFlurry_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleBidentFlurry\HadesBattleBidentFlurry"
+      Type = "Slide"
+      VideoTexture = "HadesBattleBidentFlurry_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleBidentFlurry.sga"
+      EndFrame = 80
+      NumAngles = 16
+      NumFrames = 80
+      StartFrame = 1
+      OffsetY = -105.0
+      AllowRestart = true
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleBidentFlurry_ReturnToIdle"
+      ChainTo = "HadesBattleIdle"
+      FilePath = "Animations\Hades\HadesBattleBidentFlurry\HadesBattleBidentFlurry"
+      Type = "Slide"
+      VideoTexture = "HadesBattleBidentFlurry_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleBidentFlurry.sga"
+      EndFrame = 80
+      NumAngles = 16
+      NumFrames = 80
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/SFX/Player Sounds/WeaponSwing"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/SFX/Player Sounds/WeaponSwing"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepL-Spawner-Hades"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcOne_Start"
+      ChainTo = "EPCHadesBattleAttackArcOne_Fire"
+      FilePath = "Animations\Hades\HadesBattleAttackArcOne\HadesBattleAttackArcOne"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcOne_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcOne.sga"
+      EndFrame = 93
+      NumAngles = 16
+      NumFrames = 93
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcOne_Fire"
+      ChainTo = "EPCHadesBattleAttackArcOne_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleAttackArcOne\HadesBattleAttackArcOne"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcOne_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcOne.sga"
+      EndFrame = 93
+      NumAngles = 16
+      NumFrames = 93
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcOne_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleAttackArcOne\HadesBattleAttackArcOne"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcOne_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcOne.sga"
+      EndFrame = 93
+      NumAngles = 16
+      NumFrames = 93
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcTwo_Start"
+      ChainTo = "EPCHadesBattleAttackArcTwo_Fire"
+      FilePath = "Animations\Hades\HadesBattleAttackArcTwo\HadesBattleAttackArcTwo"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcTwo_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcTwo.sga"
+      EndFrame = 82
+      NumAngles = 16
+      NumFrames = 82
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcTwo_Fire"
+      ChainTo = "EPCHadesBattleAttackArcTwo_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleAttackArcTwo\HadesBattleAttackArcTwo"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcTwo_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcTwo.sga"
+      EndFrame = 82
+      NumAngles = 16
+      NumFrames = 82
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackArcTwo_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleAttackArcTwo\HadesBattleAttackArcTwo"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackArcTwo_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackArcTwo.sga"
+      EndFrame = 82
+      NumAngles = 16
+      NumFrames = 82
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin_Start"
+      ChainTo = "EPCHadesBattleAttackSpin_Fire"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin\HadesBattleAttackSpin"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin.sga"
+      EndFrame = 100
+      NumAngles = 32
+      NumFrames = 100
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepL-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+          DangerDistance = 350
+        }
+        {
+          DurationFrames = 2
+          DangerDistance = 350
+        }
+        {
+          DurationFrames = 2
+          DangerDistance = 350
+        }
+        {
+          DurationFrames = 2
+          DangerDistance = 350
+        }
+        {
+          DurationFrames = 14
+          DangerDistance = 350
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin_Fire"
+      ChainTo = "EPCHadesBattleAttackSpin_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin\HadesBattleAttackSpin"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin.sga"
+      DisableOwnerRotation = true
+      EndFrame = 100
+      NumAngles = 32
+      NumFrames = 100
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin_FireReverse"
+      InheritFrom = "EPCHadesBattleAttackSpin_Fire"
+      PlayBackwards = true
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin\HadesBattleAttackSpin"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin.sga"
+      EndFrame = 100
+      NumAngles = 32
+      NumFrames = 100
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleCastBeam_Start"
+      ChainTo = "EPCHadesBattleCastBeam_Fire"
+      FilePath = "Animations\Hades\HadesBattleCastBeam\HadesBattleCastBeam"
+      Type = "Slide"
+      VideoTexture = "HadesBattleCastBeam_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleCastBeam.sga"
+      EndFrame = 175
+      NumAngles = 32
+      NumFrames = 175
+      StartFrame = 1
+      OffsetY = -105.0
+      OwnerImmobile = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/SFX/Enemy Sounds/Hades/HadesLaserBlastChargeUp"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/SFX/Enemy Sounds/Hades/HadesLaserSpin"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/SFX/Player Sounds/HermesWhooshUpgradeSFX"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/SFX/Enemy Sounds/Tisiphone/TisiphoneHarpySlowBeam"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleCastBeam_Fire"
+      ChainTo = "EPCHadesBattleCastBeam_FireLoop"
+      FilePath = "Animations\Hades\HadesBattleCastBeam\HadesBattleCastBeam"
+      Type = "Slide"
+      VideoTexture = "HadesBattleCastBeam_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleCastBeam.sga"
+      EndFrame = 175
+      NumAngles = 32
+      NumFrames = 175
+      StartFrame = 1
+      OffsetY = -105.0
+      OwnerImmobile = true
+      Sound = "/SFX/Enemy Sounds/Hades/HadesLaserBlastLoop"
+      StopSoundOnFinishFade = 0.2
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleCastBeam_FireLoop"
+      ChainTo = "EPCHadesBattleCastBeam_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleCastBeam\HadesBattleCastBeam"
+      Type = "Slide"
+      VideoTexture = "HadesBattleCastBeam_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleCastBeam.sga"
+      Loop = true
+      EndFrame = 175
+      NumAngles = 32
+      NumFrames = 175
+      StartFrame = 1
+      OffsetY = -105.0
+      OwnerImmobile = true
+      Sound = "/SFX/Enemy Sounds/Hades/HadesLaserBlastLoop2"
+      StopSoundOnFinishFade = 0.5
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleCastBeam_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleCastBeam\HadesBattleCastBeam"
+      Type = "Slide"
+      VideoTexture = "HadesBattleCastBeam_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleCastBeam.sga"
+      CancelOnOwnerMove = false
+      EndFrame = 175
+      NumAngles = 32
+      NumFrames = 175
+      StartFrame = 1
+      OffsetY = -105.0
+      OwnerImmobile = true
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepL-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin2_Start"
+      ChainTo = "EPCHadesBattleAttackSpin2_Fire"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin2\HadesBattleAttackSpin2"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin2_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin2.sga"
+      EndFrame = 84
+      NumAngles = 32
+      NumFrames = 84
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepL-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin2_Fire"
+      ChainTo = "EPCHadesBattleAttackSpin2_ReturnToIdle"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin2\HadesBattleAttackSpin2"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin2_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin2.sga"
+      DisableOwnerRotation = true
+      EndFrame = 84
+      NumAngles = 32
+      NumFrames = 84
+      StartFrame = 1
+      OffsetY = -105.0
+      DangerDistance = 350
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepR-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+          Sound = "/Leftovers/SFX/FootstepsHuge"
+          VisualFx = "FireFootstepL-Spawner-Hades"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin2_FireReverse"
+      InheritFrom = "HadesBattleAttackSpin2_Fire"
+      PlayBackwards = true
+    }
+    {
+      Name = "EPCHadesBattleAttackSpin2_ReturnToIdle"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleAttackSpin2\HadesBattleAttackSpin2"
+      Type = "Slide"
+      VideoTexture = "HadesBattleAttackSpin2_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleAttackSpin2.sga"
+      EndFrame = 84
+      NumAngles = 32
+      NumFrames = 84
+      StartFrame = 1
+      OffsetY = -105.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleHeal_Start"
+      ChainTo = "EPCHadesBattleHeal_Loop"
+      FilePath = "Animations\Hades\HadesBattleHeal\HadesBattleHeal"
+      Type = "Slide"
+      VideoTexture = "HadesBattleHeal_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleHeal.sga"
+      EndFrame = 90
+      NumAngles = 1
+      NumFrames = 90
+      AngleFromOwner = "Ignore"
+      StartFrame = 1
+      OffsetY = -105.0
+      CancelOnOwnerMove = false
+      //CreateAnimation = "HadesUrnConsumeFx_Self"
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          //Sound = "/SFX/Enemy Sounds/Hades/EmotePoweringUp"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCHadesBattleHeal_Loop"
+      ChainTo = "null"
+      FilePath = "Animations\Hades\HadesBattleHeal\HadesBattleHeal"
+      Type = "Slide"
+      VideoTexture = "HadesBattleHeal_Bink"
+      FrameDataFile = "Game\Animations\FrameData\HadesBattleHeal.sga"
+      EndFrame = 90
+      NumAngles = 1
+      NumFrames = 90
+      Loop = true
+      AngleFromOwner = "Ignore"
+      StartFrame = 1
+      OffsetY = -105.0
+      CancelOnOwnerMove = false
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          //Sound = "/SFX/Enemy Sounds/Hades/HadesHealingTick"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+          //Sound = "/SFX/Enemy Sounds/Hades/HadesHealingTick"
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+ ]
+}
+    

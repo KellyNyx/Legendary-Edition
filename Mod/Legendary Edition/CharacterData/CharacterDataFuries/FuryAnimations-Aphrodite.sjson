@@ -1,0 +1,39 @@
+{
+ Animations = [   
+   "_append"
+   {
+      Name = "EPCFuryLungeFire-Aphrodite"
+      InheritFrom = "EPCFuryLungeFire"
+      DangerDistance = 600
+      CreateAnimation = "FuryLungeStreak-Aphrodite-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFury2LungeFire-Aphrodite"
+      InheritFrom = "EPCFuryLungeFire"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      ChainTo = "Fury2LungeReturnToIdle"
+      DangerDistance = 600
+      CreateAnimation = "FuryLungeStreak-Aphrodite-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFury3LungeFire-Aphrodite"
+      InheritFrom = "EPCFuryLungeFire"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+      ChainTo = "Fury3LungeReturnToIdle"
+      DangerDistance = 600
+      CreateAnimation = "FuryLungeStreak-Aphrodite-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+ ]
+}
+    

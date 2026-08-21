@@ -1,0 +1,1400 @@
+{
+ Animations = [
+     "_append"
+     {
+      Name = "FuryLungeStreak-Aphrodite-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "FuryLungeStreak-Aphrodite"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "FuryLungeStreak-Aphrodite"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCSpearRushTrail-Aphrodite"
+        }
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "QuickFlashYellowSmall"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "EPCSpearRushTrailFx-Aphrodite"
+      FilePath = "Dev\blank_invisible"
+      InheritFrom = "SpearRushTrailFx"
+      VisualFx = "SpearRushTrail-Aphrodite"
+      ClearCreateAnimations = true
+      CreateAnimations =
+      [
+        { Name = "SpearRushDashPuff" }
+        { Name = "QuickFlashYellowSmall" }
+      ]
+    }
+    {
+      Name = "EPCSpearRushTrail-Aphrodite"
+      InheritFrom = "SpearRushTrail"
+      Duration = 0.25
+      StartRed = 1
+      StartGreen = 1
+      StartBlue = 0.7
+      EndRed = 0.99
+      EndGreen = 0.99
+      EndBlue = 0.3
+      AngleFromMarker = "Take"
+      AngleFromOwner = "Take"
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "SpearRushTrail_Dark"
+        }
+        {
+          Name = "SpearThrowParticles_Rush-Aphrodite"
+        }
+        {
+          Name = "LightningPiece"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = "QuickFlashPink"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      VisualFx = "FuryWhipWhirlRandom-Aphrodite_"
+      Sound = "/SFX/Player Sounds/AphroditeLoveShieldRush"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 60.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      VisualFxCap = 2
+      VisualFxIntervalMax = 0.12
+      VisualFxIntervalMin = 0.1
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDark"
+        }
+        {
+          Name = "SpearSwipe360-Aphrodite-Emitter"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomA-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkA"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomB-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkB"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomC-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkC"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomD-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkD"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomE-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkE"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomF-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkF"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomG-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkG"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomH-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkH"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomI-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkI"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJ-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJ"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomK-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkK"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomL-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkL"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomM-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkM"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomN-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkN"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomO-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkO"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomAFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkAFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomBFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkBFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomCFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkCFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomDFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkDFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomEFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkEFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomFFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkFFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomGFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkGFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomHFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkHFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomIFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkIFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomKFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkKFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomLFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkLFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomMFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkMFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomNFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkNFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomOFast-Aphrodite"
+      InheritFrom = "FuryWhipWhirl-Aphrodite"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkOFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandom-Aphrodite_"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "FuryWhipWhirlRandomA-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomB-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomC-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomD-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomE-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomF-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomG-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomH-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomI-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomJ-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomK-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomL-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomM-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomN-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomO-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomAFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomBFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomCFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomDFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomEFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomFFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomGFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomHFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomIFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomJFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomKFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomLFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomMFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomNFast-Aphrodite" }
+        { Name = "FuryWhipWhirlRandomOFast-Aphrodite" }
+      ]
+    }
+    {
+      Name = "AlectoWhipArc-Aphrodite"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/AphroditeLoveSwipe"
+      AddColor = true
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+      EndFrame = 17
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashPinkLarge"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement-Aphrodite"
+        }
+        {
+          Name = "AlectoWhipArcDark"
+        }]
+    }
+    {
+      Name = "QuickFlashPinkLarge"
+      InheritFrom = "QuickFlashPink"
+      EndScale = 4.0
+      StartScale = 5.0
+    }
+    {
+      Name = "AlectoWhipArcDisplacement-Aphrodite"
+      InheritFrom = "AlectoWhipArc-Aphrodite"
+      Sound = null
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "FuryAlectoThrow-Aphrodite"
+      ChainTo = "null"
+      CreateAnimation = null
+      FilePath = "Fx\AphroditeHeartShape\AphroditeHeartShape"
+      Type = "Book"
+      VisualFx = "SpearSwipe360Alecto-Aphrodite"
+      AngleFromOwner = "MainTain"
+      Sound = "/SFX/AphroditeDevotionSFX"
+      StopSoundOnFinishFade = 0.3
+      DurationFrames = 48
+      AddColor = true
+      StartRed = 1
+      EndRed = 0
+      StartGreen = 1
+      EndGreen = 0
+      StartBlue = 1
+      EndBlue = 0
+      PingPongColor = true
+      EndFrame = 1
+      Loop = true
+      NumAngles = 60
+      NumFrames = 1
+      StartFrame = 1.0
+      // StartScale = 0.2
+      // EndScale = 0.3
+      EaseIn = 0.01
+      EaseOut = 0.02
+      Scale = 0.5
+      ScaleRadius = 110.0
+      Ambient = 0.0
+      VisualFxIntervalMax = 0.2
+      VisualFxIntervalMin = 0.1
+    }
+    {
+      Name = "SpearSwipe360Alecto-Aphrodite"
+      InheritFrom = "SpearSwipe360"
+      CreateAnimation = "SpearSwipe360Alecto-Displace"
+      ChildAnimation = "SpearSwipe360AlectoB-Aphrodite"
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+      EaseIn = 0.999
+      EaseOut = 1.0
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+          Frame = 4
+          VisualFx = "QuickFlashPinkSpawner"
+        }]
+    }
+    {
+      Name = "SpearSwipe360Alecto-Displace"
+      InheritFrom = "SpearSwipe360"
+      ChildAnimation = "null"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      StartAlpha = 0.1
+      ClearSlides = true
+      CancelOverCap = true
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360AlectoB-Aphrodite"
+      InheritFrom = "SpearSwipe360B"
+      ChildAnimation = "AphroditeParticleEmitter"
+      Scale = 1.8
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+    }
+    {
+      Name = "AphroditeParticleEmitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "AphroditeParticleMix_"
+      //Sound = "/SFX/Player Sounds/AphroditeLoveSwipe"
+      Duration = 0.1
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxIntervalMax = 0.01
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "AphroditeParticleMix_"
+      FilePath = "Animations\AphroditeParticleMixSparse\AphroditeParticleMixSparse"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "AphroditeParticleSparkle" }
+        { Name = "AphroditeParticleHeart" }
+        { Name = "AphroditeParticleHeart2" }
+      ]
+    }
+    {
+      Name = "SpearSwipeGlowAlecto-Aphrodite"
+      InheritFrom = "SpearSwipeGlow"
+      ChildAnimation = null
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+    }
+    {
+      Name = "SpearSwipe360Alecto-Aphrodite-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "SpearSwipe360-Aphrodite-Particles"
+      Duration = 0.2
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxIntervalMax = 0.011
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "AphroditeSpawner"
+      InheritFrom = "RadialNova"
+      FilePath = "Dev\blank_invisible"
+      Type = "Book"
+      GroupName = "FX_Terrain_Add"
+      VisualFx = "LightningPieceSwordParry"
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.03
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "FuryBeamEmitter-Aphrodite"
+      FilePath = "Fx\ProjectileFire\ProjectileFire"
+      GroupName = "FX_Standing_Add"
+      Type = "Book"
+      VisualFx = "FuryBeamFire-Aphrodite_Particles"
+	  VisualFxManagerCap = 400
+      AngleFromOwner = "Ignore"
+      AddColor = true
+      EndFrame = 60
+      Loop = true
+      NumFrames = 60
+      Color = { Red = 1.0 Green = 0.1 Blue = 0.79 }
+      RandomPlaySpeedMax = 120.0
+      RandomPlaySpeedMin = 90.0
+      ReRandomizeOnLoop = false
+      StartFrame = 1
+      RandomRotation = true
+      EndScale = 0.25
+      PingPongScale = true
+      ScaleMax = 1.0
+      ScaleMin = 0.5
+      VisualFxDistanceMax = 200.0
+      VisualFxDistanceMin = 180.0
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastFire"
+      CreateAnimations = [
+        { Name = "FuryBeamEmitterDark" }
+      ]
+    }
+    {
+      Name = "FuryBeamFire-Aphrodite"
+      FilePath = "Dev\blank_invisible"
+      GroupName = "FX_Standing_Add"
+      Type = "Book"
+      AngleFromOwner = "Take"
+      EndFrame = 38
+      NumFrames = 38
+      RandomPlaySpeedMax = 70.0
+      RandomPlaySpeedMin = 60.0
+      StartFrame = 1
+      RandomFlipVertical = true
+      LocationFromOwner = "Ignore"
+      LocationZFromOwner = "Take"
+      SortMode = "Id"
+      Velocity = 400.0
+      ScaleMax = 1.0
+      ScaleMin = 0.8
+      ScaleX = 1.3
+      ScaleY = 0.3
+      Ambient = 0.0
+      Color = { Red = 1.0 Green = 0.90 Blue = 0.2 }
+      RandomAccelerationMax = -300.0
+      RandomAccelerationMin = -700.0
+	  VisualFxManagerCap = 450
+      CreateAnimations = [
+        //{ Name = "FuryBeamFireDark" }
+        { Name = "FuryBeamFire-Aphrodite-Particles" }
+      ]
+    }
+    {
+      Name = "FuryBeamFire-Aphrodite_Particles"
+      FilePath = "Animations\AphroditeStreak\AphroditeStreak"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "AphroditeStreakA_" }
+        { Name = "AphroditeStreakB_" }
+      ]
+    }
+    {
+      Name = "AphroditeStreakA_"
+      InheritFrom = "AphroditeStreakA"
+      RandomPlaySpeedMax = 180.0
+      RandomPlaySpeedMin = 180.0
+      EndScaleX = 0.9
+      EndScaleY = 0.8
+      ScaleMax = 1.0
+      //OffsetZ = 60.0
+      OriginX = 300.0
+      ScaleMin = 1.0
+      StartScaleX = 0.9
+      StartScaleY = 0.8
+      FilePath = "Fx\AphroditeStreakB\AphroditeStreakB"
+      CreateAnimation = "AphroditeParticleMix_FuryBeamFire"
+    }
+    {
+      Name = "AphroditeStreakB_"
+      InheritFrom = "AphroditeStreakA"
+      RandomPlaySpeedMax = 180.0
+      RandomPlaySpeedMin = 180.0
+      EndScaleX = 0.9
+      EndScaleY = 0.8
+      ScaleMax = 1.0
+      //OffsetZ = 60.0
+      OriginX = 300.0
+      ScaleMin = 0.95
+      StartScaleX = 0.9
+      StartScaleY = 0.8
+      FilePath = "Fx\AphroditeStreakB\AphroditeStreakB"
+      CreateAnimation = "AphroditeParticleMix_FuryBeamFire"
+    }
+    {
+      Name = "AphroditeParticleMix_FuryBeamFire"
+      FilePath = "Animations\AphroditeParticleMixSparse\AphroditeParticleMixSparse"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        { Name = "AphroditeParticleSparkle" }
+        { Name = "AphroditeParticleHeart" }
+        { Name = "AphroditeParticleHeart2" }
+        { Name = null }
+        { Name = null }
+        { Name = null }
+        { Name = null }
+      ]
+    }
+    {
+      Name = "EnemyProjectileLightPink"
+      InheritFrom = "EnemyProjectileLight"
+      Color = { Red = 1.0 Green = 0.75 Blue = 0.79 }
+    }
+    {
+      Name = "EnemyHeavySlashLasso-Aphrodite"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashLassoDark_1"
+      GroupName = "FX_Standing_Add"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/AphroditeLoveSwipe"
+      AddColor = true
+      EaseIn = 0.9
+      EaseOut = 1.0
+      OriginX = 240.0
+      OriginY = 120.0
+      EndScaleY = 0.0
+      ScaleX = 4.0
+      StartScaleY = 0.8
+      // EndBlue = 0.1
+      // EndGreen = 1.0
+      // EndRed = 1.0
+      // StartBlue = 0.8
+      // StartGreen = 1.0
+      // StartRed = 1.0
+      Color = { Red = 1.0 Green = 0.75 Blue = 0.79 }
+      VisualFx = "AphroditeLassoParticles"
+      VisualFxCap = 5
+      VisualFxIntervalMax = 0.06
+      VisualFxIntervalMin = 0.05
+      CreateAnimations = [
+        {
+          Name = "QuickFlashPink"
+        }
+        ]
+    }
+    {
+      Name = "AphroditeLassoParticles"
+      InheritFrom = "SpearThrustParticles-Aphrodite"
+      OffsetZ = 300.0
+      OffsetX = 300.0
+    }
+    {
+      Name = "EnemyHeavySlashWhip1-Aphrodite"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashWhip1Dark_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      //ChildAnimation = "ProjectileLightningBallGlowLargeSpawner"
+      AddColor = true
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Hue = 0.20
+      EaseIn = 0.9
+      EaseOut = 1.0
+      ScaleX = 2.0
+      ScaleY = 1.5
+      CreateAnimations = [
+        {
+          Name = "ProjectileLightningBallGlowLarge"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashWhipLighting-Aphrodite"
+      InheritFrom = "EnemyHeavySlashWhipLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "RadialNovaFuryHellfire-Aphrodite"
+      InheritFrom = "RadialNova"
+      GroupName = "FX_Terrain_Add"
+      VisualFx = "AphroditeParticlesSwordParry"
+      EndBlue = 1.0
+      EndRed = 0.7
+      StartBlue = 1.0
+      StartGreen = 0.3
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 24
+      VisualFxIntervalMax = 0.00011
+      VisualFxIntervalMin = 0.0001
+      TimeModifierFraction = 0.0
+      Sound = "/SFX/Player Sounds/AphroditeLoveShotgunBlast"
+      CreateAnimations = [
+        { Name = "DisplaceShockwaveSwordParry" }
+        { Name = "QuickFlashPink" }
+        { Name = "RadialNovaSwordParryDark" }
+      ]
+    }
+    {
+      Name = "FuryHellfire-Aphrodite"
+      InheritFrom = "FuryHellfire"
+      FilePath = "Dev\blank_invisible"
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = null
+      AddColor = true
+      Color = { Red = 1.0 Green = 0.1 Blue = 0.79 }
+      EaseIn = 0.5
+      EaseOut = 0.6
+      EndScaleX = 0.2
+      EndScaleY = 1.5
+      StartScaleX = 0.6
+      RandomFlipHorizontal = false
+      Hue = 0.2
+      CreateAnimations = [
+        {
+          Name = "FuryHellfireRandom-Aphrodite"
+        }
+        {
+          Name = "QuickFlashPinkLarge"
+        }
+        {
+          Name = "RadialNovaFuryHellfire-Aphrodite"
+        }
+        {
+          Name = "FuryDustRingFront"
+        }
+        {
+          Name = "FuryDustRingBack"
+        }]
+    }
+    {
+      Name = "FuryHellfireRandom-Aphrodite"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        {
+          Name = "FuryHellfireSlow-Aphrodite"
+        }
+        {
+          Name = "FuryHellfireFast-Aphrodite"
+        }]
+    }
+    {
+      Name = "FuryHellfireSlow-Aphrodite"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = true
+      Color = { Red = 1.0 Green = 0.1 Blue = 0.79 }
+      PlaySpeed = 45.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "FuryHellFireDark"
+        }]
+    }
+    {
+      Name = "FuryHellfireFast-Aphrodite"
+      InheritFrom = "FuryHellfireSlow-Aphrodite"
+      PlaySpeed = 75.0
+      CreateAnimations = [
+        {
+          Name = "FuryHellFireDarkFast"
+        }]
+    }
+    {
+      Name = "FuryHellfirePreviewDecalDark-Aphrodite"
+      InheritFrom = "FuryHellfirePreviewDecalDark"
+      CreateAnimation = "FuryHellfirePreviewDecal-Aphrodite"
+    }
+    {
+      Name = "FuryHellfirePreviewDecal-Aphrodite"
+      InheritFrom = "FuryHellfirePreviewDecal"
+      Color = { Red = 1.0 Green = 0.75 Blue = 0.79 }
+    }
+    // {
+    //   Name = "RadialNovaZeus"
+    //   InheritFrom = "RadialNova"
+    //   GroupName = "FX_Terrain_Add"
+    //   //VisualFx = "LightningPieceSwordParry"
+    //   EndBlue = 0.3
+    //   EndGreen = 0.7
+    //   EndRed = 0.999
+    //   StartBlue = 0.6
+    //   StartGreen = 1.0
+    //   StartRed = 1.0
+    //   PlaySpeed = 75.0
+    //   ScaleRadius = 350.0
+    //   VisualFxCap = 8
+    //   VisualFxIntervalMax = 0.03
+    //   VisualFxIntervalMin = 0.01
+    //   TimeModifierFraction = 0.0
+    //   CreateAnimations = [
+    //     { Name = "RadialNovaSwordParryDark" }
+    //     { Name = "DisplaceShockwaveSwordParry" }
+    //     { Name = "LightningBoltZeus" }
+    //     { Name = "QuickFlashYellow" }
+    //   ]
+    // }
+{
+      Name = "HarpyWhipSlashSwipe-Aphrodite"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Aphrodite"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Aphrodite"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Aphrodite"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Aphrodite"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      EndGreen = 0.1
+      EndBlue = 0.2
+      EndRed = 1.0
+      StartGreen = 0.5
+      StartBlue = 0.9
+      StartRed = 1.0
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Aphrodite"
+      VisualFx = "SpearThrustParticles-Aphrodite"
+      VisualFxIntervalMin = 0.06
+      VisualFxIntervalMax = 0.05
+      VisualFxCap = 5
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace-Aphrodite"
+        }
+        {
+          Name = "QuickFlashPink"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Aphrodite"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Aphrodite"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Aphrodite"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Aphrodite"
+        }
+        {
+          Name = "QuickFlashPink"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Aphrodite"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Aphrodite"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Aphrodite"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Aphrodite"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace-Aphrodite"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Aphrodite"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Aphrodite"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Aphrodite"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+ ]
+}

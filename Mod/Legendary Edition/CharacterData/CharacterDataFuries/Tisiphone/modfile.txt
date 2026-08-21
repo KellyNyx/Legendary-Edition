@@ -1,0 +1,19 @@
+Import "EPCTisiphoneMain.lua"
+
+To "Scripts/WeaponData.lua"
+Import "TisiphoneWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "TisiphoneWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "TisiphoneWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "TisiphoneWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "TisiphoneProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "TisiphoneWeapons.sjson"

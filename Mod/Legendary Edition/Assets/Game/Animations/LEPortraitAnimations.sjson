@@ -1,0 +1,27 @@
+{
+    Animations = [
+        "_append"
+/*Character Portraits*/
+    {
+      Name = "Character_Portrait_Alecto"
+      InheritFrom = "Codex_Portrait_Base_01"
+      FilePath = "Portraits\CharacterIcons\CharacterPortrait_Alecto"
+      EndFrame = 1
+      StartFrame = 1
+    }
+    {
+      Name = "Character_Portrait_Megaera"
+      InheritFrom = "Codex_Portrait_Base_01"
+      FilePath = "Portraits\CharacterIcons\CharacterPortrait_Meg"
+      EndFrame = 1
+      StartFrame = 1
+    }
+    {
+      Name = "Character_Portrait_Tisiphone"
+      InheritFrom = "Codex_Portrait_Base_01"
+      FilePath = "Portraits\CharacterIcons\CharacterPortrait_Tis"
+      EndFrame = 1
+      StartFrame = 1
+    }
+    ]
+}

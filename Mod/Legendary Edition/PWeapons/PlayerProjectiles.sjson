@@ -1,0 +1,215 @@
+{
+ Projectiles = [
+     "_append"
+    {
+      Name = "EPCMegaeraRushWeapon"
+      DetonateSound = "null"
+      Type = "STRAIGHT"
+      Fuse = 0.0
+      Range = 700
+      DamageLow = 13
+      DamageHigh = 13
+      DamageRadius = 220.0
+      DamageRadiusScaleY = 0.6
+      DamageRadiusScaleX = 1.1
+      AttachToOwner = true
+      UseRadialImpact = true
+      AutoAdjustForTarget = false
+      UseVulnerability = false
+      UnlimitedUnitPenetration = true
+      UnlimitedObstaclePenetration = true
+      SilentImpactOnInvulnerable = true
+	  ClearOnAttackEffects = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        AttachedAnim = "null"
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 48
+            Y = 48
+          }
+          {
+            X = 48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = -48
+          }
+          {
+            X = -48
+            Y = 48
+          }
+        ]
+      }
+      Effects = [
+        {
+          Name = "ReduceDamageOutput"
+          Type = "DAMAGE_OUTPUT"
+          Duration = 4
+          Modifier = 0.7
+          Active = false
+          TimeModifierFraction = 0
+          BackFx = "AphroditeDebuffB"
+          FlashFrontFxWhenExpiring = true
+          IsVulnerabilityEffect = true
+        }
+        {
+          Name = "IncreaseDamageTaken"
+          Type = "DAMAGE_TAKEN"
+          Duration = 4
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+        }
+        /* For Poseidon Rush */
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = false
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+
+        {
+          Name = "SwordParryBonusMark"
+          Duration = 10.0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetPrimary"
+          BackFx = "null"
+        }
+        {
+          Name = "ClearSwordParryBonusMark"
+          Duration = 0
+          Modifier = 1
+          Active = false
+          TimeModifierFraction = 0
+          FrontFx = "MarkTargetSecondary"
+          BackFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpyBeam"
+      InheritFrom = "1_BasePlayerSmallProjectile"
+      Type = "STRAIGHT"
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = false
+      Range = 2000
+      Speed = 800
+      DamageLow = 4
+      DamageHigh = 4
+      NumPenetrations = 0
+      GroupName = "FX_Standing_Add"
+      DangerDistance = 150
+      Thing = {
+        Graphic = "FuryBeamEmitter"
+        OffsetZ = 70
+        AttachedAnim = "EnemyProjectileLight"
+        Grip = 999999
+        RotateGeometry = true
+        Points =
+		[
+          {
+            X = -14
+            Y = 0
+          }
+          {
+            X = 10
+            Y = 14
+          }
+          {
+            X = 10
+            Y = -14
+          }
+        ]
+      }
+    }
+        {
+      Name = "EPCHarpWhipWhirl"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "FuryWhipWhirl"
+      Type = "STRAIGHT"
+      DetonateSound = "null"
+      Fuse = 0.0
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1.0
+	  ActiveBlinkSpeedMultiplier = 1.4
+	  ActiveBlinkRangeMultiplier = 1.8
+      DamageRadius = 210
+      DamageRadiusScaleY = 0.62
+	  RequireHitCenter = false
+      BlastDuration = 0.16
+      AttachToOwner = true
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = false
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      DamageLow = 30
+      DamageHigh = 30
+      ImpactVelocity = 0
+
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+	  UseDetonationForProjectileDefense = true
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        Grip = 999999
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "EPCHarpWhipWhirl2"
+      InheritFrom = "EPCHarpWhipWhirl"
+      DamageLow = 50
+      DamageHigh = 50
+      DamageRadius = 350
+      DeflectProjectiles = false
+    }
+    {
+      Name = "EPCHarpWhipWhirl3"
+      InheritFrom = "EPCHarpWhipWhirl"
+      DamageLow = 100
+      DamageHigh = 100
+      DamageRadius = 500
+      DeflectProjectiles = false
+    }
+ ]
+}

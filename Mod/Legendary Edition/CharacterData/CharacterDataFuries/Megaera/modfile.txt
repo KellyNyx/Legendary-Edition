@@ -1,0 +1,19 @@
+Import "EPCMegaeraMain.lua"
+
+To "Scripts/WeaponData.lua"
+Import "MegaeraWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "MegaeraWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "MegaeraWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "MegaeraWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "MegaeraProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "MegaeraWeapons.sjson"

@@ -1,0 +1,76 @@
+{
+  Units = [
+    "_append"
+    {
+      Name = "EPCHadesAmmo"
+      InheritFrom = "Trap"
+      AutoLockable = true
+      BlockAllEffects = false
+      DisplayInEditor = true
+      ImmuneToStun = true
+      Life = 
+      {
+        DeathGraphic = "HadesAmmoBurst"
+        DeathSound = "/SFX/Enemy Sounds/Hades/HadesFireSkullImpact"
+        HomingEligible = true
+        JumpTargetEligible = true
+        RequiresDamageToAffect = false
+		InvulnerableFx = "Invincibubble"
+      
+      }
+      Thing = 
+      {
+        AttachedAnim = "LootShadowHydraTooth"
+        EditorOutlineDrawBounds = false
+        Graphic = "HadesAmmo"
+        Grip = 6000.0
+        ImmuneToForce = true
+        OnTouchdownFxAnim = "DoorCloseDust"
+        SelectionHeight = 200.0
+        SelectionWidth = 200.0
+        SelectionShiftY = -40.0
+        Points = [
+          { X = 0 Y = 16 }
+          { X = 32 Y = 0 }
+          { X = 0 Y = -16 }
+          { X = -32 Y = 0 }
+        ]
+      }
+    }
+    
+    {
+      Name = "EPCHadesTombstone"
+      InheritFrom = "Trap"
+      AutoLockable = true
+      DisplayInEditor = true
+      ImmuneToStun = true
+      NoAllegiance = true
+      OnDeathWeapon = "HadesGraspingHands"
+      Life = 
+      {
+        DeathGraphic = "HadesTombstoneExplode"
+        DeathSound = "/SFX/Enemy Sounds/EnemyDeathExplode"
+        ProjectilesAlwaysPenetrate = true
+      }
+      Thing = 
+      {
+        AttachedAnim = "HadesStunTotemSpawnDecal"
+        EditorOutlineDrawBounds = false
+        Graphic = "HadesTombstoneSpawn"
+        Scale = 0.35
+        Tallness = 550.0
+        Offset = { X = 0 Y = -290 }
+        Points = [
+          { X = 0 Y = 42 }
+          { X = 88 Y = 0 }
+          { X = 48 Y = -54 }
+          { X = -47 Y = -56 }
+          { X = -85 Y = 2 }
+        ]
+        Using = [
+          { Name = "HadesTombstoneActivate" }
+        ]
+      }
+    }
+  ]
+}

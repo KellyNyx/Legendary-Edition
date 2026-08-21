@@ -1,0 +1,42 @@
+{
+    Projectiles = [
+        "_search", [
+            {
+                Name = "PoisonTrapWeapon"
+                Effect = {
+                    Name = "StyxPoison"
+                }
+            }
+            {
+                Effect = {
+                    Cooldown = 1.0
+                }
+            }
+
+            {
+                Name = "PoisonPuddleSmall"
+                Effect = {
+                    Name = "StyxPoison"
+                }
+            }
+            {
+                Effect = {
+                    Cooldown = 1.0
+                }
+            }
+
+            {
+                Name = "SatyrRangedWeapon"
+                           
+            }
+            {
+                Effects = [
+                    "_search", [
+                        { Name = "StyxPoison" }
+                        { Cooldown = 1.0 }
+                    ]
+                ]                     
+            }
+        ]
+    ]
+}

@@ -1,0 +1,842 @@
+ {
+    Weapons = [
+        "_append"   
+      {
+      Name = "EPCHadesDash"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "BLINK"
+      Control = "Rush"
+      FireGraphic = "HadesBattleDash_Start"
+      UnblockedBlinkFx = "DashCrack"
+      AddOnFire = "EPCHadesBidentStrike"
+      ChargeTime = 0
+      SelfVelocity = 0
+      SelfVelocityCap = 0
+      BlinkDuration = 0.21
+      BlinkEaseIn = 0
+      BlinkEaseOut = 0.8
+      Projectile = "null"
+      WeaponRange = 500
+      BlinkMaxRange = 500
+      ClipSize = 1
+      ClipRegenInterval = 0.74
+      FullClipRegen = true
+      Cooldown = 0.05
+      ChargeFx = "null"
+      ArsenalCooldown = 0.0
+      CancelMovement = false
+      FullyAutomatic = false
+      AutoLock = false
+      UseTargetAngle = true
+      BlockMoveInput = true
+      ControlHelpTextId = "Rush"
+      IgnoreForceCooldown = true
+      ForceReleaseAllOnFire = true
+      CanCancelDisables = true
+      BlinkDetonateAtEndpoint = false
+      BlinkDetonateAtOrigin = true
+      BlinkNumGhosts = 3
+      BlinkGhostAnimation = "null"
+      CheckMovementReactionDistance = 150
+      CheckDanger = true
+      CanUseKeyboardAim = true
+      FireFx = "null"
+      SilentImpact = true
+      AcceptTriggerLockRequests = true
+      AllowMultiFireRequest = true
+      CancelAttachedProjectiles = true
+      SetTargetAngleOnRequest = false
+      SetCompleteAngleOnFire = true
+      SetCompleteAngleOnCharge = true
+      Effects = [
+        {
+          Name = "RushWeaponInvulnerable"
+          Type = "INVULNERABLE"
+          Duration = 0.24
+          Modifier = 1.0
+          NoUnitCollision = true
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponImmuneToForce"
+          ImmuneToForce = true
+          Duration = 0.24
+          Active = true
+          CanAffectInvulnerable = true
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponSelfSlow"
+          Type = "SPEED"
+          DurationFrames = 15
+          Modifier = 0.65
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponSpeedBoost"
+          Type = "SPEED"
+          DurationFrames = 15
+          Modifier = 0.65
+          Cancelable = true
+          Active = false
+          HaltOnEnd = true
+          BackFx = "HermesRushSpeedTrail"
+        }
+        {
+          Name = "RushWeaponDodgeBoost"
+          OnlyAffectName = "_PlayerUnit"
+          ExtendDurationOnReapply = true
+          Duration = 0.5
+          DodgeChance = 0.5
+          ClearOnAttack = true
+          Active = false
+        }
+        {
+          Name = "RushHyperArmor"
+          Type = "DAMAGE_TAKEN"
+          Duration = 5
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          ExtendDurationOnReapply = true
+          BackFx = "null"
+          Active = false
+          FlashFrontFxWhenExpiring = true
+          FlashBackFxWhenExpiring = true
+          ImmuneToForce = true
+          ClearOnAttack = false
+        }
+        {
+          Name = "RushWeaponSelfGrip"
+          Type = "GRIP"
+          DurationFrames = 1
+          Modifier = 1.0
+          HaltOnEnd = true
+          Cancelable = false
+        }
+        {
+          Name = "RushWeaponDisableRotation"
+          DurationFrames = 1
+          DisableMove = false
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponDisableMove"
+          DurationFrames = 12
+          DisableMove = true
+          DisableRotate = false
+          DisableAttack = false
+          Cancelable = true
+        }
+        {
+          Name = "RushWeaponDisableRapid"
+          DurationFrames = 4
+          DisableMove = true
+          DisableRotate = false
+          DisableAttack = false
+          Cancelable = true
+          Active = false
+        }
+        {
+          Name = "DashDamageIncrease"
+          Duration = 0
+          CritAddition = 0
+          Active = false
+          FrontFx = "ArtemisCritSparkles"
+          BackFx = "null"
+        }
+        {
+          Name = "DashDamageShield"
+          Type = "DAMAGE_TAKEN"
+          Duration = 1.5
+          Modifier = 0.75
+          Active = false
+          FrontFx = "Shielded"
+        }
+        {
+          Name = "MagicShieldBlast"
+          Duration = 0.35
+          Active = false
+          BackFx = "AthenaSingleShieldRushFront"
+        }
+        {
+          Name = "AthenaDashShieldReflection"
+          Duration = 0.175
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "AthenaProtectionFront"
+          BackFx = "AthenaProtectionBack"
+          FlashFrontFxWhenExpiring = false
+          FlashBackFxWhenExpiring = false
+        }
+        {
+          Name = "AthenaDashShieldReflect"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.175
+          Range = 210
+          Deflect = true
+          Active = false
+        }
+        {
+          Name = "SlowShieldDeflect"
+          Duration = 0.25
+          ReflectAddition = 1.0
+          Active = false
+          CanAffectInvulnerable = true
+          FrontFx = "Invincibubble"
+          BackFx = "null"
+          Sound = "/Leftovers/SFX/AuraOnLoud"
+        }
+        {
+          Name = "SlowShieldInvulnerable"
+          Type = "INVULNERABLE"
+          Duration = 0.25
+          Modifier = 1.0
+          Active = false
+          CanAffectInvulnerable = true
+        }
+        {
+          Name = "SlowShieldReflectRange"
+          Type = "PROJECTILE_DEFENSE"
+          Duration = 0.25
+          Range = 200
+          Deflect = true
+          Active = false
+        }
+        {
+          Trigger = "Charging"
+          Name = "AreaSlowWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.05
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }
+        {
+          Trigger = "Fire"
+          Name = "RushAreaSlowWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.05
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }
+        {
+          Trigger = "Fire"
+          Name = "RushRuptureWeapon"
+          Type = "WEAPON_FIRE"
+          Duration = 0.15
+          Active = false
+          CanAffectInvulnerable = true
+          TimeModifierFraction = 0
+        }]
+    }
+    {
+      Name = "EPCHadesBidentArcCombo1"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack2"
+      Projectile = "EPCHadesBidentArcCombo1"
+      ClipSize = 1
+      RootOwnerWhileFiring = false
+      BlockMoveInput = false
+      CancelMovement = false
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      AutoLock = true
+      ChargeTime = 0.3
+      AutoLockRange = 900
+      AutoLockArcDistance = 90
+      ChargeStartAnimation = "EPCHadesBattleAttackArcOne_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleAttackArcOne_Fire"
+      SwapOnFire = "EPCHadesBidentArcCombo2"
+      NumProjectiles = 1
+      ChargeFx = "null"
+      FireFx = "EPCHadesBidentArcRight"
+      FireSound = "null"
+      //SelfVelocity = 1450
+      BarrelLength = 0
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentArcDisable"
+          Duration = 0.2
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "SwordReflection2"
+          Duration = 0.5
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "null"
+          BackFx = "null"
+        }
+        {
+          Name = "SpearSpinDisable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableCancelable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableFast"
+          DurationFrames = 10
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearSpinDisableCancelableFast"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearWeaponSpinExplosiveChargeWeapon"
+          Type = "WEAPON_FIRE"
+          Trigger = "Charging"
+          Duration = 999.0
+          Active = false
+          ClearOnAttack = true
+        }
+        {
+          Name = "SpearWeaponSpinDefenseWeapon"
+          Type = "DAMAGE_TAKEN"
+          Trigger = "Charging"
+          Duration = 0.3
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          Active = false
+          ImmuneToForce = true
+          ClearOnAttack = false
+          ExtendDurationOnReapply = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentArcCombo2"
+      InheritFrom = "EPCHadesBidentArcCombo1"
+      Control = "Attack2"
+      ControlWindow = 0.5
+      Projectile = "EPCHadesBidentArcCombo2"
+      FireFx = "EPCHadesBidentArcLeft"
+      ChargeTime = 0
+      AutoLockRange = 900
+      AutoLockArcDistance = 90
+      ChargeStartAnimation = "null"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleAttackArcTwo_Fire"
+      SwapOnFire = "EPCHadesBidentArcCombo3"
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentArc2Disable"
+          Duration = 0.3
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "SwordReflection2"
+          Duration = 0.5
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "null"
+          BackFx = "null"
+        }
+        {
+          Name = "SpearSpinDisable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableCancelable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableFast"
+          DurationFrames = 10
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearSpinDisableCancelableFast"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearWeaponSpinExplosiveChargeWeapon"
+          Type = "WEAPON_FIRE"
+          Trigger = "Charging"
+          Duration = 999.0
+          Active = false
+          ClearOnAttack = true
+        }
+        {
+          Name = "SpearWeaponSpinDefenseWeapon"
+          Type = "DAMAGE_TAKEN"
+          Trigger = "Charging"
+          Duration = 0.3
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          Active = false
+          ImmuneToForce = true
+          ClearOnAttack = false
+          ExtendDurationOnReapply = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentArcCombo3"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack2"
+      ControlWindow = 0.5
+      SwapOnFire = "EPCHadesBidentArcCombo1"
+      Projectile = "EPCHadesBidentSpin"
+      FireSound = "/SFX/Enemy Sounds/Hades/Hades360Swipe"
+      ChargeTime = 0.35
+      AutoLockRange = 900
+      AutoLockArcDistance = 90
+      ChargeStartAnimation = "EPCHadesBattleAttackSpin_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleAttackSpin_Fire"
+      RootOwnerWhileFiring = false
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      AutoLock = true
+      LockTriggerForCharge = false
+      //SelfVelocity = 1350.0
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentArc3Disable"
+          Duration = 0.3
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "MeleeAttackGrip"
+          Type = "GRIP"
+          Duration = 0.3
+          Modifier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }
+        {
+          Name = "MeleeAttackRotation"
+          Duration = 0.3
+          RotationMultiplier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentSpin"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack2"
+      Projectile = "EPCHadesBidentSpin"
+      FireSound = "/SFX/Enemy Sounds/Hades/Hades360Swipe"
+      ChargeTime = 0.6
+      AutoLockRange = 900
+      AutoLockArcDistance = 90
+      ChargeStartAnimation = "EPCHadesBattleAttackSpin_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleAttackSpin_Fire"
+      RootOwnerWhileFiring = false
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      AutoLock = true
+      LockTriggerForCharge = false
+      SelfVelocity = 1350.0
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentSpinDisable"
+          Duration = 0.3
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "MeleeAttackGrip"
+          Type = "GRIP"
+          Duration = 0.3
+          Modifier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }
+        {
+          Name = "MeleeAttackRotation"
+          Duration = 0.3
+          RotationMultiplier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentStrike"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack2"
+      ControlWindow = 0.25
+      Enabled = true
+      ChargeStartAnimation = "EPCHadesBattleBidentFlurry_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleBidentFlurry_Fire"
+      Projectile = "EPCHadesBidentStrike"
+      FullyAutomatic = false
+      ChargeCancelMovement = true
+      CancelMovement = true
+      RootOwnerWhileFiring = true
+      BarrelLength = 0
+      AutoLock = false
+      SelfVelocity = 1500.0
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentSpinDisable"
+          Duration = 0.2
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "MeleeAttackGrip"
+          Type = "GRIP"
+          Duration = 0.3
+          Modifier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }
+        {
+          Name = "MeleeAttackRotation"
+          Duration = 0.3
+          RotationMultiplier = 0.001
+          HaltOnEnd = true
+          Active = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentThrow"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack3"
+      ChargeStartAnimation = "HadesBattleBidentThrow_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "HadesBattleBidentThrow_Fire"
+      Projectile = "EPCHadesBidentThrow"
+      SwapOnFire = "EPCHadesBidentRecoveryDash"
+      ShowFreeAimLine = true
+      AimLineAnimation = "AuraAimLine"
+      MinChargeToFire = 0.0
+      ChargeTime = 0.5
+      ChargeRumbleRight = 0.06
+      ChargeDamageMultiplier = 2.0
+      ChargeRangeMultiplier = 2.0
+      AutoLockRange = 900
+      AutoLockArcDistance = 90
+      ClipSize = 1
+      ChargeSound = "null"
+      RootOwnerWhileFiring = true
+      BlockMoveInput = true
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = true
+      FireOnRelease = true
+      RemoveControlOnFire = "EPCHadesBidentArcCombo1"
+      RemoveControlOnFire2 = "EPCHadesBidentArcCombo2"
+      RemoveControlOnFire3 = "EPCHadesBidentArcCombo3"
+      RemoveControlOnFire4 = "EPCHadesBidentStrike"
+      CanCancelDisables = true
+      TriggersStoredAmmoVulnerability = true
+      BarrelLength = -55
+      AutoLock = true
+      LockTriggerForCharge = false
+      DisableOwnerForDuration = 0.0
+      NumProjectiles = 1
+      TriggersStoredAmmoVulnerability = true
+      Effects = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentArc2Disable"
+          Duration = 0.1
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "SwordReflection2"
+          Duration = 0.5
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "null"
+          BackFx = "null"
+        }
+        {
+          Name = "SpearSpinDisableFast"
+          DurationFrames = 10
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearSpinDisableCancelableFast"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearWeaponSpinExplosiveChargeWeapon"
+          Type = "WEAPON_FIRE"
+          Trigger = "Charging"
+          Duration = 999.0
+          Active = false
+          ClearOnAttack = true
+        }
+        {
+          Name = "SpearWeaponSpinDefenseWeapon"
+          Type = "DAMAGE_TAKEN"
+          Trigger = "Charging"
+          Duration = 0.3
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          Active = false
+          ImmuneToForce = true
+          ClearOnAttack = false
+          ExtendDurationOnReapply = true
+        }]
+    }
+    {
+      Name = "EPCHadesBidentRecoveryDash"
+      Control = "Attack3"
+      SwapOnFire = "EPCHadesBidentThrow"
+      AddControlOnFire = "EPCHadesBidentArcCombo1"
+      InheritFrom = "EPCHadesDash"
+      FireGraphic = "HadesBattleBidentDash_Loop"
+      WeaponRange = 1200
+      //BlinkMaxRange = 1200
+      Projectile = "EPCHadesBidentRecoveryDash"
+      FireToObstacle = "HadesBidentReturnPoint"
+      DestroyTargetedObstacle = true
+    }
+    {
+      Name = "EPCHadesCast"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Control = "Attack1"
+      Projectile = "EPCHadesCast"
+      ClipSize = 1
+      ChargeTime = 0.3
+      ChargeSound = "null"
+      ShowFreeAimLine = true
+      AimLineAnimation = "AuraAimLineNoMovement"
+      ChargeStartAnimation = "EPCHadesBattleAttackRange_Start"
+      ChargeCancelGraphic = "HadesBattleIdle"
+      FireGraphic = "EPCHadesBattleAttackRange_Fire"
+      FireSound = "/SFX/HellFireShoot"
+      RootOwnerWhileFiring = true
+      BlockMoveInput = false
+      FireOnRelease = false
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      BarrelLength = 55
+      AutoLockRange = 1000
+      AutoLockArcDistance = 75
+      AutoLock = true
+      LockTriggerForCharge = true
+      SetCompleteAngleOnCharge = true
+      NumProjectiles = 1
+      Effect = [
+        {
+          Trigger = "Fire"
+          Name = "EPCHadesBidentArc2Disable"
+          Duration = 0.2
+          DisableMove = true
+          DisableRotate = false
+          DisableAttack = true
+          Cancelable = false
+        }
+        {
+          Name = "SwordReflection2"
+          Duration = 0.5
+          ReflectAddition = 1.0
+          Active = false
+          FrontFx = "null"
+          BackFx = "null"
+        }
+        {
+          Name = "SpearSpinDisable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableCancelable"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = true
+        }
+        {
+          Name = "SpearSpinDisableFast"
+          DurationFrames = 10
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Cancelable = false
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearSpinDisableCancelableFast"
+          DurationFrames = 20
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = false
+          Cancelable = true
+          RequestTriggerLock = true
+          Active = false
+        }
+        {
+          Name = "SpearWeaponSpinExplosiveChargeWeapon"
+          Type = "WEAPON_FIRE"
+          Trigger = "Charging"
+          Duration = 999.0
+          Active = false
+          ClearOnAttack = true
+        }
+        {
+          Name = "SpearWeaponSpinDefenseWeapon"
+          Type = "DAMAGE_TAKEN"
+          Trigger = "Charging"
+          Duration = 0.3
+          Modifier = 1.0
+          FrontFx = "HyperArmorLoop"
+          Active = false
+          ImmuneToForce = true
+          ClearOnAttack = false
+          ExtendDurationOnReapply = true
+        }
+        {
+          Name = "BowFireRotation"
+          Duration = 1.0
+          RotationMultiplier = 1e-06
+          HaltOnEnd = true
+          Active = true
+        }]
+    }
+    {
+      Name = "EPCHadesAmmoDrop"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      Projectile = "EPCHadesAmmoDrop"
+      ClipSize = 1
+      ChargeSound = "null"
+      FireSound = "/SFX/Enemy Sounds/Hades/HadesAmmoExitPoof"
+      RootOwnerWhileFiring = true
+      BlockMoveInput = true
+      CancelMovement = true
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      BarrelLength = 55
+      AutoLock = true
+      FireGraphic = "null"
+      LockTriggerForCharge = false
+      DisableOwnerForDuration = 0
+      Spread = 60
+    }
+    {
+      Name = "EPCHadesAmmoWeapon"
+      InheritFrom = "1_BasePlayerSlowWeapon"
+      Type = "GUN"
+      FireSound = "/Leftovers/Menu Sounds/TextReveal3Distance"
+      Projectile = "EPCHadesAmmoWeapon"
+      ChargeSound = "null"
+      RootOwnerWhileFiring = false
+      BlockMoveInput = true
+      CancelMovement = false
+      ChargeCancelMovement = true
+      FullyAutomatic = false
+      BarrelLength = 90
+      AutoLock = false
+      FireGraphic = "null"
+      LockTriggerForCharge = false
+      DisableOwnerForDuration = 0
+    }
+   ]
+ }

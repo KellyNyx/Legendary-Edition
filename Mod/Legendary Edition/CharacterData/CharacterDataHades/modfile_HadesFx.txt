@@ -1,0 +1,5 @@
+To "Game/Animations/CharacterAnim_EnemiesBosses_Hades.sjson"
+SJSON "HadesAnimations.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "HadesFX.sjson"

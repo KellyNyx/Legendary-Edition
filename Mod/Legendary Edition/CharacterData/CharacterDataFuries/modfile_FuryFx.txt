@@ -1,0 +1,67 @@
+:: Fury Animations
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations.sjson"
+
+:: God Fury Animations
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Aphrodite.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Ares.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Artemis.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Athena.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Demeter.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Dionysus.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Hermes.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Poseidon.sjson"
+
+To "Game/Animations/CharacterAnim_EnemiesBosses_Furies.sjson"
+SJSON "FuryAnimations-Zeus.sjson"
+
+:: Fury Effects
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX.sjson"
+
+:: God Fury Effects
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Aphrodite.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Ares.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Artemis.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Athena.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Demeter.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Dionysus.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Hermes.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Poseidon.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "FuryFX-Zeus.sjson"

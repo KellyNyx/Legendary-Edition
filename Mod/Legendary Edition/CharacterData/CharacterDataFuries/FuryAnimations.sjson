@@ -1,0 +1,6622 @@
+{
+ Animations = [   
+   "_append"
+
+/* tweaked lunge charge/fire animations */
+
+   {
+      Name = "EPCFuryLungeCharge"
+      FilePath = "Animations\Fury\Lunge\FuryLunge"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lunge_Bink"
+      EndFrame = 150
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = true
+      Slides = [
+
+        { DurationFrames = 1 }
+        /*Frame 1*/
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 DangerDistance = 600 }
+        { DurationFrames = 1 DangerDistance = 600 }
+        /*Frame 40*/
+
+        { DurationFrames = 1 DangerDistance = 600 }
+        { DurationFrames = 9999 DangerDistance = 600 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+
+    {
+      Name = "EPCFury2LungeCharge"
+      InheritFrom = "EPCFuryLungeCharge"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      DangerDistance = 600
+    }
+    {
+      Name = "EPCFury3LungeCharge"
+      InheritFrom = "EPCFuryLungeCharge"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+    }
+    {
+      Name = "EPCFuryLungeFire"
+      ChainTo = "FuryLungeReturnToIdle"
+      FilePath = "Animations\Fury\Lunge\FuryLunge"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lunge_Bink"
+      EndFrame = 150
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = false
+      Loop = false
+      DangerDistance = 650
+      CreateAnimation = "EPCFuryLungeStreak_Meg-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 10
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2LungeFire"
+      InheritFrom = "EPCFuryLungeFire"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      ChainTo = "Fury2LungeReturnToIdle"
+      DangerDistance = 600
+      CreateAnimation = "EPCFuryLungeStreak_Alecto-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "EPCFury3LungeFire"
+      InheritFrom = "EPCFuryLungeFire"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+      ChainTo = "Fury3LungeReturnToIdle"
+      DangerDistance = 600
+      CreateAnimation = "EPCFuryLungeStreak_Tisiphone-Emitter"
+      VisualFx = null
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+
+/* tweaked beam fire/charge animations */
+
+    {
+      Name = "EPCFuryBeamCharge"
+      FilePath = "Animations\Fury\Beam\FuryBeam"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Beam_Bink"
+      EndFrame = 52
+      Loop = true
+      NumAngles = 32
+      NumFrames = 52
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = true
+      Slides = [
+
+        { DurationFrames = 1 }
+        /*Frame 1*/
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 9999 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2BeamCharge"
+      InheritFrom = "EPCFuryBeamCharge"
+      FilePath = "Animations\Alecto\Beam\FuryAlectoBeam"
+      VideoTexture = "Enemy_Alecto_Beam_Bink"
+    }
+    {
+      Name = "EPCFury3BeamCharge"
+      InheritFrom = "EPCFuryBeamCharge"
+      FilePath = "Animations\Tisiphone\Beam\FuryTisiphoneBeam"
+      VideoTexture = "Enemy_Tisiphone_Beam_Bink"
+      DangerDistance = 750
+    }
+    {
+      Name = "EPCFuryBeam"
+      ChainTo = "EPCFuryBeam2"
+      FilePath = "Animations\Fury\Beam\FuryBeam"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Beam_Bink"
+      EndFrame = 52
+      Loop = false
+      NumAngles = 32
+      NumFrames = 52
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+    Name = "EPCFuryBeam2"
+    InheritFrom = "EPCFuryBeam"
+    ChainTo = "FuryLungeReturnToIdle"
+    }
+    {
+      Name = "EPCFury2Beam"
+      InheritFrom = "EPCFuryBeam"
+      ChainTo = "Fury2LungeReturnToIdle"
+      FilePath = "Animations\Alecto\Beam\FuryAlectoBeam"
+      VideoTexture = "Enemy_Alecto_Beam_Bink"
+    }
+    {
+      Name = "EPCFury3Beam"
+      InheritFrom = "EPCFuryBeam"
+      ChainTo = "EPCFury3Beam2"
+      FilePath = "Animations\Tisiphone\Beam\FuryTisiphoneBeam"
+      VideoTexture = "Enemy_Tisiphone_Beam_Bink"
+    }
+    {
+      Name = "EPCFury3Beam2"
+      InheritFrom = "EPCFury3Beam"
+      ChainTo = "EPCFury3Beam3"
+    }
+    {
+      Name = "EPCFury3Beam3"
+      InheritFrom = "EPCFury3Beam2"
+      ChainTo = "EPCFury3Beam4"
+    }
+    {
+      Name = "EPCFury3Beam4"
+      InheritFrom = "EPCFury3Beam2"
+      ChainTo = "Fury3LungeReturnToIdle"
+    }
+
+/* tweaked whip whirl charge/fire animations */
+
+    {
+      Name = "EPCFury3WhipWhirlFire"
+      InheritFrom = "FuryWhipWhirlFire"
+      FilePath = "Animations\Tisiphone\WhipWhirl\FuryTisiphoneWhipWhirl"
+      VideoTexture = "Enemy_Tisiphone_WhipWhirl_Bink"
+      CancelOnOwnerMove = false
+      DangerDistance = 600
+    }
+    {
+      Name = "EPCFuryWhipWhirlCharge"
+      ChainTo = "EPCFuryWhipWhirlChargeLoop"
+      FilePath = "Animations\Fury\WhipWhirl\FuryWhipWhirl"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_WhipWhirl_Bink"
+      EndFrame = 90
+      NumAngles = 16
+      NumFrames = 90
+      StartFrame = 1
+      OffsetY = -50.0
+      Loop = false
+      CancelOnOwnerMove = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2WhipWhirlCharge"
+      InheritFrom = "EPCFuryWhipWhirlCharge"
+      ChainTo = "EPCFury2WhipWhirlChargeLoop"
+      FilePath = "Animations\Alecto\WhipWhirl\FuryAlectoWhipWhirl"
+      VideoTexture = "Enemy_Alecto_WhipWhirl_Bink"
+    }
+    {
+      Name = "EPCFury3WhipWhirlCharge"
+      InheritFrom = "EPCFuryWhipWhirlCharge"
+      ChainTo = "EPCFury3WhipWhirlChargeLoop"
+      FilePath = "Animations\Tisiphone\WhipWhirl\FuryTisiphoneWhipWhirl"
+      VideoTexture = "Enemy_Tisiphone_WhipWhirl_Bink"
+      DangerDistance = 650
+    }
+    {
+      Name = "EPCFuryWhipWhirlChargeLoop"
+      FilePath = "Animations\Fury\WhipWhirl\FuryWhipWhirl"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_WhipWhirl_Bink"
+      //Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWhipFlurryAttack"
+      EndFrame = 90
+      NumAngles = 16
+      NumFrames = 90
+      StartFrame = 1
+      OffsetY = -50.0
+      Loop = true
+      CancelOnOwnerMove = true
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        //Frame 10
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        //Frame 20
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        //Frame 30
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        //Frame 40
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        //Frame 50
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        {
+          DurationFrames = 0
+          DangerDistance = 600
+        }
+        //Frame 60
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2WhipWhirlChargeLoop"
+      InheritFrom = "EPCFuryWhipWhirlChargeLoop"
+      FilePath = "Animations\Alecto\WhipWhirl\FuryAlectoWhipWhirl"
+      VideoTexture = "Enemy_Alecto_WhipWhirl_Bink"
+    }
+    {
+      Name = "EPCFury3WhipWhirlChargeLoop"
+      InheritFrom = "EPCFuryWhipWhirlChargeLoop"
+      FilePath = "Animations\Tisiphone\WhipWhirl\FuryTisiphoneWhipWhirl"
+      VideoTexture = "Enemy_Tisiphone_WhipWhirl_Bink"
+      DangerDistance = 650
+    }
+    {
+      Name = "EPCTisiphoneWhipLassoCharge"
+      FilePath = "Animations\Tisiphone\WhipWhirl\FuryTisiphoneWhipWhirl"
+      Type = "Slide"
+      VideoTexture = "Enemy_Tisiphone_WhipWhirl_Bink"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWhipFlurryAttack"
+      EndFrame = 90
+      FrameDataFile = "Game\Animations\FrameData\TisiphoneWhipWhirl.sga"
+      NumAngles = 16
+      NumFrames = 90
+      StartFrame = 1
+      OffsetY = -50.0
+      Loop = true
+      CancelOnOwnerMove = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 1
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 9999
+          DangerDistance = 800
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+
+/* Fury whip lash (animation for alternate attack) */
+
+    {
+      Name = "FuryWhipLashFire"
+      FilePath = "Animations\Fury\WhipWhirl\FuryWhipWhirl"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_WhipWhirl_Bink"
+      EndFrame = 90
+      NumAngles = 16
+      NumFrames = 90
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = true
+      DangerDistance = 600
+      Slides = [
+
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60  End Of Charge*/
+
+        { DurationFrames = 0 }
+        /*Fire*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 2 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 70*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 80*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 90*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "AlectoWhipLashFire"
+      InheritFrom = "FuryWhipLashFire"
+      FilePath = "Animations\Alecto\WhipWhirl\FuryAlectoWhipWhirl"
+      VideoTexture = "Enemy_Alecto_WhipWhirl_Bink"
+      AllowRestart = true
+    }
+    {
+      Name = "EPCFury3WhipWhirlFire"
+      InheritFrom = "FuryWhipWhirlFire"
+      FilePath = "Animations\Tisiphone\WhipWhirl\FuryTisiphoneWhipWhirl"
+      VideoTexture = "Enemy_Tisiphone_WhipWhirl_Bink"
+      CancelOnOwnerMove = false
+      AllowRestart = true
+      DangerDistance = 600
+    }
+    {
+      Name = "MegWhipLashFire"
+      InheritFrom = "FuryWhipLashFire"
+      CancelOnOwnerMove = false
+      AllowRestart = true
+      DangerDistance = 600
+    }
+    {
+      Name = "MegRapidLashesFire1"
+      InheritFrom = "MegRapidLashesFire1"
+      ChainTo "MegRapidLashesFire2"
+      CancelOnOwnerMove = false
+      PlaySpeed = 120
+      //AllowRestart = true
+      DangerDistance = 600
+    }
+    {
+      Name = "MegRapidLashesFire2"
+      InheritFrom = "MegRapidLashesFire1"
+      ChainTo "MegRapidLashesFire3"
+      CancelOnOwnerMove = false
+      //AllowRestart = true
+      DangerDistance = 600
+    }
+    {
+      Name = "MegRapidLashesFire3"
+      InheritFrom = "MegRapidLashesFire1"
+      ChainTo "MegRapidLashesFire4"
+      CancelOnOwnerMove = false
+      //AllowRestart = true
+      DangerDistance = 600
+    }
+    {
+      Name = "MegRapidLashesFire4"
+      InheritFrom = "MegRapidLashesFire1"
+      ChainTo "FuryIdle"
+      CancelOnOwnerMove = false
+      //AllowRestart = true
+      DangerDistance = 600
+    }
+
+/* tweaked lightning loop animations */
+
+    {
+      Name = "EPCFuryLightningLoop"
+      ChainTo = "FuryLightningReturnToIdle"
+      FilePath = "Animations\Fury\Lightning\FuryLightning"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lightning_Bink"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlipChargeup"
+      EndFrame = 240
+      Loop = false
+      NumAngles = 8
+      NumFrames = 240
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2LightningLoop"
+      ChainTo = "Fury2LightningReturnToIdle"
+      InheritFrom = "EPCFuryLightningLoop"
+      FilePath = "Animations\Alecto\Lightning\FuryAlectoLightning"
+      VideoTexture = "Enemy_Alecto_Lightning_Bink"
+    }
+    {
+      Name = "EPCFury3LightningLoop"
+      ChainTo = "Fury3LightningReturnToIdle"
+      InheritFrom = "EPCFuryLightningLoop"
+      FilePath = "Animations\Tisiphone\Lightning\FuryTisiphoneLightning"
+      VideoTexture = "Enemy_Tisiphone_Lightning_Bink"
+    }
+
+/*__intro landing__*/
+
+    {
+      Name = "EPCMegaeraHeroLanding_Air"
+      ChainTo = "EPCMegaeraHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Fury\MultiFurySkyDive\MegaeraMultiFurySkyDive"
+      Type = "Book"
+      GroupName = "Standing"
+      VideoTexture = "Enemy_MegaeraMultiFurySkyDive_Bink"
+      EndFrame = 68
+      NumAngles = 8
+      NumFrames = 79
+      PlaySpeed = 30
+      StartFrame = 1
+      OffsetY = -50.0
+      AngleFromOwner = "Ignore"
+      CancelOnOwnerMove = false
+      CreateAnimation = "EPCMegaeraHeroLanding_Air_Streak"
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 999
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 10*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 20*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 30*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 40*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 50*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 60*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 70*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/Leftovers/SFX/HarpDash"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Final Frame (Frame 79)*/
+        }]
+      Material = 
+      {
+      Ambient = 0.0
+      Diffuse = 0.0
+      Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCAlectoHeroLanding_Air"
+      InheritFrom = "EPCMegaeraHeroLanding_Air"
+      ChainTo = "EPCAlectoHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Alecto\MultiFuryTakeOff\AlectoMultiFuryTakeOff"
+      VideoTexture = "Enemy_AlectoMultiFuryTakeOff_Bink"
+      CreateAnimation = "EPCAlectoHeroLanding_Air_Streak"
+    }
+    {
+      Name = "EPCTisiphoneHeroLanding_Air"
+      InheritFrom = "EPCMegaeraHeroLanding_Air"
+      ChainTo = "EPCTisiphoneHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Tisiphone\MultiFuryTakeOff\TisiphoneMultiFuryTakeOff"
+      VideoTexture = "Enemy_TisiphoneMultiFuryTakeOff_Bink"
+      CreateAnimation = "EPCTisiphoneHeroLanding_Air_Streak"
+    }
+    {
+      Name = "EPCMegaeraHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Fury\Lunge\FuryLunge"
+      ChainTo = "FuryLungeReturnToIdle"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lunge_Bink"
+      EndFrame = 150
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = true
+      Slides = [
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 40*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCAlectoHeroLanding_ReturnToIdle"
+      InheritFrom = "EPCMegaeraHeroLanding_ReturnToIdle"
+      ChainTo = "Fury2LungeReturnToIdle"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+    }
+    {
+      Name = "EPCTisiphoneHeroLanding_ReturnToIdle"
+      InheritFrom = "EPCMegaeraHeroLanding_ReturnToIdle"
+      ChainTo = "Fury3LungeReturnToIdle"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+    }
+        {
+      Name = "EPCMegaeraLanding_Air"
+      ChainTo = "EPCMegaeraHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Fury\MultiFurySkyDive\MegaeraMultiFurySkyDive"
+      Type = "Book"
+      VideoTexture = "Enemy_MegaeraMultiFurySkyDive_Bink"
+      EndFrame = 68
+      NumAngles = 8
+      NumFrames = 79
+      PlaySpeed = 30
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelOnOwnerMove = false
+      CreateAnimation = "EPCMegaeraHeroLanding_Air_Streak_Fast"
+      Slides = [
+        {
+          DurationFrames = 4 Sound = "/Leftovers/World Sounds/CaravanFallWhoosh"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 50 Sound = "/Leftovers/SFX/BallLand"
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 10*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 20*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 30*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 40*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 50*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 60*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 70*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/Leftovers/SFX/HarpDash"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Final Frame (Frame 79)*/
+        }]
+      Material = 
+      {
+      Ambient = 0.0
+      Diffuse = 0.0
+      Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCAlectoLanding_Air"
+      InheritFrom = "EPCMegaeraLanding_Air"
+      ChainTo = "EPCAlectoHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Alecto\MultiFuryTakeOff\AlectoMultiFuryTakeOff"
+      VideoTexture = "Enemy_AlectoMultiFuryTakeOff_Bink"
+      CreateAnimation = "EPCAlectoHeroLanding_Air_Streak_Fast"
+    }
+    {
+      Name = "EPCTisiphoneLanding_Air"
+      InheritFrom = "EPCMegaeraLanding_Air"
+      ChainTo = "EPCTisiphoneHeroLanding_ReturnToIdle"
+      FilePath = "Animations\Tisiphone\MultiFuryTakeOff\TisiphoneMultiFuryTakeOff"
+      VideoTexture = "Enemy_TisiphoneMultiFuryTakeOff_Bink"
+      CreateAnimation = "EPCTisiphoneHeroLanding_Air_Streak_Fast"
+    }
+
+/*_ on hit animations _*/
+
+    {
+      Name = "EPCMegaeraOnHit"
+      FilePath = "Animations\Fury\Lunge\FuryLunge"
+      ChainTo = "FuryIdle"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lunge_Bink"
+      EndFrame = 150
+      NumAngles = 16
+      AngleFromOwner = "Take"
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      CancelWeaponCharges = true
+      TimeModifierFraction = 0.1
+      Slides = [
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 3 }
+        { DurationFrames = 6 }
+        /*Frame 10*/
+
+        { DurationFrames = 6 }
+        { DurationFrames = 3 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }    
+    {
+      Name = "EPCAlectoOnHit"
+      InheritFrom = "EPCMegaeraOnHit"
+      ChainTo = "Fury2Idle"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+    }
+    {
+      Name = "EPCTisiphoneOnHit"
+      InheritFrom = "EPCMegaeraOnHit"
+      ChainTo = "Fury3Idle"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+    }
+    {
+      Name = "EPCMegaeraOnHitReturnToIdle"
+      ChainTo = "FuryIdle"
+      EndFrame = 150
+      NumAngles = 16
+      AngleFromOwner = "Take"
+      NumFrames = 150
+      StartFrame = 1
+      PlayBackwards = true
+      OffsetY = -50.0
+      CancelWeaponCharges = false
+      Slides = [
+        { DurationFrames = 1 }
+        /*Frame 1*/
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 3 }
+        { DurationFrames = 3 }
+        /*Frame 10*/
+
+        { DurationFrames = 3 }
+        { DurationFrames = 3 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }   
+    {
+      Name = "EPCAlectoOnHitReturnToIdle"
+      InheritFrom = "EPCMegaeraOnHitReturnToIdle"
+      ChainTo = "Fury2Idle"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+    }
+    {
+      Name = "EPCTisiphoneOnHitReturnToIdle"
+      InheritFrom = "EPCMegaeraOnHitReturnToIdle"
+      ChainTo = "Fury3Idle"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+    }
+
+    {
+      Name = "EPCMegaeraStunned"
+      InheritFrom = "EPCMegaeraOnHit"
+      HoldLastFrame = true
+      }
+      {
+      Name = "EPCAlectoStunned"
+      InheritFrom = "EPCAlectoOnHit"
+      HoldLastFrame = true
+      }
+      {
+      Name = "EPCTisiphoneStunned"
+      InheritFrom = "EPCTisiphoneOnHit"
+      HoldLastFrame = true
+      }
+
+/* Fury secret door dive animations */
+
+        {
+      Name = "EPCMegaeraSecretDoorDive_Start"
+      FilePath = "Animations\Fury\Lunge\FuryLunge"
+      VideoTexture = "Enemy_Fury_Lunge_Bink"
+      ChainTo = "EPCMegaeraSecretDoorDive"
+      EndFrame = 150
+      NumAngles = 16
+      AngleFromOwner = "Take"
+      NumFrames = 150
+      StartFrame = 1
+      PlayBackwards = true
+      OffsetY = -50.0
+      CancelOnOwnerMove = false
+      Slides = [
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 140*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 150*/]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+      {
+      Name = "EPCAlectoSecretDoorDive_Start"
+      InheritFrom = "EPCMegaeraSecretDoorDive_Start"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      ChainTo = "EPCAlectoSecretDoorDive"
+      }
+      {
+      Name = "EPCTisiphoneSecretDoorDive_Start"
+      InheritFrom = "EPCMegaeraSecretDoorDive_Start"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+      ChainTo = "EPCTisiphoneSecretDoorDive"
+      }
+      {
+      Name = "EPCMegaeraSecretDoorDive"
+      InheritFrom = "EPCMegaeraSecretDoorDive_Start"
+      ChainTo = "EPCMegaeraSecretDoorDive_End"
+      EndFrame = 79
+      StartFrame = 1
+      Slides = [
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*End Of Charge*/
+        { DurationFrames = 0 }
+        /*Attack Start*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        /*Start of Return To Idle*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 70*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/]
+      Material = 
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCAlectoSecretDoorDive"
+      InheritFrom = "EPCMegaeraSecretDoorDive"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      ChainTo = "EPCAlectoSecretDoorDive_End"
+      }
+      {
+      Name = "EPCTisiphoneSecretDoorDive"
+      InheritFrom = "EPCMegaeraSecretDoorDive"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+      ChainTo = "EPCTisiphoneSecretDoorDive_End"
+      }
+        {
+      Name = "EPCMegaeraSecretDoorDive_End"
+      ChainTo = "null"
+      FilePath = "Animations\Fury\MultiFurySkyDive\MegaeraMultiFurySkyDive"
+      Type = "Book"
+      VideoTexture = "Enemy_MegaeraMultiFurySkyDive_Bink"
+      EndFrame = 79
+      NumAngles = 8
+      NumFrames = 79
+      PlaySpeed = 30
+      StartFrame = 1
+      OffsetY = -50.0
+      AngleFromOwner = "Take"
+      Slides = [
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 10*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 20*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 30*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 40*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 50*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 60*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/SFX/Enemy Sounds/Megaera/MegaeraWingFlap"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Frame 70*/
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+          Sound = "/Leftovers/SFX/HarpDash"
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0
+        }
+        {
+          DurationFrames = 0 /*Final Frame (Frame 79)*/
+        }]
+      Material = 
+      {
+      Ambient = 0.0
+      Diffuse = 0.0
+      Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCAlectoSecretDoorDive_End"
+      InheritFrom = "EPCMegaeraSecretDoorDive_End"
+      FilePath = "Animations\Alecto\Lunge\FuryAlectoLunge"
+      VideoTexture = "Enemy_Alecto_Lunge_Bink"
+      ChainTo = "null"
+      }
+      {
+      Name = "EPCTisiphoneSecretDoorDive_End"
+      InheritFrom = "EPCMegaeraSecretDoorDive_End"
+      FilePath = "Animations\Tisiphone\Lunge\FuryTisiphoneLunge"
+      VideoTexture = "Enemy_Tisiphone_Lunge_Bink"
+      ChainTo = "null"
+      }
+
+/* tweaked shielded animations */
+
+          {
+      Name = "EPCFuryShieldedStart"
+      ChainTo = "EPCFuryShieldedLoop"
+      FilePath = "Animations\Fury\Shielded\FuryShielded"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Shielded_Bink"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraPowerUp"
+      EndFrame = 150
+      FrameDataFile = "Game\Animations\FrameData\FuryShielded.sga"
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+
+        { DurationFrames = 1 }
+        /*Frame 1*/
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2ShieldedStart"
+      InheritFrom = "EPCFuryShieldedStart"
+      ChainTo = "EPCFury2ShieldedLoop"
+      FilePath = "Animations\Alecto\Shielded\FuryAlectoShielded"
+      VideoTexture = "Enemy_Alecto_Shielded_Bink"
+    }
+    {
+      Name = "EPCFury3ShieldedStart"
+      InheritFrom = "EPCFuryShieldedStart"
+      ChainTo = "EPCFury3ShieldedLoop"
+      FilePath = "Animations\Tisiphone\Shielded\FuryTisiphoneShielded"
+      VideoTexture = "Enemy_Tisiphone_Shielded_Bink"
+    }
+
+    {
+      Name = "EPCFuryShielded_OnHit"
+      InheritFrom = "FuryShieldedStart"
+      ChainTo = "null"
+      Sound = "/EmptyCue"
+      EndFrame = 150
+      StartFrame = 1
+    }
+
+    {
+      Name = "EPCFuryShieldedLoop"
+      ChainTo = "EPCFuryShieldedEnd"
+      FilePath = "Animations\Fury\Shielded\FuryShielded"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Shielded_Bink"
+      EndFrame = 150
+      FrameDataFile = "Game\Animations\FrameData\FuryShielded.sga"
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 40*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 50*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 60*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 70*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 80*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 90*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 100*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 110*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 120*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 130*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2ShieldedLoop"
+      InheritFrom = "EPCFuryShieldedLoop"
+      ChainTo = "EPCFury2ShieldedEnd"
+      FilePath = "Animations\Alecto\Shielded\FuryAlectoShielded"
+      VideoTexture = "Enemy_Alecto_Shielded_Bink"
+    }
+    {
+      Name = "EPCFury3ShieldedLoop"
+      InheritFrom = "EPCFuryShieldedLoop"
+      ChainTo = "EPCFury3ShieldedEnd"
+      FilePath = "Animations\Tisiphone\Shielded\FuryTisiphoneShielded"
+      VideoTexture = "Enemy_Tisiphone_Shielded_Bink"
+    }
+
+    /* FuryShielded Markers has to be exported at 750x750  and IdleFury at 315x315 */
+
+    {
+      Name = "EPCFuryShieldedEnd"
+      ChainTo = "FuryIdle"
+      FilePath = "Animations\Fury\Shielded\FuryShielded"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Shielded_Bink"
+      EndFrame = 150
+      FrameDataFile = "Game\Animations\FrameData\FuryShielded.sga"
+      NumAngles = 16
+      NumFrames = 150
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 20*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 30*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 40*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 50*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 140*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 150*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2ShieldedEnd"
+      InheritFrom = "EPCFuryShieldedEnd"
+      ChainTo = "Fury2Idle"
+      FilePath = "Animations\Alecto\Shielded\FuryAlectoShielded"
+      VideoTexture = "Enemy_Alecto_Shielded_Bink"
+    }
+    {
+      Name = "EPCFury3ShieldedEnd"
+      InheritFrom = "EPCFuryShieldedEnd"
+      ChainTo = "Fury3Idle"
+      FilePath = "Animations\Tisiphone\Shielded\FuryTisiphoneShielded"
+      VideoTexture = "Enemy_Tisiphone_Shielded_Bink"
+    }
+
+/* tweaked Fury lightning animation */
+
+      {
+      Name = "EPCFuryLightning"
+      ChainTo = "FuryLungeReturnToIdle"
+      FilePath = "Animations\Fury\Lightning\FuryLightning"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Lightning_Bink"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlipChargeup"
+      EndFrame = 240
+      NumAngles = 8
+      NumFrames = 240
+      StartFrame = 1
+      OffsetY = -50.0
+      Slides = [
+
+        { DurationFrames = 0 }
+        /*Frame 1*/
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 40*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 50*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 60*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 70*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 80*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 90*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 100*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 110*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 120*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 130*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 140*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 150*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 160*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 170*/
+
+        { DurationFrames = 0 Sound = "null" }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 180*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 190*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 200*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 210*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 220*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 230*/
+
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        { DurationFrames = 0 }
+        /*Frame 240*/
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+    {
+      Name = "EPCFury2Lightning"
+      ChainTo = "Fury2LungeReturnToIdle"
+      InheritFrom = "EPCFuryLightning"
+      FilePath = "Animations\Alecto\Lightning\FuryAlectoLightning"
+      VideoTexture = "Enemy_Alecto_Lightning_Bink"
+    }
+    {
+      Name = "EPCFury3Lightning"
+      ChainTo = "Fury3LungeReturnToIdle"
+      InheritFrom = "EPCFuryLightning"
+      FilePath = "Animations\Tisiphone\Lightning\FuryTisiphoneLightning"
+      VideoTexture = "Enemy_Tisiphone_Lightning_Bink"
+    }
+
+/* tweaked death animations */
+
+    {
+      Name = "EPCFuryDead"
+      FilePath = "Animations\Fury\DeadVFX\FuryDeadVFX"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury_Dead_Bink"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/EmoteDying"
+      EndFrame = 171
+      HoldLastFrame = true
+      NumFrames = 171
+      PlaySpeed = 30.0
+      StartFrame = 1
+      OffsetY = -50.0
+      Scale = 0.66
+      TimeModifierFraction = 0.0
+      Slides = [
+
+        { DurationFrames = 1 Sound = "/SFX/StabSplatter" }
+        /*Frame 1*/
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/Megaera/MegDeathExplode" }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/BloodWhirlpool" }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 40*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 50*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 60*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegDeathSplash" }
+        { DurationFrames = 2 }
+        /*Frame 70*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 80*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 90*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 100*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/Leftovers/SFX/BallLandWet" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 110*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegDeathFinish" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 120*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 130*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 140*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 150*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 160*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 170*/
+
+        { DurationFrames = 40 }
+      ]
+      Material =
+      {
+        Ambient = 0.0
+        Diffuse = 0.0
+        Directionality = 0.0
+      }
+    }
+
+    {
+      Name = "EPCFuryDeadAlecto"
+      FilePath = "Animations\Fury\DeadVFXAlecto\FuryDeadVFXAlecto"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury2_Dead_Bink"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Alecto/EmoteDying"
+      ColorFromOwner = "Ignore"
+      EndFrame = 140
+      HoldLastFrame = true
+      NumFrames = 140
+      PlaySpeed = 30.0
+      StartFrame = 1
+      Scale = 0.66
+      TimeModifierFraction = 0.0
+      Slides = [
+
+        { DurationFrames = 1 Sound = "/SFX/StabSplatter" }
+        /*Frame 1*/
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/Megaera/MegDeathExplode" }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 40*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 50*/
+
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlamePreBurst" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 60*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastStartup" }
+        { DurationFrames = 2 Sound = "/SFX/ThanatosAOERift" }
+        /*Frame 70*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/BatGroupSFX" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 80*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 90*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 100*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/BatSingleSFX" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 110*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 120*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 130*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 40 }
+        /*Frame 140*/
+      ]
+    }
+
+    {
+      Name = "EPCFuryDeadTisiphone"
+      FilePath = "Animations\Fury\DeadVFXTisiphone\FuryDeadVFXTisiphone"
+      Type = "Slide"
+      VideoTexture = "Enemy_Fury3_Dead_Bink"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Tisiphone/EmoteDying"
+      ColorFromOwner = "Ignore"
+      EndFrame = 140
+      HoldLastFrame = true
+      NumFrames = 140
+      PlaySpeed = 30.0
+      StartFrame = 1
+      Scale = 0.66
+      TimeModifierFraction = 0.0
+      Slides = [
+
+        { DurationFrames = 1 Sound = "/SFX/StabSplatter" }
+        /*Frame 1*/
+        { DurationFrames = 1 Sound = "/SFX/Enemy Sounds/Megaera/MegDeathExplode" }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 10*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 20*/
+
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        { DurationFrames = 1 }
+        /*Frame 30*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 40*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 50*/
+
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlamePreBurst" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 60*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastStartup" }
+        { DurationFrames = 2 Sound = "/SFX/ThanatosAOERift" }
+        /*Frame 70*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/BatGroupSFX" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 80*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 90*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 100*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 Sound = "/SFX/BatSingleSFX" }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 110*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 120*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        /*Frame 130*/
+
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 2 }
+        { DurationFrames = 40 }
+        /*Frame 140*/
+      ]
+    }
+    {
+      Name = "EPCFuryStart"
+      InheritFrom = "FuryStart"
+      ChainTo = "EPCFuryRun"
+    }
+    {
+      Name = "EPCFury2Start"
+      InheritFrom = "EPCFuryStart"
+      ChainTo = "EPCFury2Run"
+      FilePath = "Animations\Alecto\StartStop\FuryAlectoStartStop"
+      VideoTexture = "Enemy_Alecto_StartStop_Bink"
+    }
+    {
+      Name = "EPCFury3Start"
+      InheritFrom = "EPCFuryStart"
+      ChainTo = "EPCFury3Run"
+      FilePath = "Animations\Tisiphone\StartStop\FuryTisiphoneStartStop"
+      VideoTexture = "Enemy_Tisiphone_StartStop_Bink"
+    }
+
+    {
+      Name = "EPCFuryStop"
+      InheritFrom = "FuryStop"
+      ChainTo = "FuryIdle"
+    }
+    {
+      Name = "EPCFury2Stop"
+      InheritFrom = "EPCFuryStop"
+      ChainTo = "Fury2Idle"
+      FilePath = "Animations\Alecto\StartStop\FuryAlectoStartStop"
+      VideoTexture = "Enemy_Alecto_StartStop_Bink"
+    }
+    {
+      Name = "EPCFury3Stop"
+      InheritFrom = "EPCFuryStop"
+      ChainTo = "Fury3Idle"
+      FilePath = "Animations\Tisiphone\StartStop\FuryTisiphoneStartStop"
+      VideoTexture = "Enemy_Tisiphone_StartStop_Bink"
+    }
+    
+    {
+      Name = "EPCFuryRun"
+      InheritFrom = "FuryRun"
+      VisualFx = "EPCFuryRunBlur"
+    }
+    {
+      Name = "EPCFury2Run"
+      InheritFrom = "EPCFuryRun"
+      FilePath = "Animations\Alecto\Run\FuryAlectoRun"
+      VisualFx = "EPCFuryRunBlur_Alecto"
+      VideoTexture = "Enemy_Alecto_Run_Bink"
+    }
+    {
+      Name = "EPCFury3Run"
+      InheritFrom = "EPCFuryRun"
+      FilePath = "Animations\Tisiphone\Run\FuryTisiphoneRun"
+      VisualFx = "EPCFuryRunBlur_Tisiphone"
+      VideoTexture = "Enemy_Tisiphone_Run_Bink"
+    }
+
+    {
+      Name = "EPCFuryRunBlur"
+      Type = "Book"
+      FilePath = "Fx\FuryRunBlur\FuryRunBlur"
+      NumAngles = 64
+      NumFrames = 1
+      Material = "Unlit"
+      GroupName = "FX_Standing_Add"
+      Duration = 0.3
+      StartAlpha = 0.33
+      EndAlpha = 0.0
+      PingPongColor = false
+      LocationFromOwner = "Ignore"
+      AngleFromOwner = "Take"
+      ScaleFromOwner = "Ignore"
+      LocationZFromOwner = "Take"
+      OffsetZ = 50
+      CreateAnimation = "EPCFuryRunBlurDark"
+      StartScale = 1
+      EndScale = 1.05
+    }
+    {
+      Name = "EPCFuryRunBlurDark"
+      InheritFrom = "EPCFuryRunBlur"
+      CreateAnimation = null
+      GroupName = "FX_Dark"
+      Red = 0
+      Green = 0
+      Blue = 0
+      StartAlpha = 1
+      EndAlpha = 0
+      Duration = 0.5
+    }
+
+    {
+      Name = "EPCFuryRunBlur_Alecto"
+      InheritFrom = "EPCFuryRunBlur"
+      Hue = 0.38
+    }
+
+    {
+      Name = "EPCFuryRunBlur_Tisiphone"
+      InheritFrom = "EPCFuryRunBlur"
+      Hue = 0.72
+    }
+ ]
+}
+    

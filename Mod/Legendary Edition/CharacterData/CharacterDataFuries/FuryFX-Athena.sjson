@@ -1,0 +1,1423 @@
+{
+ Animations = [
+     "_append"
+     {
+      Name = "FuryLungeStreak-Athena-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "FuryLungeStreak-Athena"
+      Duration = 0.25
+      DieWithOwner = false
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      // VisualFxIntervalMax = 0.01
+      // VisualFxIntervalMin = 0.01
+      VisualFxDistanceMin = 80
+      VisualFxDistanceMax = 90
+    }
+    {
+      Name = "FuryLungeStreak-Athena"
+      InheritFrom = "EPCFuryLungeStreak_Meg"
+      EndBlue = 1.0
+      EndGreen = 0.0
+      EndRed = 0.0
+      StartRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.6
+      //Hue = 0.2
+      ClearCreateAnimations = true
+      CreateAnimations = [
+        {
+          Name = "EPCFuryLungeStreakDark"
+        }
+        {
+          Name = "CastDustBullRush"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirl-Athena"
+      CreateAnimation = "QuickFlashYellow"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Book"
+      VisualFx = "FuryWhipWhirlRandom-Athena_"
+      //Sound = "/SFX/Player Sounds/AthenaWeaponFlash3"
+      AngleFromOwner = "Ignore"
+      ColorFromOwner = "Ignore"
+      AddColor = true
+      // Color = 
+      // {
+      //   Red = 1.0
+      //   Green = 1.0
+      //   Blue = 0.8
+      // }
+      EndBlue = 1.0
+      EndRed = 0.0
+      EndGreen = 0.0
+      StartRed = 1.0
+      StartBlue = 0.3
+      StartGreen = 0.95
+      Hue = 0.2
+      EndFrame = 35
+      NumFrames = 35
+      PlaySpeed = 60.0
+      StartFrame = 1
+      Scale = 2.0
+      ScaleFromOwner = "Ignore"
+      Ambient = 0.0
+      VisualFxCap = 2
+      VisualFxIntervalMax = 0.12
+      VisualFxIntervalMin = 0.1
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDark"
+        }
+        {
+          Name = "SpearSwipe360-Athena-Emitter"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomA-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkA"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomB-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkB"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomC-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkC"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomD-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkD"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomE-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkE"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomF-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkF"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomG-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkG"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomH-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkH"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomI-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkI"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJ-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJ"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomK-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkK"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomL-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkL"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomM-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkM"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomN-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkN"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomO-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 60.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkO"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomAFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 20
+      AngleMax = 20
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkAFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomBFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 30
+      AngleMax = 30
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkBFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomCFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 40
+      AngleMax = 40
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkCFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomDFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 50
+      AngleMax = 50
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkDFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomEFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 60
+      AngleMax = 60
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkEFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomFFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 70
+      AngleMax = 70
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkFFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomGFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 80
+      AngleMax = 80
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkGFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomHFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 90
+      AngleMax = 90
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkHFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomIFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 100
+      AngleMax = 100
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkIFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomJFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 110
+      AngleMax = 110
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkJFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomKFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 120
+      AngleMax = 120
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkKFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomLFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 130
+      AngleMax = 130
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkLFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomMFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 140
+      AngleMax = 140
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkMFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomNFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 150
+      AngleMax = 150
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkNFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandomOFast-Athena"
+      InheritFrom = "FuryWhipWhirl-Athena"
+      CreateAnimation = null
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      PlaySpeed = 90.0
+      AngleMin = 160
+      AngleMax = 160
+      Scale = 1.5
+      CreateAnimations = [
+        {
+          Name = "FuryWhipWhirlDarkOFast"
+        }]
+    }
+    {
+      Name = "FuryWhipWhirlRandom-Athena_"
+      FilePath = "Fx\FuryWhipWhirl\FuryWhipWhirl"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        {
+          Name = "FuryWhipWhirlRandomA-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomB-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomC-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomD-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomE-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomF-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomG-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomH-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomI-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomJ-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomK-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomL-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomM-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomN-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomO-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomAFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomBFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomCFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomDFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomEFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomFFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomGFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomHFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomIFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomJFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomKFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomLFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomMFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomNFast-Athena"
+        }
+        {
+          Name = "FuryWhipWhirlRandomOFast-Athena"
+        }]
+    }
+    {
+      Name = "AlectoWhipArc-Athena"
+      FilePath = "Fx\FuryWhipArcAlecto\FuryWhipArcAlecto"
+      Type = "Book"
+      ColorFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/AthenaWeaponFlash1"
+      VisualFx = "AthenaClawSwipeParticles"
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.02
+      VisualFxCap = 6
+      AddColor = true
+      EndBlue = 1.0
+      EndGreen = 0.0
+      EndRed = 0.0
+      StartRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.6
+      EndFrame = 17
+      Hue = 0.15
+      NumFrames = 17
+      PlaySpeed = 60.0
+      StartFrame = 1
+      FlipVertical = true
+      PostRotateScaleY = 0.5
+      Scale = 2.0
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "QuickFlashYellow"
+        }
+        {
+          Name = "AlectoWhipArcDisplacement-Athena"
+        }
+        {
+          Name = "AlectoWhipArcDark"
+        }]
+    }
+    {
+      Name = "AlectoWhipArcDisplacement-Athena"
+      InheritFrom = "AlectoWhipArc-Athena"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      Alpha = 0.05
+      PlaySpeed = 45.0
+    }
+    {
+      Name = "FuryAlectoThrow-Athena"
+      ChainTo = "null"
+      CreateAnimation = null
+      FilePath = "Fx\AthenaProjectile\AthenaProjectile"
+      Type = "Book"
+      VisualFx = "SpearSwipe360Alecto-Athena"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Player Sounds/AthenaShieldRangedAttack"
+      StopSoundOnFinishFade = 0.3
+      EndFrame = 30
+      Loop = true
+      NumFrames = 30
+      StartFrame = 1
+      Scale = 0.5
+      ScaleRadius = 110.0
+      Ambient = 0.0
+      VisualFxIntervalMax = 0.2
+      VisualFxIntervalMin = 0.2
+    }
+    {
+      Name = "SpearSwipe360Alecto-Athena"
+      InheritFrom = "SpearSwipe360"
+      CreateAnimation = "SpearSwipe360Alecto-Displace"
+      ChildAnimation = "SpearSwipe360AlectoB-Athena"
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      Scale = 1.8
+      StartGreen = 0.95
+      EaseIn = 0.999
+      EaseOut = 1.0
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+          Frame = 4
+          VisualFx = "QuickFlashBlueSpawner"
+        }]
+    }
+    {
+      Name = "SpearSwipe360Alecto-Displace"
+      InheritFrom = "SpearSwipe360"
+      ChildAnimation = "null"
+      CreateAnimation = "null"
+      ClearCreateAnimations = true
+      GroupName = "FX_Displacement"
+      StartAlpha = 0.1
+      ClearSlides = true
+      CancelOverCap = true
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360AlectoB-Athena"
+      InheritFrom = "SpearSwipe360B"
+      ChildAnimation = "SpearSwipeGlowAlecto-Athena"
+      Scale = 1.8
+      EndBlue = 1.0
+      EndGreen = 0.0
+      EndRed = 0.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+    }
+    {
+      Name = "SpearSwipeGlowAlecto-Athena"
+      InheritFrom = "SpearSwipeGlow"
+      ChildAnimation = null
+      EndGreen = 0.9
+      EndRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+      Scale = 1.8
+    }
+    {
+      Name = "SpearSwipe360Alecto-Athena-Emitter"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "SpearSwipe360-Athena-Particles"
+      //Sound = "null"
+      Duration = 0.2
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxIntervalMax = 0.011
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "AthenaThingySpawner"
+      FilePath = "Dev\blank_invisible"
+      Type = "Constant"
+      VisualFx = "SpearSwipe360-Athena-Particles"
+      Duration = 0.2
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      VisualFxCap = 8
+      VisualFxIntervalMax = 0.011
+      VisualFxIntervalMin = 0.01
+    }
+    {
+      Name = "FuryBeamEmitter-Athena"
+      FilePath = "Fx\ProjectileFire\ProjectileFire"
+      GroupName = "FX_Standing_Add"
+      Type = "Book"
+      VisualFx = "FuryBeamFire-Athena"
+	  VisualFxManagerCap = 400
+      AngleFromOwner = "Ignore"
+      AddColor = true
+      EndFrame = 60
+      Loop = true
+      NumFrames = 60
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+      Hue = 0.2
+      RandomPlaySpeedMax = 120.0
+      RandomPlaySpeedMin = 90.0
+      ReRandomizeOnLoop = false
+      StartFrame = 1
+      RandomRotation = true
+      EndScale = 0.25
+      PingPongScale = true
+      ScaleMax = 1.0
+      ScaleMin = 0.5
+      VisualFxDistanceMax = 200.0
+      VisualFxDistanceMin = 180.0
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraRapidEnergyBlastFire"
+      CreateAnimations = [
+        { Name = "FuryBeamEmitterDark" }
+      ]
+    }
+    {
+      Name = "FuryBeamFire-Athena"
+      FilePath = "Fx\FuryBeamFire\FuryBeamFire"
+      GroupName = "FX_Standing_Add"
+      Type = "Book"
+      AngleFromOwner = "Take"
+      EndFrame = 38
+      NumFrames = 38
+      RandomPlaySpeedMax = 70.0
+      RandomPlaySpeedMin = 60.0
+      StartFrame = 1
+      RandomFlipVertical = true
+      LocationFromOwner = "Ignore"
+      LocationZFromOwner = "Take"
+      SortMode = "Id"
+      Velocity = 400.0
+      ScaleMax = 1.0
+      ScaleMin = 0.8
+      ScaleX = 1.3
+      ScaleY = 0.3
+      Ambient = 0.0
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartRed = 1.0
+      StartBlue = 0.1
+      StartGreen = 0.95
+      Hue = 0.2
+      RandomAccelerationMax = -300.0
+      RandomAccelerationMin = -700.0
+	  VisualFxManagerCap = 450
+      CreateAnimations = [
+        { Name = "FuryBeamFireDark" }
+        { Name = "FuryBeamFire-Athena-Particles" }
+      ]
+    }
+    {
+      Name = "FuryBeamFire-Athena-Particles"
+      Type = "Random"
+      Random =
+      [
+        { Name = "BowTrailA-Athena-ParticlesA" }
+        { Name = "BowTrailA-Athena-ParticlesB" }
+        { Name = null }
+      ]
+    }
+    {
+      Name = "EnemyProjectileLight-Athena"
+      FilePath = "Fx\LootShadow\LootShadow"
+      GroupName = "FX_Terrain_Add"
+      Type = "Constant"
+      AngleFromOwner = "Ignore"
+      AddColor = true
+      EndBlue = 0.6
+      EndGreen = 0.4
+      EndRed = 0.0
+      StartBlue = 1.0
+      StartGreen = 0.3
+      StartRed = 0.01
+      Alpha = 0.25
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      RandomFlipHorizontal = true
+      DieWithOwner = true
+      LocationZFromOwner = "Ignore"
+      Scale = 0.5
+      
+    }
+    {
+      Name = "EnemyHeavySlashLasso-Athena"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashLassoDark_1"
+      GroupName = "FX_Standing_Add"
+      AngleFromOwner = "Take"
+      Sound = "/SFX/Player Sounds/AthenaWeaponFlash3"
+      AddColor = true
+      EaseIn = 0.9
+      EaseOut = 1.0
+      OriginX = 240.0
+      OriginY = 120.0
+      EndScaleY = 0.0
+      ScaleX = 4.0
+      StartScaleY = 0.8
+      EndBlue = 1.0
+      EndRed = 0.0
+      EndGreen = 0.0
+      StartRed = 1.0
+      StartBlue = 0.3
+      StartGreen = 0.95
+      //Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      CreateAnimations = [
+        {
+          Name = "QuickFlashBlue"
+        }
+        ]
+    }
+    {
+      Name = "EnemyHeavySlashLassoLighting-Athena"
+      InheritFrom = "EnemyHeavySlashLassoLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    {
+      Name = "EnemyHeavySlashWhip1-Athena"
+      InheritFrom = "EnemyHeavySlash"
+      CreateAnimation = "EnemyHeavySlashWhip1Dark_"
+      Sound = "/SFX/Player Sounds/ZeusLightningSlash"
+      //ChildAnimation = "ProjectileLightningBallGlowLargeSpawner"
+      AddColor = true
+      EndBlue = 0.1
+      EndGreen = 1.0
+      EndRed = 1.0
+      StartBlue = 0.8
+      StartGreen = 1.0
+      StartRed = 1.0
+      Hue = 0.20
+      EaseIn = 0.9
+      EaseOut = 1.0
+      ScaleX = 2.0
+      ScaleY = 1.5
+      CreateAnimations = [
+        {
+          Name = "ProjectileLightningBallGlowLarge"
+        }
+        {
+          Name = "LightningPieceLong"
+        }]
+    }
+    {
+      Name = "EnemyHeavySlashWhipLighting-Athena"
+      InheritFrom = "EnemyHeavySlashWhipLighting"
+      AddColor = true
+      Color = { Red = 1.0 Green = 1.0 Blue = 0.8 }
+      Hue = 0.20
+      EndBlue = 0.3
+      EndGreen = 0.7
+      EndRed = 0.999
+      StartBlue = 0.6
+      StartGreen = 1.0
+      StartRed = 1.0
+    }
+    // {
+    //   Name = "ProjectileLightningBallGlowLarge"
+    //   FilePath = "Particles\particle_quickflash"
+    //   GroupName = "FX_Standing_Add"
+    //   Type = "Constant"
+    //   UseOwnAngle = false
+    //   EndAlpha = 0.7
+    //   StartAlpha = 1.0
+    //   EndFrame = 1
+    //   Loop = false
+    //   NumFrames = 1
+    //   RandomDurationMax = 0.2
+    //   RandomDurationMin = 0.2
+    //   StartFrame = 1
+    //   DieWithOwner = true
+    //   SortMode = "FromParent"
+    //   EndScale = 0.5
+    //   Scale = 1.0
+    //   ScaleFromOwner = "Ignore"
+    //   StartScale = 1.5
+    //   Ambient = 0.0
+    //   Color = 
+    //   {
+    //     Red = 1.0
+    //     Green = 0.8
+    //     Blue = 0.3
+    //   }
+    // }
+    // {
+    //   Name = "ProjectileLightningBallGlowLargeSpawner"
+    //   InheritFrom = "GroupChange"
+    //   VisualFx = "ProjectileLightningBallGlowLarge"
+    //   DieWithOwner = true
+    //   LocationZFromOwner = "Ignore"
+    //   ScaleFromOwner = "Ignore"
+    // }
+    {
+      Name = "RadialNovaHellfire-Athena"
+      InheritFrom = "RadialNova"
+      GroupName = "FX_Terrain_Add"
+      EndGreen = 0.8
+      EndRed = 0.999
+      StartBlue = 0.2
+      StartGreen = 0.9
+      StartRed = 1.0
+      PlaySpeed = 75.0
+      ScaleRadius = 350.0
+      VisualFxCap = 3
+      VisualFxIntervalMax = 0.00011
+      VisualFxIntervalMin = 0.0001
+      TimeModifierFraction = 0.0
+      CreateAnimations = [
+        { Name = "RadialNovaSwordParryDark" }
+        { Name = "DisplaceShockwaveSwordParry" }
+        { Name = "AthenaProjectileImpactSwordParry" }
+      ]
+    }
+    {
+      Name = "RadialNovaDarkSmaller"
+      InheritFrom = "RadialNovaSwordParry"
+      UseAttachedFlasher = false
+      LocationZFromOwner = "Take"
+      ClearCreateAnimations = true
+      GroupName = "FX_Terrain"
+      VisualFx = "null"
+      AddColor = false
+      EndGreen = 0.1
+      StartGreen = 0.5
+      PlaySpeed = 70.0
+      Scale = 0.95
+      Color = { Red = 0.0 Green = 0.0 Blue = 0.0 }
+    }
+    {
+      Name = "FuryDustRingFront-Athena"
+      InheritFrom = "FuryDustRingFront"
+      EndBlue = 0.6
+      EndGreen = 0.4
+      EndRed = 0.0
+      StartBlue = 1.0
+      StartGreen = 0.01
+      StartRed = 0.5
+    }
+    {
+      Name = "FuryDustRingBack-Athena"
+      InheritFrom = "FuryDustRingFront"
+      FilePath = "Fx\DustRingBack\DustRingBack"
+      EndBlue = 0.6
+      EndGreen = 0.4
+      EndRed = 0.0
+      StartBlue = 0.5
+      StartGreen = 0.2
+      StartRed = 0.01
+      EndFrame = 54
+      NumFrames = 54
+      StartFrame = 1
+      LocationFromOwner = "Ignore"
+      SortMode = "Isometric"
+    }
+    {
+      Name = "FuryHellfire-Athena"
+      InheritFrom = "FuryHellfire"
+      FilePath = "Dev\blank_invisible"
+      ChildAnimation = "null"
+      ClearCreateAnimations = true
+      VisualFx = "null"
+      AddColor = true
+      EndGreen = 0.0
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartRed = 0.5
+      StartBlue = 0.1
+      StartGreen = 0.4
+      Hue = 0.2
+      EaseIn = 0.5
+      EaseOut = 0.6
+      EndScaleX = 0.2
+      EndScaleY = 1.5
+      StartScaleX = 0.6
+      RandomFlipHorizontal = false
+      CreateAnimations = [
+        {
+          Name = "FuryHellfireRandom-Athena"
+        }
+        {
+          Name = "QuickFlashBlueLarge"
+        }
+        {
+          Name = "RadialNovaHellfire-Athena"
+        }
+        {
+          Name = "FuryDustRingFront-Athena"
+        }
+        {
+          Name = "FuryDustRingBack-Athena"
+        }]
+    }
+    {
+      Name = "FuryHellfireRandom-Athena"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      Type = "Random"
+      EndFrame = 1
+      NumFrames = 1
+      StartFrame = 1
+      Random = [
+        {
+          Name = "FuryHellfireSlow-Athena"
+        }
+        {
+          Name = "FuryHellfireFast-Athena"
+        }]
+    }
+    {
+      Name = "FuryHellfireSlow-Athena"
+      FilePath = "Fx\FuryHellfire\FuryHellfire"
+      GroupName = "Standing"
+      Type = "Book"
+      AngleFromOwner = "Ignore"
+      Sound = "/SFX/Enemy Sounds/Megaera/MegaeraFlameBurst"
+      ColorFromOwner = "Ignore"
+      EndFrame = 52
+      NumFrames = 52
+      AddColor = true
+      EndGreen = 0.0
+      EndBlue = 1.0
+      EndRed = 0.0
+      StartRed = 0.5
+      StartBlue = 0.1
+      StartGreen = 0.4
+      Hue = 0.2
+      PlaySpeed = 45.0
+      StartFrame = 1
+      RandomFlipHorizontal = false
+      OriginX = 240.0
+      OriginY = 510.0
+      SortMode = "Id"
+      ScaleFromOwner = "Ignore"
+      ScaleMax = 1.1
+      ScaleMin = 0.9
+      Ambient = 0.0
+      CreateAnimations = [
+        {
+          Name = "FuryHellFireDark"
+        }]
+    }
+    {
+      Name = "FuryHellfireFast-Athena"
+      InheritFrom = "FuryHellfireSlow-Athena"
+      PlaySpeed = 75.0
+      CreateAnimations = [
+        {
+          Name = "FuryHellFireDarkFast"
+        }]
+    }
+    {
+      Name = "FuryHellfirePreviewDecalDark-Athena"
+      InheritFrom = "FuryHellfirePreviewDecalDark"
+      CreateAnimation = "FuryHellfirePreviewDecal-Athena"
+    }
+    {
+      Name = "FuryHellfirePreviewDecal-Athena"
+      InheritFrom = "FuryHellfirePreviewDecal"
+      Color = 
+      {
+        Red = 1.0
+        Green = 1.0
+        Blue = 0.8
+      }
+      Hue = 0.2
+    }
+    {
+      Name = "HarpyWhipSlashSwipe-Athena"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFx-Athena"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFlipped-Athena"
+      Type = "Constant"
+      FilePath = "Dev\blank_invisible"
+      CreateAnimation = "HarpyWhipSlashSwipeFxFlipped-Athena"
+      DieWithOwner = true
+      DurationFrames = 1
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFx-Athena"
+      Type = "Slide"
+      FilePath = "Fx\SpearDashSwipe\SpearDashSwipe"
+      GroupName = "FX_Standing_Add"
+      AddColor = true
+      ColorFromOwner = "Ignore"
+      EndBlue = 1.0
+      EndRed = 0.0
+      EndGreen = 0.0
+      StartRed = 1.0
+      StartBlue = 0.3
+      StartGreen = 0.95
+      EndFrame = 11
+      NumFrames = 11
+      StartFrame = 1
+      IsometricSkew = "None"
+      SortMode = "FromParent"
+      Material = "Unlit"
+      OverlayVfx = true
+      TimeModifierFraction = 0.9
+      DieWithOwner = false
+      StartScaleX = 0.7
+      EndScaleX = 1.1
+      ScaleY = 0.7
+      ChildAnimation = "HarpyWhipSlashSwipeFxB-Athena"
+      VisualFx = null
+      VisualFxIntervalMin = 0.01
+      VisualFxIntervalMax = 0.011
+      VisualFxCap = 8
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxDisplace-Athena"
+        }
+        {
+          Name = "QuickFlashBlue"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlipped-Athena"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Athena"
+      StartFrame = 1
+      FlipVertical = true
+      ClearSlides = true
+      ClearCreateAnimations = true
+      ChildAnimation = "HarpyWhipSlashSwipeFxBFlipped-Athena"
+      CreateAnimations = [
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDark"
+        }
+        {
+          Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Athena"
+        }
+        {
+          Name = "QuickFlashBlue"
+        }]
+      Slides = [
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 3
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 1
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxB-Athena"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Athena"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxBFlipped-Athena"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Athena"
+      VisualFx = null
+      ChildAnimation = null
+      ClearCreateAnimations = true
+      CreateAnimation = null
+      IsometricSkew = "None"
+      PostRotateScaleY = 0.5
+      ClearSlides = true
+      FlipVertical = true
+      Slides = [
+        {
+          DurationFrames = 1
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }
+        {
+          DurationFrames = 2
+        }]
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxDisplace-Athena"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Athena"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      ChildAnimation = null
+    }
+    {
+      Name = "HarpyWhipSlashSwipeFxFlippedDisplace-Athena"
+      InheritFrom = "HarpyWhipSlashSwipeFx-Athena"
+      PlaySpeed = 50
+      GroupName = "FX_Displacement"
+      ClearCreateAnimations = true
+      StartAlpha = 0.02
+      EndAlpha = 0.005
+      VisualFx = null
+      FlipVertical = true
+      ChildAnimation = null
+    }
+ ]
+}
