@@ -1,0 +1,24 @@
+{
+    Texts = [
+        "_append"
+    {
+      Id = "ContractExchange_Title"
+      DisplayName = "Contract Exchange"
+    }
+    {
+      Id = "MegWhipLash1"
+      DisplayName = "Whip"
+      //Description = "Exagryph, Adamant Rail"
+    }
+    {
+      Id = "AlectoWhipLash1"
+      DisplayName = "Whip"
+      //Description = "Exagryph, Adamant Rail"
+    }
+    {
+      Id = "HarpyWhipSlash1"
+      DisplayName = "Whip"
+      //Description = "Exagryph, Adamant Rail"
+    }
+    ]
+}
