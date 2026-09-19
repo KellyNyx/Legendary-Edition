@@ -10,19 +10,6 @@ ModUtil.WrapBaseFunction( 'SetupMap', function(baseFunc)
 return baseFunc()
 end)
 
--- ModUtil.WrapBaseFunction( 'SetupMap', function(baseFunc)
--- 	--if CurrentRun == nil then return end
---     local LastCharTrait = LECharacterData.LastCharTraitName
--- 	if LastCharTrait == nil then LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
--- 	-- LastCharTrait = "EPC_CharacterHandlerTrait"
--- 	end
---     if HeroHasTrait( LastCharTrait ) then
--- 	else
---     AddTraitToHero({ TraitName = LastCharTrait })
---     end
--- return baseFunc()
--- end)
-
 function CheckForEPCMegaeraTrait()
 	ModUtil.WrapBaseFunction( 'SetupMap', function(baseFunc)
 		if HeroHasTrait('EPCMegaeraTrait') then

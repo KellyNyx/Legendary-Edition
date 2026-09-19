@@ -2409,15 +2409,15 @@ ModUtil.BaseOverride( "AddLastStand", function ( args )
 end )
 
 ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
--- 	if not IsCustomHero == true then local TraitName = LECharacterData.LastCharacter 
--- 	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag" else
--- 	 local currentWeaponInSlot = GetEquippedWeapon()
---    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
---    local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
--- 	end
-
-	local TraitName = LECharacterData.LastCharacter 
-	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag"
+	if not IsCustomHero == true then local TraitName = "DefaultCharacterTrait"
+	local CurrentCharacterExtraLifeIcon = "ExtraLifeZag" else
+	 local currentWeaponInSlot = GetEquippedWeapon()
+   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
+   local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
+	end
+	--if not IsCustomHero == true then
+	
+	--end
 
 	local unit = heroUnit or CurrentRun.Hero
 	if not ScreenAnchors.LifePipIds or not unit.LastStands then
@@ -2434,7 +2434,7 @@ ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
 				if IsMetaUpgradeActive("ExtraChanceReplenishMetaUpgrade") then
 					SetAnimation({ Name = "ExtraLifeReplenish", DestinationId = ScreenAnchors.LifePipIds[i] })
 				else
-					SetAnimation({ Name = CurrentCharacterExtraLifeIcon, DestinationId = ScreenAnchors.LifePipIds[i] })
+					SetAnimation({ Name = CurrentCharacterExtraLifeIcon or "ExtraLifeZag", DestinationId = ScreenAnchors.LifePipIds[i] })
 				--else
 					--SetAnimation({ Name = "ExtraLifeZag", DestinationId = ScreenAnchors.LifePipIds[i] })
 				--end
@@ -2446,22 +2446,10 @@ ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
 	end
 end )
 
---bug fix--
-function LEGetWeaponUpgradeTrait( weapon, index )
-	if weapon == nil or index == nil then
-		return nil
-	end
-	if WeaponUpgradeData[weapon][index].TraitName then
-		return WeaponUpgradeData[weapon][index].TraitName
-	elseif  WeaponUpgradeData[weapon][index].RequiredInvestmentTraitName and GetWeaponUpgradeLevel(weapon, index) > 0 then
-		return WeaponUpgradeData[weapon][index].RequiredInvestmentTraitName
-	end
-	return nil
-end
-
 ModUtil.BaseOverride( "InitHeroLastStands", function ( newHero )
-	local TraitName = LECharacterData.LastCharacter 
-	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag"
+	local currentWeaponInSlot = GetEquippedWeapon()
+   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index) or "null"
+   local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
 
 	for s = 1, GetNumMetaUpgrades("ExtraChanceMetaUpgrade" ) do
 		for i = 1, MetaUpgradeData["ExtraChanceMetaUpgrade"].ChangeValue do

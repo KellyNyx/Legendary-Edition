@@ -146,13 +146,13 @@ WeaponData.AlectoWhipLash1 =
 		FirstTimeEquipAnimation = "ZagreusSpearThrowFireReturn",
 		FirstTimeEquipSound = "/SFX/Player Sounds/ZagreusSpearSwipe",
 		UpgradeChoiceText = "UpgradeChoiceMenu_Melee",
-		ShortName = "AlectoWhipLash1",
+		ShortName = "SpearWeapon_Short",
 		UnlockName = "SpearWeapon_Unlock",
 		DashWeapon = "EPCHarpyWhipWhirlAlectoDash",
 		DashSwaps = { "AlectoWhipLash1", "AlectoWhipLash2", "AlectoWhipLash3", 
                       "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6",                                                       },
 		ExpireDashWeaponOnDash = true,
-		SecondaryWeapon = "EPCHarpyWhipShot",
+		SecondaryWeapon = "EPCHarpyBeam",
 		ResourceName = "LockKeys",
 		UnlockCost = 4,
 		LockKeyTextOffsetY = -125,
@@ -172,7 +172,7 @@ WeaponData.AlectoWhipLash1 =
 
 		--FireScreenshake = { Distance = 6, Speed = 300, FalloffSpeed = 0, Duration = 0.1, DynamicAngleOffset = 0 },
 
-    --StartingWeapon = false,
+    StartingWeapon = false,
 
     --OnHitFunctionName = { "LEShoddyZeusAttackFix" },
 
@@ -640,7 +640,7 @@ WeaponData.EPCHarpyLightningChase =
 }
 WeaponData.EPCHarpyWhipShot =
 {
-		--StartingWeapon = false,
+		StartingWeapon = false,
 
 		FireScreenshake = { Distance = 6, Speed = 400, FalloffSpeed = 1400, Duration = 0.4 },
 

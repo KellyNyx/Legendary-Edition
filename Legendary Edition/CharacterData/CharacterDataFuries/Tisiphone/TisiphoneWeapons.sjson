@@ -447,7 +447,7 @@
       ChargeStartAnimation = "EPCFury3WhipWhirlCharge"
       ChargeCancelGraphic = "Fury3Idle"
       FireGraphic = "TisiphoneWhipLassoFire"
-      FireFx = "LEEnemyHeavySlashLasso"
+      FireFx = "EnemyHeavySlashLasso"
       //AddOnFire = "TisiphoneRushWeaponControl"
       FireFxOffset = 300
       LockTriggerForCharge = false

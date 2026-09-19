@@ -95,70 +95,6 @@ TraitData.EPCTisiphoneTrait =
 	BoonSelectInFrontFxOffset = 0.0,
 	UpgradeAcquiredAnimation = "Fury3LungeReturnToIdle",
 	IntroPresentationFunction = "DoCurrentCharacterIntroLanding",
-	RageData = {
-		EnragedPresentation = "EPCHarpyEnragedPresentation",
-		RageDecayRate = 0.00,
-		RageDecayStartDuration = 4.0,
-		LastRageGainTime = 0,
-		RageChargeMultiplier = 0.0,
-		EnragedDuration = 12,
-		EnragedWaitMultiplier = 0.65,
-		EnragedSpeedValue = 800.0,
-		EnragedMoveSpeedBonus = 200,
-		RequiredMaxLastStandsForPermaRage = 0,
-		PermaRageHealthThreshold = 0.30,
-		RageWeapon = "EPCHarpyEnrage",
-		RageFullSound = "/SFX/SurvivalChallengeStart",
-		RageFullVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			CooldownTime = 20,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- That's it!
-			{ Cue = "/VO/Alecto_0166" },
-			-- My turn.
-			{ Cue = "/VO/Alecto_0167" },
-			-- That does it!
-			{ Cue = "/VO/Alecto_0168" },
-			-- Now you've done it.
-			{ Cue = "/VO/Alecto_0169" },
-			-- Graahhh!
-			{ Cue = "/VO/Alecto_0170" },
-			-- Rrryaah!
-			{ Cue = "/VO/Alecto_0171" },
-			-- Raaahh!
-			{ Cue = "/VO/Alecto_0172" },
-			-- Enough of this!
-			{ Cue = "/VO/Alecto_0173" },
-			-- Why, you!
-			{ Cue = "/VO/Alecto_0175" },
-			-- Enough!
-			{ Cue = "/VO/Alecto_0176" },
-		},
-
-		RageExpiredSound = "/Leftovers/World Sounds/MapZoomInShortHigh",
-		RageExpiredVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			RequiresInRun = true,
-			SuccessiveChanceToPlay = 0.33,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- Whew.
-			{ Cue = "/VO/Alecto_0177" },
-			-- Whew!
-			{ Cue = "/VO/Alecto_0178" },
-			-- Nrrgghh...
-			{ Cue = "/VO/Alecto_0179" },
-			-- Mmph.
-			{ Cue = "/VO/Alecto_0180" },
-		},
-	},
 	UpgradeAcquiredVoicelines = {
 		RandomRemaining = true,
 		CooldownTime = 20,
@@ -295,7 +231,7 @@ TraitData.EPCTisiphoneTrait =
 		},
     SetupFunction =
     {
-        Name = "EquipEPCTisiphoneWeaponsTEST"
+        Name = "EquipEPCTisiphoneWeapons"
     },
     WeaponDataOverride =
 		{
@@ -424,9 +360,6 @@ function EquipEPCTisiphoneWeapons()
     SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "PriorityWeapon", Value = "EPCTisiphoneRushWeapon" })
 	StopAnimation({ Name = CurrentRun.Hero.AttachedAnimationName, DestinationId = CurrentRun.Hero.ObjectId })
 	SetupCharacterHandler()
-	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCTisiphoneTrait
-	LECharacterData.LastCharTraitName = "EPCTisiphoneTrait"
 	SetupCurrentCharacter()
 	if CurrentRun.Hero.AttachedAnimationName == "LaurelCindersSpawner" then
 		StopAnimation({ Names = "LaurelCindersSpawner", DestinationId = CurrentRun.Hero.ObjectId })
@@ -435,67 +368,7 @@ function EquipEPCTisiphoneWeapons()
 	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
 	end
 	--make sure to let the game know that we are playing as a custom character
-	
-	UpdateLifePips()
-end
-
-function SetupEPCTisiphoneCharacter()
-	--Remove Zagreus Binks To Set Current Character Binks
-	-- SetThingProperty({ Property = "Graphic", Value = nil, DestinationId = currentRun.Hero.ObjectId })
-	-- SetUnitProperty({ Property = "StartGraphic", Value = nil, DestinationId = currentRun.Hero.ObjectId })
-	-- SetUnitProperty({ Property = "MoveGraphic", Value = nil, DestinationId = currentRun.Hero.ObjectId })
-	-- SetUnitProperty({ Property = "StopGraphic", Value = nil, DestinationId = currentRun.Hero.ObjectId })
-	--Set Current Character Binks
-	SetThingProperty({ Property = "Graphic", Value = "Fury3Idle", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "StartGraphic", Value = "Fury3Start", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "MoveGraphic", Value = "Fury3Run", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "StopGraphic", Value = "Fury3Stop", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "LowSpeedAnimation", Value = "Fury3Run", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "HighSpeedAnimation", Value = "Fury3Run", DestinationId = CurrentRun.Hero.ObjectId })
-	SetUnitProperty({ Property = "Speed", Value = 850.0, DestinationId = CurrentRun.Hero.ObjectId })
-	SetScale({ Fraction = 1.3, Id = CurrentRun.Hero.ObjectId })
-    SetThingProperty({ Property = SubtitleColor, Value = Color.TisiphoneVoice, DestinationId = CurrentRun.Hero.ObjectId })
-	LoadPackages{ Name = "Tartarus" }
-end
-
-function EquipEPCTisiphoneWeaponsTEST()
-    local herospearweapon = WeaponSets.HeroWeaponSets.SpearWeapon
-    local heroswordweapon = WeaponSets.HeroWeaponSets.SwordWeapon
-    local TisiphoneWeaponSet = TisiphoneAllWeapons
-	TisiphoneAllWeapons =
-{ 
-  --"TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon", 
-  "HarpyWhipSlash1", "HarpyWhipSlash2", "HarpyWhipSlash3", 
- --"EPCHarpyLightningLineCONTROL", 
- "EPCHarpyLightningLine2", "EPCHarpyWhipLasso",
-  "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
-}
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = herospearweapon, UnloadPackages = false })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "RushWeapon", UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "TisiphoneDash", PreLoadBinks = true })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = WeaponSets.HeroRangedWeapons, UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "EPCHarpyLightningLine2", PreLoadBinks = true })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpySlowBeam360", "EPCHarpySlowBeam3602", "EPCHarpySlowBeam3603", PreLoadBinks = true })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "SpearWeapon", UnloadPackages = false })
-    EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = TisiphoneWeaponSet, PreLoadBinks = true })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HarpyLightningLine", PreLoadBinks = true })
-    SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "PriorityWeapon", Value = "EPCTisiphoneRushWeapon" })
-	StopAnimation({ Name = CurrentRun.Hero.AttachedAnimationName, DestinationId = CurrentRun.Hero.ObjectId })
-	SetupCharacterHandler()
 	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCTisiphoneTrait
-	LECharacterData.LastCharTraitName = "EPCTisiphoneTrait"
-	SetupCurrentCharacter()
-	if CurrentRun.Hero.AttachedAnimationName == "LaurelCindersSpawner" then
-		StopAnimation({ Names = "LaurelCindersSpawner", DestinationId = CurrentRun.Hero.ObjectId })
-	end
-	if HeroHasTrait("StaminaMetaUpgrade") then
-	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
-	end
-	--make sure to let the game know that we are playing as a custom character
-	if IsCustomHero == false then
-	EquipPlayerWeapon( WeaponData.HarpyWhipSlash1, { PreLoadBinks = true } )
-	end
 	UpdateLifePips()
 end
 

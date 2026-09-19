@@ -833,16 +833,10 @@
       PlaySpeed = 65.0
     }
     {
-      Name = "QuickFlashGreenOffset"
-      InheritFrom = "QuickFlashGreen"
-      OriginX = 200
-      OriginY = 256
-    }
-    {
       Name = "FuryWhipWhirlAlecto"
       InheritFrom = "FuryWhipWhirl"
       FilePath = "Fx\FuryWhipWhirlAlecto\FuryWhipWhirlAlecto"
-      CreateAnimation = "QuickFlashGreen"
+      CreateAnimation = "QuickFlashRed"
       VisualFx = "FuryWhipWhirlRandomAlecto"
     }
     {
@@ -876,7 +870,7 @@
       Name = "FuryWhipWhirlTisiphoneLE"
       InheritFrom = "FuryWhipWhirl"
       FilePath = "Fx\FuryWhipWhirlTisiphone\FuryWhipWhirlTisiphone"
-      CreateAnimation = "QuickFlashGreen"
+      CreateAnimation = "QuickFlashRed"
       VisualFx = "FuryWhipWhirlRandomTisiphoneLE"
     }
     {
@@ -915,7 +909,7 @@
     {
       Name = "FuryWhipWhirl-RapidLashesTisiphoneLE"
       FilePath = "Fx\FuryWhipWhirlTisiphone\FuryWhipWhirlTisiphone"
-      InheritFrom = "FuryWhipWhirlTisiphoneLE"
+      InheritFrom = "FuryWhipWhirl"
       VisualFx = "FuryWhipWhirlRandom-RapidLashesTisiphoneLE"
       Scale = 1.0
     }
@@ -1506,11 +1500,7 @@
       InheritFrom = "HarpyWhipSlashSwipeFxFlippedDisplace"
       Color = { Red = 0.25 Green = 0.0 Blue = 0.12 }
     }
-    {
-      Name = "LEEnemyHeavySlashLasso"
-      InheritFrom = "EnemyHeavySlashLasso"
-      Color = { Red = 1.0 Green = 1.0 Blue = 0.0 }
-    }
+
     {
       Name = "FuryWhipLash"
       FilePath = "Fx\FuryWhipLash\FuryWhipLash"
@@ -1550,51 +1540,29 @@
     }
     {
       Name = "AlectoWhipLash"
-      Type = "Book"
-      ColorFromOwner = "Ignore"
-      ScaleFromOwner = "Ignore"
-      //AddColor = false
-      EndFrame = 16
-      NumFrames = 16
-      PlaySpeed = 60.0
-      StartFrame = 1
-      FlipVertical = false
-      PostRotateScaleY = 0.5
-      //Hue = 0.80
-      Scale = 2.0
-      Ambient = 0.0
-      CreateAnimation = "QuickFlashGreen"
+      InheritFrom = "FuryWhipLash"
+      Hue = 0.1
+      CreateAnimation = "QuickFlashRed"
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
     }
     {
       Name = "AlectoWhipLashFlipped"
       InheritFrom = "AlectoWhipLash"
       FlipVertical = true
-      ClearCreateAnimations = true
       //Hue = 0.1
       //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
     }
     {
       Name = "TisiphoneWhipLash"
-      Type = "Book"
-      ColorFromOwner = "Ignore"
-      ScaleFromOwner = "Ignore"
-      //AddColor = false
-      EndFrame = 16
-      NumFrames = 16
-      PlaySpeed = 60.0
-      StartFrame = 1
-      FlipVertical = false
-      PostRotateScaleY = 0.5
-      //Hue = 0.80
-      Scale = 2.0
-      Ambient = 0.0
+      InheritFrom = "FuryWhipLash"
+      Hue = 0.55
       CreateAnimation = "QuickFlashGreen"
+      //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
     }
     {
       Name = "TisiphoneWhipLashFlipped"
       InheritFrom = "TisiphoneWhipLash"
       FlipVertical = true
-      ClearCreateAnimations = true
       //Hue = 0.55
       //Color = { Red = 1.0 Green = 0.0 Blue = 0.0 }
     }
@@ -1663,7 +1631,6 @@
       Name = "FuryWhipLashAlecto"
       InheritFrom = "FuryWhipLashMegaera"
       FilePath = "Fx\FuryWhipLashAlecto\FuryWhipLashAlecto"
-      CreateAnimation = "QuickFlashGreenOffset"
     }
     {
       Name = "FuryWhipLashAlectoFlipped"
@@ -1674,57 +1641,11 @@
       Name = "FuryWhipLashTisiphone"
       InheritFrom = "FuryWhipLashMegaera"
       FilePath = "Fx\FuryWhipLashTisiphone\FuryWhipLashTisiphone"
-      CreateAnimation = "QuickFlashGreenOffset"
     }
     {
       Name = "FuryWhipLashTisiphoneFlipped"
       InheritFrom = "FuryWhipLashTisiphone"
       FlipVertical = true
-    }
-    {
-      Name = "FuryHellfirePreviewDecalDarkLE"
-      InheritFrom = "FuryHellfirePreviewDecalDark"
-      CreateAnimation = "FuryHellfirePreviewDecalLE"
-      //Scale = 0.5
-    }
-    {
-      Name = "FuryHellfirePreviewDecalDarkAlectoLE"
-      InheritFrom = "FuryHellfirePreviewDecalDark"
-      CreateAnimation = "FuryHellfirePreviewDecalAlectoLE"
-      //Scale = 0.5
-    }
-    {
-      Name = "FuryHellfirePreviewDecalAlectoLE"
-      InheritFrom = "FuryHellfirePreviewDecalLE"
-      Color = 
-      {
-        Red = 1.0
-        Green = 0.0
-        Blue = 0.0
-      }
-    }
-    {
-      Name = "FuryHellfirePreviewDecalLE"
-      InheritFrom = "FuryHellfirePreviewDecal"
-      //CreateAnimation = "null"
-      //OffsetX = 300
-      OffsetZ = 235
-      Scale = 0.38
-    }
-    {
-      Name = "FuryHellfirePreviewDecalDarkTisiphoneLE"
-      InheritFrom = "FuryHellfirePreviewDecalDark"
-      CreateAnimation = "FuryHellfirePreviewDecalTisiphoneLE"
-    }
-    {
-      Name = "FuryHellfirePreviewDecalTisiphoneLE"
-      InheritFrom = "FuryHellfirePreviewDecalLE"
-      Color = 
-      {
-        Red = 0.0
-        Green = 1.0
-        Blue = 0.5
-      }
     }
  ]
 }

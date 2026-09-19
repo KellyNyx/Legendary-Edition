@@ -11,23 +11,6 @@ table.insert(WeaponUpgradeData.SpearWeapon,
 	Image = "Character_Portrait_Megaera"
 })
 
-WeaponUpgradeData.MegWhipLash1 =
-{
-	{
-			Costs = { 0, 2, 3, 4, 5 },
-			MaxUpgradeLevel = 5,
-			--TraitName = "SwordAmmoWaveTrait"
-			TraitName = "EPCMegaeraTrait",
-			StartsUnlocked = true,
-			UnequipFunctionName = "RemoveEPCMegaeraWeapons",
-			EquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOff",
-			UnequippedKitAnimation = "WeaponSwordAlt01FloatingIdle",
-			BonusUnequippedKitAnimation = "WeaponSwordAlt01FloatingIdleBonus",
-			BonusEquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOffBonus",
-			Image = "Character_Portrait_Megaera"
-		}
-}
-
 function RemoveEPCMegaeraWeapons()
 	--Unequip Character Weapons
 	UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = MegAllWeapons })
@@ -48,7 +31,6 @@ function RemoveEPCMegaeraWeapons()
 	StopAnimation({ Name = "MedusaShadow", DestinationId = CurrentRun.Hero.ObjectId })
 	
 	RemoveTrait( CurrentRun.Hero, "EPC_CharacterHandlerTrait" )
-	--RemoveTrait( CurrentRun.Hero, "EPCMegaeraTrait" )
 	SetupDefaultCharacter()
 	if HeroHasTrait("StaminaMetaUpgrade") then
 	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
@@ -56,8 +38,6 @@ function RemoveEPCMegaeraWeapons()
 	--make sure to let the game know that we aren't playing as a custom
 	--character anymore
 	IsCustomHero = false
-	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
-	LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
 	UpdateLifePips()
 	
 end

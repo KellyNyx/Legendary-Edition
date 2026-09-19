@@ -11,23 +11,6 @@ table.insert(WeaponUpgradeData.SpearWeapon,
 	Image = "Character_Portrait_Tisiphone"
 })
 
-WeaponUpgradeData.HarpyWhipSlash1 =
-{
-	{
-			Costs = { 0, 2, 3, 4, 5 },
-			MaxUpgradeLevel = 5,
-			--TraitName = "SwordAmmoWaveTrait"
-			TraitName = "EPCTisiphoneTrait",
-			StartsUnlocked = true,
-			UnequipFunctionName = "RemoveEPCTisiphoneWeapons",
-			EquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOff",
-			UnequippedKitAnimation = "WeaponSwordAlt01FloatingIdle",
-			BonusUnequippedKitAnimation = "WeaponSwordAlt01FloatingIdleBonus",
-			BonusEquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOffBonus",
-			Image = "Character_Portrait_Tisiphone"
-		}
-}
-
 function RemoveEPCTisiphoneWeapons()
 	--Unequip Character Weapons
 	UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = TisiphoneAllWeapons })
@@ -54,9 +37,5 @@ function RemoveEPCTisiphoneWeapons()
 	--make sure to let the game know that we aren't playing as a custom
 	--character anymore
 	IsCustomHero = false
-	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
-	LECharacterData.LastCharTraitName = "EPCTisiphoneTrait"
-
-
 	UpdateLifePips()
 end

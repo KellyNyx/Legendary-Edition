@@ -7,15 +7,6 @@ TisiphoneAllWeapons =
   "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
 }
 
-WeaponSets.HeroWeaponSets.HarpyWhipSlash1 =
-{ 
-  --"TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon", 
-  "HarpyWhipSlash1", "HarpyWhipSlash2", "HarpyWhipSlash3", 
- --"EPCHarpyLightningLineCONTROL", 
- "EPCHarpyLightningLine2", "EPCHarpyWhipLasso",
-  "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
-}
-
 --Attack--
 ModdedAttackWeapons.EPC_Tisiphone_Attack =
 {

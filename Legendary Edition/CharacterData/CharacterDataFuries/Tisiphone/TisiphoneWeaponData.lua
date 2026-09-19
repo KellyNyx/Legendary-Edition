@@ -6,7 +6,7 @@ WeaponData.HarpyWhipSlash1 =
     ExpireDashWeaponOnDash = true,
     SecondaryWeapon = "EPCHarpyWhipLasso",
     SkipAttackNotReadySounds = true,
-    ShortName = "HarpyWhipSlash1",
+
     HitSimSlowCooldown = 0.2,
     HitSimSlowParameters =
     {

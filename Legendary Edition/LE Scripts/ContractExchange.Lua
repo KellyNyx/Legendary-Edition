@@ -211,7 +211,7 @@ function OpenContractExchangeScreen()
   wait(0.2)
 
   -- Title
-  CreateTextBox({ Id = components.ShopBackground.Id, Text = "Contract Exchange", FontSize = 28, OffsetX = 28, OffsetY = -460,
+  CreateTextBox({ Id = components.ShopBackground.Id, Text = "Contract Exchange", FontSize = 34, OffsetX = 0, OffsetY = -460,
     Color = Color.White, Font = "SpectralSCLightTitling", ShadowBlur = 0, ShadowColor = { 0, 0, 0, 1 }, ShadowOffset = { 0, 2 },
     Justification = "Center" })
 

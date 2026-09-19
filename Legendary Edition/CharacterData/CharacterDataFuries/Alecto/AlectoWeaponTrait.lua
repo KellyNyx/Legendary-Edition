@@ -350,7 +350,7 @@ TraitData.EPCAlectoTrait =
 			},
     SetupFunction =
     {
-        Name = "EquipEPCAlectoWeaponsTEST"
+        Name = "EquipEPCAlectoWeapons"
     },
     WeaponDataOverride =
 		{
@@ -452,9 +452,6 @@ function EquipEPCAlectoWeapons()
     SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "PriorityWeapon", Value = "EPCAlectoRushWeapon" })
 	StopAnimation({ Name = CurrentRun.Hero.AttachedAnimationName, DestinationId = CurrentRun.Hero.ObjectId })
 	SetupCharacterHandler()
-	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCAlectoTrait
-	LECharacterData.LastCharTraitName = "EPCAlectoTrait"
 	SetupCurrentCharacter()
 	CreatePlayerRageMeter(CurrentRun.Hero)
 	if CurrentRun.Hero.AttachedAnimationName == "LaurelCindersSpawner" then
@@ -464,49 +461,7 @@ function EquipEPCAlectoWeapons()
 	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
 	end
 	--make sure to let the game know that we are playing as a custom character
-	
-	UpdateLifePips()
-	
-end
-
-function EquipEPCAlectoWeaponsTEST()
-    local herospearweapon = WeaponSets.HeroWeaponSets.SpearWeapon
-    local heroswordweapon = WeaponSets.HeroWeaponSets.SwordWeapon
-    local AlectoWeaponSet = AlectoAllWeapons
-
-	AlectoAllWeapons =
-{ --"EPCHarpyWhipArc", "EPCHarpyWhipArc2", "AlectoWhipSlash"
-"AlectoWhipLash1", "AlectoWhipLash2", "AlectoWhipLash3", "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6", 
-"EPCHarpyWhipRageBeam",
-"AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",  }
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = herospearweapon, UnloadPackages = false })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "RushWeapon", UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "AlectoDash", PreLoadBinks = true })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = WeaponSets.HeroRangedWeapons, UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "EPCHarpyLightningChase", PreLoadBinks = true })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpySlowBeam360", "EPCHarpySlowBeam3602", "EPCHarpySlowBeam3603", PreLoadBinks = true })
-    --UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "SpearWeapon", UnloadPackages = false })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = AlectoWeaponSet, PreLoadBinks = true })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HarpyLightningLine", PreLoadBinks = true })
-    SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "PriorityWeapon", Value = "EPCAlectoRushWeapon" })
-	StopAnimation({ Name = CurrentRun.Hero.AttachedAnimationName, DestinationId = CurrentRun.Hero.ObjectId })
-	SetupCharacterHandler()
-	if IsCustomHero == false then
-	EquipPlayerWeapon( WeaponData.AlectoWhipLash1, { PreLoadBinks = true } )
-	end
 	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCAlectoTrait
-	LECharacterData.LastCharTraitName = "EPCAlectoTrait"
-	SetupCurrentCharacter()
-	CreatePlayerRageMeter(CurrentRun.Hero)
-	if CurrentRun.Hero.AttachedAnimationName == "LaurelCindersSpawner" then
-		StopAnimation({ Names = "LaurelCindersSpawner", DestinationId = CurrentRun.Hero.ObjectId })
-	end
-	if HeroHasTrait("StaminaMetaUpgrade") then
-	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
-	end
-	--make sure to let the game know that we are playing as a custom character
-	
 	UpdateLifePips()
 	
 end

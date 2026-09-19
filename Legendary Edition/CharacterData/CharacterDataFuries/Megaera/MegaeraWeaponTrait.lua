@@ -95,70 +95,7 @@ TraitData.EPCMegaeraTrait =
 	BoonSelectInFrontFxOffset = 0.0,
 	UpgradeAcquiredAnimation = "FuryLungeReturnToIdle",
 	IntroPresentationFunction = "DoCurrentCharacterIntroLanding",
-	RageData = {
-		EnragedPresentation = "EPCHarpyEnragedPresentation",
-		RageDecayRate = 0.00,
-		RageDecayStartDuration = 4.0,
-		LastRageGainTime = 0,
-		RageChargeMultiplier = 0.0,
-		EnragedDuration = 12,
-		EnragedWaitMultiplier = 0.65,
-		EnragedSpeedValue = 800.0,
-		EnragedMoveSpeedBonus = 200,
-		RequiredMaxLastStandsForPermaRage = 0,
-		PermaRageHealthThreshold = 0.30,
-		RageWeapon = "EPCHarpyEnrage",
-		RageFullSound = "/SFX/SurvivalChallengeStart",
-		RageFullVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			CooldownTime = 20,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- That's it!
-			{ Cue = "/VO/Alecto_0166" },
-			-- My turn.
-			{ Cue = "/VO/Alecto_0167" },
-			-- That does it!
-			{ Cue = "/VO/Alecto_0168" },
-			-- Now you've done it.
-			{ Cue = "/VO/Alecto_0169" },
-			-- Graahhh!
-			{ Cue = "/VO/Alecto_0170" },
-			-- Rrryaah!
-			{ Cue = "/VO/Alecto_0171" },
-			-- Raaahh!
-			{ Cue = "/VO/Alecto_0172" },
-			-- Enough of this!
-			{ Cue = "/VO/Alecto_0173" },
-			-- Why, you!
-			{ Cue = "/VO/Alecto_0175" },
-			-- Enough!
-			{ Cue = "/VO/Alecto_0176" },
-		},
-
-		RageExpiredSound = "/Leftovers/World Sounds/MapZoomInShortHigh",
-		RageExpiredVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			RequiresInRun = true,
-			SuccessiveChanceToPlay = 0.33,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- Whew.
-			{ Cue = "/VO/Alecto_0177" },
-			-- Whew!
-			{ Cue = "/VO/Alecto_0178" },
-			-- Nrrgghh...
-			{ Cue = "/VO/Alecto_0179" },
-			-- Mmph.
-			{ Cue = "/VO/Alecto_0180" },
-		},
-	},
+	
 	UpgradeAcquiredVoicelines = {
 		RandomRemaining = true,
 		PreLineWait = 0.5,
@@ -378,7 +315,7 @@ TraitData.EPCMegaeraTrait =
 			},
     SetupFunction =
     {
-        Name = "EquipEPCMegaeraWeaponsTEST"
+        Name = "EquipEPCMegaeraWeapons"
     },
     WeaponDataOverride =
 		{
@@ -448,81 +385,9 @@ function EquipEPCMegaeraWeapons()
 	end
 	--make sure to let the game know that we are playing as a custom character
 	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCMegaeraTrait
 	UpdateLifePips()
-
-	-- local unit = CurrentRun.Hero
-	-- if not ScreenAnchors.LifePipIds or not unit.LastStands then
-	-- 	return
-	-- end
-	-- local lastSeenLives = UIData.LastSeenLives or 0
-	-- local numLives = TableLength( unit.LastStands )
-	-- for i, lifePipId in pairs( ScreenAnchors.LifePipIds ) do
-	-- 	local lastStandData = unit.LastStands[i]
-	-- 	if lastStandData then
-	-- 		SetAnimation({ Name = lastStandData.Icon, DestinationId = ScreenAnchors.LifePipIds[i] })
-	-- 	else
-	-- 		if unit.IsDead then
-	-- 			if IsMetaUpgradeActive("ExtraChanceReplenishMetaUpgrade") then
-	-- 				SetAnimation({ Name = "ExtraLifeReplenish", DestinationId = ScreenAnchors.LifePipIds[i] })
-	-- 			else
-	-- 				SetAnimation({ Name = "ExtraLifeMeg", DestinationId = ScreenAnchors.LifePipIds[i] })
-	-- 			end
-	-- 		else
-	-- 			SetAnimation({ Name = "ExtraLifeEmpty", DestinationId = ScreenAnchors.LifePipIds[i] })
-	-- 		end
-	-- 	end
-	-- end
 	
     --EquipPlayerWeapon( WeaponData.MegWhipLash1, { PreLoadBinks = true } )
-end
-
-function EquipEPCMegaeraWeaponsTEST()
-    local herospearweapon = WeaponSets.HeroWeaponSets.SpearWeapon
-    local heroswordweapon = WeaponSets.HeroWeaponSets.SwordWeapon
-	MegAllWeapons =
-{ "MegaeraDash", 
-  --"MegRushWeaponControl", "EPCMegaeraRushWeapon",
-  "EPCHarpyBeam", "EPCHarpyBeam2", "EPCHarpyBeam3", 
-  "EPCHarpyBeam4", "EPCHarpyBeam5",
-  "EPCHarpyBeam6", "EPCHarpyBeam7", 
-  "EPCHarpyBeam8", "EPCHarpyBeam9", "EPCHarpyBeam10",
-  "EPCHarpyBeam11", "EPCHarpyBeam12", 
-  "EPCHarpyBeam13", "EPCHarpyBeam14", "EPCHarpyBeam15",
-  "EPCHarpyWhipWhirl", "EPCHarpyWhipWhirlDash", "EPCHarpyLightning2", "EPCHarpyLightning3", "EPCHarpyLightning4", "EPCHarpyLightning", "EPCHarpyLightning_2", "EPCHarpyLightning_3",
-  "MegWhipLash1", "MegWhipLash2", "MegWhipLash3", }
-    local MegaeraWeaponSet = MegAllWeapons
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = herospearweapon, UnloadPackages = false })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "RushWeapon", UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "MegaeraDash", PreLoadBinks = true })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = WeaponSets.HeroRangedWeapons, UnloadPackages = false })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpyLightning2", PreLoadBinks = true })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpyLightning3", PreLoadBinks = true })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpyLightning4", PreLoadBinks = true })
-	EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpyLightning", PreLoadBinks = true })
-    --EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = MegaeraWeaponSet, PreLoadBinks = true })
-	--SetWeaponProperty({ Names = SpearWeapon, Property = "Enabled", Value = false })
-    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Name = "SpearWeapon", UnloadPackages = false })
-   -- EquipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "EPCHarpyWhipWhirlDash", "EPCHarpyWhipWhirl", "EPCHarpyWhipWhirl2", "EPCHarpyWhipWhirl3", PreLoadBinks = true })
-    SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "PriorityWeapon", Value = "MegaeraDash" })
-	StopAnimation({ Name = CurrentRun.Hero.AttachedAnimationName, DestinationId = CurrentRun.Hero.ObjectId })
-	SetupCharacterHandler()
-	
-    if CurrentRun.Hero.AttachedAnimationName == "LaurelCindersSpawner" then
-		StopAnimation({ Names = "LaurelCindersSpawner", DestinationId = CurrentRun.Hero.ObjectId })
-	end
-	if HeroHasTrait("StaminaMetaUpgrade") then
-	SetWeaponProperty({ Names = WeaponSets.HeroRushWeapons, Property = "ClipSize", Value = 2 })
-	end
-	if IsCustomHero == false then
-	EquipPlayerWeapon( WeaponData.MegWhipLash1, { PreLoadBinks = true } )
-	end
-	--make sure to let the game know that we are playing as a custom character
-	IsCustomHero = true
-	LECharacterData.LastCharacter = TraitData.EPCMegaeraTrait
-	LECharacterData.LastCharTraitName = "EPCMegaeraTrait"
-	SetupCurrentCharacter()
-	UpdateLifePips()  
 end
 --function EquipEPCMegaeraWeapons()
   --  UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = "SpearWeapon", "SpearWeapon2", "SpearWeapon3", "SpearWeaponSpin", "SpearWeaponDash", "SpearWeaponThrow" })

@@ -4,11 +4,6 @@ AlectoAllWeapons =
 "EPCHarpyWhipRageBeam",
 "AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",  }
 
-WeaponSets.HeroWeaponSets.AlectoWhipLash1 =
-{ --"EPCHarpyWhipArc", "EPCHarpyWhipArc2", "AlectoWhipSlash"
-"AlectoWhipLash1", "AlectoWhipLash2", "AlectoWhipLash3", "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6", 
-"EPCHarpyWhipRageBeam",
-"AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",  }
 -- --  table.insert(WeaponSets.HeroRushWeapons,
 -- --      "EPCAlectoRushWeapon"
 -- )

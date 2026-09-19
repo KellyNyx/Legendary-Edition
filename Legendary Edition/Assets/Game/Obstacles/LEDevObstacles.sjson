@@ -34,56 +34,5 @@
         Invisible = false
       }
     }
-    {
-      Name = "MegCharObstacle"
-      InheritFrom = "1_BaseInvulnerableObstacle"
-      DisplayInEditor = true
-      Thing = 
-      {
-        EditorOutlineDrawBounds = false
-        Graphic = "FuryHellfirePreviewDecalDarkLE"
-        Offset = { X = 0 Y = -154 }
-        Points = [
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-        ]
-      }
-    }
-    {
-      Name = "AlectoCharObstacle"
-      InheritFrom = "1_BaseInvulnerableObstacle"
-      DisplayInEditor = true
-      Thing = 
-      {
-        EditorOutlineDrawBounds = false
-        Graphic = "FuryHellfirePreviewDecalDarkAlectoLE"
-        Offset = { X = 0 Y = -154 }
-        Points = [
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-        ]
-      }
-    }
-    {
-      Name = "TisCharObstacle"
-      InheritFrom = "1_BaseInvulnerableObstacle"
-      DisplayInEditor = true
-      Thing = 
-      {
-        EditorOutlineDrawBounds = false
-        Graphic = "FuryHellfirePreviewDecalDarkTisiphoneLE"
-        Offset = { X = 0 Y = -154 }
-        Points = [
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-          { X = 0 Y = 0 }
-        ]
-      }
-    }
     ]
 }

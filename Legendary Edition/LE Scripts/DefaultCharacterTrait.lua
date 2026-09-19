@@ -67,75 +67,11 @@ TraitData.DefaultCharacterTrait =
 	RequiredPackages = "null",
 	DeathIdleAnimation = "ZagreusIdle",
 	DeathAnimation = "ZagreusDeathFullscreen",
-    ExtraLifeIcon = "ExtraLifeZag",
 	DamagedAnimation = "ZagreusOnHit",
 	InteractAnimation = "ZagreusInteractEquip",
 	UpgradeAcquiredAnimation = "ZagreusLanding",
 	IntroPresentationFunction = "DropHeroToRoomPosition",
-    RageData = {
-		EnragedPresentation = "EPCHarpyEnragedPresentation",
-		RageDecayRate = 0.00,
-		RageDecayStartDuration = 4.0,
-		LastRageGainTime = 0,
-		RageChargeMultiplier = 0.0,
-		EnragedDuration = 12,
-		EnragedWaitMultiplier = 0.65,
-		EnragedSpeedValue = 800.0,
-		EnragedMoveSpeedBonus = 200,
-		RequiredMaxLastStandsForPermaRage = 0,
-		PermaRageHealthThreshold = 0.30,
-		RageWeapon = "EPCHarpyEnrage",
-		RageFullSound = "/SFX/SurvivalChallengeStart",
-		RageFullVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			CooldownTime = 20,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- That's it!
-			{ Cue = "/VO/Alecto_0166" },
-			-- My turn.
-			{ Cue = "/VO/Alecto_0167" },
-			-- That does it!
-			{ Cue = "/VO/Alecto_0168" },
-			-- Now you've done it.
-			{ Cue = "/VO/Alecto_0169" },
-			-- Graahhh!
-			{ Cue = "/VO/Alecto_0170" },
-			-- Rrryaah!
-			{ Cue = "/VO/Alecto_0171" },
-			-- Raaahh!
-			{ Cue = "/VO/Alecto_0172" },
-			-- Enough of this!
-			{ Cue = "/VO/Alecto_0173" },
-			-- Why, you!
-			{ Cue = "/VO/Alecto_0175" },
-			-- Enough!
-			{ Cue = "/VO/Alecto_0176" },
-		},
-
-		RageExpiredSound = "/Leftovers/World Sounds/MapZoomInShortHigh",
-		RageExpiredVoiceLines =
-		{
-			BreakIfPlayed = true,
-			RandomRemaining = true,
-			PreLineWait = 0.25,
-			RequiresInRun = true,
-			SuccessiveChanceToPlay = 0.33,
-			Source = {SubtitleColor = Color.AlectoVoice},
-
-			-- Whew.
-			{ Cue = "/VO/Alecto_0177" },
-			-- Whew!
-			{ Cue = "/VO/Alecto_0178" },
-			-- Nrrgghh...
-			{ Cue = "/VO/Alecto_0179" },
-			-- Mmph.
-			{ Cue = "/VO/Alecto_0180" },
-		},
-	},
+    ExtraLifeIcon = "ExtraLifeZag",
 	UpgradeAcquiredVoicelines = {
 		RandomRemaining = true,
 		PreLineWait = 0.5,
@@ -331,10 +267,10 @@ TraitData.DefaultCharacterTrait =
 					{ Cue = "/VO/MegaeraField_0325", },
 		},
 	},
-    -- SetupFunction =
-    -- {
-    --     Name = "null"
-    -- },
+    SetupFunction =
+    {
+        Name = "null"
+    },
     WeaponDataOverride =
 		{
 			SpearWeapon =
