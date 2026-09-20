@@ -1,15 +1,15 @@
-table.insert(WeaponUpgradeData.SpearWeapon,
-{
-	Costs = { 0, 1, 1, 1, 1 },
-	MaxUpgradeLevel = 5,
-	TraitName = "EPCHadesTrait",
-	UnequipFunctionName = "RemoveEPCHadesWeapons",
-	EquippedKitAnimation = "WeaponSpearAlt02FloatingIdleOff",
-	UnequippedKitAnimation = "WeaponSpearAlt02FloatingIdleOff",
-	BonusUnequippedKitAnimation = "WeaponSpearAlt02FloatingIdleBonus",
-	BonusEquippedKitAnimation = "WeaponSpearAlt02FloatingIdleOffBonus",
-	Image = "Codex_Portrait_Hades"
-})
+-- table.insert(WeaponUpgradeData.SpearWeapon,
+-- {
+-- 	Costs = { 0, 1, 1, 1, 1 },
+-- 	MaxUpgradeLevel = 5,
+-- 	TraitName = "EPCHadesTrait",
+-- 	UnequipFunctionName = "RemoveEPCHadesWeapons",
+-- 	EquippedKitAnimation = "WeaponSpearAlt02FloatingIdleOff",
+-- 	UnequippedKitAnimation = "WeaponSpearAlt02FloatingIdleOff",
+-- 	BonusUnequippedKitAnimation = "WeaponSpearAlt02FloatingIdleBonus",
+-- 	BonusEquippedKitAnimation = "WeaponSpearAlt02FloatingIdleOffBonus",
+-- 	Image = "Codex_Portrait_Hades"
+-- })
 
 function RemoveEPCHadesWeapons()
 	--Unequip Character Weapons

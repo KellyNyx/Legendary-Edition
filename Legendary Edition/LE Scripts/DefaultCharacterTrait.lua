@@ -65,28 +65,93 @@ TraitData.DefaultCharacterTrait =
 	BaseSpeedValue = 540.0,
 	ScaleFraction = 0,
 	RequiredPackages = "null",
-	DeathIdleAnimation = "ZagreusIdle",
+	DeathIdleAnimation = "ZagreusOnHitFinal",
 	DeathAnimation = "ZagreusDeathFullscreen",
+    PostEndingDeathAnimation = "ZagreusDeathPostEndingFullscreen",
+    ExtraLifeIcon = "ExtraLifeZag",
 	DamagedAnimation = "ZagreusOnHit",
 	InteractAnimation = "ZagreusInteractEquip",
 	UpgradeAcquiredAnimation = "ZagreusLanding",
 	IntroPresentationFunction = "DropHeroToRoomPosition",
-    ExtraLifeIcon = "ExtraLifeZag",
-	UpgradeAcquiredVoicelines = {
-		RandomRemaining = true,
-		PreLineWait = 0.5,
-		CooldownTime = 20,
-		SuccessiveChanceToPlayAll = 10,
-		Queue = "Interrupt",
-		Source = {SubtitleColor = Color.MegVoice},
+    RageData = {
+		EnragedPresentation = "EPCHarpyEnragedPresentation",
+		RageDecayRate = 0.00,
+		RageDecayStartDuration = 4.0,
+		LastRageGainTime = 0,
+		RageChargeMultiplier = 0.0,
+		EnragedDuration = 12,
+		EnragedWaitMultiplier = 0.65,
+		EnragedSpeedValue = 800.0,
+		EnragedMoveSpeedBonus = 200,
+		RequiredMaxLastStandsForPermaRage = 0,
+		PermaRageHealthThreshold = 0.30,
+		RageWeapon = "EPCHarpyEnrage",
+		RageFullSound = "/SFX/SurvivalChallengeStart",
+		RageFullVoiceLines =
+		{
+			BreakIfPlayed = true,
+			RandomRemaining = true,
+			PreLineWait = 0.25,
+			CooldownTime = 20,
+			Source = {SubtitleColor = Color.AlectoVoice},
 
-		-- That's it.
-		{ Cue = "/VO/MegaeraField_0290" },
-		-- All right.
-		{ Cue = "/VO/MegaeraField_0291" },
-		-- Not bad.
-		{ Cue = "/VO/MegaeraField_0628", },
+			-- That's it!
+			{ Cue = "/VO/Alecto_0166" },
+			-- My turn.
+			{ Cue = "/VO/Alecto_0167" },
+			-- That does it!
+			{ Cue = "/VO/Alecto_0168" },
+			-- Now you've done it.
+			{ Cue = "/VO/Alecto_0169" },
+			-- Graahhh!
+			{ Cue = "/VO/Alecto_0170" },
+			-- Rrryaah!
+			{ Cue = "/VO/Alecto_0171" },
+			-- Raaahh!
+			{ Cue = "/VO/Alecto_0172" },
+			-- Enough of this!
+			{ Cue = "/VO/Alecto_0173" },
+			-- Why, you!
+			{ Cue = "/VO/Alecto_0175" },
+			-- Enough!
+			{ Cue = "/VO/Alecto_0176" },
+		},
+
+		RageExpiredSound = "/Leftovers/World Sounds/MapZoomInShortHigh",
+		RageExpiredVoiceLines =
+		{
+			BreakIfPlayed = true,
+			RandomRemaining = true,
+			PreLineWait = 0.25,
+			RequiresInRun = true,
+			SuccessiveChanceToPlay = 0.33,
+			Source = {SubtitleColor = Color.AlectoVoice},
+
+			-- Whew.
+			{ Cue = "/VO/Alecto_0177" },
+			-- Whew!
+			{ Cue = "/VO/Alecto_0178" },
+			-- Nrrgghh...
+			{ Cue = "/VO/Alecto_0179" },
+			-- Mmph.
+			{ Cue = "/VO/Alecto_0180" },
+		},
 	},
+	-- UpgradeAcquiredVoicelines = {
+	-- 	RandomRemaining = true,
+	-- 	PreLineWait = 0.5,
+	-- 	CooldownTime = 20,
+	-- 	SuccessiveChanceToPlayAll = 10,
+	-- 	Queue = "Interrupt",
+	-- 	Source = {SubtitleColor = Color.MegVoice},
+
+	-- 	-- That's it.
+	-- 	{ Cue = "/VO/MegaeraField_0290" },
+	-- 	-- All right.
+	-- 	{ Cue = "/VO/MegaeraField_0291" },
+	-- 	-- Not bad.
+	-- 	{ Cue = "/VO/MegaeraField_0628", },
+	-- },
 	SecretDoorDiveAnimation = "FuryLungeReturnToIdle",
 	SecretRoomEntranceExitAnimation = "EPCMegaeraLanding_Air",
 	DamagedSound = "/SFX/Enemy Sounds/Megaera/EmoteHurt",
@@ -215,62 +280,74 @@ TraitData.DefaultCharacterTrait =
 		{ Cue = "/VO/MegaeraField_0772", },
 	}},
 	DeathVoiceLines =
+{
+	Queue = "Interrupt",
+	RequiredFalseRooms = { "E_Story_01" },
+	-- Unnggh!
+	{ Cue = "/VO/ZagreusField_0079", RequiredCompletedRuns = 0, BreakIfPlayed = true, SkipAnim = true },
 	{
-		Queue = "Interrupt",
 		{
-			{ Cue = "/EmptyCue" }
-		},
-		{
-			BreakIfPlayed = true,
 			RandomRemaining = true,
-			PreLineWait = 1.45,
+			-- BreakIfPlayed = true,
+			-- PreLineWait = 0.25,
 			SkipAnim = true,
-			Source = {SubtitleColor = Color.MegVoice},
+			RequiredFalseRooms = { "E_Story_01" },
 
-					-- No...!
-					{ Cue = "/VO/MegaeraField_0149", PreLineWait = 0.3 },
-					-- No!
-					{ Cue = "/VO/MegaeraField_0150", PreLineWait = 0.3 },
-					-- How...!
-					{ Cue = "/VO/MegaeraField_0151", PreLineWait = 0.3 },
-					-- How...?!
-					{ Cue = "/VO/MegaeraField_0152", PreLineWait = 0.3 },
-					-- What...?!
-					{ Cue = "/VO/MegaeraField_0153", PreLineWait = 0.3 },
-					-- Impossible!
-					{ Cue = "/VO/MegaeraField_0154", },
-					-- I can't--!
-					{ Cue = "/VO/MegaeraField_0155", PreLineWait = 0.6 },
-					-- Again?!
-					{ Cue = "/VO/MegaeraField_0156", },
-					-- Not again?!
-					{ Cue = "/VO/MegaeraField_0157", },
-					-- Ungh, damn...
-					{ Cue = "/VO/MegaeraField_0316", PreLineWait = 0.3 },
-					-- Damn you...
-					{ Cue = "/VO/MegaeraField_0317", },
-					-- Ngh, blood and--
-					{ Cue = "/VO/MegaeraField_0318", },
-					-- Lord Hades, I...
-					{ Cue = "/VO/MegaeraField_0319", },
-					-- Sisters...
-					{ Cue = "/VO/MegaeraField_0320", },
-					-- Why, you...
-					{ Cue = "/VO/MegaeraField_0321", },
-					-- This is...
-					{ Cue = "/VO/MegaeraField_0322", },
-					-- How could I--!
-					{ Cue = "/VO/MegaeraField_0323", },
-					-- Absurd...
-					{ Cue = "/VO/MegaeraField_0324", },
-					-- Why...
-					{ Cue = "/VO/MegaeraField_0325", },
+			-- No...!
+			{ Cue = "/VO/ZagreusScratch_0009b"},
+			-- No...
+			{ Cue = "/VO/ZagreusField_0067" },
+			-- Aahh!
+			{ Cue = "/VO/ZagreusField_0068" },
+			-- Wha--?
+			{ Cue = "/VO/ZagreusField_0069" },
+			-- Wha?!
+			{ Cue = "/VO/ZagreusField_0070" },
+			-- Again?!
+			{ Cue = "/VO/ZagreusField_0071" },
+			-- Anngh.
+			{ Cue = "/VO/ZagreusField_0072" },
+			-- Aarrgh!
+			{ Cue = "/VO/ZagreusField_0073" },
+			-- No, no!
+			{ Cue = "/VO/ZagreusField_0074" },
+			-- Ah, damn it!
+			{ Cue = "/VO/ZagreusField_0075" },
+			-- Why, you...!
+			{ Cue = "/VO/ZagreusField_0076" },
+			-- Unh, no!
+			{ Cue = "/VO/ZagreusField_0077" },
+			-- Wha, how?
+			{ Cue = "/VO/ZagreusField_0078" },
+			-- Unnggh!
+			{ Cue = "/VO/ZagreusField_0079" },
+			-- No, wait...!
+			{ Cue = "/VO/ZagreusField_0080" },
+			-- Ugh, no!
+			{ Cue = "/VO/ZagreusField_0290" },
+			-- Aughh!
+			{ Cue = "/VO/ZagreusField_0292" },
+			-- Gaaah!
+			-- { Cue = "/VO/ZagreusField_4003" },
+			-- Daaah!
+			{ Cue = "/VO/ZagreusField_4004" },
+			-- Graah!
+			{ Cue = "/VO/ZagreusField_4005" },
+			-- Argh, you!
+			-- { Cue = "/VO/ZagreusField_4006" },
+			-- No, you!
+			-- { Cue = "/VO/ZagreusField_4007" },
+			-- Guh, argh!
+			{ Cue = "/VO/ZagreusField_4008" },
+			-- Huh--?
+			{ Cue = "/VO/ZagreusField_4009" },
 		},
 	},
-    SetupFunction =
-    {
-        Name = "null"
-    },
+},
+    -- SetupFunction =
+    -- {
+    --     Name = "null"
+    -- },
     WeaponDataOverride =
 		{
 			SpearWeapon =

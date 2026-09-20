@@ -4,6 +4,11 @@ AlectoAllWeapons =
 "EPCHarpyWhipRageBeam",
 "AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",  }
 
+WeaponSets.HeroWeaponSets.AlectoWhipLash1 =
+{ --"EPCHarpyWhipArc", "EPCHarpyWhipArc2", "AlectoWhipSlash"
+ "AlectoWhipLash2", "AlectoWhipLash3", "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6", 
+"EPCHarpyWhipRageBeam",
+"AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",  }
 -- --  table.insert(WeaponSets.HeroRushWeapons,
 -- --      "EPCAlectoRushWeapon"
 -- )
@@ -30,7 +35,7 @@ table.insert(WeaponSets.HeroPhysicalWeapons, "EPCHarpyWhipWhirlAlectoDash")
 --insert here--
 
 --HeroMeleeWeapons--
---table.insert(WeaponSets.HeroPhysicalWeapons, "AlectoWhipLash1")
+table.insert(WeaponSets.HeroMeleeWeapons, "AlectoWhipLash1")
 --insert here--
 
 --HeroDashWeapons-- (Dash Strike)

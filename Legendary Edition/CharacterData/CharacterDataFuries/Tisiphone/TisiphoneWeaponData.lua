@@ -6,13 +6,14 @@ WeaponData.HarpyWhipSlash1 =
     ExpireDashWeaponOnDash = true,
     SecondaryWeapon = "EPCHarpyWhipLasso",
     SkipAttackNotReadySounds = true,
-
+    ShortName = "HarpyWhipSlash1",
     HitSimSlowCooldown = 0.2,
     HitSimSlowParameters =
     {
         { ScreenPreWait = 0.02, Fraction = 0.1, LerpTime = 0 },
         { ScreenPreWait = 0.02, Fraction = 1.0, LerpTime = 0.02 },
     },
+    StartingWeapon = false,
 
     HitRumbleParameters =
     {
@@ -137,6 +138,7 @@ WeaponData.HarpyWhipSlash1 =
 				-- Zrrnngh!
 				--{ Cue = "/VO/Tisiphone_0145", RequiredTextLines = { "Fury3Encounter08" } },
 			},
+            Upgrades = { },
 }
 WeaponData.HarpyWhipSlash2 =
 {

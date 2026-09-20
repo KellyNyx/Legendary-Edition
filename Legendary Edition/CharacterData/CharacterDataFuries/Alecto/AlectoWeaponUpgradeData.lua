@@ -1,15 +1,32 @@
-table.insert(WeaponUpgradeData.SpearWeapon,
+-- table.insert(WeaponUpgradeData.SpearWeapon,
+-- {
+-- 	Costs = { 0, 1, 1, 1, 1 },
+-- 	MaxUpgradeLevel = 5,
+-- 	TraitName = "EPCAlectoTrait",
+-- 	UnequipFunctionName = "RemoveEPCAlectoWeapons",
+-- 	EquippedKitAnimation = "WeaponSwordFloatingIdleOff",
+-- 	UnequippedKitAnimation = "WeaponSwordFloatingIdle",
+-- 	BonusUnequippedKitAnimation = "WeaponSwordFloatingIdleBonus",
+-- 	BonusEquippedKitAnimation = "WeaponSwordFloatingIdleOffBonus",
+-- 	Image = "Character_Portrait_Alecto"
+-- })
+
+WeaponUpgradeData.AlectoWhipLash1 =
 {
-	Costs = { 0, 1, 1, 1, 1 },
-	MaxUpgradeLevel = 5,
-	TraitName = "EPCAlectoTrait",
-	UnequipFunctionName = "RemoveEPCAlectoWeapons",
-	EquippedKitAnimation = "WeaponSwordFloatingIdleOff",
-	UnequippedKitAnimation = "WeaponSwordFloatingIdle",
-	BonusUnequippedKitAnimation = "WeaponSwordFloatingIdleBonus",
-	BonusEquippedKitAnimation = "WeaponSwordFloatingIdleOffBonus",
-	Image = "Character_Portrait_Alecto"
-})
+	{
+			Costs = { 0, 2, 3, 4, 5 },
+			MaxUpgradeLevel = 5,
+			--TraitName = "SwordAmmoWaveTrait"
+			TraitName = "EPCAlectoTrait",
+			StartsUnlocked = true,
+			UnequipFunctionName = "RemoveEPCAlectoWeapons",
+			EquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOff",
+			UnequippedKitAnimation = "WeaponSwordAlt01FloatingIdle",
+			BonusUnequippedKitAnimation = "WeaponSwordAlt01FloatingIdleBonus",
+			BonusEquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOffBonus",
+			Image = "Character_Portrait_Alecto"
+		}
+}
 
 function RemoveEPCAlectoWeapons()
 	--Unequip Character Weapons
@@ -38,6 +55,8 @@ function RemoveEPCAlectoWeapons()
 	--make sure to let the game know that we aren't playing as a custom
 	--character anymore
 	IsCustomHero = false
+	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
+	LECharacterData.LastCharTraitName = "EPCAlectoTrait"
 	UpdateLifePips()
 	DestroyPlayerRageMeter()
 end

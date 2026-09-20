@@ -7,6 +7,15 @@ TisiphoneAllWeapons =
   "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
 }
 
+WeaponSets.HeroWeaponSets.HarpyWhipSlash1 =
+{ 
+  --"TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon", 
+ "HarpyWhipSlash2", "HarpyWhipSlash3", 
+ --"EPCHarpyLightningLineCONTROL", 
+ "EPCHarpyLightningLine2", "EPCHarpyWhipLasso",
+  "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
+}
+
 --Attack--
 ModdedAttackWeapons.EPC_Tisiphone_Attack =
 {
@@ -56,7 +65,7 @@ table.insert(WeaponSets.HeroMeleeRangeWeapons, "HarpyWhipSlash3")
 table.insert(WeaponSets.HeroMeleeRangeWeapons, "EPCHarpyWhipCombo3")
 
 --HeroMeleeWeapons--
---table.insert(WeaponSets.HeroMeleeWeapons, "HarpyWhipSlash1")
+table.insert(WeaponSets.HeroMeleeWeapons, "HarpyWhipSlash1")
 
 --HeroDashWeapons-- (Dash Strike)
 table.insert(WeaponSets.HeroDashWeapons, "EPCHarpyWhipCombo3")
@@ -86,12 +95,12 @@ table.insert(WeaponSets.HeroSecondaryWeapons, "EPCHarpyWhipLasso")
 --insert here--
 
 --HeroWeaponSets--
-WeaponSets.HeroWeaponSets.HarpyWhipSlash1 = 
-{
-    "HarpyWhipSlash2", 
-  "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam", "EPCHarpyWhipLasso",
-  --  "EPCHarpyLightningLineCONTROL", "EPCHarpyLightningLine", "TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon","TisiphoneDash", 
-}
+-- WeaponSets.HeroWeaponSets.HarpyWhipSlash1 = 
+-- {
+--     "HarpyWhipSlash2", 
+--   "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam", "EPCHarpyWhipLasso",
+--   --  "EPCHarpyLightningLineCONTROL", "EPCHarpyLightningLine", "TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon","TisiphoneDash", 
+-- }
 
 --LinkedWeaponUpgrades--
 WeaponSets.LinkedWeaponUpgrades.HarpyWhipSlash1 = 

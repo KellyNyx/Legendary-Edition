@@ -1,15 +1,32 @@
-table.insert(WeaponUpgradeData.SpearWeapon,
+-- table.insert(WeaponUpgradeData.SpearWeapon,
+-- {
+-- 	Costs = { 0, 1, 1, 1, 1 },
+-- 	MaxUpgradeLevel = 5,
+-- 	TraitName = "EPCTisiphoneTrait",
+-- 	UnequipFunctionName = "RemoveEPCTisiphoneWeapons",
+-- 	EquippedKitAnimation = "WeaponSwordFloatingIdleOff",
+-- 	UnequippedKitAnimation = "WeaponSwordFloatingIdle",
+-- 	BonusUnequippedKitAnimation = "WeaponSwordFloatingIdleBonus",
+-- 	BonusEquippedKitAnimation = "WeaponSwordFloatingIdleOffBonus",
+-- 	Image = "Character_Portrait_Tisiphone"
+-- })
+
+WeaponUpgradeData.HarpyWhipSlash1 =
 {
-	Costs = { 0, 1, 1, 1, 1 },
-	MaxUpgradeLevel = 5,
-	TraitName = "EPCTisiphoneTrait",
-	UnequipFunctionName = "RemoveEPCTisiphoneWeapons",
-	EquippedKitAnimation = "WeaponSwordFloatingIdleOff",
-	UnequippedKitAnimation = "WeaponSwordFloatingIdle",
-	BonusUnequippedKitAnimation = "WeaponSwordFloatingIdleBonus",
-	BonusEquippedKitAnimation = "WeaponSwordFloatingIdleOffBonus",
-	Image = "Character_Portrait_Tisiphone"
-})
+	{
+			Costs = { 0, 2, 3, 4, 5 },
+			MaxUpgradeLevel = 5,
+			--TraitName = "SwordAmmoWaveTrait"
+			TraitName = "EPCTisiphoneTrait",
+			StartsUnlocked = true,
+			UnequipFunctionName = "RemoveEPCTisiphoneWeapons",
+			EquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOff",
+			UnequippedKitAnimation = "WeaponSwordAlt01FloatingIdle",
+			BonusUnequippedKitAnimation = "WeaponSwordAlt01FloatingIdleBonus",
+			BonusEquippedKitAnimation = "WeaponSwordAlt01FloatingIdleOffBonus",
+			Image = "Character_Portrait_Tisiphone"
+		}
+}
 
 function RemoveEPCTisiphoneWeapons()
 	--Unequip Character Weapons
@@ -37,5 +54,9 @@ function RemoveEPCTisiphoneWeapons()
 	--make sure to let the game know that we aren't playing as a custom
 	--character anymore
 	IsCustomHero = false
+	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
+	LECharacterData.LastCharTraitName = "EPCTisiphoneTrait"
+
+
 	UpdateLifePips()
 end

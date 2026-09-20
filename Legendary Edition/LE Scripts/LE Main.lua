@@ -5,7 +5,37 @@ if not LegendaryEdition.Config.Enabled then return end
 function nop()
 end
 
+LECharacterData = {}
 
+LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
+-- CurrentCharTrait = LECharacterData.LastCharacter
+-- --Character Rage Data--
+--      CurrentCharacterEnragedPresentation = CurrentCharTrait.RageData.EnragedPresentation or "null"
+--      CurrentCharacterRageDecayRate = CurrentCharTrait.RageData.RageDecayRate or "null"
+--      CurrentCharacterRageDecayStartDuration = CurrentCharTrait.RageData.RageDecayStartDuration or "null"
+--      CurrentCharacterLastRageGainTime = CurrentCharTrait.RageData.LastRageGainTime or "null"
+--      CurrentCharacterRageChargeMultiplier = CurrentCharTrait.RageData.RageChargeMultiplier or "null"
+--      CurrentCharacterEnragedDuration = CurrentCharTrait.RageData.EnragedDuration or "null"
+--      CurrentCharacterEnragedWaitMultiplier = CurrentCharTrait.RageData.EnragedWaitMultiplier or "null"
+--      CurrentCharacterEnragedMoveSpeedBonus = CurrentCharTrait.RageData.EnragedMoveSpeedBonus or "null"
+--      CurrentCharacterRequiredMaxLastStandsForPermaRage = CurrentCharTrait.RageData.RequiredMaxLastStandsForPermaRage or "null"
+--      CurrentCharacterPermaRageThreshold = CurrentCharTrait.RageData.PermaRageHealthThreshold or "null"
+--      CurrentCharacterRageWeapon = CurrentCharTrait.RageData.RageWeapon or "null"
+--      CurrentCharacterRageFullSound = CurrentCharTrait.RageData.RageFullSound or "null"
+--      CurrentCharacterRageFullVoiceLines = CurrentCharTrait.RageData.RageFullVoiceLines or "null"
+--      CurrentCharacterRageExpireSound = CurrentCharTrait.RageData.RageExpiredSound or "null"
+--      CurrentCharacterRageExpireVoiceLines = CurrentCharTrait.RageData.RageExpiredVoiceLines or "null"
+LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
+
+--equip character trait--
+-- ModUtil.WrapBaseFunction( 'SetupMap', function(baseFunc)
+-- 	--if CurrentRun == nil then return end
+--     local LastCharTrait = LECharacterData.LastCharacter
+--     if not HeroHasTrait( LastCharTrait ) then
+--     AddTraitToHero({ TraitName = LastCharTrait })
+--     end
+-- return baseFunc()
+-- end)
 
 function SpawnContractExchangeObstacle()
     local CharManager = SpawnObstacle({ Name = "BlankObstacle",  LocationX = 17540, LocationY = 4500, Group = "Standing", DestinationId = CurrentRun.Hero.ObjectId  })
@@ -172,37 +202,64 @@ end
 
 
 function SetupCurrentCharacter()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-   local CurrentCharacterAttachedAnimationScale = TraitData[TraitName].AttachedAnimationScale or 1.0
-   local CurrentCharacterAttachedAnimation2Name = TraitData[TraitName].AttachedAnimation2Name or "null"
-   local CurrentCharacterAttachedAnimationOffsetZ = TraitData[TraitName].AttachedAnimationOffsetZ or "null"
+    --local currentWeaponInSlot = GetEquippedWeapon()
+    CurrentCharTrait = LECharacterData.LastCharacter
+   --local TraitName = GetWeaponUpgradeTrait("SpearWeapon", GameState.LastWeaponUpgradeData["SpearWeapon"].Index)
+   CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoicelines
+     CurrentCharacterIdleAnimation = CurrentCharTrait.IdleAnimation
+    CurrentCharacterMoveStartAnimation = CurrentCharTrait.MoveStartAnimation
+    CurrentCharacterMoveAnimation = CurrentCharTrait.MoveAnimation
+    CurrentCharacterMoveStopAnimation = CurrentCharTrait.MoveStopAnimation
+    CurrentCharacterLowSpeedAnimation = CurrentCharTrait.LowSpeedAnimation
+    CurrentCharacterHighSpeedAnimation = CurrentCharTrait.HighSpeedAnimation
+    CurrentCharacterBaseSpeed = CurrentCharTrait.BaseSpeedValue
+    CurrentCharacterScale = CurrentCharTrait.ScaleFraction
+    CurrentCharacterRequiredPackages = CurrentCharTrait.RequiredPackages
+    CurrentCharacterDamagedAnimation = CurrentCharTrait.DamagedAnimation
+    CurrentCharacterDamagedSound = CurrentCharTrait.DamagedSound
+    CurrentCharacterIntroPresentationFunction = CurrentCharTrait.IntroPresentationFunction
+    CurrentCharacterHeroLandingAnimation = CurrentCharTrait.HeroLandingAnimation
+    CurrentCharacterHeroTouchDownGraphic = CurrentCharTrait.HeroTouchdownGraphic
+    CurrentCharacterUpgradeAcquiredAnimation = CurrentCharTrait.UpgradeAcquiredAnimation
+    CurrentCharacterSecretDoorDiveAnimation = CurrentCharTrait.SecretDoorDiveAnimation
+    CurrentCharacterSecretRoomEntranceExitAnimation = CurrentCharTrait.SecretRoomEntranceExitAnimation
+    CurrentCharacterChargingEmote = CurrentCharTrait.ChargingEmote
+    CurrentCharacterPowerUpEmote = CurrentCharTrait.PowerUpEmote
+    CurrentCharacterLastStandAnimation = CurrentCharTrait.LastStandAnimation
+    CurrentCharacterLastStandVoiceLines = CurrentCharTrait.LastStandVoicelines
+    CurrentCharacterLastStandLastLifeVoiceLines = CurrentCharTrait.LastStandLastLifeVoiceLines
+    CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation
+    CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation-- or "ZagreusDeathFullscreen"
+    CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation-- or "ZagreusDeathPostEndingFullscreen"
+    CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines
+    CurrentCharacterInteractAnimation = CurrentCharTrait.InteractAnimation
+    CurrentCharacterAttachedAnimationName = CurrentCharTrait.AttachedAnimationName or "null"
+    CurrentCharacterAttachedAnimationScale = CurrentCharTrait.AttachedAnimationScale or 1.0
+    CurrentCharacterAttachedAnimation2Name = CurrentCharTrait.AttachedAnimation2Name or "null"
+    CurrentCharacterAttachedAnimationOffsetZ = CurrentCharTrait.AttachedAnimationOffsetZ or "null"
+    CurrentCharacterBoonBox = CurrentCharTrait.BoonBox
+    CurrentCharacterBoonSelectInGraphic = CurrentCharTrait.BoonSelectInGraphic
+    CurrentCharacterBoonSelectLightingGraphic = CurrentCharTrait.BoonSelectLightingGraphic
+    CurrentCharacterBoonOffset = CurrentCharTrait.BoonOffset
+    CurrentCharacterBoonSelectInFrontFxOffset = CurrentCharTrait.BoonSelectInFrontFxOffset
+    CurrentCharacterBoonSelectOutGraphic = CurrentCharTrait.BoonSelectOutGraphic
+    --Character Rage Data--
+     CurrentCharacterEnragedPresentation = CurrentCharTrait.RageData.EnragedPresentation or "null"
+     CurrentCharacterRageDecayRate = CurrentCharTrait.RageData.RageDecayRate or "null"
+     CurrentCharacterRageDecayStartDuration = CurrentCharTrait.RageData.RageDecayStartDuration or "null"
+     CurrentCharacterLastRageGainTime = CurrentCharTrait.RageData.LastRageGainTime or "null"
+     CurrentCharacterRageChargeMultiplier = CurrentCharTrait.RageData.RageChargeMultiplier or "null"
+     CurrentCharacterEnragedDuration = CurrentCharTrait.RageData.EnragedDuration or "null"
+     CurrentCharacterEnragedWaitMultiplier = CurrentCharTrait.RageData.EnragedWaitMultiplier or "null"
+     CurrentCharacterEnragedMoveSpeedBonus = CurrentCharTrait.RageData.EnragedMoveSpeedBonus or "null"
+     CurrentCharacterRequiredMaxLastStandsForPermaRage = CurrentCharTrait.RageData.RequiredMaxLastStandsForPermaRage or "null"
+     CurrentCharacterPermaRageThreshold = CurrentCharTrait.RageData.PermaRageHealthThreshold or "null"
+     CurrentCharacterRageWeapon = CurrentCharTrait.RageData.RageWeapon or "null"
+     CurrentCharacterRageFullSound = CurrentCharTrait.RageData.RageFullSound or "null"
+     CurrentCharacterRageFullVoiceLines = CurrentCharTrait.RageData.RageFullVoiceLines or "null"
+     CurrentCharacterRageExpireSound = CurrentCharTrait.RageData.RageExpiredSound or "null"
+     CurrentCharacterRageExpireVoiceLines = CurrentCharTrait.RageData.RageExpiredVoiceLines or "null"
+
    --local CurrentCharacterVoiceLines = TraitData[TraitName].CharacterVoiceLines
     
 	--Set Current Character Properties
@@ -270,34 +327,7 @@ end
 
 function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapon )
 
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
 		AddInputBlock({ Name = "DeathPresentation" })
 		ClearCameraClamp({ LerpTime = 0.4 })
@@ -481,34 +511,7 @@ function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapo
 --Intro Presentations--
 
 function HadesIntroPresentation( heroId, lightId, heroDestination, disableCollision, dropDelay, landDelay, speedAdjustment )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
   --Set Current Character Animations
 	AddInputBlock({ Name = "MoveHeroToRoomPosition" })
     AddTimerBlock( CurrentRun, "MoveHeroToRoomPosition" )
@@ -524,7 +527,7 @@ function HadesIntroPresentation( heroId, lightId, heroDestination, disableCollis
     -- if( lightId ~= nil ) then
     --     SetAlpha({ Id = lightId, Fraction = 1.0 })
     -- end
-    SetAlpha({ Id = currentRun.Hero.ObjectId, Fraction = 1.0 })
+    SetAlpha({ Id = CurrentRun.Hero.ObjectId, Fraction = 1.0 })
     
     SetAnimation({ Name = "HadesBattleIntro", DestinationId = heroId })
     wait(0.4)
@@ -553,36 +556,7 @@ function HadesIntroPresentation( heroId, lightId, heroDestination, disableCollis
 end  
 
 function DoCurrentCharacterIntroPresentation()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-
-   local CurrentCharacterIntroPresentationFunction = TraitData[TraitName].IntroPresentationFunction
+    
 
    CurrentCharacterIntroPresentationFunction = _G[CurrentCharacterIntroPresentationFunction]
    thread(CurrentCharacterIntroPresentationFunction, currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId)
@@ -590,34 +564,7 @@ function DoCurrentCharacterIntroPresentation()
 		end
 
 function DoCurrentCharacterIntroLanding( heroId, lightId, heroDestination, disableCollision, dropDelay, landDelay, speedAdjustment )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
     
 	--Set Current Character Animations
 	AddInputBlock({ Name = "MoveHeroToRoomPosition" })
@@ -658,34 +605,7 @@ function DoCurrentCharacterIntroLanding( heroId, lightId, heroDestination, disab
 		end
 
 function DoCurrentCharacterSecretDoorEntrance( secretDoor )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
     SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
 	SetAnimation({ Name = CurrentCharacterSecretDoorDiveAnimation, DestinationId = CurrentRun.Hero.ObjectId })
@@ -693,34 +613,7 @@ end
 
 --RoomEntranceHades Character Animations/Voicelines--
 function SetCurrentCharacterHadesEntranceAnimations()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
     SetUnitProperty({ Property = "StartGraphic", Value = nil, DestinationId = currentRun.Hero.ObjectId })
 	SetUnitProperty({ Property = "MoveGraphic", Value = CurrentCharacterMoveAnimation, DestinationId = currentRun.Hero.ObjectId })
@@ -728,34 +621,7 @@ function SetCurrentCharacterHadesEntranceAnimations()
 end
 
 function ResetCurrentCharacterAnimations()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
     SetUnitProperty({ Property = "StartGraphic", Value = CurrentCharacterMoveStartAnimation, DestinationId = currentRun.Hero.ObjectId })
 			SetUnitProperty({ Property = "MoveGraphic", Value = CurrentCharacterMoveAnimation, DestinationId = currentRun.Hero.ObjectId })
@@ -764,34 +630,7 @@ function ResetCurrentCharacterAnimations()
 end
 
 function DoCurrentCharacterLeaveRoomAnim( currentRun, exitDoor )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
 	    SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
 
@@ -799,34 +638,7 @@ function DoCurrentCharacterLeaveRoomAnim( currentRun, exitDoor )
 end
 
 function DoCurrentCharacterPortalEntrance( currentRun, currentRoom )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
 	AddInputBlock({ Name = "RoomEntrancePortal" })
 	local roomIntroSequenceDuration = currentRoom.IntroSequenceDuration or RoomData.BaseRoom.IntroSequenceDuration or 0.0
@@ -873,233 +685,43 @@ function DoCurrentCharacterPortalEntrance( currentRun, currentRoom )
 end
 
 function PlayCurrentCharacterInteractAnimation( interactableObjectId, args )args = args or {}
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
 	SetAnimation({ Name = CurrentCharacterInteractAnimation, DestinationId = CurrentRun.Hero.ObjectId })
 end
 
 function DoCurrentCharacterUpgradeAcquiredAnimation(  )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 	SetAnimation({ Name = CurrentCharacterUpgradeAcquiredAnimation, DestinationId = CurrentRun.Hero.ObjectId })
 end
 
 function PlayCurrentCharacterUpgradeAcquiredVoicelines()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterUpgradeAcquiredVoicelines = TraitData[TraitName].UpgradeAcquiredVoicelines
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
    
    thread(PlayVoiceLines, CurrentCharacterUpgradeAcquiredVoicelines)
 end
 
 function PlayCurrentCharacterLastStandVoicelines( args )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
     thread( PlayVoiceLines,CurrentCharacterLastStandVoiceLines, true )
 end
 
 function PlayCurrentCharacterLastStandLastLifeVoicelines( args )
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
    
     thread( PlayVoiceLines,CurrentCharacterLastStandLastLifeVoiceLines, true )
 end
 
 function DoCurrentCharacterLastStandSFX()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
 
 		PlaySound({ Name = "/SFX/DeathDefianceActivate", Id = CurrentRun.Hero.ObjectId })
 		PlaySound({ Name = CurrentCharacterChargingEmote, Id = CurrentRun.Hero.ObjectId })
 end
 
 function DoCurrentCharacterLastHealingPresentation()
-    local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
+    
     SetThingProperty({ Property = "ElapsedTimeMultiplier", Value = 4.5, ValueChangeType = "Absolute", DataValue = false, DestinationNames = { "HeroTeam" } })
 	PlaySound({ Name = CurrentCharacterPowerUpEmote, Id = CurrentRun.Hero.ObjectId })
 	SetAnimation({ Name = CurrentCharacterLastStandAnimation, DestinationId = CurrentRun.Hero.ObjectId })
@@ -1243,50 +865,7 @@ function BuildPlayerRageMeterAlecto(currentRun, meterAmount, player)
 end
 
 function EnragePlayerUnit(player, currentRun, startDelay)
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-    --Character Rage Data--
-    local CurrentCharacterEnragedPresentation = TraitData[TraitName].RageData.EnragedPresentation
-    local CurrentCharacterRageDecayRate = TraitData[TraitName].RageData.RageDecayRate
-    local CurrentCharacterRageDecayStartDuration = TraitData[TraitName].RageData.RageDecayStartDuration
-    local CurrentCharacterLastRageGainTime = TraitData[TraitName].RageData.LastRageGainTime
-    local CurrentCharacterRageChargeMultiplier = TraitData[TraitName].RageData.RageChargeMultiplier
-    local CurrentCharacterEnragedDuration = TraitData[TraitName].RageData.EnragedDuration
-    local CurrentCharacterEnragedWaitMultiplier = TraitData[TraitName].RageData.EnragedWaitMultiplier
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterRequiredMaxLastStandsForPermaRage = TraitData[TraitName].RageData.RequiredMaxLastStandsForPermaRage
-    local CurrentCharacterPermaRageThreshold = TraitData[TraitName].RageData.PermaRageHealthThreshold
-    local CurrentCharacterRageWeapon = TraitData[TraitName].RageData.RageWeapon
-    local CurrentCharacterRageFullSound = TraitData[TraitName].RageData.RageFullSound
-    local CurrentCharacterRageFullVoiceLines = TraitData[TraitName].RageData.RageFullVoiceLines
-    local CurrentCharacterRageExpireSound = TraitData[TraitName].RageData.RageExpiredSound
-    local CurrentCharacterRageExpireVoiceLines = TraitData[TraitName].RageData.RageExpiredVoiceLines
+    
 
 	wait( startDelay )
 	if not IsAlive({ Id = player.ObjectId }) then
@@ -1333,51 +912,7 @@ function EnragePlayerUnit(player, currentRun, startDelay)
 end
 
 function EPCEnrageHarpyPermanent(player, currentRun, startDelay)
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-    --Character Rage Data--
-    local CurrentCharacterEnragedPresentation = TraitData[TraitName].RageData.EnragedPresentation
-    local CurrentCharacterRageDecayRate = TraitData[TraitName].RageData.RageDecayRate
-    local CurrentCharacterRageDecayStartDuration = TraitData[TraitName].RageData.RageDecayStartDuration
-    local CurrentCharacterLastRageGainTime = TraitData[TraitName].RageData.LastRageGainTime
-    local CurrentCharacterRageChargeMultiplier = TraitData[TraitName].RageData.RageChargeMultiplier
-    local CurrentCharacterEnragedDuration = TraitData[TraitName].RageData.EnragedDuration
-    local CurrentCharacterEnragedWaitMultiplier = TraitData[TraitName].RageData.EnragedWaitMultiplier
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterRequiredMaxLastStandsForPermaRage = TraitData[TraitName].RageData.RequiredMaxLastStandsForPermaRage
-    local CurrentCharacterPermaRageThreshold = TraitData[TraitName].RageData.PermaRageHealthThreshold
-    local CurrentCharacterRageWeapon = TraitData[TraitName].RageData.RageWeapon
-    local CurrentCharacterRageFullSound = TraitData[TraitName].RageData.RageFullSound
-    local CurrentCharacterRageFullVoiceLines = TraitData[TraitName].RageData.RageFullVoiceLines
-    local CurrentCharacterRageExpireSound = TraitData[TraitName].RageData.RageExpiredSound
-    local CurrentCharacterRageExpireVoiceLines = TraitData[TraitName].RageData.RageExpiredVoiceLines
-
+    
 	 wait( startDelay )
 	if not IsAlive({ Id = player.ObjectId }) then
 		return
@@ -1414,10 +949,7 @@ end
 
 
 function SetupAlectoRagePropertyChanges()
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
+   
 
     local enragedMoveSpeed = CurrentCharacterEnragedMoveSpeedBonus + CurrentCharacterBaseSpeed
 	SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "Speed", Value = enragedMoveSpeed })
@@ -1437,50 +969,7 @@ function SetupAlectoRagePropertyChanges()
 end
 
 function EndPlayerEnrage(player, currentRun)
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-    --Character Rage Data--
-    local CurrentCharacterEnragedPresentation = TraitData[TraitName].RageData.EnragedPresentation
-    local CurrentCharacterRageDecayRate = TraitData[TraitName].RageData.RageDecayRate
-    local CurrentCharacterRageDecayStartDuration = TraitData[TraitName].RageData.RageDecayStartDuration
-    local CurrentCharacterLastRageGainTime = TraitData[TraitName].RageData.LastRageGainTime
-    local CurrentCharacterRageChargeMultiplier = TraitData[TraitName].RageData.RageChargeMultiplier
-    local CurrentCharacterEnragedDuration = TraitData[TraitName].RageData.EnragedDuration
-    local CurrentCharacterEnragedWaitMultiplier = TraitData[TraitName].RageData.EnragedWaitMultiplier
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterRequiredMaxLastStandsForPermaRage = TraitData[TraitName].RageData.RequiredMaxLastStandsForPermaRage
-    local CurrentCharacterPermaRageThreshold = TraitData[TraitName].RageData.PermaRageHealthThreshold
-    local CurrentCharacterRageWeapon = TraitData[TraitName].RageData.RageWeapon
-    local CurrentCharacterRageFullSound = TraitData[TraitName].RageData.RageFullSound
-    local CurrentCharacterRageFullVoiceLines = TraitData[TraitName].RageData.RageFullVoiceLines
-    local CurrentCharacterRageExpireSound = TraitData[TraitName].RageData.RageExpiredSound
-    local CurrentCharacterRageExpireVoiceLines = TraitData[TraitName].RageData.RageExpiredVoiceLines
+    
     
     ResetAlectoRagePropertyChanges()
 
@@ -1502,50 +991,7 @@ function EndPlayerEnrage(player, currentRun)
 end
 
 function EndPlayerPermaEnrage(player, currentRun)
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-    --Character Rage Data--
-    local CurrentCharacterEnragedPresentation = TraitData[TraitName].RageData.EnragedPresentation
-    local CurrentCharacterRageDecayRate = TraitData[TraitName].RageData.RageDecayRate
-    local CurrentCharacterRageDecayStartDuration = TraitData[TraitName].RageData.RageDecayStartDuration
-    local CurrentCharacterLastRageGainTime = TraitData[TraitName].RageData.LastRageGainTime
-    local CurrentCharacterRageChargeMultiplier = TraitData[TraitName].RageData.RageChargeMultiplier
-    local CurrentCharacterEnragedDuration = TraitData[TraitName].RageData.EnragedDuration
-    local CurrentCharacterEnragedWaitMultiplier = TraitData[TraitName].RageData.EnragedWaitMultiplier
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterRequiredMaxLastStandsForPermaRage = TraitData[TraitName].RageData.RequiredMaxLastStandsForPermaRage
-    local CurrentCharacterPermaRageThreshold = TraitData[TraitName].RageData.PermaRageHealthThreshold
-    local CurrentCharacterRageWeapon = TraitData[TraitName].RageData.RageWeapon
-    local CurrentCharacterRageFullSound = TraitData[TraitName].RageData.RageFullSound
-    local CurrentCharacterRageFullVoiceLines = TraitData[TraitName].RageData.RageFullVoiceLines
-    local CurrentCharacterRageExpireSound = TraitData[TraitName].RageData.RageExpiredSound
-    local CurrentCharacterRageExpireVoiceLines = TraitData[TraitName].RageData.RageExpiredVoiceLines
+    
     
     ResetAlectoRagePropertyChanges()
 
@@ -1576,10 +1022,7 @@ function CheckIfPermaRageEligible(player, currentRun)
     end
 
 function ResetAlectoRagePropertyChanges()
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
+    
 
     local enragedMoveSpeed = CurrentCharacterEnragedMoveSpeedBonus + CurrentCharacterBaseSpeed
 	SetUnitProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "Speed", Value = CurrentCharacterBaseSpeed })
@@ -1606,50 +1049,7 @@ end
 -- end
 
 function EPCHarpyEnragedPresentation(player, currentRun)
-    local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-    local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-    local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-    local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-    local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-    local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-    local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-    local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-    local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-    local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-    local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-    local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-    local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-    local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-    local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-    local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-    local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-    local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-    local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-    local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-    local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-    local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-    local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-    local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-    local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-    local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-    local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-    --Character Rage Data--
-    local CurrentCharacterEnragedPresentation = TraitData[TraitName].RageData.EnragedPresentation
-    local CurrentCharacterRageDecayRate = TraitData[TraitName].RageData.RageDecayRate
-    local CurrentCharacterRageDecayStartDuration = TraitData[TraitName].RageData.RageDecayStartDuration
-    local CurrentCharacterLastRageGainTime = TraitData[TraitName].RageData.LastRageGainTime
-    local CurrentCharacterRageChargeMultiplier = TraitData[TraitName].RageData.RageChargeMultiplier
-    local CurrentCharacterEnragedDuration = TraitData[TraitName].RageData.EnragedDuration
-    local CurrentCharacterEnragedWaitMultiplier = TraitData[TraitName].RageData.EnragedWaitMultiplier
-    local CurrentCharacterEnragedMoveSpeedBonus = TraitData[TraitName].RageData.EnragedMoveSpeedBonus
-    local CurrentCharacterRequiredMaxLastStandsForPermaRage = TraitData[TraitName].RageData.RequiredMaxLastStandsForPermaRage
-    local CurrentCharacterPermaRageThreshold = TraitData[TraitName].RageData.PermaRageHealthThreshold
-    local CurrentCharacterRageWeapon = TraitData[TraitName].RageData.RageWeapon
-    local CurrentCharacterRageFullSound = TraitData[TraitName].RageData.RageFullSound
-    local CurrentCharacterRageFullVoiceLines = TraitData[TraitName].RageData.RageFullVoiceLines
-    local CurrentCharacterRageExpireSound = TraitData[TraitName].RageData.RageExpiredSound
-    local CurrentCharacterRageExpireVoiceLines = TraitData[TraitName].RageData.RageExpiredVoiceLines
+    
 
 	local screenId = ScreenAnchors.PlayerRageFill
 
@@ -1833,8 +1233,9 @@ Config2 = {
 function SetupConfig()
     local Config = {
       ModName = "Furies",
-      YourFirstSetting = true,
-      YourSecondSetting = false 
+      Megaera = true,
+      Tisiphone = false ,
+      Alecto = false
     }
 
 	
@@ -1854,7 +1255,13 @@ end
 
 SetupConfig()
 
---SetupConfig2()
+SetupConfig2()
+
+-- OnControlPressed{ "Gift",
+-- 	function(triggerArgs)
+-- 	Import "../Mods/Legendary Edition/LE Scripts/ContractExchange.lua"
+-- 	end
+-- }
 
 --stupid boon fix--
 
@@ -1936,3 +1343,157 @@ function AddTraitToHeroLE(args)
 		ShowSuperMeter()
 	end
 end
+
+
+--Character specific functions--
+
+--Megaera--
+function LE_EquipMegWeapon()
+    UnEquipWeapons = 
+    {
+        --Megaera--
+        "MegaeraDash", 
+  "MegRushWeaponControl", "EPCMegaeraRushWeapon",
+  "EPCHarpyBeam", "EPCHarpyBeam2", "EPCHarpyBeam3", 
+  "EPCHarpyBeam4", "EPCHarpyBeam5",
+  "EPCHarpyBeam6", "EPCHarpyBeam7", 
+  "EPCHarpyBeam8", "EPCHarpyBeam9", "EPCHarpyBeam10",
+  "EPCHarpyBeam11", "EPCHarpyBeam12", 
+  "EPCHarpyBeam13", "EPCHarpyBeam14", "EPCHarpyBeam15",
+  "EPCHarpyWhipWhirl", "EPCHarpyWhipWhirlDash", "EPCHarpyLightning2", "EPCHarpyLightning",
+  "MegWhipLash1", "MegWhipLash2", "MegWhipLash3",
+
+--Tisiphone--
+  --"TisiphoneRushWeaponControl", "EPCTisiphoneRushWeapon", 
+  "HarpyWhipSlash1", "HarpyWhipSlash2", "HarpyWhipSlash3", 
+ --"EPCHarpyLightningLineCONTROL", 
+ "EPCHarpyLightningLine2", "EPCHarpyWhipLasso",
+  "TisiphoneDash", "EPCHarpyWhipCombo3", "EPCHarpyLungeSurgeBeam",
+
+--Alecto--
+  "AlectoWhipLash1", "AlectoWhipLash2", "AlectoWhipLash3", "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6", 
+"EPCHarpyWhipRageBeam",
+"AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",
+    }
+	if HeroHasTrait("EPCMegaeraTrait") then return end
+	AddInputBlock({ Name = "CharacterSetup" })
+	FullScreenFadeOutAnimation()
+    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = UnEquipWeapons })
+    --RemoveTrait(CurrentRun.Hero, LECharacterData.LastCharTraitName)
+	UnequipWeaponUpgrade()
+   EquipPlayerWeapon( WeaponData.MegWhipLash1, { PreLoadBinks = true } )
+    GameState.LastWeaponUpgradeData["MegWhipLash1"] = { Index = 1 }
+    --GameState.LastWeaponUpgradeData[MegWhipLash1].Index
+    EquipWeaponUpgrade( CurrentRun.Hero.ObjectId, { SkipTraitHighlight = true })
+    GameState.LastInteractedWeaponUpgrade = { WeaponName = "MegWhipLash1", ItemIndex = 1 }
+	wait(0.5)
+	FullScreenFadeInAnimation()
+	
+	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
+	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
+	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
+	wait(0.7)
+	RemoveInputBlock({ Name = "CharacterSetup" })
+-- local currentWeaponInSlot = GetEquippedWeapon()
+-- 	args = args or {}
+-- 	local skipTraitHighlight = args.SkipTraitHighlight or false
+-- 	--equip trait
+-- 	--if GameState.LastWeaponUpgradeData[ currentWeaponInSlot ] and GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index) and not HeroHasTrait(GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)) then
+-- 		--AddTraitToHero({ SkipNewTraitHighlight = skipTraitHighlight, TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot][1].TraitName), Rarity = GetRarityKey(GetWeaponUpgradeLevel(currentWeaponInSlot, GetEquippedWeaponTraitIndex( currentWeaponInSlot ))) })
+-- 	--end
+    -- AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCMegaeraTrait"}) })
+-- 	GameState.LastInteractedWeaponUpgrade = { WeaponName = currentWeaponInSlot, ItemIndex = GetEquippedWeaponTraitIndex( currentWeaponInSlot ) }
+   
+   
+   
+   --AddTraitToHero({TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCMegaeraTrait"}) })
+end
+
+
+
+--Alecto--
+function LE_EquipAlectoWeapon()
+	if HeroHasTrait("EPCAlectoTrait") then return end
+	AddInputBlock({ Name = "CharacterSetup" })
+	FullScreenFadeOutAnimation()
+    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = UnEquipWeapons })
+    --RemoveTrait(CurrentRun.Hero, LECharacterData.LastCharTraitName)
+	UnequipWeaponUpgrade()
+   EquipPlayerWeapon( WeaponData.AlectoWhipLash1, { PreLoadBinks = true } )
+    GameState.LastWeaponUpgradeData["AlectoWhipLash1"] = { Index = 1 }
+    --GameState.LastWeaponUpgradeData[MegWhipLash1].Index
+    EquipWeaponUpgrade( CurrentRun.Hero.ObjectId, { SkipTraitHighlight = true })
+    --AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCAlectoTrait"}) })
+    GameState.LastInteractedWeaponUpgrade = { WeaponName = "AlectoWhipLash1", ItemIndex = 1 }
+	wait(0.5)
+	FullScreenFadeInAnimation()
+	
+	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
+	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
+	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
+	wait(0.7)
+	RemoveInputBlock({ Name = "CharacterSetup" })
+-- local currentWeaponInSlot = GetEquippedWeapon()
+-- 	args = args or {}
+-- 	local skipTraitHighlight = args.SkipTraitHighlight or false
+-- 	--equip trait
+-- 	--if GameState.LastWeaponUpgradeData[ currentWeaponInSlot ] and GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index) and not HeroHasTrait(GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)) then
+-- 		AddTraitToHero({ SkipNewTraitHighlight = skipTraitHighlight, TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot][1].TraitName), Rarity = GetRarityKey(GetWeaponUpgradeLevel(currentWeaponInSlot, GetEquippedWeaponTraitIndex( currentWeaponInSlot ))) })
+-- 	--end
+     --AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCAlectoTrait"}) })
+-- 	GameState.LastInteractedWeaponUpgrade = { WeaponName = currentWeaponInSlot, ItemIndex = GetEquippedWeaponTraitIndex( currentWeaponInSlot ) }
+   
+   
+   
+   --AddTraitToHero({TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCMegaeraTrait"}) })
+end
+
+
+
+--Tisiphone--
+function LE_EquipTisiphoneWeapon()
+	if HeroHasTrait("EPCTisiphoneTrait") then return end
+	AddInputBlock({ Name = "CharacterSetup" })
+	FullScreenFadeOutAnimation()
+    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = UnEquipWeapons })
+    --RemoveTrait(CurrentRun.Hero, LECharacterData.LastCharTraitName)
+	UnequipWeaponUpgrade()
+   EquipPlayerWeapon( WeaponData.HarpyWhipSlash1, { PreLoadBinks = true } )
+    GameState.LastWeaponUpgradeData["HarpyWhipSlash1"] = { Index = 1 }
+    --GameState.LastWeaponUpgradeData[MegWhipLash1].Index
+    EquipWeaponUpgrade( CurrentRun.Hero.ObjectId, { SkipTraitHighlight = true })
+    --AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCTisiphoneTrait"}) })
+    GameState.LastInteractedWeaponUpgrade = { WeaponName = "HarpyWhipSlash1", ItemIndex = 1 }
+	wait(0.5)
+	FullScreenFadeInAnimation()
+	
+	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
+	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
+	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
+	wait(0.7)
+	RemoveInputBlock({ Name = "CharacterSetup" })
+-- local currentWeaponInSlot = GetEquippedWeapon()
+-- 	args = args or {}
+-- 	local skipTraitHighlight = args.SkipTraitHighlight or false
+-- 	--equip trait
+-- 	--if GameState.LastWeaponUpgradeData[ currentWeaponInSlot ] and GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index) and not HeroHasTrait(GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)) then
+-- 		--AddTraitToHero({ SkipNewTraitHighlight = skipTraitHighlight, TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot][1].TraitName), Rarity = GetRarityKey(GetWeaponUpgradeLevel(currentWeaponInSlot, GetEquippedWeaponTraitIndex( currentWeaponInSlot ))) })
+-- 	--end
+     --AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCTisiphoneTrait"}) })
+-- 	GameState.LastInteractedWeaponUpgrade = { WeaponName = currentWeaponInSlot, ItemIndex = GetEquippedWeaponTraitIndex( currentWeaponInSlot ) }
+   
+   
+   
+   --AddTraitToHero({TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCMegaeraTrait"}) })
+end
+
+-- ModUtil.WrapBaseFunction( 'EquipPlayerWeapon', function(baseFunc)
+-- 	--if CurrentRun == nil then return end
+--     --local LastCharTrait = LECharacterData.LastCharTraitName
+-- 	if IsCustomHero == true
+-- 	then
+--         RemoveEPCMegaeraWeapons()
+--         RemoveTrait( CurrentRun.Hero, "EPCMegaeraTrait" )
+-- 	end
+-- return baseFunc()
+-- end)

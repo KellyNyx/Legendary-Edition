@@ -1038,13 +1038,12 @@ end)
 		end
 
 		
-	    local currentWeaponInSlot = GetEquippedWeapon()
-		local traitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-		local CurrentCharacterDeathVoicelines = TraitData[traitName].DeathVoiceLines or GlobalVoiceLines.DeathVoiceLines
-		local CurrentCharacterRunClearedVoicelines = TraitData[traitName].RunClearedVoiceLines or GlobalVoiceLines.DeathVoiceLines
-		local CurrentCharacterDeathAnimation = TraitData[traitName].DeathAnimation or "ZagreusDeathFullscreen"
-		local CurrentCharacterPostEndingDeathAnimation = TraitData[traitName].PostEndingDeathAnimation or "ZagreusDeathPostEndingFullscreen"
-		local CurrentCharacterDeathIdleAnimation = TraitData[traitName].DeathIdleAnimation or "ZagreusOnHitFinal"
+		-- local CurrentCharTrait = LECharacterData.LastCharacter
+		-- local CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines or GlobalVoiceLines.DeathVoiceLines
+		-- local CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoiceLines or GlobalVoiceLines.DeathVoiceLines
+		-- local CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation or "ZagreusDeathFullscreen"
+		-- local CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation or "ZagreusDeathPostEndingFullscreen"
+		-- local CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation or "ZagreusOnHitFinal"
 		-- had to move this above CleanUpEnemies() for the RequiredKillEnemies check to work
 		local deathPresentation = 0
 		if CurrentRun.CurrentRoom.Encounter ~= nil then
@@ -1749,42 +1748,7 @@ end)
 --OpenUpgradeChoiceMenu Override--
 
 ModUtil.BaseOverride("OpenUpgradeChoiceMenu", function ( lootData )
-	local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterIdleAnimation = TraitData[TraitName].IdleAnimation
-   local CurrentCharacterMoveStartAnimation = TraitData[TraitName].MoveStartAnimation
-   local CurrentCharacterMoveAnimation = TraitData[TraitName].MoveAnimation
-   local CurrentCharacterMoveStopAnimation = TraitData[TraitName].MoveStopAnimation
-   local CurrentCharacterLowSpeedAnimation = TraitData[TraitName].LowSpeedAnimation
-   local CurrentCharacterHighSpeedAnimation = TraitData[TraitName].HighSpeedAnimation
-   local CurrentCharacterBaseSpeed = TraitData[TraitName].BaseSpeedValue
-   local CurrentCharacterScale = TraitData[TraitName].ScaleFraction
-   local CurrentCharacterRequiredPackages = TraitData[TraitName].RequiredPackages
-   local CurrentCharacterDamagedAnimation = TraitData[TraitName].DamagedAnimation
-   local CurrentCharacterDamagedSound = TraitData[TraitName].DamagedSound
-   local CurrentCharacterHeroLandingAnimation = TraitData[TraitName].HeroLandingAnimation
-   local CurrentCharacterHeroTouchDownGraphic = TraitData[TraitName].HeroTouchdownGraphic
-   local CurrentCharacterUpgradeAcquiredAnimation = TraitData[TraitName].UpgradeAcquiredAnimation
-   local CurrentCharacterSecretDoorDiveAnimation = TraitData[TraitName].SecretDoorDiveAnimation
-   local CurrentCharacterSecretRoomEntranceExitAnimation = TraitData[TraitName].SecretRoomEntranceExitAnimation
-   local CurrentCharacterChargingEmote = TraitData[TraitName].ChargingEmote
-   local CurrentCharacterPowerUpEmote = TraitData[TraitName].PowerUpEmote
-   local CurrentCharacterLastStandAnimation = TraitData[TraitName].LastStandAnimation
-   local CurrentCharacterLastStandVoiceLines = TraitData[TraitName].LastStandVoicelines
-   local CurrentCharacterLastStandLastLifeVoiceLines = TraitData[TraitName].LastStandLastLifeVoiceLines
-   local CurrentCharacterDeathIdleAnimation = TraitData[TraitName].DeathIdleAnimation
-   local CurrentCharacterDeathAnimation = TraitData[TraitName].DeathAnimation
-   local CurrentCharacterDeathVoicelines = TraitData[TraitName].DeathVoiceLines
-   local CurrentCharacterInteractAnimation = TraitData[TraitName].InteractAnimation
-   local CurrentCharacterAttachedAnimationName = TraitData[TraitName].AttachedAnimationName or "null"
-   local CurrentCharacterAttachedAnimationScale = TraitData[TraitName].AttachedAnimationScale or 1.0
-   local CurrentCharacterAttachedAnimation2Name = TraitData[TraitName].AttachedAnimation2Name or "null"
-   local CurrentCharacterAttachedAnimationOffsetZ = TraitData[TraitName].AttachedAnimationOffsetZ or "null"
-   local CurrentCharacterBoonBox = TraitData[TraitName].BoonBox
-   local CurrentCharacterBoonSelectInGraphic = TraitData[TraitName].BoonSelectInGraphic
-   local CurrentCharacterBoonSelectLightingGraphic = TraitData[TraitName].BoonSelectLightingGraphic
-   local CurrentCharacterBoonOffset = TraitData[TraitName].BoonOffset
-   local CurrentCharacterBoonSelectInFrontFxOffset = TraitData[TraitName].BoonSelectInFrontFxOffset
+	
 
 	local upgradeName = lootData.Name
 	local upgradeChoiceData = LootData[upgradeName]
@@ -1879,10 +1843,6 @@ end )
 --CloseUpgradeChoiceScreen Override--
 
 ModUtil.BaseOverride("CloseUpgradeChoiceScreen", function ( screen, button )
-	local currentWeaponInSlot = GetEquippedWeapon()
-    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-	local CurrentCharacterBoonSelectOutGraphic = TraitData[TraitName].BoonSelectOutGraphic
-
 	DisableShopGamepadCursor( screen.Name )
 	SetConfigOption({ Name = "FreeFormSelectWrapY", Value = false })
 	if HeroHasTrait("EPC_CharacterHandlerTrait") then
@@ -2409,15 +2369,15 @@ ModUtil.BaseOverride( "AddLastStand", function ( args )
 end )
 
 ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
-	if not IsCustomHero == true then local TraitName = "DefaultCharacterTrait"
-	local CurrentCharacterExtraLifeIcon = "ExtraLifeZag" else
-	 local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
-	end
-	--if not IsCustomHero == true then
-	
-	--end
+-- 	if not IsCustomHero == true then local TraitName = LECharacterData.LastCharacter 
+-- 	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag" else
+-- 	 local currentWeaponInSlot = GetEquippedWeapon()
+--    local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
+--    local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
+-- 	end
+
+	local TraitName = LECharacterData.LastCharacter 
+	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag"
 
 	local unit = heroUnit or CurrentRun.Hero
 	if not ScreenAnchors.LifePipIds or not unit.LastStands then
@@ -2434,7 +2394,7 @@ ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
 				if IsMetaUpgradeActive("ExtraChanceReplenishMetaUpgrade") then
 					SetAnimation({ Name = "ExtraLifeReplenish", DestinationId = ScreenAnchors.LifePipIds[i] })
 				else
-					SetAnimation({ Name = CurrentCharacterExtraLifeIcon or "ExtraLifeZag", DestinationId = ScreenAnchors.LifePipIds[i] })
+					SetAnimation({ Name = CurrentCharacterExtraLifeIcon, DestinationId = ScreenAnchors.LifePipIds[i] })
 				--else
 					--SetAnimation({ Name = "ExtraLifeZag", DestinationId = ScreenAnchors.LifePipIds[i] })
 				--end
@@ -2446,10 +2406,22 @@ ModUtil.BaseOverride( "UpdateLifePips", function ( heroUnit )
 	end
 end )
 
+--bug fix--
+function LEGetWeaponUpgradeTrait( weapon, index )
+	if weapon == nil or index == nil then
+		return nil
+	end
+	if WeaponUpgradeData[weapon][index].TraitName then
+		return WeaponUpgradeData[weapon][index].TraitName
+	elseif  WeaponUpgradeData[weapon][index].RequiredInvestmentTraitName and GetWeaponUpgradeLevel(weapon, index) > 0 then
+		return WeaponUpgradeData[weapon][index].RequiredInvestmentTraitName
+	end
+	return nil
+end
+
 ModUtil.BaseOverride( "InitHeroLastStands", function ( newHero )
-	local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index) or "null"
-   local CurrentCharacterExtraLifeIcon = TraitData[TraitName].ExtraLifeIcon or "ExtraLifeZag"
+	local TraitName = LECharacterData.LastCharacter 
+	local CurrentCharacterExtraLifeIcon = TraitName.ExtraLifeIcon or "ExtraLifeZag"
 
 	for s = 1, GetNumMetaUpgrades("ExtraChanceMetaUpgrade" ) do
 		for i = 1, MetaUpgradeData["ExtraChanceMetaUpgrade"].ChangeValue do
