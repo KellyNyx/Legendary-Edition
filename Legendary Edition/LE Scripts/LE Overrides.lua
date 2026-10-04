@@ -2247,9 +2247,7 @@ end)
 
 --ParryAttackPresentation Override--
 ModUtil.BaseOverride( "ParryAttackPresentation", function ( unitId )
-	local currentWeaponInSlot = GetEquippedWeapon()
-   local TraitName = GetWeaponUpgradeTrait(currentWeaponInSlot, GameState.LastWeaponUpgradeData[currentWeaponInSlot].Index)
-   local CurrentCharacterParryEmote = TraitData[TraitName].ParryEmote or "/EmptyCue"
+   local CurrentCharParryEmote = CurrentCharacterParryEmote or "/EmptyCue"
 	if unitId ~= CurrentRun.Hero.ObjectId then
 		return
 	end
@@ -2258,7 +2256,7 @@ ModUtil.BaseOverride( "ParryAttackPresentation", function ( unitId )
 	--end
 	if HeroHasTrait("EPC_CharacterHandlerTrait") then
 	PlaySound({ Name = "/Leftovers/Menu Sounds/LevelUpFlash", Id = unitId })
-	PlaySound({ Name = CurrentCharacterParryEmote, Id = unitId })
+	PlaySound({ Name = CurrentCharParryEmote, Id = unitId })
 	else
 	PlaySound({ Name = "/Leftovers/Menu Sounds/LevelUpFlash", Id = unitId })
 	PlaySound({ Name = "/VO/ZagreusEmotes/EmotePowerAttacking", Id = unitId })

@@ -219,6 +219,7 @@ function SetupCurrentCharacter()
     CurrentCharacterDamagedSound = CurrentCharTrait.DamagedSound
     CurrentCharacterIntroPresentationFunction = CurrentCharTrait.IntroPresentationFunction
     CurrentCharacterHeroLandingAnimation = CurrentCharTrait.HeroLandingAnimation
+	CurrentCharacterParryEmote = CurrentCharTrait.ParryEmote
     CurrentCharacterHeroTouchDownGraphic = CurrentCharTrait.HeroTouchdownGraphic
     CurrentCharacterUpgradeAcquiredAnimation = CurrentCharTrait.UpgradeAcquiredAnimation
     CurrentCharacterSecretDoorDiveAnimation = CurrentCharTrait.SecretDoorDiveAnimation
@@ -1388,11 +1389,11 @@ function LE_EquipMegWeapon()
     GameState.LastInteractedWeaponUpgrade = { WeaponName = "MegWhipLash1", ItemIndex = 1 }
 	wait(0.5)
 	FullScreenFadeInAnimation()
-	
+	wait(0.3)
 	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
 	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
 	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
-	wait(0.7)
+	wait(0.5)
 	RemoveInputBlock({ Name = "CharacterSetup" })
 -- local currentWeaponInSlot = GetEquippedWeapon()
 -- 	args = args or {}
@@ -1427,11 +1428,11 @@ function LE_EquipAlectoWeapon()
     GameState.LastInteractedWeaponUpgrade = { WeaponName = "AlectoWhipLash1", ItemIndex = 1 }
 	wait(0.5)
 	FullScreenFadeInAnimation()
-	
+	wait(0.3)
 	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
 	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
 	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
-	wait(0.7)
+	wait(0.5)
 	RemoveInputBlock({ Name = "CharacterSetup" })
 -- local currentWeaponInSlot = GetEquippedWeapon()
 -- 	args = args or {}
@@ -1466,11 +1467,11 @@ function LE_EquipTisiphoneWeapon()
     GameState.LastInteractedWeaponUpgrade = { WeaponName = "HarpyWhipSlash1", ItemIndex = 1 }
 	wait(0.5)
 	FullScreenFadeInAnimation()
-	
+	wait(0.3)
 	SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
 	ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
 	SetAnimation({ Name = CurrentCharacterSecretRoomEntranceExitAnimation, DestinationId = CurrentRun.Hero.ObjectId })
-	wait(0.7)
+	wait(0.5)
 	RemoveInputBlock({ Name = "CharacterSetup" })
 -- local currentWeaponInSlot = GetEquippedWeapon()
 -- 	args = args or {}
