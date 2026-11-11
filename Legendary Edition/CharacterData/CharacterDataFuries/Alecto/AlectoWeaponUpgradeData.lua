@@ -56,7 +56,8 @@ function RemoveEPCAlectoWeapons()
 	--character anymore
 	IsCustomHero = false
 	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
-	LECharacterData.LastCharTraitName = "EPCAlectoTrait"
+	LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
 	UpdateLifePips()
+	SwapCharAnimations()
 	DestroyPlayerRageMeter()
 end

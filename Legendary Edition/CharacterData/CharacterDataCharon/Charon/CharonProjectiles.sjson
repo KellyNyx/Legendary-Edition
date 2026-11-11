@@ -1,0 +1,252 @@
+{
+    Projectiles = [
+        "_append"
+        {
+      Name = "LECharonDash"
+      InheritFrom = "RushWeapon"
+      Range = 450
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 0.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+        {
+      Name = "LECharonMeleeArcLeft"
+      DetonateGraphic = "null"
+      InheritFrom = "1_BaseDamagingProjectile"
+      Type = "ARC"
+      AttachToOwner = true
+      ArcStart = 0
+      ArcEnd = -77
+      Speed = -465
+      StartDelay = 0.09
+      AffectsEnemies = true
+      AffectsFriends = false
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      DamageLow = 80
+      DamageHigh = 80
+      NumPenetrations = 99999
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = true
+      UseVulnerability = true
+      InvulnerableImpactOwnerVelocity = 0
+      StartFx = "null"
+      UseRadialImpact = false
+      ImpactLineOfSightFromOwner = true
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 500
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        RotateGeometry = true
+        Grip = 999999
+        Points = [
+          {
+            X = 0
+            Y = 0
+          }
+          {
+            X = 575
+            Y = 125
+          }
+          {
+            X = 630
+            Y = 0
+          }
+          {
+            X = 575
+            Y = -125
+          }
+        ]
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 1.2
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+    {
+      Name = "LECharonMeleeArcRight"
+      InheritFrom = "LECharonMeleeArcLeft"
+      ArcStart = 0
+      ArcEnd = 77
+      ProjectileDefenseAngle = 90
+      ProjectileDefenseRadius = 500
+      DeflectProjectiles = false
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.35
+          Modifier = 0.1
+          HaltOnEnd = true
+          Active = false
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 1.0
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }]
+    }
+    {
+      Name = "LECharonRadialPush"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "CharonPushNova"
+      Type = "STRAIGHT"
+      DetonateSound = "null"
+      Fuse = 0.0
+      AffectsEnemies = true
+      AffectsFriends = false
+      Range = 1.0
+      DamageRadius = 600
+      DamageRadiusScaleY = 0.58
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = false
+      UnlimitedUnitPenetration = true
+      DamageLow = 20
+      DamageHigh = 20
+      ImpactVelocity = 1800
+      CriticalFx = "CriticalHit"
+      HitVulnerabilityFx = "Backstab"
+      UseArmor = false
+      UseVulnerability = false
+      CanBeProjectileDefenseDestroyed = false
+      ProjectileDefenseRadius = 600
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "null"
+        OffsetZ = 70
+        Grip = 999999
+      }
+      Effects = [
+        {
+          Name = "RushGrip"
+          Type = "GRIP"
+          Duration = 0.15
+          Modifier = 1.00
+          HaltOnEnd = true
+          Active = true
+        }
+        {
+          Name = "OnHitStun"
+          Duration = 1.5
+          DisableMove = true
+          DisableRotate = true
+          DisableAttack = true
+          Active = true
+          CanAffectInvulnerable = false
+          FrontFx = "null"
+        }
+      ]
+    }
+
+    {
+      Name = "LECharonWave"
+      InheritFrom = "1_BaseDamagingProjectile"
+      DetonateGraphic = "EnemyConeAttackLoopEnd"
+      Type = "STRAIGHT"
+      DetonateSound = "/SFX/Enemy Sounds/EnemyProjectileDetonateExplode"
+      AttachToOwner = false
+      Fuse = 6.5
+      Speed = 150
+      MaxSpeed = 600
+      Range = 2000
+      Acceleration = 1100
+      AffectsEnemies = true
+      AffectsFriends = false
+      ImpactVelocity = 800
+      NumPenetrations = 9999
+      AffectsSelf = false
+      CheckUnitImpact = true
+      CheckObstacleImpact = true
+      UnlimitedUnitPenetration = true
+      CanBeProjectileDefenseDestroyed = false
+      CanBeReflected = false
+      DamageLow = 40
+      UseRadialImpact = false
+      DamageHigh = 40
+      GroupName = "FX_Terrain_Add"
+      DangerDistance = 200
+      NumBounces = 0
+      UseVulnerability = false
+      ProjectileDefenseRadius = 0
+      DeflectProjectiles = false
+      Thing = {
+        Graphic = "CharonWaveFx"
+        RotateGeometry = true
+        AttachedAnim = "null"
+        Grip = 999999
+        Points = [
+          {
+            X = 50
+            Y = 155
+          }
+          {
+            X = 50
+            Y = -155
+          }
+          {
+            X = -50
+            Y = -155
+          }
+          {
+            X = -50
+            Y = 155
+          }
+        ]
+      }
+      Effect = {
+        Name = "OnHitStun"
+        Duration = 0.5
+        DisableMove = true
+        DisableRotate = true
+        DisableAttack = true
+        Active = true
+        CanAffectInvulnerable = false
+      }
+    }
+    ]
+}

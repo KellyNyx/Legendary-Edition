@@ -59,6 +59,7 @@ function RemoveEPCMegaeraWeapons()
 	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
 	LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
 	UpdateLifePips()
+	SwapCharAnimations()
 	
 end
 

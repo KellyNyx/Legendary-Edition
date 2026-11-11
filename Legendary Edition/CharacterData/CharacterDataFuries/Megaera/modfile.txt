@@ -1,5 +1,7 @@
 Import "EPCMegaeraMain.lua"
 
+Import "MegaeraVoicelines.lua"
+
 To "Scripts/WeaponData.lua"
 Import "MegaeraWeaponData.lua"
 

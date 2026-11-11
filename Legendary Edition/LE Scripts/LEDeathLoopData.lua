@@ -93,7 +93,7 @@ function SpawnMegaeraCharObstacle()
 	LECharMeg.ActivateIds = { LECharMeg.ObjectId }
    
    SetupObstacle( LECharMeg )
-    DebugPrint({ Text = "Successfully spawned meg char obstacle" })
+    DebugPrint({ Text = "Successfully spawned Megaera char obstacle" })
     --SetThingProperty({ Property = "Graphic", DestinationId = LECharMeg, Value = "FuryHellfirePreviewDecalDark" })
     --SetThingProperty({ Property = "Graphic", DestinationId = CharManager, Value = "HouseDesk01" })
 end
@@ -125,7 +125,7 @@ function SpawnAlectoCharObstacle()
 	LECharAlecto.ActivateIds = { LECharAlecto.ObjectId }
    
    SetupObstacle( LECharAlecto )
-    DebugPrint({ Text = "Successfully spawned meg char obstacle" })
+    DebugPrint({ Text = "Successfully spawned Alecto char obstacle" })
     --SetThingProperty({ Property = "Graphic", DestinationId = LECharMeg, Value = "FuryHellfirePreviewDecalDark" })
     --SetThingProperty({ Property = "Graphic", DestinationId = CharManager, Value = "HouseDesk01" })
 end
@@ -157,7 +157,39 @@ function SpawnTisiphoneCharObstacle()
 	LECharTis.ActivateIds = { LECharTis.ObjectId }
    
    SetupObstacle( LECharTis )
-    DebugPrint({ Text = "Successfully spawned meg char obstacle" })
+    DebugPrint({ Text = "Successfully spawned Tisiphone char obstacle" })
+    --SetThingProperty({ Property = "Graphic", DestinationId = LECharMeg, Value = "FuryHellfirePreviewDecalDark" })
+    --SetThingProperty({ Property = "Graphic", DestinationId = CharManager, Value = "HouseDesk01" })
+end
+
+--Charon--
+table.insert(DeathLoopData.RoomPreRun.StartUnthreadedEvents, {
+    FunctionName = "SpawnCharonCharObstacle",
+    Args = {},
+})
+function SpawnCharonCharObstacle()
+   
+    local LECharCharon = DeepCopyTable( DeathLoopData.DeathAreaOffice.ObstacleData[488699] ) or {}
+    LECharCharon.Name = "LECharCharon"
+	LECharCharon.ObjectId = SpawnObstacle({
+		Name = "CharonCharObstacle",
+		Group = "Standing",
+		DestinationId = CurrentRun.Hero.ObjectId,
+		AttachedTable = LECharCharon,
+		OffsetX = 1100,
+		OffsetY = -1100,
+      LocationX = 7139,
+      LocationY = 3855,
+      
+	})
+   LECharCharon.UseText = "Exchange Contracts With Charon?"
+   LECharCharon.OnUsedFunctionName = "LE_EquipCharonWeapon"
+   LECharCharon.InteractDistance = 100
+   SetScale({ Id = LECharCharon.ObjectId, Fraction = 1.3 })
+	LECharCharon.ActivateIds = { LECharCharon.ObjectId }
+   
+   SetupObstacle( LECharCharon )
+    DebugPrint({ Text = "Successfully spawned Charon char obstacle" })
     --SetThingProperty({ Property = "Graphic", DestinationId = LECharMeg, Value = "FuryHellfirePreviewDecalDark" })
     --SetThingProperty({ Property = "Graphic", DestinationId = CharManager, Value = "HouseDesk01" })
 end

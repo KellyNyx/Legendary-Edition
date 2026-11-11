@@ -20,5 +20,10 @@
       DisplayName = "Whip"
       //Description = "Exagryph, Adamant Rail"
     }
+    {
+      Id = "LECharonMeleeLeft"
+      DisplayName = "Oar"
+      //Description = "Exagryph, Adamant Rail"
+    }
     ]
 }

@@ -65,6 +65,33 @@ TraitData.EPCTisiphoneTrait =
 				AutoLockArc = 60,
 			},
 		},
+	SwapAnimations = {
+	--talk denial--
+	["ZagreusTalkDenial"] = "Fury3Idle",
+	["ZagreusTalkDenialStart"] = "Fury3Idle",
+	["ZagreusTalkDenialReturnToIdle"] = "Fury3Idle",
+	["ZagreusTalkDenial_Full"] = "Fury3Idle",
+	--talk empathy--
+	["ZagreusTalkEmpathy"] = "Fury3Idle",
+	["ZagreusTalkEmpathyStart"] = "Fury3Idle",
+	["ZagreusTalkEmpathy_Return"] = "Fury3Idle",
+	--Interact thoughtful--
+	["ZagreusInteractionThoughtful"] = "Fury3Idle",
+	--Interact Come Hither--
+	["ZagreusInteractionComeHither_Start"] = "Fury3Idle",
+	["ZagreusInteractionComeHither"] = "Fury3Idle",
+	["ZagreusInteractionComeHither_End"] = "Fury3Idle",
+	--Interact Fishing--
+	["ZagreusInteractionFishing_Start"] = "Fury3Idle",
+	["ZagreusInteractionFishing_PullSuccess"] = "Fury3Idle",
+	["ZagreusInteractionFishing_PullFailure"] = "Fury3Idle",
+	--cosmetic purchase--
+	["ZagreusCosmeticPurchase"] = "Fury3Idle",
+	--secret door dive--
+	["ZagreusSecretDoorDive"] = "Fury3LungeReturnToIdle",
+	--stunned--
+	["ZagreusStun"] = "EPCTisiphoneOnHit",
+	},
     PostWeaponUpgradeScreenAnimation = "Fury3LungeReturnToIdle",
     RequiredWeapons = {"SpearWeapon", "SpearWeaponThrow",},
     RequiredFalseTraits = { "SpearAutoAttack", "SpearSpinAura" },
@@ -497,6 +524,7 @@ function EquipEPCTisiphoneWeaponsTEST()
 	-- EquipPlayerWeapon( WeaponData.HarpyWhipSlash1, { PreLoadBinks = true } )
 	-- end
 	UpdateLifePips()
+	SwapCharAnimations()
 end
 
 function SetupEPCTisiphoneCharacter()

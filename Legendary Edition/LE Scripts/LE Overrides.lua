@@ -979,13 +979,13 @@ end)
 	
 		ZeroSuperMeter()
 		FinishTargetMarker( killer )
-	
 		local deathPresentationName = currentRun.DeathPresentationFunctionName or "DeathPresentation"
-		local deathPresentationFunction = _G[deathPresentationName]
-		if HeroHasTrait( "EPC_CharacterHandlerTrait" )
-        then deathPresentationName = "CurrentCharacterDeathPresentation" else
+	    if IsCustomHero == true
+		then deathPresentationName = currentRun.DeathPresentationFunctionName or "CurrentCharacterDeathPresentation" else
 			deathPresentationName = currentRun.DeathPresentationFunctionName or "DeathPresentation"
 		end
+		
+		local deathPresentationFunction = _G[deathPresentationName]
 
 		deathPresentationFunction( currentRun, killer, killingUnitWeapon )
 		AddInputBlock({ Name = "MapLoad" })
@@ -1021,193 +1021,193 @@ end)
 
     -- DeathPresentation Override --
 
-	ModUtil.BaseOverride("DeathPresentation", function ( currentRun, killer, killingUnitWeapon )
+	-- ModUtil.BaseOverride("DeathPresentation", function ( currentRun, killer, killingUnitWeapon )
 
-		AddInputBlock({ Name = "DeathPresentation" })
-		ClearCameraClamp({ LerpTime = 0.4 })
-		PanCamera({ Id = currentRun.Hero.ObjectId, Duration = 0.4 })
-		FocusCamera({ Fraction = 1.1, Duration = 0.4 })
-		ZeroMouseTether("DeathPresentation")
-		DisableCombatControls()
-		DestroyCombatUI( "Death" )
-		ClearStoredAmmoHero()
-		SetConfigOption({ Name = "UseOcclusion", Value = false })
+	-- 	AddInputBlock({ Name = "DeathPresentation" })
+	-- 	ClearCameraClamp({ LerpTime = 0.4 })
+	-- 	PanCamera({ Id = currentRun.Hero.ObjectId, Duration = 0.4 })
+	-- 	FocusCamera({ Fraction = 1.1, Duration = 0.4 })
+	-- 	ZeroMouseTether("DeathPresentation")
+	-- 	DisableCombatControls()
+	-- 	DestroyCombatUI( "Death" )
+	-- 	ClearStoredAmmoHero()
+	-- 	SetConfigOption({ Name = "UseOcclusion", Value = false })
 	
-		if IsScreenOpen("Codex") then
-			CloseCodexScreen()
-		end
+	-- 	if IsScreenOpen("Codex") then
+	-- 		CloseCodexScreen()
+	-- 	end
 
 		
-		-- local CurrentCharTrait = LECharacterData.LastCharacter
-		-- local CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines or GlobalVoiceLines.DeathVoiceLines
-		-- local CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoiceLines or GlobalVoiceLines.DeathVoiceLines
-		-- local CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation or "ZagreusDeathFullscreen"
-		-- local CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation or "ZagreusDeathPostEndingFullscreen"
-		-- local CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation or "ZagreusOnHitFinal"
-		-- had to move this above CleanUpEnemies() for the RequiredKillEnemies check to work
-		local deathPresentation = 0
-		if CurrentRun.CurrentRoom.Encounter ~= nil then
-			if CurrentRun.CurrentRoom.Encounter.HadesDeathTaunt then
-				-- Hades Death Taunt
-				deathPresentation = 1
-			elseif CurrentRun.CurrentRoom.Encounter.SpurnedGodName ~= nil and not IsEmpty( RequiredKillEnemies ) then
-				-- Olympian Death Taunt
-				deathPresentation = 2
-			elseif CurrentRun.CurrentRoom.Encounter.ThanatosId ~= nil and not not IsEmpty( RequiredKillEnemies ) then
-				-- Thanatos Death Taunt
-				deathPresentation = 3
-			elseif CurrentRun.CurrentRoom.Encounter.TookChaosCurseDamage ~= nil and not IsEmpty( RequiredKillEnemies ) then
-				-- Chaos Death Taunt
-				deathPresentation = 4
-			end
-		end
+	-- 	-- local CurrentCharTrait = LECharacterData.LastCharacter
+	-- 	-- local CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines or GlobalVoiceLines.DeathVoiceLines
+	-- 	-- local CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoiceLines or GlobalVoiceLines.DeathVoiceLines
+	-- 	-- local CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation or "ZagreusDeathFullscreen"
+	-- 	-- local CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation or "ZagreusDeathPostEndingFullscreen"
+	-- 	-- local CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation or "ZagreusOnHitFinal"
+	-- 	-- had to move this above CleanUpEnemies() for the RequiredKillEnemies check to work
+	-- 	local deathPresentation = 0
+	-- 	if CurrentRun.CurrentRoom.Encounter ~= nil then
+	-- 		if CurrentRun.CurrentRoom.Encounter.HadesDeathTaunt then
+	-- 			-- Hades Death Taunt
+	-- 			deathPresentation = 1
+	-- 		elseif CurrentRun.CurrentRoom.Encounter.SpurnedGodName ~= nil and not IsEmpty( RequiredKillEnemies ) then
+	-- 			-- Olympian Death Taunt
+	-- 			deathPresentation = 2
+	-- 		elseif CurrentRun.CurrentRoom.Encounter.ThanatosId ~= nil and not not IsEmpty( RequiredKillEnemies ) then
+	-- 			-- Thanatos Death Taunt
+	-- 			deathPresentation = 3
+	-- 		elseif CurrentRun.CurrentRoom.Encounter.TookChaosCurseDamage ~= nil and not IsEmpty( RequiredKillEnemies ) then
+	-- 			-- Chaos Death Taunt
+	-- 			deathPresentation = 4
+	-- 		end
+	-- 	end
 	
-		CleanupEnemies()
-		ExpireProjectiles({ })
-		ClearEffect({ Id = killer.ObjectId, All = true, BlockAll = true })
-		SetThingProperty({ Property = "AllowAnyFire", Value = false, DestinationId = CurrentRun.Hero.ObjectId, DataValue = false })
-		StopAmbientSound({ All = true })
-		StopSound({ Id = SecretMusicId, Duration = 0.25 })
-		SecretMusicId = nil
-		SecretMusicName = nil
+	-- 	CleanupEnemies()
+	-- 	ExpireProjectiles({ })
+	-- 	ClearEffect({ Id = killer.ObjectId, All = true, BlockAll = true })
+	-- 	SetThingProperty({ Property = "AllowAnyFire", Value = false, DestinationId = CurrentRun.Hero.ObjectId, DataValue = false })
+	-- 	StopAmbientSound({ All = true })
+	-- 	StopSound({ Id = SecretMusicId, Duration = 0.25 })
+	-- 	SecretMusicId = nil
+	-- 	SecretMusicName = nil
 	
-		Stop({ Id = currentRun.Hero.ObjectId })
-		Halt({ Id = currentRun.Hero.ObjectId })
-		SetThingProperty({ Property = "ElapsedTimeMultiplier", Value = 0.0, DataValue = false, DestinationNames = { "GroundEnemies", "FlyingEnemies" } })
+	-- 	Stop({ Id = currentRun.Hero.ObjectId })
+	-- 	Halt({ Id = currentRun.Hero.ObjectId })
+	-- 	SetThingProperty({ Property = "ElapsedTimeMultiplier", Value = 0.0, DataValue = false, DestinationNames = { "GroundEnemies", "FlyingEnemies" } })
 	
-		RemoveFromGroup({ Id = killer.ObjectId, Names = { "Standing", "GroundEnemies", "FlyingEnemies" } })
-		AddToGroup({ Id = killer.ObjectId, Name = "Combat_Menu", DrawGroup = true })
+	-- 	RemoveFromGroup({ Id = killer.ObjectId, Names = { "Standing", "GroundEnemies", "FlyingEnemies" } })
+	-- 	AddToGroup({ Id = killer.ObjectId, Name = "Combat_Menu", DrawGroup = true })
 	
-		if currentRun.Hero.AttachedAnimationName ~= nil then
-			StopAnimation({ Name = currentRun.Hero.AttachedAnimationName, DestinationId = currentRun.Hero.ObjectId })
-		end
+	-- 	if currentRun.Hero.AttachedAnimationName ~= nil then
+	-- 		StopAnimation({ Name = currentRun.Hero.AttachedAnimationName, DestinationId = currentRun.Hero.ObjectId })
+	-- 	end
 	
-		if currentRun.Hero.HitShields ~= nil and currentRun.Hero.HitShields > 0 then
-			CurrentRun.Hero.HitShields = 0
-			for i, traitData in pairs(currentRun.Hero.Traits) do
-				if traitData.BossEncounterShieldHits then
-					UpdateTraitNumber( traitData )
-				end
-			end
-		end
+	-- 	if currentRun.Hero.HitShields ~= nil and currentRun.Hero.HitShields > 0 then
+	-- 		CurrentRun.Hero.HitShields = 0
+	-- 		for i, traitData in pairs(currentRun.Hero.Traits) do
+	-- 			if traitData.BossEncounterShieldHits then
+	-- 				UpdateTraitNumber( traitData )
+	-- 			end
+	-- 		end
+	-- 	end
 	
-		currentRun.Hero.Mute = false
-		SetPlayerInvulnerable( "PlayerDeath" )
-		PlaySound({ Name = "/SFX/Player Sounds/PlayerDeath" })
+	-- 	currentRun.Hero.Mute = false
+	-- 	SetPlayerInvulnerable( "PlayerDeath" )
+	-- 	PlaySound({ Name = "/SFX/Player Sounds/PlayerDeath" })
 	
 		
-		if CurrentRun.Cleared then 
-			thread( PlayVoiceLines, CurrentCharacterRunClearedVoicelines ) else
-				thread( PlayVoiceLines, CurrentCharacterDeathVoicelines )
-			end
+	-- 	if CurrentRun.Cleared then 
+	-- 		thread( PlayVoiceLines, CurrentCharacterRunClearedVoicelines ) else
+	-- 			thread( PlayVoiceLines, CurrentCharacterDeathVoicelines )
+	-- 		end
 	
-		if killer.CauseOfDeathVoiceLines ~= nil then
-			thread( PlayVoiceLines, killer.CauseOfDeathVoiceLines, nil, killer )
-		elseif currentRun.CurrentRoom.Encounter.CauseOfDeathVoiceLines ~= nil then
-			thread( PlayVoiceLines, currentRun.CurrentRoom.Encounter.CauseOfDeathVoiceLines )
-		elseif currentRun.CurrentRoom.CauseOfDeathVoiceLines ~= nil then
-			thread( PlayVoiceLines, currentRun.CurrentRoom.CauseOfDeathVoiceLines )
-		end
+	-- 	if killer.CauseOfDeathVoiceLines ~= nil then
+	-- 		thread( PlayVoiceLines, killer.CauseOfDeathVoiceLines, nil, killer )
+	-- 	elseif currentRun.CurrentRoom.Encounter.CauseOfDeathVoiceLines ~= nil then
+	-- 		thread( PlayVoiceLines, currentRun.CurrentRoom.Encounter.CauseOfDeathVoiceLines )
+	-- 	elseif currentRun.CurrentRoom.CauseOfDeathVoiceLines ~= nil then
+	-- 		thread( PlayVoiceLines, currentRun.CurrentRoom.CauseOfDeathVoiceLines )
+	-- 	end
 	
-		-- black out world
-		StopAnimation({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HadesReverseDarknessVignetteHold" })
-		StopAnimation({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HadesReverseDarknessGroundFog" })
-		AdjustFrame({ Color = Color.TransparentRed, Duration = 0.0, Fraction = 0 })
-		ScreenAnchors.DeathBackground = CreateScreenObstacle({ Name = "rectangle01", Group = "Combat_UI", X = ScreenCenterX, Y = ScreenCenterY })
-		SetScale({ Id = ScreenAnchors.DeathBackground, Fraction = 10 })
-		SetColor({ Id = ScreenAnchors.DeathBackground, Color = Color.Black })
-		SetAlpha({ Id = ScreenAnchors.DeathBackground, Fraction = 1.0, Duration = 0 })
+	-- 	-- black out world
+	-- 	StopAnimation({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HadesReverseDarknessVignetteHold" })
+	-- 	StopAnimation({ DestinationId = CurrentRun.Hero.ObjectId, Name = "HadesReverseDarknessGroundFog" })
+	-- 	AdjustFrame({ Color = Color.TransparentRed, Duration = 0.0, Fraction = 0 })
+	-- 	ScreenAnchors.DeathBackground = CreateScreenObstacle({ Name = "rectangle01", Group = "Combat_UI", X = ScreenCenterX, Y = ScreenCenterY })
+	-- 	SetScale({ Id = ScreenAnchors.DeathBackground, Fraction = 10 })
+	-- 	SetColor({ Id = ScreenAnchors.DeathBackground, Color = Color.Black })
+	-- 	SetAlpha({ Id = ScreenAnchors.DeathBackground, Fraction = 1.0, Duration = 0 })
 	
-		RemoveFromGroup({ Id = currentRun.Hero.ObjectId, Name = "Standing" })
-		thread( DoRumble, currentRun.Hero.HeroFinalHitRumbleParameters )
+	-- 	RemoveFromGroup({ Id = currentRun.Hero.ObjectId, Name = "Standing" })
+	-- 	thread( DoRumble, currentRun.Hero.HeroFinalHitRumbleParameters )
 	
-		wait( 0.15 )
-		SetAlpha({ Id = killer.ObjectId, Fraction = 0, Duration = 0.3 })
+	-- 	wait( 0.15 )
+	-- 	SetAlpha({ Id = killer.ObjectId, Fraction = 0, Duration = 0.3 })
 	
-		if CurrentRun.Cleared then
-			thread( DisplayLocationText, nil, { Text = "OutroDeathMessageAlt", Delay = 0.95, Color = Color.Red, Layer = "Overlay", AnimationName = "LocationTextBGDeath", AnimationOutName = "LocationTextBGDeathOut", ThreadName = "Outro", Duration = 4.25 } )
-		else
-			thread( DisplayLocationText, nil, { Text = "DeathMessage", Delay = 0.95, Color = Color.Red, Layer = "Overlay", AnimationName = "LocationTextBGDeath", AnimationOutName = "LocationTextBGDeathOut" } )
-		end
+	-- 	if CurrentRun.Cleared then
+	-- 		thread( DisplayLocationText, nil, { Text = "OutroDeathMessageAlt", Delay = 0.95, Color = Color.Red, Layer = "Overlay", AnimationName = "LocationTextBGDeath", AnimationOutName = "LocationTextBGDeathOut", ThreadName = "Outro", Duration = 4.25 } )
+	-- 	else
+	-- 		thread( DisplayLocationText, nil, { Text = "DeathMessage", Delay = 0.95, Color = Color.Red, Layer = "Overlay", AnimationName = "LocationTextBGDeath", AnimationOutName = "LocationTextBGDeathOut" } )
+	-- 	end
 	
-		local criticalSlowHoldTime = 0
-		FocusCamera({ Fraction = 1.0, Duration = 0.3, ZoomType = "Ease" })
-		SetThingProperty({ Property = "Grip", Value = 99999, DestinationId = CurrentRun.Hero.ObjectId })
-		SetThingProperty({ Property = "Graphic", Value = CurrentCharacterDeathIdleAnimation, DestinationId = CurrentRun.Hero.ObjectId })
-		Flash({ Id = CurrentRun.Hero.ObjectId, Speed = 1.65, MinFraction = 1.0, MaxFraction = 0.0, Color = Color.Red, Duration = 0.15, ExpireAfterCycle = true })
-		thread( DeathFrameHold )
+	-- 	local criticalSlowHoldTime = 0
+	-- 	FocusCamera({ Fraction = 1.0, Duration = 0.3, ZoomType = "Ease" })
+	-- 	SetThingProperty({ Property = "Grip", Value = 99999, DestinationId = CurrentRun.Hero.ObjectId })
+	-- 	SetThingProperty({ Property = "Graphic", Value = CurrentCharacterDeathIdleAnimation, DestinationId = CurrentRun.Hero.ObjectId })
+	-- 	Flash({ Id = CurrentRun.Hero.ObjectId, Speed = 1.65, MinFraction = 1.0, MaxFraction = 0.0, Color = Color.Red, Duration = 0.15, ExpireAfterCycle = true })
+	-- 	thread( DeathFrameHold )
 	
-		for k, simData in ipairs( CurrentRun.Hero.FinalHitSlowParameters ) do
-			if( damageVulnerability or damageCrit ) then
-				if( k == 2) then
-					criticalSlowHoldTime = 0.04
-				end
-			end
-			waitScreenTime( simData.ScreenPreWait + criticalSlowHoldTime )
-			if simData.Fraction < 1.0 then
-				AddSimSpeedChange( "Death", { Fraction = simData.Fraction, LerpTime = simData.LerpTime } )
-			else
-				RemoveSimSpeedChange( "Death", { LerpTime = simData.LerpTime } )
-			end
-		end
-		wait(0.15)
-		SetThingProperty({ Property = "Grip", Value = "Default", DestinationId = CurrentRun.Hero.ObjectId })
-		StopFlashing({ Id = CurrentRun.Hero.ObjectId })
-		local zagreusDeathFlash = CreateScreenComponent({ Name = "rectangle01", Group = "Overlay" })
-		SetAnimation({ DestinationId = zagreusDeathFlash.Id, Name = "ZagreusDeathFlash" })
+	-- 	for k, simData in ipairs( CurrentRun.Hero.FinalHitSlowParameters ) do
+	-- 		if( damageVulnerability or damageCrit ) then
+	-- 			if( k == 2) then
+	-- 				criticalSlowHoldTime = 0.04
+	-- 			end
+	-- 		end
+	-- 		waitScreenTime( simData.ScreenPreWait + criticalSlowHoldTime )
+	-- 		if simData.Fraction < 1.0 then
+	-- 			AddSimSpeedChange( "Death", { Fraction = simData.Fraction, LerpTime = simData.LerpTime } )
+	-- 		else
+	-- 			RemoveSimSpeedChange( "Death", { LerpTime = simData.LerpTime } )
+	-- 		end
+	-- 	end
+	-- 	wait(0.15)
+	-- 	SetThingProperty({ Property = "Grip", Value = "Default", DestinationId = CurrentRun.Hero.ObjectId })
+	-- 	StopFlashing({ Id = CurrentRun.Hero.ObjectId })
+	-- 	local zagreusDeathFlash = CreateScreenComponent({ Name = "rectangle01", Group = "Overlay" })
+	-- 	SetAnimation({ DestinationId = zagreusDeathFlash.Id, Name = "ZagreusDeathFlash" })
 	
-		local deathAnimation = CurrentCharacterDeathAnimation
-		if CurrentRun.Cleared then
-			deathAnimation = CurrentCharacterPostEndingDeathAnimation
-		end
-		SetThingProperty({ Property = "Graphic", Value = deathAnimation, DestinationId = currentRun.Hero.ObjectId })
+	-- 	local deathAnimation = CurrentCharacterDeathAnimation
+	-- 	if CurrentRun.Cleared then
+	-- 		deathAnimation = CurrentCharacterPostEndingDeathAnimation
+	-- 	end
+	-- 	SetThingProperty({ Property = "Graphic", Value = deathAnimation, DestinationId = currentRun.Hero.ObjectId })
 	
-		wait( 0.3 )
-		Teleport({ Id = killer.ObjectId, OffsetX = 0, OffsetY = 0 })
-		ClearLootDrops( killer )
-		Destroy({ Id = zagreusDeathFlash.Id })
+	-- 	wait( 0.3 )
+	-- 	Teleport({ Id = killer.ObjectId, OffsetX = 0, OffsetY = 0 })
+	-- 	ClearLootDrops( killer )
+	-- 	Destroy({ Id = zagreusDeathFlash.Id })
 	
-		wait(0.55)
-		if CurrentRun.Cleared then
-			PlaySound({ Name = "/Music/HadesThemeStingerINTENSE" })
-		else
-			PlaySound({ Name = "/Music/HadesThemeStinger" })
-		end
+	-- 	wait(0.55)
+	-- 	if CurrentRun.Cleared then
+	-- 		PlaySound({ Name = "/Music/HadesThemeStingerINTENSE" })
+	-- 	else
+	-- 		PlaySound({ Name = "/Music/HadesThemeStinger" })
+	-- 	end
 	
-		if ConfigOptionCache.EasyMode and not currentRun.Cleared then
-			thread( EasyModeLevelUpPresentation )
-			wait( 3.0 )
-		end
+	-- 	if ConfigOptionCache.EasyMode and not currentRun.Cleared then
+	-- 		thread( EasyModeLevelUpPresentation )
+	-- 		wait( 3.0 )
+	-- 	end
 	
-		if deathPresentation == 1 then
-			-- Hades Death Taunt
-			thread( HadesSpeakingPresentation, {}, { BlockScreenshake = true, VoiceLines = GlobalVoiceLines.HadesDeathTauntVoiceLines } )
-		elseif deathPresentation == 2 then
-			-- Olympian Death Taunt
-			local spurnedGodName = CurrentRun.CurrentRoom.Encounter.SpurnedGodName
-			local spurnedGodData = LootData[spurnedGodName]
-			thread( HadesSpeakingPresentation, { SubtitleColor = spurnedGodData.SubtitleColor }, { OverlayAnim = spurnedGodData.OverlayAnim, BlockScreenshake = true, VoiceLines = spurnedGodData.DeathTauntVoiceLines } )
-		elseif deathPresentation == 3 then
-			-- Thanatos Death Taunt
-			thread( HadesSpeakingPresentation, ActiveEnemies[ThanatosId] or { SubtitleColor = Color.ThanatosVoice }, { OverlayAnim = "ThanatosOverlay", BlockScreenshake = true, VoiceLines = GlobalVoiceLines.ThanatosDeathTauntVoiceLines } )
-		elseif deathPresentation == 4 then
-			-- Chaos Death Taunt
-			thread( HadesSpeakingPresentation, { SubtitleColor = LootData.TrialUpgrade.SubtitleColor }, { OverlayAnim = "ChaosOverlay", BlockScreenshake = true, VoiceLines = LootData.TrialUpgrade.DeathTauntVoiceLines } )
-		end
+	-- 	if deathPresentation == 1 then
+	-- 		-- Hades Death Taunt
+	-- 		thread( HadesSpeakingPresentation, {}, { BlockScreenshake = true, VoiceLines = GlobalVoiceLines.HadesDeathTauntVoiceLines } )
+	-- 	elseif deathPresentation == 2 then
+	-- 		-- Olympian Death Taunt
+	-- 		local spurnedGodName = CurrentRun.CurrentRoom.Encounter.SpurnedGodName
+	-- 		local spurnedGodData = LootData[spurnedGodName]
+	-- 		thread( HadesSpeakingPresentation, { SubtitleColor = spurnedGodData.SubtitleColor }, { OverlayAnim = spurnedGodData.OverlayAnim, BlockScreenshake = true, VoiceLines = spurnedGodData.DeathTauntVoiceLines } )
+	-- 	elseif deathPresentation == 3 then
+	-- 		-- Thanatos Death Taunt
+	-- 		thread( HadesSpeakingPresentation, ActiveEnemies[ThanatosId] or { SubtitleColor = Color.ThanatosVoice }, { OverlayAnim = "ThanatosOverlay", BlockScreenshake = true, VoiceLines = GlobalVoiceLines.ThanatosDeathTauntVoiceLines } )
+	-- 	elseif deathPresentation == 4 then
+	-- 		-- Chaos Death Taunt
+	-- 		thread( HadesSpeakingPresentation, { SubtitleColor = LootData.TrialUpgrade.SubtitleColor }, { OverlayAnim = "ChaosOverlay", BlockScreenshake = true, VoiceLines = LootData.TrialUpgrade.DeathTauntVoiceLines } )
+	-- 	end
 	
-		for index, requirements in pairs(GameData.FlashbackRequirements) do
-			if IsGameStateEligible( CurrentRun, requirements ) then
-				GameState.Flags.AllowFlashback = true
-			end
-		end
+	-- 	for index, requirements in pairs(GameData.FlashbackRequirements) do
+	-- 		if IsGameStateEligible( CurrentRun, requirements ) then
+	-- 			GameState.Flags.AllowFlashback = true
+	-- 		end
+	-- 	end
 	
-		wait(7.2)
+	-- 	wait(7.2)
 	
-		SetThingProperty({ Property = "AllowAnyFire", Value = true, DestinationId = CurrentRun.Hero.ObjectId, DataValue = false })
-		RemoveInputBlock({ Name = "DeathPresentation" })
-		UnblockCombatUI("Death")
-		SetConfigOption({ Name = "UseOcclusion", Value = true })
-	end)
+	-- 	SetThingProperty({ Property = "AllowAnyFire", Value = true, DestinationId = CurrentRun.Hero.ObjectId, DataValue = false })
+	-- 	RemoveInputBlock({ Name = "DeathPresentation" })
+	-- 	UnblockCombatUI("Death")
+	-- 	SetConfigOption({ Name = "UseOcclusion", Value = true })
+	-- end)
 
 	--WindowDropEntrance Override--
 	ModUtil.BaseOverride("WindowDropEntrance", function ( currentRun, currentRoom )
@@ -1224,9 +1224,10 @@ end)
 		end
 		FullScreenFadeInAnimation()
 		if currentRoom.HeroEndPoint ~= nil then
-			if HeroHasTrait("EPCHadesTrait") and HeroHasTrait("EPC_CharacterHandlerTrait") then thread(HadesIntroPresentation, currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId) 
-			elseif HeroHasTrait( "EPC_CharacterHandlerTrait" ) then	
-			thread(DoCurrentCharacterIntroLanding, currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId, currentRoom.HeroEndPoint, true, 1, 1.8, 50 )
+			local CurrentCharacterIntroName = CurrentCharacterIntroPresentationFunction
+			-- if HeroHasTrait("EPCHadesTrait") and HeroHasTrait("EPC_CharacterHandlerTrait") then thread(HadesIntroPresentation, currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId) 
+			if HeroHasTrait( "EPC_CharacterHandlerTrait" ) then	
+			thread(_G[CurrentCharacterIntroName], currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId, currentRoom.HeroEndPoint, true, 1, 1.8, 50 )
 			else
 			thread( DropHeroToRoomPosition, currentRun.Hero.ObjectId, currentRun.Hero.AttachedLightId, currentRoom.HeroEndPoint, true, 1, 1.8, 50 )
 		end
@@ -1585,7 +1586,7 @@ ModUtil.BaseOverride("RoomEntrancePortal", function ( currentRun, currentRoom )
 
 	wait(0.3)
 	if HeroHasTrait( "EPC_CharacterHandlerTrait" )
-    then DoCurrentCharacterLeaveRoomAnim() else
+    then thread(DoCurrentCharacterLeaveRoomAnim) else
 
     SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = "ZagreusHeroLanding_ReturnToIdle" })
 
@@ -2106,9 +2107,9 @@ end)
 	-- Play this line
 	if line.Cue ~= nil then
 
-		if HeroHasTrait("EPC_CharacterHandlerTrait") and source == CurrentRun.Hero
-		--and args.Actor == "Zagreus" --or "Defualt" 
-		then return end
+		if HeroHasTrait("EPC_CharacterHandlerTrait") and type(line) == "table" and line.Cue then if string.sub(line.Cue, 1, 11) == "/VO/Zagreus" 
+			--and args.Actor == "Zagreus" --or "Defualt" 
+			then return end end
 		if args.OnPlayedSomethingFunctionName ~= nil and not args.PlayedSomething then
 			local onPlayedSomethingFunction = _G[args.OnPlayedSomethingFunctionName]
 			if onPlayedSomethingFunction ~= nil then
@@ -2142,9 +2143,9 @@ end)
 			if line.NoTarget or parentLine.NoTarget then
 				playedSpeechId = PlaySpeech({ Name = line.Cue, Queue = args.Queue, SubtitleColor = source.SubtitleColor, UseSubtitles = useSubtitles, Actor = args.Actor })
 			elseif line.SkipAnim or parentLine.SkipAnim then
-				if HeroHasTrait("EPC_CharacterHandlerTrait") and source == CurrentRun.Hero
-				--and args.Actor == "Zagreus" --or "Defualt" 
-				then return end
+				if HeroHasTrait("EPC_CharacterHandlerTrait") and type(line) == "table" and line.Cue then if string.sub(line.Cue, 1, 11) == "/VO/Zagreus" 
+			--and args.Actor == "Zagreus" --or "Defualt" 
+			then return end end
 				playedSpeechId = PlaySpeechCueFromSource( line.Cue, source, false, args.Queue, useSubtitles, source.SubtitleColor, args )
 			else
 				playedSpeechId = PlaySpeechCueFromSource( line.Cue, source, true, args.Queue, useSubtitles, source.SubtitleColor, args )
@@ -2209,9 +2210,9 @@ end)
 			PlayedRandomLines[randomLine.Cue] = true
 			-- Effectively pass down by value rather than reference
 			local subLineArgs = ShallowCopyTable( args )
-			if HeroHasTrait("EPC_CharacterHandlerTrait") and source == CurrentRun.Hero
+			if HeroHasTrait("EPC_CharacterHandlerTrait") and type(line) == "table" and line.Cue then if string.sub(line.Cue, 1, 11) == "/VO/Zagreus" 
 			--and args.Actor == "Zagreus" --or "Defualt" 
-			then return end
+			then return end end
 			if PlayVoiceLine( randomLine, prevLine, line, source, subLineArgs ) then
 				prevLine = randomLine
 				playedSomething = true
@@ -2447,3 +2448,12 @@ ModUtil.BaseOverride( "InitHeroLastStands", function ( newHero )
 		end
 	end
 end )
+
+--Check for Zag animations--
+ModUtil.WrapBaseFunction( 'SetAnimation', function(base, args)
+	--if CurrentRun == nil then return end
+    if args.Name == "ZagreusInteractEquip" then if IsCustomHero == true then args.Name = CurrentCharacterInteractAnimation
+	end
+end
+return base(args)
+end)

@@ -42,11 +42,11 @@ WeaponData.HarpyWhipSlash1 =
             },
             {
                 RandomRemaining = true,
+                BreakIfPlayed = true,
+                CooldownTime = 5,
+                Queue = "Interrupt",
                 PreLineWait = 0.35,
-                SuccessiveChanceToPlay = 0.33,
-                TriggerCooldowns = { "ZagreusMiscWeaponEquipSpeech", },
-
-                ExplicitRequirements = true,
+                Source = { SubtitleColor = Color.TisiphoneVoice },
                 GameStateRequirements =
                 {
                     -- None
@@ -65,9 +65,7 @@ WeaponData.HarpyWhipSlash1 =
 				-- Murderrr!!
 				{ Cue = "/VO/Tisiphone_0039" },
             },
-            [3] = GlobalVoiceLines.MiscWeaponEquipVoiceLines,
         },
-        [2] = GlobalVoiceLines.SkellyWeaponEquipReactionVoiceLines,
     },
 
     Sounds =

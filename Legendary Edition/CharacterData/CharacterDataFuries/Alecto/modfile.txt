@@ -1,5 +1,7 @@
 Import "EPCAlectoMain.lua"
 
+Import "AlectoVoicelines.lua"
+
 To "Scripts/WeaponData.lua"
 Import "AlectoWeaponData.lua"
 

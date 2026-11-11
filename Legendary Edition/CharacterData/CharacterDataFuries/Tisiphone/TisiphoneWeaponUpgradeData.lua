@@ -55,8 +55,9 @@ function RemoveEPCTisiphoneWeapons()
 	--character anymore
 	IsCustomHero = false
 	LECharacterData.LastCharacter = TraitData.DefaultCharacterTrait
-	LECharacterData.LastCharTraitName = "EPCTisiphoneTrait"
+	LECharacterData.LastCharTraitName = "DefaultCharacterTrait"
 
 
 	UpdateLifePips()
+	SwapCharAnimations()
 end

@@ -1,0 +1,20 @@
+{
+    Animations = [
+        "_append"
+    {
+      Name = "FuryHellfirePreviewDecalDarkCharonLE"
+      InheritFrom = "FuryHellfirePreviewDecalDarkLE"
+      CreateAnimation = "FuryHellfirePreviewDecalCharonLE"
+    }
+    {
+      Name = "FuryHellfirePreviewDecalCharonLE"
+      InheritFrom = "FuryHellfirePreviewDecalLE"
+      Color = 
+      {
+        Red = 1.0
+        Green = 0.6
+        Blue = 0.0
+      }
+    }
+    ]
+}

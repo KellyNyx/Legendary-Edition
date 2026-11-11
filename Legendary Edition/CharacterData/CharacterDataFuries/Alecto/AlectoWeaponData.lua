@@ -190,6 +190,53 @@ WeaponData.AlectoWhipLash1 =
     {
         { ScreenPreWait = 0.02, Fraction = 0.16, Duration = 0.3 },
     },
+    EquipVoiceLines =
+    {
+        {
+            Cooldowns =
+            {
+                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
+            },
+            {
+                BreakIfPlayed = true,
+                PreLineWait = 0.35,
+
+                ExplicitRequirements = true,
+                GameStateRequirements =
+                {
+                    -- None
+                },
+
+                -- Varatha, the Eternal Spear; join my pursuit.
+                --{ Cue = "/VO/ZagreusField_0153", PlayOnce = true },
+            },
+            {
+                RandomRemaining = true,
+                BreakIfPlayed = true,
+                CooldownTime = 5,
+                Queue = "Interrupt",
+                PreLineWait = 0.35,
+                Source = { SubtitleColor = Color.AlectoVoice },
+                GameStateRequirements =
+                {
+                    -- None
+                },
+
+            -- My turn.
+			{ Cue = "/VO/Alecto_0167" },
+            -- So...!
+			{ Cue = "/VO/Alecto_0149" },
+			-- So...
+			{ Cue = "/VO/Alecto_0150" },
+            -- <Laughter>
+			{ Cue = "/VO/Alecto_0231" },
+			-- <Laughter>
+			{ Cue = "/VO/Alecto_0229" },
+			-- <Laughter>
+			{ Cue = "/VO/Alecto_0230" },
+            },
+        },
+    },
 
     Sounds =
     {
@@ -220,8 +267,9 @@ WeaponData.AlectoWhipLash1 =
 			{
 				RandomRemaining = true,
 				BreakIfPlayed = true,
+                CooldownTime = 60,
 				PreLineWait = 0.15,
-				CooldownTime = 60,
+				
 				Queue = "Interrupt",
                 Source = {SubtitleColor = Color.AlectoVoice},
 

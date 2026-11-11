@@ -1,0 +1,19 @@
+Import "LEThanatosMain.lua"
+
+To "Scripts/WeaponData.lua"
+Import "ThanatosWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "ThanatosWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "ThanatosWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "ThanatosWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "ThanatosProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "ThanatosWeapons.sjson"

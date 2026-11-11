@@ -26,6 +26,8 @@ Import "LE Scripts/LEDeathLoopData.lua"
 
 Import "LE Scripts/ContractExchange.lua"
 
+Import "LE Scripts/SilenceZagreusQuips.lua"
+
 
 
 To "Scripts/TraitData.lua"
@@ -55,3 +57,5 @@ Include "CharacterData/CharacterDataFuries/Alecto/modfile.txt"
 Include "CharacterData/CharacterDataHades/Hades/modfile.txt"
 
 Include "CharacterData/CharacterDataHades/modfile_HadesFx.txt"
+
+Include "CharacterData/CharacterDataCharon/Charon/modfile.txt"

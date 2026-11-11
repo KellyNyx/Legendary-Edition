@@ -50,6 +50,31 @@ TraitData.DefaultCharacterTrait =
 			"ZagreusDashVFX_Bink",
             "ZagreusWrath_Bink",
 		},
+	SwapAnimations = {
+	--talk denial--
+	["ZagreusTalkDenial"] = "ZagreusTalkDenial",
+	["ZagreusTalkDenialStart"] = "ZagreusTalkDenialStart",
+	["ZagreusTalkDenialReturnToIdle"] = "ZagreusTalkDenialReturnToIdle",
+	["ZagreusTalkDenial_Full"] = "ZagreusTalkDenial_Full",
+	--talk empathy--
+	["ZagreusTalkEmpathy"] = "ZagreusTalkEmpathy",
+	["ZagreusTalkEmpathyStart"] = "ZagreusTalkEmpathyStart",
+	["ZagreusTalkEmpathy_Return"] = "ZagreusTalkEmpathy_Return",
+	--Interact thoughtful--
+	["ZagreusInteractionThoughtful"] = "ZagreusInteractionThoughtful",
+	--Interact Come Hither--
+	["ZagreusInteractionComeHither_Start"] = "ZagreusInteractionComeHither_Start",
+	["ZagreusInteractionComeHither"] = "ZagreusInteractionComeHither",
+	["ZagreusInteractionComeHither_End"] = "ZagreusInteractionComeHither_End",
+	--Interact Fishing--
+	["ZagreusInteractionFishing_Start"] = "ZagreusInteractionFishing_Start",
+	["ZagreusInteractionFishing_PullSuccess"] = "ZagreusInteractionFishing_PullSuccess",
+	["ZagreusInteractionFishing_PullFailure"] = "ZagreusInteractionFishing_PullFailure",
+	--cosmetic purchase--
+	["ZagreusCosmeticPurchase"] = "ZagreusCosmeticPurchase",
+	--secret door dive--
+	["ZagreusSecretDoorDive"] = "ZagreusSecretDoorDive",
+	},
     PostWeaponUpgradeScreenAnimation = "FuryLungeReturnToIdle",
     RequiredWeapons = {"SpearWeapon", "SpearWeaponThrow",},
     RequiredFalseTraits = { "SpearAutoAttack", "SpearSpinAura" },

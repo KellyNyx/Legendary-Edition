@@ -1,5 +1,7 @@
 Import "EPCTisiphoneMain.lua"
 
+Import "TisiphoneVoicelines.lua"
+
 To "Scripts/WeaponData.lua"
 Import "TisiphoneWeaponData.lua"
 

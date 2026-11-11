@@ -55,6 +55,33 @@ TraitData.EPCAlectoTrait =
 			"Enemy_TisiphoneMultiFuryTakeOff_Bink",
 			"Enemy_TisiphoneMultiFurySkyDive_Bink",
 		},
+	SwapAnimations = {
+	--talk denial--
+	["ZagreusTalkDenial"] = "Fury2Idle",
+	["ZagreusTalkDenialStart"] = "Fury2Idle",
+	["ZagreusTalkDenialReturnToIdle"] = "Fury2Idle",
+	["ZagreusTalkDenial_Full"] = "Fury2Idle",
+	--talk empathy--
+	["ZagreusTalkEmpathy"] = "Fury2Idle",
+	["ZagreusTalkEmpathyStart"] = "Fury2Idle",
+	["ZagreusTalkEmpathy_Return"] = "Fury2Idle",
+	--Interact thoughtful--
+	["ZagreusInteractionThoughtful"] = "Fury2Idle",
+	--Interact Come Hither--
+	["ZagreusInteractionComeHither_Start"] = "Fury2Idle",
+	["ZagreusInteractionComeHither"] = "Fury2Idle",
+	["ZagreusInteractionComeHither_End"] = "Fury2Idle",
+	--Interact Fishing--
+	["ZagreusInteractionFishing_Start"] = "Fury2Idle",
+	["ZagreusInteractionFishing_PullSuccess"] = "Fury2Idle",
+	["ZagreusInteractionFishing_PullFailure"] = "Fury2Idle",
+	--cosmetic purchase--
+	["ZagreusCosmeticPurchase"] = "Fury2Idle",
+	--secret door dive--
+	["ZagreusSecretDoorDive"] = "Fury2LungeReturnToIdle",
+	--stunned--
+	["ZagreusStun"] = "EPCAlectoOnHit",
+	},
     PostWeaponUpgradeScreenAnimation = "Fury2LungeReturnToIdle",
     RequiredWeapons = {"SpearWeapon", "SpearWeaponThrow",},
     RequiredFalseTraits = { "SpearAutoAttack", "SpearSpinAura" },
@@ -508,6 +535,7 @@ function EquipEPCAlectoWeaponsTEST()
 	--make sure to let the game know that we are playing as a custom character
 	
 	UpdateLifePips()
+	SwapCharAnimations()
 	
 end
 

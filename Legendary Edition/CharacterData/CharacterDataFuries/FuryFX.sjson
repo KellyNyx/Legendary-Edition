@@ -1681,15 +1681,17 @@
       InheritFrom = "FuryWhipLashTisiphone"
       FlipVertical = true
     }
+//for courtyard obstacles//
     {
       Name = "FuryHellfirePreviewDecalDarkLE"
       InheritFrom = "FuryHellfirePreviewDecalDark"
       CreateAnimation = "FuryHellfirePreviewDecalLE"
       //Scale = 0.5
+      OffsetZ = -235
     }
     {
       Name = "FuryHellfirePreviewDecalDarkAlectoLE"
-      InheritFrom = "FuryHellfirePreviewDecalDark"
+      InheritFrom = "FuryHellfirePreviewDecalDarkLE"
       CreateAnimation = "FuryHellfirePreviewDecalAlectoLE"
       //Scale = 0.5
     }
@@ -1708,12 +1710,12 @@
       InheritFrom = "FuryHellfirePreviewDecal"
       //CreateAnimation = "null"
       //OffsetX = 300
-      OffsetZ = 235
+      OffsetZ = 0
       Scale = 0.38
     }
     {
       Name = "FuryHellfirePreviewDecalDarkTisiphoneLE"
-      InheritFrom = "FuryHellfirePreviewDecalDark"
+      InheritFrom = "FuryHellfirePreviewDecalDarkLE"
       CreateAnimation = "FuryHellfirePreviewDecalTisiphoneLE"
     }
     {

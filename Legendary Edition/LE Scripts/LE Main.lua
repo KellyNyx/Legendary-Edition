@@ -202,48 +202,82 @@ end
 
 
 function SetupCurrentCharacter()
-    --local currentWeaponInSlot = GetEquippedWeapon()
+	--The trait of the character being used (current character)--
     CurrentCharTrait = LECharacterData.LastCharacter
-   --local TraitName = GetWeaponUpgradeTrait("SpearWeapon", GameState.LastWeaponUpgradeData["SpearWeapon"].Index)
+	--Voicelines that play when clearing a run (after you reach the postgame)--
    CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoicelines
+   --Animation used while idle--
      CurrentCharacterIdleAnimation = CurrentCharTrait.IdleAnimation
+	 --Animation used when starting to move--
     CurrentCharacterMoveStartAnimation = CurrentCharTrait.MoveStartAnimation
+	--Animation used when moving--
     CurrentCharacterMoveAnimation = CurrentCharTrait.MoveAnimation
+	--Animation used when coming to a stop after moving--
     CurrentCharacterMoveStopAnimation = CurrentCharTrait.MoveStopAnimation
+	--Animation used when moving slowly--
     CurrentCharacterLowSpeedAnimation = CurrentCharTrait.LowSpeedAnimation
+	--Animation used when moving fast--
     CurrentCharacterHighSpeedAnimation = CurrentCharTrait.HighSpeedAnimation
+	--Character base move speed--
     CurrentCharacterBaseSpeed = CurrentCharTrait.BaseSpeedValue
+	--Character scale--
     CurrentCharacterScale = CurrentCharTrait.ScaleFraction
+	--Packages required for character Fx--
     CurrentCharacterRequiredPackages = CurrentCharTrait.RequiredPackages
+	--Animation that plays when the character is hurt--
     CurrentCharacterDamagedAnimation = CurrentCharTrait.DamagedAnimation
+	--Emote that plays when the character is hurt--
     CurrentCharacterDamagedSound = CurrentCharTrait.DamagedSound
+	--Function called during the intro--
     CurrentCharacterIntroPresentationFunction = CurrentCharTrait.IntroPresentationFunction
+	--Animation used when falling (during intro or after exiting Chaos gates etc.)--
     CurrentCharacterHeroLandingAnimation = CurrentCharTrait.HeroLandingAnimation
+	--Emote used when reflecting projectiles--
 	CurrentCharacterParryEmote = CurrentCharTrait.ParryEmote
+	--Animation used when landing after falling (during intro or out of Chaos gates etc.)--
     CurrentCharacterHeroTouchDownGraphic = CurrentCharTrait.HeroTouchdownGraphic
+	--Animation used after choosing an offering from a boon--
     CurrentCharacterUpgradeAcquiredAnimation = CurrentCharTrait.UpgradeAcquiredAnimation
+	--Animation used when entering Chaos gates--
     CurrentCharacterSecretDoorDiveAnimation = CurrentCharTrait.SecretDoorDiveAnimation
+	-- --Function called during RoomEntrancePortal--
+	-- CurrentCharacterRoomEntrancePortalFunction = CurrentCharTrait.RoomEntrancePortalFunction
+	--Animation used when entering and exiting Chaos gates--
     CurrentCharacterSecretRoomEntranceExitAnimation = CurrentCharTrait.SecretRoomEntranceExitAnimation
+	--charging emote that plays during the death defiance presentation--
     CurrentCharacterChargingEmote = CurrentCharTrait.ChargingEmote
+	--powering up emote that plays during the death defiance presentation--
     CurrentCharacterPowerUpEmote = CurrentCharTrait.PowerUpEmote
+	--Animation that plays when using a death defiance--
     CurrentCharacterLastStandAnimation = CurrentCharTrait.LastStandAnimation
+	--Voicelines that play when using a death defiance, while still having some left--
     CurrentCharacterLastStandVoiceLines = CurrentCharTrait.LastStandVoicelines
+	--voicelines that play when using your last Death Defiance--
     CurrentCharacterLastStandLastLifeVoiceLines = CurrentCharTrait.LastStandLastLifeVoiceLines
+	--animation that plays when your character freezes before the death animation plays--
     CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation
+	--Which animation to use when dying--
     CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation-- or "ZagreusDeathFullscreen"
+	--Which Animation to use when you finish a run after reaching the postgame--
     CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation-- or "ZagreusDeathPostEndingFullscreen"
+	--VoiceLines played when dying--
     CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines
+	--Interact animation (Picking up rewards etc.)--
     CurrentCharacterInteractAnimation = CurrentCharTrait.InteractAnimation
+	--AttachedAnimations--
     CurrentCharacterAttachedAnimationName = CurrentCharTrait.AttachedAnimationName or "null"
     CurrentCharacterAttachedAnimationScale = CurrentCharTrait.AttachedAnimationScale or 1.0
     CurrentCharacterAttachedAnimation2Name = CurrentCharTrait.AttachedAnimation2Name or "null"
     CurrentCharacterAttachedAnimationOffsetZ = CurrentCharTrait.AttachedAnimationOffsetZ or "null"
+	--BoonSelect--
     CurrentCharacterBoonBox = CurrentCharTrait.BoonBox
     CurrentCharacterBoonSelectInGraphic = CurrentCharTrait.BoonSelectInGraphic
     CurrentCharacterBoonSelectLightingGraphic = CurrentCharTrait.BoonSelectLightingGraphic
     CurrentCharacterBoonOffset = CurrentCharTrait.BoonOffset
     CurrentCharacterBoonSelectInFrontFxOffset = CurrentCharTrait.BoonSelectInFrontFxOffset
     CurrentCharacterBoonSelectOutGraphic = CurrentCharTrait.BoonSelectOutGraphic
+	--SwapAnimations--
+	CurrentCharacterSwapAnimations = CurrentCharTrait.SwapAnimations
     --Character Rage Data--
      CurrentCharacterEnragedPresentation = CurrentCharTrait.RageData.EnragedPresentation or "null"
      CurrentCharacterRageDecayRate = CurrentCharTrait.RageData.RageDecayRate or "null"
@@ -293,6 +327,12 @@ function SetupCurrentCharacter()
             --MergeWeaponSetTables()		
 end
 
+function SwapCharAnimations()
+	for fromAnim, toAnim in pairs( CurrentCharacterSwapAnimations ) do
+		SwapAnimation({ Name = fromAnim, DestinationName = toAnim })
+	end
+end
+
 function SetupDefaultCharacter()
     -- Damaged Animation/Sound --
     CurrentRun.Hero.DamagedAnimation = "ZagreusOnHit"
@@ -328,8 +368,6 @@ end
 
 function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapon )
 
-    
-
 		AddInputBlock({ Name = "DeathPresentation" })
 		ClearCameraClamp({ LerpTime = 0.4 })
 		PanCamera({ Id = currentRun.Hero.ObjectId, Duration = 0.4 })
@@ -345,7 +383,12 @@ function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapo
 		end
 
 		
-	    
+		-- local CurrentCharTrait = LECharacterData.LastCharacter
+		-- local CurrentCharacterDeathVoicelines = CurrentCharTrait.DeathVoiceLines or GlobalVoiceLines.DeathVoiceLines
+		-- local CurrentCharacterRunClearedVoicelines = CurrentCharTrait.RunClearedVoiceLines or GlobalVoiceLines.DeathVoiceLines
+		-- local CurrentCharacterDeathAnimation = CurrentCharTrait.DeathAnimation or "ZagreusDeathFullscreen"
+		-- local CurrentCharacterPostEndingDeathAnimation = CurrentCharTrait.PostEndingDeathAnimation or "ZagreusDeathPostEndingFullscreen"
+		-- local CurrentCharacterDeathIdleAnimation = CurrentCharTrait.DeathIdleAnimation or "ZagreusOnHitFinal"
 		-- had to move this above CleanUpEnemies() for the RequiredKillEnemies check to work
 		local deathPresentation = 0
 		if CurrentRun.CurrentRoom.Encounter ~= nil then
@@ -393,13 +436,15 @@ function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapo
 			end
 		end
 	
-		--currentRun.Hero.Mute = false
+		currentRun.Hero.Mute = false
 		SetPlayerInvulnerable( "PlayerDeath" )
 		PlaySound({ Name = "/SFX/Player Sounds/PlayerDeath" })
-
-        local DummyObstacle = SpawnObstacle({ Name = "BlankObstacle", Group = "Standing", DestinationId = CurrentRun.Hero.ObjectId  })
 	
-		thread( PlayVoiceLines, CurrentCharacterDeathVoicelines )
+		
+		if CurrentRun.Cleared then 
+			thread( PlayVoiceLines, CurrentCharacterRunClearedVoicelines ) else
+				thread( PlayVoiceLines, CurrentCharacterDeathVoicelines )
+			end
 	
 		if killer.CauseOfDeathVoiceLines ~= nil then
 			thread( PlayVoiceLines, killer.CauseOfDeathVoiceLines, nil, killer )
@@ -458,7 +503,7 @@ function CurrentCharacterDeathPresentation( currentRun, killer, killingUnitWeapo
 	
 		local deathAnimation = CurrentCharacterDeathAnimation
 		if CurrentRun.Cleared then
-			deathAnimation = "ZagreusDeathPostEndingFullscreen"
+			deathAnimation = CurrentCharacterPostEndingDeathAnimation
 		end
 		SetThingProperty({ Property = "Graphic", Value = deathAnimation, DestinationId = currentRun.Hero.ObjectId })
 	
@@ -634,8 +679,15 @@ function DoCurrentCharacterLeaveRoomAnim( currentRun, exitDoor )
     
 
 	    SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
-
+		--SetAlpha({ Id = currentRun.Hero.ObjectId, Fraction = 1.0, Duration = 1.0 })
 		SetAnimation({ DestinationId = CurrentRun.Hero.ObjectId, Name = CurrentCharacterSecretRoomEntranceExitAnimation })
+
+        if HeroHasTrait("LECharonTrait") then
+			SetAlpha({ Id = CurrentRun.Hero.ObjectId, Fraction = 0.0})
+			wait(1.0)
+			CreateAnimation({ Name = "ThanatosTeleport", DestinationId = CurrentRun.Hero.ObjectId })
+			SetAlpha({ Id = CurrentRun.Hero.ObjectId, Fraction = 1.0})
+		end
 end
 
 function DoCurrentCharacterPortalEntrance( currentRun, currentRoom )
@@ -1375,6 +1427,10 @@ function LE_EquipMegWeapon()
   "AlectoWhipLash1", "AlectoWhipLash2", "AlectoWhipLash3", "AlectoWhipLash4", "AlectoWhipLash5", "AlectoWhipLash6", 
 "EPCHarpyWhipRageBeam",
 "AlectoDash", "EPCHarpyWhipShot", "EPCHarpyLightningChase",
+
+--Charon--
+"LECharonDash", "LECharonMeleeLeft", "LECharonMeleeRight",
+"LECharonRadialPush", "LECharonWaveStraight",
     }
 	if HeroHasTrait("EPCMegaeraTrait") then return end
 	AddInputBlock({ Name = "CharacterSetup" })
@@ -1486,6 +1542,29 @@ function LE_EquipTisiphoneWeapon()
    
    
    --AddTraitToHero({TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCMegaeraTrait"}) })
+end
+
+function LE_EquipCharonWeapon()
+	if HeroHasTrait("LECharonTrait") then return end
+	AddInputBlock({ Name = "CharacterSetup" })
+	FullScreenFadeOutAnimation()
+    UnequipWeapon({ DestinationId = CurrentRun.Hero.ObjectId, Names = UnEquipWeapons })
+    --RemoveTrait(CurrentRun.Hero, LECharacterData.LastCharTraitName)
+	UnequipWeaponUpgrade()
+   EquipPlayerWeapon( WeaponData.LECharonMeleeLeft, { PreLoadBinks = true } )
+    GameState.LastWeaponUpgradeData["LECharonMeleeLeft"] = { Index = 1 }
+    --GameState.LastWeaponUpgradeData[MegWhipLash1].Index
+    EquipWeaponUpgrade( CurrentRun.Hero.ObjectId, { SkipTraitHighlight = true })
+    --AddTraitToHero({ TraitData = GetProcessedTraitData({ Unit = CurrentRun.Hero, TraitName = "EPCTisiphoneTrait"}) })
+    GameState.LastInteractedWeaponUpgrade = { WeaponName = "LECharonMeleeLeft", ItemIndex = 1 }
+	wait(0.5)
+	FullScreenFadeInAnimation()
+	wait(0.3)
+	--SetThingProperty({ DestinationId = CurrentRun.Hero.ObjectId, Property = "TouchdownGraphic", Value = CurrentCharacterHeroTouchDownGraphic })
+	--ApplyUpwardForce({ Id = currentRun.Hero.ObjectId, Speed = -100 })
+	SetAnimation({ Name = "Charon_IdleBattle", DestinationId = CurrentRun.Hero.ObjectId })
+	wait(0.5)
+	RemoveInputBlock({ Name = "CharacterSetup" })
 end
 
 -- ModUtil.WrapBaseFunction( 'EquipPlayerWeapon', function(baseFunc)

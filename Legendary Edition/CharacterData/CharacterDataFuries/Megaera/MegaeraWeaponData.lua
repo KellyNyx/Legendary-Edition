@@ -429,6 +429,57 @@ WeaponData.MegWhipLash1 =
     {
         { ScreenPreWait = 0.02, Fraction = 0.16, Duration = 0.3 },
     },
+    EquipVoiceLines =
+    {
+        {
+            Cooldowns =
+            {
+                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
+            },
+            {
+                BreakIfPlayed = true,
+                PreLineWait = 0.35,
+
+                ExplicitRequirements = true,
+                GameStateRequirements =
+                {
+                    -- None
+                },
+
+                -- Varatha, the Eternal Spear; join my pursuit.
+                --{ Cue = "/VO/ZagreusField_0153", PlayOnce = true },
+            },
+            {
+                RandomRemaining = true,
+                BreakIfPlayed = true,
+                CooldownTime = 5,
+                Queue = "Interrupt",
+                PreLineWait = 0.35,
+                Source = { SubtitleColor = Color.MegVoice },
+                GameStateRequirements =
+                {
+                    -- None
+                },
+
+                -- Hold on!
+					{ Cue = "/VO/MegaeraField_0448" },
+					-- I got you.
+					{ Cue = "/VO/MegaeraField_0449" },
+					-- I'm here.
+					{ Cue = "/VO/MegaeraField_0450" },
+					-- You called?
+					{ Cue = "/VO/MegaeraField_0454" },
+					-- I have this.
+					{ Cue = "/VO/MegaeraField_0458" },
+					-- I'll take care of this.
+					{ Cue = "/VO/MegaeraField_0460" },
+					-- No problem.
+					{ Cue = "/VO/MegaeraField_0461" },
+					-- Got your message.
+					{ Cue = "/VO/MegaeraField_0462" },
+            },
+        },
+    },
 
     Sounds =
     {

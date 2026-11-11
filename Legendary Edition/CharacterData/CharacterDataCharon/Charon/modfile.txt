@@ -1,0 +1,24 @@
+Import "LECharonMain.lua"
+
+Import "CharonVoicelines.lua"
+
+To "Scripts/WeaponData.lua"
+Import "CharonWeaponData.lua"
+
+To "Scripts/WeaponSets.lua"
+Import "CharonWeaponSets.lua"
+
+To "Scripts/TraitData.lua"
+Import "CharonWeaponTrait.lua"
+
+To "Scripts/WeaponUpgradeData.lua"
+Import "CharonWeaponUpgradeData.lua"
+
+To "Game/Projectiles/PlayerProjectiles.sjson"
+SJSON "CharonProjectiles.sjson"
+
+To "Game/Weapons/PlayerWeapons.sjson"
+SJSON "CharonWeapons.sjson"
+
+To "Game/Animations/Fx.sjson"
+SJSON "CharonFx.sjson"
