@@ -50,10 +50,6 @@ WeaponData.EPCHarpyWhipArc =
     EquipVoiceLines =
     {
         {
-            Cooldowns =
-            {
-                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
-            },
             {
                 BreakIfPlayed = true,
                 PreLineWait = 0.35,
@@ -193,10 +189,6 @@ WeaponData.AlectoWhipLash1 =
     EquipVoiceLines =
     {
         {
-            Cooldowns =
-            {
-                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
-            },
             {
                 BreakIfPlayed = true,
                 PreLineWait = 0.35,
@@ -228,12 +220,14 @@ WeaponData.AlectoWhipLash1 =
 			{ Cue = "/VO/Alecto_0149" },
 			-- So...
 			{ Cue = "/VO/Alecto_0150" },
-            -- <Laughter>
-			{ Cue = "/VO/Alecto_0231" },
-			-- <Laughter>
-			{ Cue = "/VO/Alecto_0229" },
-			-- <Laughter>
-			{ Cue = "/VO/Alecto_0230" },
+            -- Mmph.
+			{ Cue = "/VO/Alecto_0180" },
+            -- -- <Laughter>
+			-- { Cue = "/VO/Alecto_0231" },
+			-- -- <Laughter>
+			-- { Cue = "/VO/Alecto_0229" },
+			-- -- <Laughter>
+			-- { Cue = "/VO/Alecto_0230" },
             },
         },
     },
@@ -272,6 +266,9 @@ WeaponData.AlectoWhipLash1 =
 				
 				Queue = "Interrupt",
                 Source = {SubtitleColor = Color.AlectoVoice},
+                CooldownName = "AlectoAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- Pain...
 				{ Cue = "/VO/Alecto_0110", RequiredPlayed = { "/VO/Alecto_0116" } },
@@ -665,6 +662,9 @@ WeaponData.EPCHarpyLightningChase =
 				CooldownTime = 60,
 				Queue = "Interrupt",
                 Source = {SubtitleColor = Color.AlectoVoice},
+                CooldownName = "AlectoAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- Pain...
 				{ Cue = "/VO/Alecto_0110" },
@@ -740,6 +740,9 @@ WeaponData.EPCHarpyWhipShot =
 				CooldownTime = 60,
 				Queue = "Interrupt",
                 Source = {SubtitleColor = Color.AlectoVoice},
+                CooldownName = "AlectoAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- I said die!
 				{ Cue = "/VO/Alecto_0093" },

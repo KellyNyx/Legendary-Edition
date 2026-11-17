@@ -69,6 +69,9 @@ WeaponData.EPCHarpyBeam =
 					PreLineWait = 0.15,
 					CooldownTime = 35,
                     Source = {SubtitleColor = Color.MegVoice},
+                    CooldownName = "MegaeraAttackQuipPlayedRecently",
+                    RequiredEncounterActiveEnemyCapMin = 1,
+                    SuccessiveChanceToPlay = 0.2,
 
 					-- Take this!
 					{ Cue = "/VO/MegaeraField_0064" },
@@ -344,7 +347,9 @@ WeaponData.EPCHarpyWhipWhirl =
 					PreLineWait = 0.35,
 					CooldownTime = 30,
                     Source = {SubtitleColor = Color.MegVoice},
-					--SuccessiveChanceToPlay = 0.2,
+                    CooldownName = "MegaeraAttackQuipPlayedRecently",
+                    RequiredEncounterActiveEnemyCapMin = 1,
+					SuccessiveChanceToPlay = 0.2,
 
 					-- You are a waste of time.
 					{ Cue = "/VO/MegaeraField_0083" },
@@ -432,10 +437,6 @@ WeaponData.MegWhipLash1 =
     EquipVoiceLines =
     {
         {
-            Cooldowns =
-            {
-                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
-            },
             {
                 BreakIfPlayed = true,
                 PreLineWait = 0.35,
@@ -515,7 +516,9 @@ WeaponData.MegWhipLash1 =
 					PreLineWait = 0.35,
 					CooldownTime = 30,
                     Source = {SubtitleColor = Color.MegVoice},
-					--SuccessiveChanceToPlay = 0.2,
+                    CooldownName = "MegaeraAttackQuipPlayedRecently",
+                    RequiredEncounterActiveEnemyCapMin = 1,
+					SuccessiveChanceToPlay = 0.2,
 
 					-- You are a waste of time.
 					{ Cue = "/VO/MegaeraField_0083" },
@@ -921,6 +924,9 @@ WeaponData.EPCHarpyLightning2 =
 					PreLineWait = 0.15,
 					CooldownTime = 60,
                     Source = {SubtitleColor = Color.MegVoice},
+                    CooldownName = "MegaeraAttackQuipPlayedRecently",
+                    RequiredEncounterActiveEnemyCapMin = 1,
+                    SuccessiveChanceToPlay = 0.2,
 
 					-- Blood and darkness!
 					{ Cue = "/VO/MegaeraField_0074" },
@@ -932,8 +938,6 @@ WeaponData.EPCHarpyLightning2 =
 					{ Cue = "/VO/MegaeraField_0077" },
 					-- Enough!
 					{ Cue = "/VO/MegaeraField_0078" },
-					-- Run for it, little man!
-					{ Cue = "/VO/MegaeraField_0079" },
 					-- Have some of this...!
 					{ Cue = "/VO/MegaeraField_0081" },
 					-- I'll make you pay...!
@@ -959,11 +963,7 @@ WeaponData.EPCHarpyLightning2 =
 					-- Stand still!
 					{ Cue = "/VO/MegaeraField_0254" },
 					-- I'll get you.
-					-- { Cue = "/VO/MegaeraField_0255" },
-					-- Pin him down!
-					--{ Cue = "/VO/MegaeraField_0766", RequiredAnyActiveEnemyTypes = { "HeavyMelee", "LightRanged" } },
-					-- Get him!
-					--{ Cue = "/VO/MegaeraField_0767", RequiredAnyActiveEnemyTypes = { "HeavyMelee", "LightRanged" } },
+					{ Cue = "/VO/MegaeraField_0255" },
 				},
 			},
 }

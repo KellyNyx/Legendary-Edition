@@ -300,7 +300,7 @@
     }
     {
       Name = "EPCHadesAmmoBurst"
-      InheritFrom = "EPCHadesAmmo"
+      InheritFrom = "HadesAmmo"
       FilePath = "Fx\HadesAmmoBurst\HadesAmmoBurst"
       NumFrames = 25
       Loop = false

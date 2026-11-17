@@ -23,10 +23,6 @@ WeaponData.HarpyWhipSlash1 =
     EquipVoiceLines =
     {
         {
-            Cooldowns =
-            {
-                { Name = "ZagreusWeaponEquipSpeech", Time = 40 },
-            },
             {
                 BreakIfPlayed = true,
                 PreLineWait = 0.35,
@@ -118,6 +114,9 @@ WeaponData.HarpyWhipSlash1 =
 				CooldownTime = 60,
                 Queue = "Interrupt",
 		        Source = {SubtitleColor = Color.TisiphoneVoice},
+                CooldownName = "TisiphoneAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- Murr....
 				{ Cue = "/VO/Tisiphone_0046" },
@@ -580,6 +579,9 @@ WeaponData.EPCHarpyLightningLine2 =
 				CooldownTime = 60,
                 Queue = "Interrupt",
 		        Source = {SubtitleColor = Color.TisiphoneVoice},
+                CooldownName = "TisiphoneAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- Murderrr!!
 				{ Cue = "/VO/Tisiphone_0039" },
@@ -686,6 +688,9 @@ WeaponData.EPCHarpyWhipLasso =
 				CooldownTime = 60,
                 Queue = "Interrupt",
 		        Source = {SubtitleColor = Color.TisiphoneVoice},
+                CooldownName = "TisiphoneAttackQuipPlayedRecently",
+                RequiredEncounterActiveEnemyCapMin = 1,
+                SuccessiveChanceToPlay = 0.2,
 
 				-- Murr....
 				{ Cue = "/VO/Tisiphone_0046" },
