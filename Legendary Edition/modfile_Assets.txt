@@ -14,12 +14,12 @@ Replace "Assets/Packages/1080p/LEGUI.pkg_manifest"
 
 ::720p
 
-To "Win/Packages/Launch.pkg"
+To "Win/Packages/720p/Launch.pkg"
 Replace "Assets/Packages/720p/Launch.pkg"
 To "Win/Packages/720p/Launch.pkg_manifest"
 Replace "Assets/Packages/720p/Launch.pkg_manifest"
 
-To "Win/Packages/LEGUI.pkg"
+To "Win/Packages/720p/LEGUI.pkg"
 Replace "Assets/Packages/720p/LEGUI.pkg"
 To "Win/Packages/720p/LEGUI.pkg_manifest"
 Replace "Assets/Packages/720p/LEGUI.pkg_manifest"

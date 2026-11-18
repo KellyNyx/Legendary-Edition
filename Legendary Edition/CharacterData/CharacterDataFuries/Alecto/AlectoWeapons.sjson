@@ -1519,62 +1519,62 @@
           ExtendDurationOnReapply = true
         }]
     }
-    {
-      Name = "AlectoWhipSlash"
-      InheritFrom = "HarpyWhipSlash1"
-      Control = "Attack2"
-      Type = "GUN"
-      SwapOnFire = "null"
-      Projectile = "AlectoWhipSlash"
-      FireGraphic = "AlectoWhipSlashFire"
-      ControlWindow = 0.45
-      ChargeTime = 0.01
-      CanCancelDisables = false
-      Effects = [
-        {
-          Trigger = "Fire"
-          Name = "EPCHarpyBeam2Disable"
-          Duration = 0.3
-          DisableMove = true
-          DisableRotate = false
-          DisableAttack = true
-          Cancelable = true
-        }
-        {
-          Name = "SpearDisable2"
-          DurationFrames = 5
-          DisableMove = true
-          DisableRotate = false
-          DisableAttack = true
-          RequestTriggerLock = true
-        }
-        {
-          Name = "SpearDisableCancelableAndLockTrigger2"
-          DurationFrames = 12
-          DisableMove = true
-          DisableRotate = false
-          DisableAttack = true
-          RequestTriggerLock = true
-          Cancelable = true
-        }
-        {
-          Name = "SpearDisableCancelableAndLockRotation"
-          DurationFrames = 15
-          DisableMove = true
-          DisableRotate = false
-          DisableAttack = false
-          Cancelable = true
-        }
-        {
-          Name = "SpearLunarAerialSlow2"
-          Duration = 0.2
-          Trigger = "Charging"
-          Type = "SPEED"
-          Modifier = 0.9
-          Active = false
-          Cancelable = true
-        }]
-    }
+    // {
+    //   Name = "AlectoWhipSlash"
+    //   InheritFrom = "HarpyWhipSlash1"
+    //   Control = "Attack2"
+    //   Type = "GUN"
+    //   SwapOnFire = "null"
+    //   Projectile = "AlectoWhipSlash"
+    //   FireGraphic = "AlectoWhipSlashFire"
+    //   ControlWindow = 0.45
+    //   ChargeTime = 0.01
+    //   CanCancelDisables = false
+    //   Effects = [
+    //     {
+    //       Trigger = "Fire"
+    //       Name = "EPCHarpyBeam2Disable"
+    //       Duration = 0.3
+    //       DisableMove = true
+    //       DisableRotate = false
+    //       DisableAttack = true
+    //       Cancelable = true
+    //     }
+    //     {
+    //       Name = "SpearDisable2"
+    //       DurationFrames = 5
+    //       DisableMove = true
+    //       DisableRotate = false
+    //       DisableAttack = true
+    //       RequestTriggerLock = true
+    //     }
+    //     {
+    //       Name = "SpearDisableCancelableAndLockTrigger2"
+    //       DurationFrames = 12
+    //       DisableMove = true
+    //       DisableRotate = false
+    //       DisableAttack = true
+    //       RequestTriggerLock = true
+    //       Cancelable = true
+    //     }
+    //     {
+    //       Name = "SpearDisableCancelableAndLockRotation"
+    //       DurationFrames = 15
+    //       DisableMove = true
+    //       DisableRotate = false
+    //       DisableAttack = false
+    //       Cancelable = true
+    //     }
+    //     {
+    //       Name = "SpearLunarAerialSlow2"
+    //       Duration = 0.2
+    //       Trigger = "Charging"
+    //       Type = "SPEED"
+    //       Modifier = 0.9
+    //       Active = false
+    //       Cancelable = true
+    //     }]
+    // }
     // {
     //   Name = "EPCHarpyWhipArc2"
     //   InheritFrom = "EPCHarpyWhipArc"
