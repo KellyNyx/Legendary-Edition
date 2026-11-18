@@ -104,7 +104,7 @@
       Control = "Attack2"
       Type = "GUN"
       SwapOnFire = "HarpyWhipSlash3"
-      Projectile = "EPCMegWhipLash2"
+      Projectile = "EPCMegWhipSlash2"
       FireGraphic = "EPCFury3WhipWhirlFire"
       FireFx = "FuryWhipLashTisiphoneFlipped"
       ClipSize = 1
@@ -158,11 +158,11 @@
     }
     {
       Name = "HarpyWhipSlash3"
-      InheritFrom = "HarpyWhipLash1"
+      InheritFrom = "HarpyWhipSlash1"
       Control = "Attack2"
       Type = "GUN"
       BarrelLength = 300
-      SwapOnFire = "HarpyWhipLash1"
+      SwapOnFire = "HarpyWhipSlash1"
       //AddOnFire = "EPCHarpyWhipWhirl"
       FireGraphic = "EPCFury3WhipWhirlFire"
       ClipSize = 1
@@ -1512,7 +1512,7 @@
         }]
     }
     {
-      Name = "EPCHarpyWhipCombo1OLD"
+      Name = "EPCHarpyWhipCombo1"
       InheritFrom = "1_BasePlayerSlowWeapon"
       Type = "GUN"
       Control = "Rush"

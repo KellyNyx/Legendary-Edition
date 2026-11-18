@@ -50,9 +50,9 @@ Include "CharacterData/CharacterDataFuries/modfile_FuryFx.txt"
 
 Include "CharacterData/CharacterDataFuries/Megaera/modfile.txt"
 
-Include "CharacterData/CharacterDataFuries/Tisiphone/modfile.txt"
-
 Include "CharacterData/CharacterDataFuries/Alecto/modfile.txt"
+
+Include "CharacterData/CharacterDataFuries/Tisiphone/modfile.txt"
 
 Include "CharacterData/CharacterDataHades/Hades/modfile.txt"
 

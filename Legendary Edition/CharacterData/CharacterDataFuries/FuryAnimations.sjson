@@ -2184,7 +2184,7 @@
     }
     {
       Name = "MegRapidLashesFire1"
-      InheritFrom = "MegRapidLashesFire1"
+      InheritFrom = "MegRapidLashesFire"
       ChainTo "MegRapidLashesFire2"
       CancelOnOwnerMove = false
       PlaySpeed = 120
